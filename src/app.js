@@ -1,7 +1,10 @@
 export const App = () => {
   return (
-    <>
-      hello app
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ThreeComponent />} />
+        <Route path="/page" element={<PageComponent />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
