@@ -1,9 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
+import { Routes } from "react-router";
+import React from "react";
+
 export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ThreeComponent />} />
-        <Route path="/page" element={<PageComponent />} />
+
       </Routes>
     </BrowserRouter>
   );
