@@ -7,7 +7,7 @@ export const App = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/navigation" element={<Navigation3d />} />
+				<Route path="/" element={<Navigation3d />} />
 			</Routes>
 		</BrowserRouter>
 	);
