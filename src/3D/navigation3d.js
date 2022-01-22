@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Experience from './threejs/javascript/Experience';
 
 export const Navigation3d = () => {
-	return (
-        <canvas className={'webGL'} />
-    );
+  const threeRef = useRef();
+  const three = useRef();
+  useEffect(() => {
+    if (!three.current && threeRef.current) {
+      three.current = new Experience(threeRef.current)
+    }
+  });
+  return <canvas ref={threeRef} />;
 };
