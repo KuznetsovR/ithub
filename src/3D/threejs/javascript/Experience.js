@@ -16,5 +16,12 @@ export default class Experience {
     this.scene = new THREE.Scene()
     this.camera = new Camera()
     this.renderer = new Renderer()
+    this.sizes.on('resize', ()=>{
+      this.resize()
+    })
+  }
+  resize(){
+    this.camera.resize()
+    this.renderer.resize()
   }
 }
