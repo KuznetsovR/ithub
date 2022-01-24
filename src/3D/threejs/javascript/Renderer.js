@@ -1,5 +1,4 @@
 import Experience from './Experience';
-import Camera from './Camera';
 import * as THREE from 'three';
 
 export default class Renderer {
@@ -8,7 +7,7 @@ export default class Renderer {
     this.sizes = this.experience.sizes;
     this.scene = this.experience.scene;
     this.canvas = this.experience.canvas;
-    this.camera = new Camera();
+    this.camera = this.experience.camera;
     this.setInstance();
   }
   setInstance() {
