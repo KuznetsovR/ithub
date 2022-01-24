@@ -5,10 +5,11 @@ export default class World {
   constructor() {
     this.experience = new Experience();
     this.scene = this.experience.scene;
-    this.scene.add(new THREE.Mesh({
-      geometry: new THREE.SphereGeometry(1, 15, 15),
-      material: new THREE.MeshBasicMaterial({ color: 0x6600ff, wireframe: true }),
-    }));
+    const geometry = new THREE.SphereGeometry(1, 15, 15);
+    const material = new THREE.MeshBasicMaterial({ color: 0x6600ff, wireframe: true });
+    const mesh = new THREE.Mesh(geometry, material);
+
+    this.scene.add(mesh);
     // this.resources = this.experience.resources
   }
 }
