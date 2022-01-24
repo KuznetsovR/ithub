@@ -4,6 +4,7 @@ import Camera from "./Camera";
 import Renderer from "./Renderer";
 import World from "./World/World";
 import Time from "./Utils/Time";
+import Debug from "./Utils/Debug";
 
 let instance = null;
 
@@ -14,6 +15,7 @@ export default class Experience {
     }
     instance = this;
     this.canvas = canvas
+    this.debug = new Debug()
     this.sizes = new Sizes()
     this.time = new Time()
     this.scene = new THREE.Scene()
