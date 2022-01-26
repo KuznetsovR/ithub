@@ -1,0 +1,15 @@
+button {
+  margin: 100px;
+  padding: 20px 40px;
+  border-radius: 0;
+  border: 0;
+}
+button::after {
+  content: '';
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -20px;
+  border-left: 15px solid #3b3d4b;
+  border-top: 27px solid transparent;
+  border-bottom: 28px solid transparent;
+}
