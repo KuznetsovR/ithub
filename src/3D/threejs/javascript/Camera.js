@@ -1,6 +1,6 @@
 import Experience from './Experience';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 export default class Camera {
   experience = new Experience();
@@ -10,7 +10,7 @@ export default class Camera {
 
   constructor() {
     this.setInstance();
-    this.setControls();
+    this.setControls()
   }
   setControls() {
     this.controls = new OrbitControls(this.instance, this.canvas);
@@ -25,7 +25,7 @@ export default class Camera {
     this.instance.aspect = this.sizes.width / this.sizes.height;
     this.instance.updateProjectionMatrix();
   }
-  update() {
-    this.controls.update();
+  update(){
+    this.controls.update()
   }
 }
