@@ -7,20 +7,11 @@ export const MainPage = () => {
   return (
     <main>
       <Header></Header>
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
-      <HexaButton />
+      <HexaButton onClick={}>123</HexaButton>
+      <HexaButton onClick={}>123</HexaButton>
+      <HexaButton onClick={}>123</HexaButton>
+      <HexaButton onClick={}>123</HexaButton>
+      <HexaButton onClick={}>123</HexaButton>
     </main>
   );
 };
