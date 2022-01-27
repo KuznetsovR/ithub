@@ -8,6 +8,19 @@ export const MainPage = () => {
     <main>
       <Header></Header>
       <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
+      <HexaButton />
     </main>
   );
 };
