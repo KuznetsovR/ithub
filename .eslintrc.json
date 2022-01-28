@@ -1,7 +1,7 @@
 //TODO: add more rules to eslint
 {
 	"root": true,
-	"parser": "babel-eslint",
+	"parser": "@babel/eslint-parser",
 	"extends": [
 		"eslint:recommended",
 		"prettier",

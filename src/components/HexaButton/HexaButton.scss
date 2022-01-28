@@ -1,0 +1,28 @@
+@use '../../styles/colors' as colors;
+.hexa {
+  margin: 0 15px;
+  padding: 15px 40px;
+  border-radius: 0;
+  border: 0;
+  background-color: colors.$main-pink;
+  color: #fff;
+  font-size: 20px;
+}
+button::after {
+  content: '';
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -15px;
+  border-left: 15px solid colors.$main-pink;
+  border-top: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
+  border-bottom: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
+}
+button::before {
+  content: '';
+  position: absolute;
+  margin-left: -55px;
+  margin-top: -15px;
+  border-right: 15px solid colors.$main-pink;
+  border-top: calc((15px * 2 + 20px + 3px) / 2) solid transparent; // 2 paddings, font size, idk what is 3
+  border-bottom: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
+}
