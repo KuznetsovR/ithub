@@ -6,12 +6,8 @@ import { Header } from '../../components/Header/Header';
 export const MainPage = () => {
   return (
     <main>
-      <Header></Header>
-      <HexaButton onClick={}>123</HexaButton>
-      <HexaButton onClick={}>123</HexaButton>
-      <HexaButton onClick={}>123</HexaButton>
-      <HexaButton onClick={}>123</HexaButton>
-      <HexaButton onClick={}>123</HexaButton>
+      <Header />
+      <HexaButton onClick={() => console.log(123)}>123</HexaButton>
     </main>
   );
 };
