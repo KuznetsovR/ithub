@@ -1,3 +1,47 @@
-.in{
-    display: block;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
 }
+header{
+    display: flex;
+    width: auto;
+    height: 120px;
+    background-color: #232020; 
+    color:white;
+}
+footer{
+    width: auto;
+   
+ }
+.logoheader{
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    padding-left: 70px;
+}
+.rectangle{
+ width: 800px;
+ height: 120px;
+ margin:auto;
+ background: #431452;
+ margin-right:0;
+}
+.rectangle2{
+    width: 345px;
+    height: 120px;
+    margin:auto;
+ 
+    margin-right:0; 
+}
+.navig{
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+    margin: 15px;
+}
+.martex{
+    margin-right: 30px ;
+}
+ 
