@@ -4,7 +4,7 @@ import './Header.scss';
 export const Header = () => {
   return (
       <header>
-         <img src="./img/itlogo.png" class="logoheader" alt="logo"> </img>
+         <img src="./img/itlogo.png" class="logoheader" alt="logoit"> </img>
       <div class="rectangle2"></div>
       
       <div class="rectangle">
