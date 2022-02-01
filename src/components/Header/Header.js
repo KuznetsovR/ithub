@@ -1,20 +1,22 @@
 import React from 'react';
 import './Header.scss';
+import logo from '../../images/IThublogo.png' 
 
 export const Header = () => {
   return (
       <header>
-         <img src="./img/itlogo.png" class="logoheader" alt="logoit"> </img>
-      <div class="rectangle2"></div>
-      
-      <div class="rectangle">
-        <div class="navig">
-        <a class="martex">Приёмная комиссия </a>
-        <a class="martex">Специальности</a>
-        <a class="">Курсы</a>
-        </div>
-        
+         <img src={logo} className="logoheader" alt="logoit"/>
+      <div className="rectangle2">
       </div>
+      <div className="rectangle">
+      <nav className="menu">
+  <ul>
+    <li><a href="#">Приёмная комиссия </a></li>
+    <li><a href="#">Специальности</a></li>
+    <li><a href="#">Курсы</a></li>
+  </ul>
+</nav>      
+         </div>
        </header>
   );
 };
