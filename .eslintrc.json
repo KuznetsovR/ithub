@@ -12,7 +12,8 @@
 	"rules": {
 		"jsx-quotes": ["error", "prefer-double"],
 		"comma-dangle": ["error", "always-multiline"],
-		"object-curly-spacing": ["error", "always"]
+		"object-curly-spacing": ["error", "always"],
+		"react/prop-types": "off"
 	},
 	"plugins": ["prettier"]
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './HexaButton.scss';
 
-export const HexaButton = () => {
+export const HexaButton = (props) => {
     return (
-        <button className={'hexa'}>12112323</button>
+        <button className={'hexa'} onClick={props.onClick}>{props.children}</button>
     );
 };

@@ -4,6 +4,7 @@ import logo from '../../images/IThublogo.png'
 
 export const Header = () => {
   return (
+
       <header>
          <img src={logo} className="logoheader" alt="logoit"/>
       <div className="rectangle2">
@@ -18,5 +19,6 @@ export const Header = () => {
 </nav>      
          </div>
        </header>
+
   );
 };

@@ -31,6 +31,9 @@ export default class Experience {
     this.time.on('tick', ( ) =>{
       this.update()
     })
+    this.resources.on('ready', () => {
+      this.canvas.classList.add('ready')
+    })
   }
   resize(){
     this.camera.resize()
