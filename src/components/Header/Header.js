@@ -3,6 +3,6 @@ import './Header.scss';
 
 export const Header = () => {
   return (
-      <header>SOme cod e in header </header>
+      <header>12321312123231e in header </header>
   );
 };
