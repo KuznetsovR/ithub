@@ -12,11 +12,12 @@ export default class Floor {
     this.geometry = new THREE.PlaneBufferGeometry(2, 2, 10, 10);
     this.resources = this.experience.resources;
 
+    // TODO: find better colors for the floor
     this.colors = {
-      topLeft: '#626161',
-      topRight: '#565656',
-      bottomRight: '#b8b5b0',
-      bottomLeft: '#8f8f8f',
+      topLeft: '#7f818d',
+      topRight: '#747780',
+      bottomRight: '#4c4d52',
+      bottomLeft: '#4c4f54',
     };
 
     this.material = new FloorMaterial();
