@@ -1,50 +1,78 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
+header {
+  display: flex;
+  height: 120px;
+  background-color: #232020;
+  color: white;
 }
-header{
+.logoheader {
+  height: 100px;
+  padding: 10px 10px 10px 70px;
+}
+.triangles-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 150px;
+}
+.triangle-row {
+  position: absolute;
+  display: flex;
+}
+.triangle {
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 60px solid;
+}
+.reversed{
+  .triangle{
+    border-top: 0;
+    border-bottom: 60px solid ;
+    &.start-color{
+      border-bottom-color: #373333;
+    }
+    &.color2{
+      border-bottom-color: #463849;
+    }
+    &.color3{
+      border-bottom-color: #2F0039;
+    }
+    &.color4{
+      border-bottom-color: #341040;
+    }
+  }
+}
+nav.menu {
+  width: 50%;
+  height: 120px;
+  background: #431452;
+  margin: auto 0 auto auto;
+  ul {
     display: flex;
-    height: 120px;
-    background-color: #232020; 
-    color:white;
-}
-.logoheader{
-    width: 150px;
-    height: 100px;
-    padding: 10px;
-    padding-left: 70px;
-}
-.rectangle{
- width: 70%;
- height: 120px;
- margin:auto;
- background: #431452;
- margin-right:0;
-}
-.rectangle2{
-    width: 30%;
-    height: 120px;
-    margin:auto;
-}
-ul {
+    justify-content: space-evenly;
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 0 50px;
     padding: 0;
-    
+    height: 100%;
+    align-items: center;
+    a {
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
 }
-li{
-    display: inline;
-    float: right;
+.start-color{
+  border-top-color: #373333;
 }
-a {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    padding: 30px;
-    text-decoration: none;
-    
+.color2{
+  border-top-color: #463849;
 }
- .menu{
-    margin-top: 40px;
- }
+.color3{
+  border-top-color: #2F0039;
+}
+.color4{
+  border-top-color: #341040;
+}
+
