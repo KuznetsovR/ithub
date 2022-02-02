@@ -9,4 +9,11 @@ body {
   height: 50px;
   display: flex;
   justify-content: center;
+  background-color: colors.$main-grey;
+}
+.number {
+  color: #4c49e3;
+}
+.help {
+  color: #9c9b9b;
 }
