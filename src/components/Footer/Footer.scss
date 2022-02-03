@@ -4,5 +4,58 @@ body{
     font-family: 'Inter', sans-serif;
 }
 footer{
- background-color: #252424;   
+    background-color: #252424; 
+    color: white;
+}
+.container{
+    max-width: 65vw;
+    display: flex; 
+    flex-direction: row; 
+    margin: 0 auto;
+}
+.textaddress{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 50px 10px 0;
+
+}
+.footertext{
+    display: flex;
+    flex-direction: column;   
+}
+.logofooter{
+    height: 100px;
+    padding: 15px 150px 5px 0;
+}
+.textcopyright{
+    color: #88898D;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 50px 15px 0px;
+}
+.textcontacts{
+    color:white;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 25px 40px 5px 40px;
+    text-align: center;
+
+}
+.textemail{
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 30px 40px 10px 40px;  
+    text-align: center;
+}
+.textphone{
+    padding-top: 10px;
+}
+
+.text3d{
+    color:white;
+    font-size: 30px;
+    padding: 85px 40px 10px 40px;  
+
 }
