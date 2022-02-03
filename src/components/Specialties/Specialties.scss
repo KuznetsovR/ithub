@@ -1,0 +1,140 @@
+@use '../../styles/colors' as colors;
+
+* {
+    background-color: #0E0E0E;
+    color: white;
+}
+
+#cont1 {
+  background-color: #191818;
+  width: 100%;
+  min-height: 500px;
+}
+
+.container {
+  max-width: 990px;
+  margin: auto;
+  height: 600px;
+}
+
+.specs {
+  display: flex;
+  flex-direction: row;
+}
+
+.specsText {
+  padding-bottom: 20px;
+  font-family: Readex Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: #fff;
+}
+
+/* Прямоугольник 1 */
+
+.rectangleP1 {
+  width: 235px;
+  height: 235px;
+  background: rgba(167, 29, 216, 0.5);
+  filter: blur(4px);
+}
+
+.picture1 {
+  width: 220px;
+  height: 220px;
+  background: url(./img/web-development.jpg);
+}
+
+.textOnPic1 {
+  width: 224px;
+  height: 26px;
+  background: rgba(167, 29, 216, 0.7);
+  filter: blur(4px);
+}
+
+.text1 {
+  width: 178px;
+  height: 17px;
+  font-family: Readex Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.rectangleP2 {
+  width: 220px;
+  height: 220px;
+  background: url(./img/sys_admin.jpg);
+  border: 10px solid #5b1573;
+}
+
+.text2 {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    border: 10px solid #5b1573;
+    background: #5b1573;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 72%;
+  }
+  
+
+/*
+.rectangleP2 {
+  width: 235px;
+  height: 235px;
+  background: rgba(167, 29, 216, 0.5);
+  filter: blur(4px);
+}
+
+.picture2 {
+  width: 220px;
+  height: 220px;
+  background: url(./img/coding.png);
+}
+
+.textOnPic2 {
+  width: 224px;
+  height: 26px;
+  background: rgba(167, 29, 216, 0.7);
+  filter: blur(4px);
+}
+
+
+
+.rectangleP3 {
+  width: 235px;
+  height: 235px;
+  background: rgba(167, 29, 216, 0.5);
+  filter: blur(4px);
+}
+
+.picture3 {
+  width: 220px;
+  height: 220px;
+  background: url(./img/sys_admin.jpg);
+}
+
+.textOnPic3 {
+  width: 224px;
+  height: 26px;
+  background: rgba(167, 29, 216, 0.7);
+  filter: blur(4px);
+}
+
+.text3 {
+  width: 178px;
+  height: 17px;
+  font-family: Readex Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+}
+*/
