@@ -7,10 +7,11 @@ footer{
     display: flex; 
     flex-direction: row; 
     margin: 0 auto;
+    justify-content: space-evenly;
 }
 .textaddress{
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     padding: 10px 50px 10px 0;
 
@@ -21,6 +22,7 @@ footer{
 }
 .logofooter{
     height: 100px;
+    width: 130px;
     padding: 15px 150px 5px 0;
 }
 .textcopyright{
@@ -31,7 +33,7 @@ footer{
 }
 .textcontacts{
     color:white;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
     padding: 25px 40px 5px 40px;
     text-align: center;
@@ -41,7 +43,7 @@ footer{
     color:white;
     font-size: 18px;
     text-decoration: none;
-    padding: 30px 40px 10px 40px;  
+    padding: 15px 40px 10px 40px;  
     text-align: center;
 }
 .textphone{
@@ -50,7 +52,9 @@ footer{
 
 .text3d{
     color:white;
-    font-size: 30px;
+    font-size: 25px;
     padding: 85px 40px 10px 40px;  
+    text-decoration: none;
+
 
 }
