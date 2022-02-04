@@ -1,11 +1,11 @@
 import EventEmitter from '../Utils/EventEmitter';
-import Experience from '../Experience';
+// import Experience from '../Experience';
 
 export default class Controls extends EventEmitter {
-  experience = new Experience();
-  camera = this.experience.camera;
-  time = this.experience.time;
-  sizes = this.experience.sizes;
+  // experience = new Experience();
+  // camera = this.experience.camera;
+  // time = this.experience.time;
+  // sizes = this.experience.sizes;
 
   constructor() {
     super();
