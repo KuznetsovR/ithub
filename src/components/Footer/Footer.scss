@@ -1,5 +1,6 @@
+@use '../../styles/colors' as colors;
 footer{
-    background-color:  colors.$main-graphite; 
+    background-color: colors.$main-graphite;
     color: white;
 }
 .container{
