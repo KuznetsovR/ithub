@@ -5,6 +5,7 @@ canvas{
   outline: none;
   opacity: 0;
   transition: 1s;
+  overflow: hidden;
 }
 .ready{
   opacity: 1;
