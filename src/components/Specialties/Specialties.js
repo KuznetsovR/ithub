@@ -3,17 +3,17 @@ import './Specialties.scss';
 
 export const Specialties = () => {
   return (
-    <div className="d-flex container" id="cont1">
-      <div className="specsText">Специальности:</div>
-      <div className="specs">
-        <div className="rectangleP1">
-          <div className="text1">Веб-Разработчик</div>
+    <div className="specialities-container">
+      <div className="specialities-heading-text">Специальности:</div>
+      <div className="all-specialities-rectangles">
+        <div className="specialities-rectangle rec-bg1">
+          <div className="rec-text-default rec-text-size1">Веб-Разработчик</div>
         </div>
-        <div className="rectangleP2">
-          <div className="text2">Программист</div>
+        <div className="specialities-rectangle rec-bg2">
+          <div className="rec-text-default rec-text-size1">Программист</div>
         </div>
-        <div className="rectangleP3">
-          <div className="text3">Системный админимтсратор</div>
+        <div className="specialities-rectangle rec-bg3">
+          <div className="rec-text-default rec-text-size2">Системный администратор</div>
         </div>
       </div>
     </div>

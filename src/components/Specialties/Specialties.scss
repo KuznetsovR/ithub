@@ -1,89 +1,58 @@
 @use '../../styles/colors' as colors;
 
-#cont1 {
+.specialities-container {
+  max-width: 990px;
+  margin: auto;
+  height: 350px;
   background-color: #191818;
   width: 100%;
   min-height: 350px;
 }
 
-.container {
-  max-width: 990px;
-  margin: auto;
-  height: 350px;
+.specialities-heading-text {
+  font-size: 40px;
+  color: #fff;
+  padding: 16px 0px;
+  margin-left: 67px;
 }
 
-.specs {
+.all-specialities-rectangles {
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-evenly;
+  width: 100%;
 }
 
-.specsText {
-    font-size: 40px;
-    color: #fff;
-    padding: 16px 0px;
-    margin-left: 67px;
-}
-
-/* Прямоугольник 1 */
-
-.rectangleP1 {
+.specialities-rectangle {
+  border: 10px solid #5b1573;
   width: 220px;
   height: 220px;
-  background: url(./img/web-development.jpg);
-  border: 10px solid #5b1573;
 }
 
-.text1 {
+.rec-bg1 {
+  background: url(./img/web_dev.png);
+  background-size: 100%;
+}
+
+.rec-bg2 {
+  background: url(./img/coder.png);
+  background-size: 100%;
+}
+
+.rec-bg3 {
+  background: url(./img/sys_adm.png);
+  background-size: 100%;
+}
+
+.rec-text-default {
   width: 100%;
-  font-size: 20px;
   line-height: 30px;
   color: #ffffff;
-  border: 5px solid #5b1573;
-  background: #5b1573;
   box-sizing: border-box;
   text-align: center;
-  margin-top: 72%;
-}
-
-/* Прямоугольник 2 */
-
-.rectangleP2 {
-  width: 220px;
-  height: 220px;
-  background: url(./img/coding.png);
-  border: 10px solid #5b1573;
-}
-
-.text2 {
-  width: 100%;
-  font-size: 20px;
-  line-height: 30px;
-  color: #ffffff;
-  border: 5px solid #5b1573;
   background: #5b1573;
-  box-sizing: border-box;
-  text-align: center;
   margin-top: 72%;
+  border: 7px solid #5b1573;
 }
-
-/* Прямоугольник 3 */
-.rectangleP3 {
-  width: 220px;
-  height: 220px;
-  background: url(./img/sys_admin.jpg);
-  border: 10px solid #5b1573;
-}
-
-.text3 {
-  width: 100%;
-  font-size: 20px;
-  line-height: 16px;
-  color: #ffffff;
-  border: 5px solid #5b1573;
-  background: #5b1573;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: 72%;
-}
+.rec-text-size1 {font-size: 20px;}
+.rec-text-size2 {font-size: 14px;}
