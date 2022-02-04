@@ -1,6 +1,7 @@
 import React from 'react';
 import './MainPage.scss';
 import { Header } from '../../components/Header/Header';
+import { Footer } from '../../components/Footer/Footer';
 import { Phone } from '../../components/Phone/Phone';
 import Slider from 'react-slick';
 import { SpecialityModal } from '../../components/SpecialityModal/SpecialityModal';
@@ -20,6 +21,7 @@ export const MainPage = () => {
   return (
     <main>
       <Header />
+
       <Phone />
 
       <SpecialityModal>
@@ -54,6 +56,8 @@ export const MainPage = () => {
           </div>
         </Slider>
       </div>
+      <Footer />
+
     </main>
   );
 };
