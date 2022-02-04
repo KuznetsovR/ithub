@@ -60,6 +60,8 @@ export default class Controls extends EventEmitter {
             case ' ':
               this.actions.brake = true;
               break;
+            default:
+              break
           }
         },
 
@@ -90,6 +92,8 @@ export default class Controls extends EventEmitter {
             case ' ':
               this.actions.brake = false;
               break;
+            default:
+              break
           }
         },
       },
