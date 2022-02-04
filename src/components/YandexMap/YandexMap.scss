@@ -1,9 +1,5 @@
 @use '../../styles/colors' as colors;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300&display=swap');
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-}
+
 .map {
   max-width: 900px;
   max-height: 900px;
@@ -11,12 +7,13 @@ body {
   height: 100%;
 }
 .box-address {
-  padding: 40px;
+  padding: 40px 40px 40px 40px;
   height: 500px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   background-color: #1e1d1d;
-  gap: 80px;
+  gap: 100px;
+  // place-items: center;
 }
 .card-address {
   background-color: #1a1a1a;
