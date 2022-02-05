@@ -6,6 +6,8 @@ export const Documents = () => {
   return (
           <div className="documents">
           <div className="container">
+          Сведения об образовательной организации
+
 
           </div>
           </div>

@@ -57,6 +57,7 @@ export const MainPage = () => {
           </div>
         </Slider>
       </div>
+      <Documents />
       <Footer />
     </main>
   );
