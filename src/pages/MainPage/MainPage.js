@@ -5,6 +5,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Phone } from '../../components/Phone/Phone';
 import Slider from 'react-slick';
 import { SpecialityModal } from '../../components/SpecialityModal/SpecialityModal';
+import { Documents } from '../../components/Documents/Documents.JS';
 
 export const MainPage = () => {
   const settings = {
@@ -57,7 +58,6 @@ export const MainPage = () => {
         </Slider>
       </div>
       <Footer />
-
     </main>
   );
 };

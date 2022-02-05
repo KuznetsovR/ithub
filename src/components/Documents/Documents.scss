@@ -1,0 +1,12 @@
+@use '../../styles/colors' as colors;
+.documents{
+    background-color: colors.$main-ink;
+}
+.container{
+    max-width: 900px;
+    display: flex; 
+    flex-direction: row; 
+    margin: 0 auto;
+    justify-content: space-evenly;
+    background-color: colors.$main-graphite;
+}
