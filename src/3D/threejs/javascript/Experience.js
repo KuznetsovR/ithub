@@ -7,6 +7,9 @@ import Time from "./Utils/Time";
 import Debug from "./Utils/Debug";
 import sources from "./sources";
 import Resources from "./Utils/Resources";
+import Controls from './World/Controls';
+import MainHero from './World/MainHero';
+import Physics from './World/Physics';
 
 let instance = null;
 
@@ -25,6 +28,14 @@ export default class Experience {
     this.camera = new Camera()
     this.renderer = new Renderer()
     this.world = new World()
+    this.controls = new Controls()
+    this.physics = new Physics()
+
+    this.mainHero = new MainHero()
+
+
+
+
     this.sizes.on('resize', ()=>{
       this.resize()
     })

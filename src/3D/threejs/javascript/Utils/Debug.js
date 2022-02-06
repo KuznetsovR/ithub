@@ -7,4 +7,7 @@ export default class Debug{
             this.ui = new lil.GUI()
         }
     }
+    addFolder(name){
+        return this.ui.addFolder(name)
+    }
 }
