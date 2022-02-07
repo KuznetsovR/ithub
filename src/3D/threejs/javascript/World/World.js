@@ -10,6 +10,9 @@ export default class World {
     this.resources.on('ready', ()=>{
       this.map = new Map();
       this.setFloor();
+      const skate = this.resources.items.SkateModel.scenes[0];
+      skate.position.y = 4
+      this.scene.add(skate)
     })
   }
   setFloor() {
