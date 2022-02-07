@@ -8,7 +8,7 @@ export default class Physics {
   debug = this.experience.debug;
 
   constructor() {
-    if (this.debug) {
+    if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('physics');
     }
 
@@ -26,7 +26,7 @@ export default class Physics {
     this.world.defaultContactMaterial.friction = 0;
     this.world.defaultContactMaterial.restitution = 0.2;
 
-    if (this.debug) {
+    if (this.debug.active) {
       this.debugFolder.add(this.world.gravity, 'z').step(0.001).min(-20).max(20).name('gravity');
     }
   }
@@ -39,7 +39,7 @@ export default class Physics {
     this.models.materials.dynamic = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
     this.models.materials.dynamicSleeping = new THREE.MeshBasicMaterial({ color: 0xffff00, wireframe: true });
 
-    if(this.debug)
+    if(this.debug.active)
     {
       this.debugFolder.add(this.models.container, 'visible').name('modelsVisible')
     }
