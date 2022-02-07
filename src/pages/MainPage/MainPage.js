@@ -20,15 +20,15 @@ export const MainPage = () => {
     arrows: false,
   };
   return (
-    <main>
+    <>
       <Header />
+      <main>
+        <Phone />
 
-      <Phone />
-
-      <div className="container">
-        <SpecialityModal>
-          <div>asdjkfnoewiuipdinowevbieghejpfmwvni</div>
-        </SpecialityModal>
+        <div className="container">
+          <SpecialityModal>
+            <div>asdjkfnoewiuipdinowevbieghejpfmwvni</div>
+          </SpecialityModal>
 
           <div className="slider-wrapper">
             <Slider {...settings}>
@@ -58,9 +58,10 @@ export const MainPage = () => {
               </div>
             </Slider>
           </div>
-        <YandexMap />
-        <Footer />
-      </div>
-    </main>
+          <YandexMap />
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 };
