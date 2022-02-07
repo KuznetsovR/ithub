@@ -5,7 +5,10 @@ import { Footer } from '../../components/Footer/Footer';
 import { Phone } from '../../components/Phone/Phone';
 import Slider from 'react-slick';
 import { SpecialityModal } from '../../components/SpecialityModal/SpecialityModal';
+
 import { Documents } from '../../components/Documents/Documents';
+
+import { YandexMap } from '../../components/YandexMap/YandexMap';
 
 export const MainPage = () => {
   const settings = {
@@ -60,7 +63,9 @@ export const MainPage = () => {
             </div>
             < Documents />
           </div>
+          < YandexMap />
         </main>
+
         <Footer />
       </>
     );

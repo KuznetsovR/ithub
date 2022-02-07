@@ -5,7 +5,7 @@ import logo from '../../assets/images/IThublogo.png';
 export const Footer = () => {
   return (
     <footer>
-      <div className="container">
+      <div className="footer-container">
         <div className="footertext">
           <img src={logo} className="logofooter" alt="logoit" />
           <a href="" className="textaddress">
