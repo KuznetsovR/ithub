@@ -25,41 +25,42 @@ export const MainPage = () => {
 
       <Phone />
 
-      <SpecialityModal>
-        <div>asdjkfnoewiuipdinowevbieghejpfmwvni</div>
-      </SpecialityModal>
+      <div className="container">
+        <SpecialityModal>
+          <div>asdjkfnoewiuipdinowevbieghejpfmwvni</div>
+        </SpecialityModal>
 
-      <div className="slider-wrapper">
-        <Slider {...settings}>
-          <div className={'slide'}>
-            <img
-              className={'slide-img'}
-              src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
-              alt=""
-            />
-            <div className="description">some text</div>
+          <div className="slider-wrapper">
+            <Slider {...settings}>
+              <div className={'slide'}>
+                <img
+                  className={'slide-img'}
+                  src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
+                  alt=""
+                />
+                <div className="description">some text</div>
+              </div>
+              <div className={'slide'}>
+                <img
+                  className={'slide-img'}
+                  src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
+                  alt=""
+                />
+                <div className="description">some text</div>
+              </div>
+              <div className={'slide'}>
+                <img
+                  className={'slide-img'}
+                  src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
+                  alt=""
+                />
+                <div className="description">some text</div>
+              </div>
+            </Slider>
           </div>
-          <div className={'slide'}>
-            <img
-              className={'slide-img'}
-              src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
-              alt=""
-            />
-            <div className="description">some text</div>
-          </div>
-          <div className={'slide'}>
-            <img
-              className={'slide-img'}
-              src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
-              alt=""
-            />
-            <div className="description">some text</div>
-          </div>
-        </Slider>
+        <YandexMap />
+        <Footer />
       </div>
-      <YandexMap />
-      <Footer />
-
     </main>
   );
 };
