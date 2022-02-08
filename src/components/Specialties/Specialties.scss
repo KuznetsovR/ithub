@@ -46,17 +46,16 @@
 
 .rec-text-default {
   width: 100%;
-  line-height: 30px;
   color: #ffffff;
   box-sizing: border-box;
   text-align: center;
   background: #5b1573;
-  margin-top: 72%;
   border: 7px solid #5b1573;
-}
-.rec-text-size1 {
   font-size: 20px;
 }
+.rec-text-size1 {
+  margin-top: 72%;
+}
 .rec-text-size2 {
-  font-size: 14px;
+  margin-top: 65%;
 }
