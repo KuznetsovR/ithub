@@ -30,6 +30,8 @@ export default class Materials {
     this.pures.items.yellow.name = 'pureYellow';
   }
 
+  // if we need matcaps, we can add them here
+
   setFloorShadow() {
     this.items.floorShadow = new FloorShadowMaterial();
     this.items.floorShadow.depthWrite = false;
