@@ -5,7 +5,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Phone } from '../../components/Phone/Phone';
 import Slider from 'react-slick';
 import { SpecialityModal } from '../../components/SpecialityModal/SpecialityModal';
-
+import { Reviews } from '../../components/Reviews/Reviews';
 import { Documents } from '../../components/Documents/Documents';
 
 import { YandexMap } from '../../components/YandexMap/YandexMap';
@@ -61,9 +61,10 @@ export const MainPage = () => {
                 </div>
               </Slider>
             </div>
+            < Reviews />
             < Documents />
           </div>
-          < YandexMap />
+         < YandexMap />
         </main>
 
         <Footer />

@@ -1,0 +1,44 @@
+@use '../../styles/colors' as colors;
+.reviews-container {
+  max-width: 990px;
+  margin: auto;
+  height: 450px;
+  background-color: #1e1d1d;
+  min-height: 350px;
+}
+
+.reviews-heading-text {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 30px;
+  margin-left: 30px;
+}
+
+.all-reviews-rectangles {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 40px 40px 40px 40px;;
+  
+
+}
+
+.reviews-rectangle {
+  border: 5px solid #5b1573;
+  width: 235px;
+  height: 235px;
+  box-shadow: 0 0 5px #a71dd8;
+}
+
+.rec-bg1 {
+  background-size: 100%;
+}
+.reviews-text {
+  color: #A71DD8;
+  padding-left: 40px;
+  font-size: 30px;
+}
+.reviews-text-2{
+    color:#fff;
+    font-size: 20px;
+}
