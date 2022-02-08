@@ -18,13 +18,22 @@ export const OpenDay = () => {
   return (
     <div className="open-day-component">
       <div className="open-day">
-        <h2>День открытых дверей</h2>
-        <div className="open-day-desc">Приглашаем абитуриентов и их родителей посетить наш колледж</div>
-        <div className="open-day-date">Состоится 6 июля</div>
-        <HexaButton>Записаться</HexaButton>
+        <h3>День открытых дверей</h3>
+        <div className="open-day-content-wrapper">
+          <div className="open-day-desc">
+            Приглашаем <span className="open-day-focus"> абитуриентов </span> и их
+            <span className="open-day-focus"> родителей</span> посетить наш колледж
+          </div>
+          <div className="open-day-date">
+            Состоится<span className="open-day-focus"> 6 июля</span>
+          </div>
+          <div className="invite-btn-wrapper">
+            <HexaButton>Записаться</HexaButton>
+          </div>
+        </div>
       </div>
       <div className="schools-events">
-        <h2>Выезд представителей в школы</h2>
+        <h3>Выезд представителей в школы</h3>
         <div className="slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
@@ -41,7 +50,11 @@ export const OpenDay = () => {
             </div>
             <div className={'slide'}>
               <div className="img-container">
-                <img className={'slide-img'} src="https://www.studylab.ru/upload/Institutions/image/big/28bdde35702ffcfbdcc4f9138a29be10.jpg" alt="" />
+                <img
+                  className={'slide-img'}
+                  src="https://www.studylab.ru/upload/Institutions/image/big/28bdde35702ffcfbdcc4f9138a29be10.jpg"
+                  alt=""
+                />
               </div>
               <div className="event-description">05.04.2022</div>
             </div>

@@ -1,8 +1,10 @@
+@use '../../styles/colors' as colors;
+
 .open-day-component{
   display: flex;
   color: #ffffff;
   font-size: 1.3rem;
-  h2{
+  h3{
     text-align: center;
   }
 }
@@ -20,14 +22,20 @@
 .slider-wrapper {
   max-width: 460px;
   margin: auto;
-
+}
+.open-day-content-wrapper{
+  display: flex;
+  flex-direction: column;
 }
 .img-container{
-  height: 280px;        // this height is height of a most tall image
+  height: 230px;        // this height is height of a most tall image
   display: grid;
   align-items: center;
   margin: 0 10px;
   cursor: pointer;
+}
+.open-day-focus{
+  color: colors.$main-dark-pink;
 }
 .event-description{
   text-align: end;
@@ -40,4 +48,11 @@
 }
 .slick-dots{
   bottom: -20px;
+}
+.open-day-desc{
+  margin-top: 50px;
+  line-height: 2rem;
+}
+.open-day-date{
+  margin-top: 50px;
 }
