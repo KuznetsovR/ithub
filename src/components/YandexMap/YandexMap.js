@@ -18,7 +18,7 @@ export const YandexMap = () => {
         className="map"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac855dd8516036f82412a7ec183dcfa5867790ca2bb9d522ef0387b9ebcb90fd0&amp;source=constructor"
         frameBorder="0"
-      ></iframe>
+      />
     </div>
   );
 };
