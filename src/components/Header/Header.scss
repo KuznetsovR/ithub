@@ -12,8 +12,8 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
   width: 150px;
+  margin-left: -75px;
 }
 .triangle-row {
   position: absolute;
@@ -44,6 +44,8 @@ header {
 }
 nav.menu {
   width: 50%;
+  min-width: 620px;
+  position: relative;
   height: 120px;
   background: #431452;
   margin: auto 0 auto auto;

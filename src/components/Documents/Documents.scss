@@ -1,0 +1,29 @@
+@use '../../styles/colors' as colors;
+.container-document {
+  max-width: 900px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-color: colors.$main-graphite;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+}
+.text-conditions {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 60px 40px 40px;
+}
+.text-title {
+  color: #fff;
+  font-size: 30px;
+  padding: 40px 40px 0 40px;
+}
+.document-photo {
+  padding-left: 40px;
+}
