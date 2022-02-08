@@ -17,7 +17,7 @@ export const MainPage = () => {
         <div className="container">
             <OpenDay />
             <Specialties />
-            < Documents />
+            <nDocuments />
             <YandexMap />
         </div>
       </main>
