@@ -10,6 +10,7 @@ import Resources from "./Utils/Resources";
 import Controls from './World/Controls';
 import MainHero from './World/MainHero';
 import Physics from './World/Physics';
+import Materials from './World/Materials';
 
 let instance = null;
 
@@ -27,6 +28,7 @@ export default class Experience {
     this.resources = new Resources(sources)
     this.camera = new Camera()
     this.renderer = new Renderer()
+    this.materials = new Materials()
     this.world = new World()
     this.controls = new Controls()
     this.physics = new Physics()
