@@ -15,7 +15,6 @@ export default class Map {
     const light = new THREE.AmbientLight( 0x404040 ); // soft white light
     this.scene.add( light );
     this.model = this.resource.scene;
-    console.log(this.model)
     this.scene.add(this.model);
   }
 }
