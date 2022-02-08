@@ -1,0 +1,83 @@
+@use '../../styles/colors' as colors;
+
+.it-hub {
+  width: 325px;
+  height: 333px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-admissions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191818;
+  padding: 30px 60px;
+}
+.it-hub-square-1 {
+  position: absolute;
+  z-index: 1;
+  width: 220px;
+  height: 220px;
+  background-color: rgba(167, 29, 216, 0.1);
+  transform: rotate(50deg);
+}
+.admissions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151212;
+  width: 402px;
+  height: 333px;
+}
+.it-hub-square-2 {
+  position: absolute;
+  z-index: 2;
+  width: 250px;
+  height: 220px;
+  background-color: rgba(167, 29, 216, 0.08);
+  transform: rotate(10deg);
+}
+.admission-square-1 {
+  position: absolute;
+  z-index: 3;
+  width: 220px;
+  height: 220px;
+  background-color: rgba(167, 29, 216, 0.2);
+  transform: rotate(50deg);
+}
+.admission-square-2 {
+  position: absolute;
+  z-index: 4;
+  width: 220px;
+  height: 220px;
+  background-color: rgba(167, 29, 216, 0.08);
+  transform: rotate(50deg);
+  margin-left: 80px;
+}
+.admission-square-3 {
+  position: absolute;
+  z-index: 4;
+  width: 220px;
+  height: 220px;
+  background-color: rgba(167, 29, 216, 0.08);
+  transform: rotate(50deg);
+  margin-right: 80px;
+}
+.title-admissions {
+  z-index: 5;
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+}
+.title-year-admissions {
+  color: #ffffff;
+  font-size: 50px;
+}
+.it-hub-logo {
+  z-index: 5;
+  height: 157px;
+  width: 210px;
+  margin-left: 10px;
+}

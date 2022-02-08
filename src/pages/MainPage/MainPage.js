@@ -6,6 +6,7 @@ import { Phone } from '../../components/Phone/Phone';
 import Slider from 'react-slick';
 import { SpecialityModal } from '../../components/SpecialityModal/SpecialityModal';
 import { YandexMap } from '../../components/YandexMap/YandexMap';
+import { Admissions } from '../../components/Admissions/Admissions';
 
 export const MainPage = () => {
   const settings = {
@@ -24,6 +25,8 @@ export const MainPage = () => {
       <Header />
 
       <Phone />
+
+      <Admissions />
 
       <SpecialityModal>
         <div>asdjkfnoewiuipdinowevbieghejpfmwvni</div>
@@ -59,7 +62,6 @@ export const MainPage = () => {
       </div>
       <YandexMap />
       <Footer />
-
     </main>
   );
 };
