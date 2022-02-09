@@ -19,7 +19,7 @@ export const OpenDay = () => {
     <div className="open-day-component">
       <div className="open-day">
         <div className="open-day-content-wrapper">
-        <h3>День открытых дверей</h3>
+          <h3>День открытых дверей</h3>
           <div className="open-day-desc">
             Приглашаем <span className="open-day-focus"> абитуриентов </span> и их
             <span className="open-day-focus"> родителей</span> посетить наш колледж

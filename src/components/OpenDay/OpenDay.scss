@@ -10,11 +10,14 @@
   }
 }
 .open-day {
-  padding: 0 30px;
+  padding: 40px 30px;
   width: calc(40% - 30px);
+  background: colors.$dark-gray;
 }
 .schools-events {
+  padding: 40px 0;
   width: 60%;
+  background: colors.$lighter-dark-gray;
 }
 .slide-img {
   max-height: 100%;
