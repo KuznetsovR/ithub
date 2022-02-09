@@ -18,36 +18,50 @@ export default class World {
     }
     instance = this;
 
-
     this.experience = new Experience();
-    this.debug = this.experience.debug
-    this.sizes = this.experience.sizes
-    this.time = this.experience.time
-    this.resources = this.experience.resources
-    this.camera = this.experience.camera
-    this.renderer = this.experience.renderer
-
-    this.shadows = new Shadows();
-    this.materials = new Materials();
-    this.controls = new Controls();
-    this.physics = new Physics();
-
-    this.objects = new Objects();
+    this.debug = this.experience.debug;
+    this.sizes = this.experience.sizes;
+    this.time = this.experience.time;
+    this.resources = this.experience.resources;
+    this.camera = this.experience.camera;
+    this.renderer = this.experience.renderer;
 
     this.container = new THREE.Object3D();
     this.container.matrixAutoUpdate = false;
 
+    this.controls = new Controls();
+    this.setFloor();
+
     this.resources.on('ready', () => {
-      this.map = new Map();
       this.createWorld();
-      this.mainHero = new MainHero();
+      this.map = new Map()
+      this.container.add(this.map.container)
     });
   }
   createWorld() {
+    this.setMaterials();
     this.setShadows();
-    this.setFloor();
+    this.setPhysics();
+    this.setObjects();
+    this.setMainHero();
+  }
+  setObjects() {
+    this.objects = new Objects();
+    this.container.add(this.objects.container)
+  }
+  setMaterials() {
+    this.materials = new Materials();
+  }
+  setPhysics() {
+    this.physics = new Physics();
+    this.container.add(this.physics.models.container);
+  }
+  setMainHero() {
+    this.mainHero = new MainHero();
+    this.container.add(this.mainHero.container);
   }
   setShadows() {
+    this.shadows = new Shadows();
     this.container.add(this.shadows.container);
   }
   setFloor() {
