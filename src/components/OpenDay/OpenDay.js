@@ -34,7 +34,7 @@ export const OpenDay = () => {
       </div>
       <div className="schools-events">
         <h3>Выезд представителей в школы</h3>
-        <div className="slider-wrapper">
+        <div className="open-day-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="img-container">
