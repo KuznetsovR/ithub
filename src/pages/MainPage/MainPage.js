@@ -12,6 +12,7 @@ import { Specialties } from '../../components/Specialties/Specialties';
 
 import { Documents } from '../../components/Documents/Documents';
 import { YandexMap } from '../../components/YandexMap/YandexMap';
+import { Admissions } from '../../components/Admissions/Admissions';
 import { OpenDay } from '../../components/OpenDay/OpenDay';
 
 export const MainPage = () => {
@@ -82,10 +83,11 @@ export const MainPage = () => {
       <main>
         <Phone />
         <div className="container">
-            <OpenDay />
-            <Specialties />
-            <nDocuments />
-            <YandexMap />
+          <Admissions />
+          <OpenDay />
+          <Specialties />
+          <nDocuments />
+          <YandexMap />
         </div>
       </main>
       <Footer />

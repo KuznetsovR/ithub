@@ -1,0 +1,65 @@
+@use '../../styles/colors' as colors;
+
+.it-hub {
+  width: 325px;
+  height: 333px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-admissions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191818;
+  padding: 30px 60px;
+}
+.it-hub-square-1 {
+  background-color: colors.$main-purple;
+}
+.admissions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151212;
+  width: 402px;
+  height: 333px;
+}
+.admission-square-1 {
+  background-color: colors.$main-purple;
+}
+.admission-square-2 {
+  background-color: colors.$main-purple;
+  margin-left: 80px;
+}
+.admission-square-3 {
+  background-color: colors.$main-purple;
+  margin-right: 80px;
+}
+.title-admissions {
+  z-index: 5;
+  text-align: center;
+  color: colors.$main-white;
+  font-size: 25px;
+}
+.title-year-admissions {
+  color: colors.$main-white;
+  font-size: 50px;
+}
+.it-hub-logo {
+  z-index: 5;
+  height: 157px;
+  width: 210px;
+  margin-left: 10px;
+}
+.admissions-square {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  transform: rotate(50deg);
+}
+.it-hub-square-2 {
+  background-color: colors.$main-purple;
+  transform: rotate(10deg);
+}
