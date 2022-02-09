@@ -3,7 +3,7 @@ import './Specialties.scss';
 
 export const Specialties = () => {
   return (
-    <div className="specialities-container">
+    <div className="specialities-container" id={'specialities'}>
       <div className="specialities-heading-text">Специальности:</div>
       <div className="all-specialities-rectangles">
         <div className="specialities-rectangle rec-bg1">

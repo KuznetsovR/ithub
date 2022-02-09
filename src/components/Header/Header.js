@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.scss';
 import logo from '../../assets/images/IThublogo.png';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export const Header = () => {
   return (
@@ -27,13 +29,13 @@ export const Header = () => {
           </div>
           <ul>
             <li>
-              <a href="#">Приёмная комиссия </a>
+              <Link to="/commission">Приёмная комиссия </Link>
             </li>
             <li>
-              <a href="#">Специальности</a>
+              <HashLink smooth to="#specialities">Специальности</HashLink>
             </li>
             <li>
-              <a href="#">Курсы</a>
+              <Link to="/courses">Курсы</Link>
             </li>
           </ul>
         </nav>
