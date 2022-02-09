@@ -1,0 +1,61 @@
+@use '../../styles/colors' as colors;
+
+.specialities-container {
+  max-width: 990px;
+  margin: auto;
+  height: 350px;
+  background-color: #191818;
+  width: 100%;
+  min-height: 350px;
+}
+
+.specialities-heading-text {
+  font-size: 40px;
+  color: #fff;
+  padding: 16px 0px;
+  margin-left: 67px;
+}
+
+.all-specialities-rectangles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.specialities-rectangle {
+  border: 10px solid #5b1573;
+  width: 220px;
+  height: 220px;
+}
+
+.rec-bg1 {
+  background: url(./img/web_dev.png);
+  background-size: 100%;
+}
+
+.rec-bg2 {
+  background: url(./img/coder.png);
+  background-size: 100%;
+}
+
+.rec-bg3 {
+  background: url(./img/sys_adm.png);
+  background-size: 100%;
+}
+
+.rec-text-default {
+  width: 100%;
+  color: #ffffff;
+  box-sizing: border-box;
+  text-align: center;
+  background: #5b1573;
+  border: 7px solid #5b1573;
+  font-size: 20px;
+}
+.rec-text-size1 {
+  margin-top: 72%;
+}
+.rec-text-size2 {
+  margin-top: 65%;
+}

@@ -5,29 +5,29 @@ import logo from '../../assets/images/IThublogo.png';
 export const Footer = () => {
   return (
     <footer>
-      <div className="container">
-        <div className="footertext">
+      <div className="footer-container">
+        <div className="footer-text">
           <img src={logo} className="logofooter" alt="logoit" />
-          <a href="" className="textaddress">
+          <a href="" className="text-address">
             Екатеринбург, Чкалова 3
           </a>
-          <a href="" className="textcopyright">
+          <a href="" className="text-copyright">
             © Copyright 2021 ITHub Ekat college
           </a>
         </div>
-        <div className="footertext">
-          <a href="" className="text3d">
+        <div className="footer-text">
+          <a href="" className="text-3d">
             ITJourney 3D
           </a>
         </div>
-        <div className="footertext">
-          <a href="" className="textcontacts">
+        <div className="foote-rtext">
+          <a href="" className="text-contacts">
             Контакты
           </a>
-          <a href="" className="textemail">
+          <a href="" className="text-email">
             &#9993; priem.ekat@ithub.ru
           </a>
-          <a href="" className="textemail textphone">
+          <a href="" className="text-email text-phone">
             &#9742; +7 (343) 286 78 59
           </a>
         </div>

@@ -1,33 +1,26 @@
 @use '../../styles/colors' as colors;
 
 .map {
-  max-width: 900px;
-  max-height: 900px;
   width: 100%;
   height: 100%;
+  min-height: 400px;
+  margin-top: 40px;
 }
 .box-address {
   padding: 40px 40px 40px 40px;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  background-color: #1e1d1d;
-  gap: 100px;
-  place-items: center;
 }
 .card-address {
   background-color: #1a1a1a;
   padding: 0 20px 0 20px;
   border: 5px solid colors.$main-dark-pink;
   box-shadow: 0 0 5px colors.$main-dark-pink;
-  max-width: 900px;
+  width: fit-content;
 }
 .h-address {
-  font-size: 45px;
+  font-size: 2rem;
   color: #fff;
-  margin-bottom: 60px;
 }
 .p-address {
   color: #fff;
-  font-size: 36px;
+  font-size: 1.5rem;
 }

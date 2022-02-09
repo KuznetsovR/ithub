@@ -1,9 +1,9 @@
 @use '../../styles/colors' as colors;
 footer{
-    background-color: colors.$main-graphite;
     color: white;
 }
-.container{
+.footer-container{
+    background-color: colors.$main-graphite;
     max-width: 900px;
     display: flex; 
     flex-direction: row; 
@@ -28,34 +28,31 @@ footer{
 }
 .textcopyright{
     color: #88898D;
-    font-size: 15px;
+    font-size: 10px;
     text-decoration: none;
-    padding: 5px 50px 15px 0px;
+    padding: 5px 50px 15px 0;
 }
-.textcontacts{
+.text-contacts{
     color:white;
     font-size: 25px;
     text-decoration: none;
     padding: 25px 40px 5px 40px;
     text-align: center;
-
 }
-.textemail{
+.text-email{
     color:white;
     font-size: 18px;
     text-decoration: none;
     padding: 15px 40px 10px 40px;  
     text-align: center;
 }
-.textphone{
+.text-phone{
     padding-top: 10px;
 }
 
-.text3d{
+.text-3d{
     color:white;
     font-size: 25px;
     padding: 85px 40px 10px 40px;  
     text-decoration: none;
-
-
 }
