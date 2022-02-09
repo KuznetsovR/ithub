@@ -14,7 +14,7 @@ export default class Shadows {
   distancePower = 2;
   zFightingDistance = 0.001;
   color = '#45464a';
-  wireframeVisible = false;
+  wireframeVisible = true;
   items = [];
 
   constructor() {
@@ -25,7 +25,6 @@ export default class Shadows {
     // Debug
     if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('shadows');
-      // this.debugFolder.open()
 
       this.debugFolder.add(this, 'alpha').step(0.01).min(0).max(1);
       this.debugFolder.add(this, 'maxDistance').step(0.01).min(0).max(10);
@@ -86,7 +85,6 @@ export default class Shadows {
     // Debug
     if (this.debug.active) {
       const folder = this.debugFolder.addFolder('sun');
-      folder.open();
 
       folder.add(this.sun.position, 'x').step(0.01).min(-10).max(10).name('sunX').onChange(this.sun.update);
       folder.add(this.sun.position, 'y').step(0.01).min(-10).max(10).name('sunY').onChange(this.sun.update);

@@ -10,7 +10,6 @@ export default class Materials {
   constructor() {
     if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('materials');
-      this.debugFolder.open();
     }
 
     this.items = {};
@@ -60,7 +59,6 @@ export default class Materials {
     // Debug
     if (this.debug.active) {
       const folder = this.debugFolder.addFolder('floorShadow');
-      folder.open();
 
       folder.addColor(this.items.floorShadow, 'shadowColor').onChange(this.items.floorShadow.updateMaterials);
     }
