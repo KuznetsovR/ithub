@@ -9,14 +9,19 @@ export default class Camera {
   canvas = this.experience.canvas;
   debug = this.experience.debug;
   time = this.experience.time;
+
   constructor() {
     this.target = new THREE.Vector3(0, 0, 0)
     this.targetEased = new THREE.Vector3(0, 0, 0)
     this.easing = 0.15
 
+    this.setAngle()
     this.setInstance();
     this.setControls();
     this.setPan();
+  }
+  setAngle(){
+    this.angle = new THREE.Vector3(1.135, - 1.45, 1.15)
   }
   setControls() {
     this.controls = new OrbitControls(this.instance, this.canvas);
@@ -24,7 +29,6 @@ export default class Camera {
   }
   setInstance() {
     this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 100);
-    this.angle = new THREE.Vector3(6, 4, 8);
     this.instance.position.copy(this.angle);
     this.scene.add(this.instance);
 
