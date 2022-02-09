@@ -16,10 +16,14 @@
   color: #fff;
   margin: 0 30px;
 }
+.document-photo {
+  max-height: 100%;
+  max-width: 100%;
+}
 .documents-slider-wrapper{
-  max-width: 200px;
+  width: 200px;
   margin: auto;
   .slick-dots {
-    bottom: -20px;
+    bottom: -25px;
   }
 }
