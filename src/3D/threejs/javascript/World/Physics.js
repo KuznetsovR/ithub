@@ -3,10 +3,10 @@ import * as THREE from 'three';
 import World from './World';
 
 export default class Physics {
-  world = new World();
-  time = this.world.time;
-  controls = this.world.controls;
-  debug = this.world.debug;
+  threeWorld = new World();
+  time = this.threeWorld.time;
+  controls = this.threeWorld.controls;
+  debug = this.threeWorld.debug;
 
   constructor() {
     if (this.debug.active) {
@@ -38,7 +38,7 @@ export default class Physics {
   setModels() {
     this.models = {};
     this.models.container = new THREE.Object3D();
-    this.models.container.visible = false;
+    this.models.container.visible = true;
     this.models.materials = {};
     this.models.materials.static = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: true });
     this.models.materials.dynamic = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
@@ -108,13 +108,13 @@ export default class Physics {
       width: 1.01,
       height: 2.3,
       depth: 2.02,
-      offset: new CANNON.Vec3(0, 0, 0.41),
+      offset: new CANNON.Vec3(0, 0, 0.5),
       mass: 20,
       wheelFrontOffsetDepth: 0.635,
       wheelBackOffsetDepth: -0.475,
-      wheelOffsetWidth: 0.39,
-      wheelRadius: 0.25,
-      wheelHeight: 0.3,
+      wheelOffsetWidth: 0.2,
+      wheelRadius: 0.1,
+      wheelHeight: 0.1,
       wheelSuspensionStiffness: 25,
       wheelSuspensionRestLength: 0.1,
       wheelFrictionSlip: 5,
@@ -130,7 +130,7 @@ export default class Physics {
       controlsSteeringQuad: false,
       controlsAcceleratingMaxSpeed: 0.055,
       controlsAcceleratingSpeed: 2,
-      controlsAcceleratingQuad: true,
+      controlsAcceleratingQuad: false,
       controlsBrakeStrength: 0.45,
     };
 
@@ -152,7 +152,7 @@ export default class Physics {
       };
 
       this.skate.chassis.body.allowSleep = false;
-      this.skate.chassis.body.position.set(1, 2, 1);
+      this.skate.chassis.body.position.set(0, 0, 12);
       this.skate.chassis.body.sleep();
       this.skate.chassis.body.addShape(this.skate.chassis.shape, this.skate.options.offset);
       this.skate.chassis.body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 0, 1), -Math.PI * 0.5);
@@ -286,6 +286,26 @@ export default class Physics {
       }
     };
 
+    /**
+     * Destroy method
+     */
+    this.skate.destroy = () =>
+    {
+      this.skate.vehicle.removeFromWorld(this.world)
+      this.models.container.remove(this.skate.model.container)
+    }
+
+    /**
+     * Recreate method
+     */
+    this.skate.recreate = () =>
+    {
+      this.skate.destroy()
+      this.skate.create()
+      this.skate.chassis.body.wakeUp()
+    }
+
+
     this.skate.brake = () => {
       this.skate.vehicle.setBrake(1, 0);
       this.skate.vehicle.setBrake(1, 1);
@@ -406,7 +426,6 @@ export default class Physics {
       const accelerateStrength = this.time.delta * accelerationSpeed;
       const controlsAcceleratingMaxSpeed = this.skate.options.controlsAcceleratingMaxSpeed;
 
-      // Accelerate up
       if (this.controls.actions.up) {
         if (this.skate.speed < controlsAcceleratingMaxSpeed || !this.skate.goingForward) {
           this.skate.accelerating = accelerateStrength;
@@ -414,6 +433,7 @@ export default class Physics {
           this.skate.accelerating = 0;
         }
       }
+
 
       // Accelerate Down
       else if (this.controls.actions.down) {
@@ -428,6 +448,7 @@ export default class Physics {
 
       this.skate.vehicle.applyEngineForce(-this.skate.accelerating, this.skate.wheels.indexes.backLeft);
       this.skate.vehicle.applyEngineForce(-this.skate.accelerating, this.skate.wheels.indexes.backRight);
+      // console.log(this.skate.model.chassis.position, this.skate);
 
       if (this.skate.options.controlsSteeringQuad) {
         this.skate.vehicle.applyEngineForce(-this.skate.accelerating, this.skate.wheels.indexes.frontLeft);
@@ -448,46 +469,45 @@ export default class Physics {
         this.skate.vehicle.setBrake(0, 2);
         this.skate.vehicle.setBrake(0, 3);
       }
+
     });
 
     this.skate.create();
 
     // Debug
-    // if(this.debug.active)
-    // {
-    //   this.skate.debugFolder = this.debugFolder.addFolder('skate')
-    //   this.skate.debugFolder.open()
-    //
-    //   this.skate.debugFolder.add(this.skate.options, 'chassisWidth').step(0.001).min(0).max(5).name('chassisWidth').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'chassisHeight').step(0.001).min(0).max(5).name('chassisHeight').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'chassisDepth').step(0.001).min(0).max(5).name('chassisDepth').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options.offset, 'z').step(0.001).min(0).max(5).name('chassisOffset').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'chassisMass').step(0.001).min(0).max(1000).name('chassisMass').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelFrontOffsetDepth').step(0.001).min(0).max(5).name('wheelFrontOffsetDepth').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelBackOffsetDepth').step(0.001).min(- 5).max(0).name('wheelBackOffsetDepth').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelOffsetWidth').step(0.001).min(0).max(5).name('wheelOffsetWidth').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelRadius').step(0.001).min(0).max(2).name('wheelRadius').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelHeight').step(0.001).min(0).max(2).name('wheelHeight').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelSuspensionStiffness').step(0.001).min(0).max(300).name('wheelSuspensionStiffness').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelSuspensionRestLength').step(0.001).min(0).max(5).name('wheelSuspensionRestLength').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelFrictionSlip').step(0.001).min(0).max(30).name('wheelFrictionSlip').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelDampingRelaxation').step(0.001).min(0).max(30).name('wheelDampingRelaxation').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelDampingCompression').step(0.001).min(0).max(30).name('wheelDampingCompression').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelMaxSuspensionForce').step(0.001).min(0).max(1000000).name('wheelMaxSuspensionForce').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelRollInfluence').step(0.001).min(0).max(1).name('wheelRollInfluence').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelMaxSuspensionTravel').step(0.001).min(0).max(5).name('wheelMaxSuspensionTravel').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelCustomSlidingRotationalSpeed').step(0.001).min(- 45).max(45).name('wheelCustomSlidingRotationalSpeed').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'wheelMass').step(0.001).min(0).max(1000).name('wheelMass').onFinishChange(this.skate.recreate)
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsSteeringSpeed').step(0.001).min(0).max(0.1).name('controlsSteeringSpeed')
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsSteeringMax').step(0.001).min(0).max(Math.PI * 0.5).name('controlsSteeringMax')
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsSteeringQuad').name('controlsSteeringQuad')
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsAcceleratingSpeed').step(0.001).min(0).max(30).name('controlsAcceleratingSpeed')
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsAcceleratingSpeedBoost').step(0.001).min(0).max(30).name('controlsAcceleratingSpeedBoost')
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsAcceleratingQuad').name('controlsAcceleratingQuad')
-    //   this.skate.debugFolder.add(this.skate.options, 'controlsBrakeStrength').step(0.001).min(0).max(5).name('controlsBrakeStrength')
-    //   this.skate.debugFolder.add(this.skate, 'recreate')
-    //   this.skate.debugFolder.add(this.skate, 'jump')
-    // }
+    if(this.debug.active)
+    {
+      this.skate.debugFolder = this.debugFolder.addFolder('skate')
+      this.skate.debugFolder.open()
+
+      this.skate.debugFolder.add(this.skate.options, 'width').step(0.001).min(0).max(5).name('chassisWidth').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'height').step(0.001).min(0).max(5).name('chassisHeight').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'depth').step(0.001).min(0).max(5).name('chassisDepth').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options.offset, 'z').step(0.001).min(0).max(5).name('chassisOffset').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'mass').step(0.001).min(0).max(1000).name('chassisMass').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelFrontOffsetDepth').step(0.001).min(0).max(5).name('wheelFrontOffsetDepth').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelBackOffsetDepth').step(0.001).min(- 5).max(0).name('wheelBackOffsetDepth').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelOffsetWidth').step(0.001).min(0).max(5).name('wheelOffsetWidth').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelRadius').step(0.001).min(0).max(2).name('wheelRadius').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelHeight').step(0.001).min(0).max(2).name('wheelHeight').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelSuspensionStiffness').step(0.001).min(0).max(300).name('wheelSuspensionStiffness').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelSuspensionRestLength').step(0.001).min(0).max(5).name('wheelSuspensionRestLength').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelFrictionSlip').step(0.001).min(0).max(30).name('wheelFrictionSlip').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelDampingRelaxation').step(0.001).min(0).max(30).name('wheelDampingRelaxation').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelDampingCompression').step(0.001).min(0).max(30).name('wheelDampingCompression').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelMaxSuspensionForce').step(0.001).min(0).max(1000000).name('wheelMaxSuspensionForce').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelRollInfluence').step(0.001).min(0).max(1).name('wheelRollInfluence').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelMaxSuspensionTravel').step(0.001).min(0).max(5).name('wheelMaxSuspensionTravel').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelCustomSlidingRotationalSpeed').step(0.001).min(- 45).max(45).name('wheelCustomSlidingRotationalSpeed').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'wheelMass').step(0.001).min(0).max(1000).name('wheelMass').onFinishChange(this.skate.recreate)
+      this.skate.debugFolder.add(this.skate.options, 'controlsSteeringSpeed').step(0.001).min(0).max(0.1).name('controlsSteeringSpeed')
+      this.skate.debugFolder.add(this.skate.options, 'controlsSteeringMax').step(0.001).min(0).max(Math.PI * 0.5).name('controlsSteeringMax')
+      this.skate.debugFolder.add(this.skate.options, 'controlsSteeringQuad').name('controlsSteeringQuad')
+      this.skate.debugFolder.add(this.skate.options, 'controlsAcceleratingSpeed').step(0.001).min(0).max(30).name('controlsAcceleratingSpeed')
+      this.skate.debugFolder.add(this.skate.options, 'controlsAcceleratingQuad').name('controlsAcceleratingQuad')
+      this.skate.debugFolder.add(this.skate.options, 'controlsBrakeStrength').step(0.001).min(0).max(5).name('controlsBrakeStrength')
+      this.skate.debugFolder.add(this.skate, 'recreate')
+    }
   }
 
   addObject(_options) {
