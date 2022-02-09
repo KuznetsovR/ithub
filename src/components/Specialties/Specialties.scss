@@ -1,19 +1,16 @@
 @use '../../styles/colors' as colors;
 
 .specialities-container {
-  max-width: 990px;
   margin: auto;
-  height: 350px;
   background-color: #191818;
   width: 100%;
-  min-height: 350px;
+  padding: 40px 0;
 }
 
 .specialities-heading-text {
   font-size: 40px;
   color: #fff;
-  padding: 16px 0px;
-  margin-left: 67px;
+  margin: 0 0 40px 30px;
 }
 
 .all-specialities-rectangles {
@@ -24,23 +21,24 @@
 }
 
 .specialities-rectangle {
-  border: 10px solid #5b1573;
+  border: 5px solid colors.$main-dark-pink;
   width: 220px;
   height: 220px;
+  box-shadow: 0 0 5px colors.$box-shadow-dark-pink;
 }
 
 .rec-bg1 {
-  background: url(./img/web_dev.png);
+  background: url(../../assets/images/web_dev.png);
   background-size: 100%;
 }
 
 .rec-bg2 {
-  background: url(./img/coder.png);
+  background: url(../../assets/images/coder.png);
   background-size: 100%;
 }
 
 .rec-bg3 {
-  background: url(./img/sys_adm.png);
+  background: url(../../assets/images/sys_adm.png);
   background-size: 100%;
 }
 

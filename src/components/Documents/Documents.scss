@@ -1,29 +1,29 @@
 @use '../../styles/colors' as colors;
 .container-document {
-  max-width: 900px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: space-evenly;
+  padding: 40px 0;
   background-color: colors.$main-graphite;
 }
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
 }
 .text-conditions {
   color: #fff;
-  font-size: 15px;
-  padding: 10px 60px 40px 40px;
+  margin: 50px 40px 20px ;
 }
 .text-title {
+  font-size: 40px;
   color: #fff;
-  font-size: 30px;
-  padding: 40px 40px 0 40px;
+  margin: 0 30px;
 }
 .document-photo {
-  padding-left: 40px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.documents-slider-wrapper{
+  width: 200px;
+  margin: auto;
+  .slick-dots {
+    bottom: -25px;
+  }
 }

@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer>
       <div className="footer-container">
         <div className="footer-text">
-          <img src={logo} className="logofooter" alt="logoit" />
+          <img src={logo} className="logo-footer" alt="logoit" />
           <a href="" className="text-address">
             Екатеринбург, Чкалова 3
           </a>
@@ -20,7 +20,7 @@ export const Footer = () => {
             ITJourney 3D
           </a>
         </div>
-        <div className="foote-rtext">
+        <div className="footer-text">
           <a href="" className="text-contacts">
             Контакты
           </a>

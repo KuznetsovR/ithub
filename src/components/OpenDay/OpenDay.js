@@ -18,8 +18,8 @@ export const OpenDay = () => {
   return (
     <div className="open-day-component">
       <div className="open-day">
-        <h3>День открытых дверей</h3>
         <div className="open-day-content-wrapper">
+          <h3>День открытых дверей</h3>
           <div className="open-day-desc">
             Приглашаем <span className="open-day-focus"> абитуриентов </span> и их
             <span className="open-day-focus"> родителей</span> посетить наш колледж
@@ -34,7 +34,7 @@ export const OpenDay = () => {
       </div>
       <div className="schools-events">
         <h3>Выезд представителей в школы</h3>
-        <div className="slider-wrapper">
+        <div className="open-day-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="img-container">
