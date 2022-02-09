@@ -58,7 +58,7 @@ export default class Materials {
     };
 
     // Debug
-    if (this.debug) {
+    if (this.debug.active) {
       const folder = this.debugFolder.addFolder('floorShadow');
       folder.open();
 

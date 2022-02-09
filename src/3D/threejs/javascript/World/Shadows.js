@@ -82,7 +82,7 @@ export default class Shadows {
     this.sun.update();
 
     // Debug
-    if (this.debug) {
+    if (this.debug.active) {
       const folder = this.debugFolder.addFolder('sun');
       folder.open();
 
