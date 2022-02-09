@@ -21,9 +21,10 @@
 }
 
 .specialities-rectangle {
-  border: 10px solid #5b1573;
+  border: 5px solid colors.$main-dark-pink;
   width: 220px;
   height: 220px;
+  box-shadow: 0 0 5px colors.$box-shadow-dark-pink;
 }
 
 .rec-bg1 {
