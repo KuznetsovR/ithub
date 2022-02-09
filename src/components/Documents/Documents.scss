@@ -16,6 +16,10 @@
   color: #fff;
   margin: 0 30px;
 }
-.document-photo {
-  padding-left: 40px;
+.documents-slider-wrapper{
+  max-width: 200px;
+  margin: auto;
+  .slick-dots {
+    bottom: -20px;
+  }
 }
