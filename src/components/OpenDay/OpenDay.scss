@@ -1,18 +1,19 @@
 @use '../../styles/colors' as colors;
 
-.open-day-component{
+.open-day-component {
   display: flex;
   color: #ffffff;
   font-size: 1.3rem;
-  h3{
+  h3 {
+    margin: 25px 0;
     text-align: center;
   }
 }
-.open-day{
-  padding: 0 30px 30px 30px;
+.open-day {
+  padding: 0 30px;
   width: calc(40% - 30px);
 }
-.schools-events{
+.schools-events {
   width: 60%;
 }
 .slide-img {
@@ -22,35 +23,37 @@
 .open-day-slider-wrapper {
   max-width: 460px;
   margin: auto;
+  .slick-dots {
+    bottom: -20px;
+  }
 }
-.open-day-content-wrapper{
+.open-day-content-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
-.img-container{
-  height: 230px;        // this height is height of a most tall image
+.img-container {
+  height: 230px; // this height is height of a most tall image
   display: grid;
   align-items: center;
   margin: 0 10px;
   cursor: pointer;
 }
-.open-day-focus{
+.open-day-focus {
   color: colors.$main-dark-pink;
 }
-.event-description{
+.event-description {
   text-align: end;
 }
-.invite-btn-wrapper{
+.invite-btn-wrapper {
   margin-top: 40px;
   text-align: center;
 }
-.slick-dots{
-  bottom: -20px;
-}
-.open-day-desc{
+.open-day-desc {
   margin-top: 50px;
   line-height: 2rem;
 }
-.open-day-date{
+.open-day-date {
   margin-top: 50px;
 }
