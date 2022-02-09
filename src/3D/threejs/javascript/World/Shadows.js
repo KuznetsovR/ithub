@@ -48,6 +48,8 @@ export default class Shadows {
       });
     } // debug end
     this.setSun();
+    this.setMaterials()
+    this.setGeometry()
   }
 
   setSun() {

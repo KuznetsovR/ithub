@@ -280,7 +280,6 @@ export default class Physics {
 
       for (let i = 0; i < 4; i++) {
         const wheel = new THREE.Mesh(wheelGeometry, this.skate.model.material);
-        console.log(wheel);
         this.skate.model.container.add(wheel);
         this.skate.model.wheels.push(wheel);
       }

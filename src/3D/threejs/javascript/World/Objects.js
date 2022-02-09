@@ -112,15 +112,15 @@ export default class Objects {
     ];
 
     // Default
-    // this.parsers.default = {}
-    // this.parsers.default.apply = (_mesh) =>
-    // {
-    //   // Create clone mesh with normal material
-    //   const mesh = _mesh.clone()
-    //   mesh.material = this.materials.shades.items.white
-    //
-    //   return mesh
-    // }
+    this.parsers.default = {}
+    this.parsers.default.apply = (_mesh) =>
+    {
+      // Create clone mesh with normal material
+      // const mesh = _mesh.clone()
+      // mesh.material = this.materials.shades.items.white
+
+      return _mesh.clone()
+    }
   }
 
   setMerge() {
@@ -205,9 +205,9 @@ export default class Objects {
       if (_child instanceof THREE.Mesh) {
         // Find parser and use default if not found
         let parser = this.parsers.items.find((_item) => _child.name.match(_item.regex));
-        if (typeof parser === 'undefined') {
-          throw new Error('Undefined parser: matcaps used or another error');
-          // parser = this.parsers.default
+        if (parser === undefined) {
+          // throw new Error('Undefined parser: matcaps used or another error');
+          parser = this.parsers.default
         }
 
         // Create mesh by applying parser
