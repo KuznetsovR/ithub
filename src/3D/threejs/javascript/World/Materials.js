@@ -1,11 +1,11 @@
-import Experience from '../Experience';
 import * as THREE from 'three';
 import FloorShadowMaterial from '../Materials/FloorShadow';
+import World from './World';
 
 export default class Materials {
-  experience = new Experience();
-  debug = this.experience.debug;
-  resources = this.experience.resources;
+  world = new World();
+  debug = this.world.debug;
+  resources = this.world.resources;
 
   constructor() {
     if (this.debug.active) {

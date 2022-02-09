@@ -1,15 +1,15 @@
-import Experience from '../Experience';
 import * as THREE from 'three';
 import { mergeBufferGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
+import World from './World';
 
 export default class Objects {
-  experience = new Experience();
-  time = this.experience.time;
-  resources = this.experience.resources;
-  materials = this.experience.materials;
-  physics = this.experience.physics;
-  shadows = this.experience.shadows;
-  debug = this.experience.debug;
+  world = new World();
+  time = this.world.time;
+  resources = this.world.resources;
+  materials = this.world.materials;
+  physics = this.world.physics;
+  shadows = this.world.shadows;
+  debug = this.world.debug;
 
   constructor() {
     this.container = new THREE.Object3D();

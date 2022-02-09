@@ -1,13 +1,13 @@
-import Experience from '../Experience';
 import * as THREE from 'three';
 import ShadowMaterial from '../Materials/Shadow';
+import World from './World';
 
 export default class Shadows {
-  experience = new Experience();
-  time = this.experience.time;
-  debug = this.experience.debug;
-  renderer = this.experience.renderer;
-  camera = this.experience.camera;
+  world = new World();
+  time = this.world.time;
+  debug = this.world.debug;
+  renderer = this.world.renderer;
+  camera = this.world.camera;
 
   alpha = 0;
   maxDistance = 3;

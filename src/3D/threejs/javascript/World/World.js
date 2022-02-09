@@ -2,13 +2,37 @@ import Experience from '../Experience';
 import Floor from './Floor';
 import Map from './Map';
 import * as THREE from 'three';
+import MainHero from './MainHero';
+import Shadows from './Shadows';
+import Materials from './Materials';
+import Controls from './Controls';
+import Physics from './Physics';
+import Objects from './Objects';
+
+let instance = null;
 
 export default class World {
   constructor() {
+    if (instance) {
+      return instance;
+    }
+    instance = this;
+
+
     this.experience = new Experience();
-    this.scene = this.experience.scene;
-    this.resources = this.experience.resources;
-    this.shadows = this.experience.shadows;
+    this.debug = this.experience.debug
+    this.sizes = this.experience.sizes
+    this.time = this.experience.time
+    this.resources = this.experience.resources
+    this.camera = this.experience.camera
+    this.renderer = this.experience.renderer
+
+    this.shadows = new Shadows();
+    this.materials = new Materials();
+    this.controls = new Controls();
+    this.physics = new Physics();
+
+    this.objects = new Objects();
 
     this.container = new THREE.Object3D();
     this.container.matrixAutoUpdate = false;
@@ -16,9 +40,7 @@ export default class World {
     this.resources.on('ready', () => {
       this.map = new Map();
       this.createWorld();
-      const skate = this.resources.items.SkateModel.scenes[0];
-      skate.position.y = 4;
-      this.scene.add(skate);
+      this.mainHero = new MainHero();
     });
   }
   createWorld() {
@@ -30,6 +52,6 @@ export default class World {
   }
   setFloor() {
     this.floor = new Floor();
-    this.scene.add(this.floor.container);
+    this.container.add(this.floor.container);
   }
 }

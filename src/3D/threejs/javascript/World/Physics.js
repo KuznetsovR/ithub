@@ -1,11 +1,12 @@
-import Experience from '../Experience';
 import * as CANNON from 'cannon-es';
 import * as THREE from 'three';
+import World from './World';
+
 export default class Physics {
-  experience = new Experience();
-  time = this.experience.time;
-  controls = this.experience.controls;
-  debug = this.experience.debug;
+  world = new World();
+  time = this.world.time;
+  controls = this.world.controls;
+  debug = this.world.debug;
 
   constructor() {
     if (this.debug.active) {
