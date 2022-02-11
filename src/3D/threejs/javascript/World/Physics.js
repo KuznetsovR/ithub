@@ -106,7 +106,7 @@ export default class Physics {
       width: 1.01,
       height: 1.2,
       depth: 2.02,
-      offset: new CANNON.Vec3(0, 0, 0.5),
+      offset: new CANNON.Vec3(0, 0, 0.6),
       mass: 20,
       wheelFrontOffsetDepth: 0.635,
       wheelBackOffsetDepth: -0.475,
@@ -148,7 +148,8 @@ export default class Physics {
         body: new CANNON.Body({ mass: this.skate.options.mass }),
       };
       this.skate.chassis.body.allowSleep = false;
-      this.skate.chassis.body.sleep();
+      this.skate.chassis.body.position.set(0, 0, 4)
+      // this.skate.chassis.body.sleep();
       this.skate.chassis.body.addShape(this.skate.chassis.shape, this.skate.options.offset);
       this.skate.chassis.body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 0, 1), -Math.PI * 0.5);
 
@@ -685,6 +686,7 @@ export default class Physics {
     const shapes = [];
 
     for (const mesh of _options.meshes) {
+      console.log(mesh);
       let shape = null;
 
       if (mesh.name.match(/^cube_?[0-9]{0,3}?|box[0-9]{0,3}?$/i)) {
