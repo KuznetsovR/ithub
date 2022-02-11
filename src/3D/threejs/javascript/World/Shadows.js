@@ -1,20 +1,20 @@
-import Experience from '../Experience';
 import * as THREE from 'three';
 import ShadowMaterial from '../Materials/Shadow';
+import World from './World';
 
 export default class Shadows {
-  experience = new Experience();
-  time = this.experience.time;
-  debug = this.experience.debug;
-  renderer = this.experience.renderer;
-  camera = this.experience.camera;
+  world = new World();
+  time = this.world.time;
+  debug = this.world.debug;
+  renderer = this.world.renderer;
+  camera = this.world.camera;
 
   alpha = 0;
   maxDistance = 3;
   distancePower = 2;
   zFightingDistance = 0.001;
   color = '#45464a';
-  wireframeVisible = false;
+  wireframeVisible = true;
   items = [];
 
   constructor() {
@@ -25,7 +25,6 @@ export default class Shadows {
     // Debug
     if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('shadows');
-      // this.debugFolder.open()
 
       this.debugFolder.add(this, 'alpha').step(0.01).min(0).max(1);
       this.debugFolder.add(this, 'maxDistance').step(0.01).min(0).max(10);
@@ -48,6 +47,8 @@ export default class Shadows {
       });
     } // debug end
     this.setSun();
+    this.setMaterials()
+    this.setGeometry()
   }
 
   setSun() {
@@ -82,9 +83,8 @@ export default class Shadows {
     this.sun.update();
 
     // Debug
-    if (this.debug) {
+    if (this.debug.active) {
       const folder = this.debugFolder.addFolder('sun');
-      folder.open();
 
       folder.add(this.sun.position, 'x').step(0.01).min(-10).max(10).name('sunX').onChange(this.sun.update);
       folder.add(this.sun.position, 'y').step(0.01).min(-10).max(10).name('sunY').onChange(this.sun.update);
