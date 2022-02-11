@@ -9,7 +9,10 @@ export default class Map {
   debug = this.world.debug;
 
   constructor() {
+    this.container = new THREE.Object3D()
+    this.container.matrixAutoUpdate = false
     this.setStatic();
+    this.setLight()
   }
   setStatic() {
     this.objects.add({
@@ -20,10 +23,8 @@ export default class Map {
       mass: 0,
     });
   }
-  setModel() {
-    // const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-    // this.container.add( light );
-    // this.model = this.resource.scene;
-    // this.container.add(this.model);
+  setLight() {
+    const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+    this.container.add( light );
   }
 }
