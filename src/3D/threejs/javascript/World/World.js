@@ -34,8 +34,6 @@ export default class World {
 
     this.resources.on('ready', () => {
       this.createWorld();
-      this.map = new Map()
-      this.container.add(this.map.container)
     });
   }
   createWorld() {
@@ -43,11 +41,16 @@ export default class World {
     this.setShadows();
     this.setPhysics();
     this.setObjects();
+    this.setMap();
     this.setMainHero();
+  }
+  setMap() {
+    this.map = new Map();
+    this.container.add(this.map.container);
   }
   setObjects() {
     this.objects = new Objects();
-    this.container.add(this.objects.container)
+    this.container.add(this.objects.container);
   }
   setMaterials() {
     this.materials = new Materials();
