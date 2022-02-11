@@ -11,17 +11,28 @@ export default class Camera {
   time = this.experience.time;
 
   constructor() {
-    this.target = new THREE.Vector3(0, 0, 0)
-    this.targetEased = new THREE.Vector3(0, 0, 0)
-    this.easing = 0.15
+    if (this.debug.active) {
+      this.debugFolder = this.debug.addFolder('camera');
+    }
 
-    this.setAngle()
+    this.target = new THREE.Vector3(0, 0, 0);
+    this.targetEased = new THREE.Vector3(0, 0, 0);
+    this.easing = 0.15;
+
+    this.setAngle();
     this.setInstance();
     this.setControls();
     this.setPan();
   }
-  setAngle(){
-    this.angle = new THREE.Vector3(1.135, - 1.45, 1.15)
+  setAngle() {
+    this.angle = new THREE.Vector3(0, -0.05, 0.037);
+
+    if (this.debug.active) {
+      this.debugFolder.add(this, 'easing').step(0.0001).min(0).max(1).name('easing');
+      this.debugFolder.add(this.angle, 'x').step(0.001).min(-2).max(2).name('invertDirectionX').listen();
+      this.debugFolder.add(this.angle, 'y').step(0.001).min(-2).max(2).name('invertDirectionY').listen();
+      this.debugFolder.add(this.angle, 'z').step(0.001).min(-2).max(2).name('invertDirectionZ').listen();
+    }
   }
   setControls() {
     this.controls = new OrbitControls(this.instance, this.canvas);
@@ -29,7 +40,7 @@ export default class Camera {
   }
   setInstance() {
     this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 100);
-    this.instance.position.copy(this.angle);
+    this.instance.position.copy(this.angle).add(this.angle.clone().normalize().multiplyScalar(15));
     this.scene.add(this.instance);
 
     this.time.on('tick', () => {
@@ -39,6 +50,8 @@ export default class Camera {
 
       // Look at target
       this.instance.lookAt(this.targetEased);
+
+      // this.instance.position.copy(this.targetEased).add(this.angle.clone().normalize().multiplyScalar(20))      //14 + 7.5
 
       // Apply pan
       this.instance.position.x += this.pan.value.x;
