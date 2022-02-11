@@ -1,4 +1,4 @@
-import * as CANNON from 'cannon-es';
+import * as CANNON from 'cannon';
 import * as THREE from 'three';
 import World from './World';
 
@@ -55,7 +55,6 @@ export default class Physics {
     this.materials.items.floor = new CANNON.Material('floorMaterial');
     this.materials.items.dummy = new CANNON.Material('dummyMaterial');
     this.materials.items.wheel = new CANNON.Material('wheelMaterial');
-
     // Contact between materials
     this.materials.contacts = {};
 
@@ -136,7 +135,6 @@ export default class Physics {
     this.skate.create = () => {
       /**
        * Chassis
-       * @type {{shape: module:shapes/Box.Box, body: module:objects/Body.Body}}
        */
 
       this.skate.chassis = {
@@ -156,7 +154,6 @@ export default class Physics {
 
       /**
        * Vehicle
-       * @type {module:objects/RaycastVehicle.RaycastVehicle}
        */
       this.skate.vehicle = new CANNON.RaycastVehicle({
         chassisBody: this.skate.chassis.body,
@@ -318,7 +315,6 @@ export default class Physics {
       let positionDelta = new CANNON.Vec3();
       positionDelta = positionDelta.copy(this.skate.chassis.body.position);
       positionDelta = positionDelta.vsub(this.skate.oldPosition);
-
       this.skate.oldPosition.copy(this.skate.chassis.body.position);
       this.skate.speed = positionDelta.length();
 
@@ -330,7 +326,6 @@ export default class Physics {
 
       this.skate.forwardSpeed = this.skate.worldForward.dot(positionDelta);
       this.skate.goingForward = this.skate.forwardSpeed > 0;
-
       // Update wheel bodies
       for (let i = 0; i < this.skate.vehicle.wheelInfos.length; i++) {
         this.skate.vehicle.updateWheelTransform(i);
@@ -441,7 +436,6 @@ export default class Physics {
 
       this.skate.vehicle.applyEngineForce(-this.skate.accelerating, this.skate.wheels.indexes.backLeft);
       this.skate.vehicle.applyEngineForce(-this.skate.accelerating, this.skate.wheels.indexes.backRight);
-
 
       if (this.skate.options.controlsSteeringQuad) {
         this.skate.vehicle.applyEngineForce(-this.skate.accelerating, this.skate.wheels.indexes.frontLeft);
