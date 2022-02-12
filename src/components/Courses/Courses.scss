@@ -1,43 +1,15 @@
 @use '../../styles/colors' as colors;
 
-.courses-header {
-  width: 100%;
-  background-color: #232020;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
-  font-size: 20px;
-}
-.courses-list,
-.logo-ithub-ekat {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  color: colors.$main-white;
-  text-decoration: none;
-}
-.ithub {
-  font-size: 36px;
-}
-.ekat {
-  font-size: 30px;
-}
-.heder-link {
-  text-decoration: none;
-  color: colors.$main-white;
-}
-
 .block-preparatory-courses {
-  background-color: #141414;
+  background-color: colors.$lighter-dark-gray;
   display: flex;
   justify-content: space-evenly;
   height: 400px;
   color: colors.$main-white;
 }
 .preparatory-courses-square {
-  padding: 60px 0px;
-  margin-right: 80px;
+  background-color: #141414;
+  padding: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +19,7 @@
 }
 .courses-square {
   position: absolute;
-  background-color: #a71dd814;
+  background-color: colors.$main-purple;
   transform: rotate(45deg);
   width: 250px;
   height: 240px;
@@ -59,30 +31,19 @@
 .courses-link {
   text-decoration: none;
   font-size: 20px;
+  color: colors.$main-white;
 }
 .preparatory-courses-description {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-.courses-footer {
-  background-color: #000000d9;
-  display: flex;
-  justify-content: space-evenly;
-  color: colors.$main-white;
-}
-.footer-3D-website {
-  font-size: 40px;
-}
-.footer-contacts {
-  font-size: 20px;
-}
-.contacts {
-  color: colors.$main-purple;
+  margin-left: 50px;
 }
 .title-preparatory-courses {
   z-index: 1;
   font-size: 30px;
+  text-align: center;
+  font-weight: bold;
 }
 .title-courses-description {
   font-size: 20px;

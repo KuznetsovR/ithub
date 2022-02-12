@@ -1,5 +1,6 @@
 import React from 'react';
 import './Courses.scss';
+import { HexaButton } from '../HexaButton/HexaButton';
 
 export const Courses = () => {
   return (
@@ -21,9 +22,7 @@ export const Courses = () => {
               Ссылка на заявления
             </a>
           </p>
-          <button type="button" name="button">
-            Записаться
-          </button>
+          <HexaButton>Записаться</HexaButton>
         </div>
       </div>
     </div>
