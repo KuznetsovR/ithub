@@ -8,6 +8,7 @@ import Materials from './Materials';
 import Controls from './Controls';
 import Physics from './Physics';
 import Objects from './Objects';
+import Lights from './Lights';
 
 let instance = null;
 
@@ -41,8 +42,13 @@ export default class World {
     this.setShadows();
     this.setPhysics();
     this.setObjects();
+    this.setLights()
     this.setMap();
     this.setMainHero();
+  }
+  setLights(){
+    this.light = new Lights()
+    this.container.add(this.light.container)
   }
   setMap() {
     this.map = new Map();
