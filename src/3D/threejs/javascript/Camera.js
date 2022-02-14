@@ -5,12 +5,13 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 export default class Camera {
   experience = new Experience();
   sizes = this.experience.sizes;
-  scene = this.experience.scene;
   canvas = this.experience.canvas;
   debug = this.experience.debug;
   time = this.experience.time;
 
   constructor() {
+    this.container = new THREE.Object3D()
+    this.container.matrixAutoUpdate = false
     if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('camera');
     }
@@ -21,11 +22,11 @@ export default class Camera {
 
     this.setAngle();
     this.setInstance();
-    this.setControls();
+    // this.setControls();
     this.setPan();
   }
   setAngle() {
-    this.angle = new THREE.Vector3(0, -0.05, 0.037);
+    this.angle = new THREE.Vector3(0, -0.075, 0.037);
 
     if (this.debug.active) {
       this.debugFolder.add(this, 'easing').step(0.0001).min(0).max(1).name('easing');
@@ -39,23 +40,21 @@ export default class Camera {
     this.controls.enableDamping = true;
   }
   setInstance() {
-    this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 100);
-    this.instance.position.copy(this.angle).add(this.angle.clone().normalize().multiplyScalar(15));
-    this.scene.add(this.instance);
+    this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 200);
+    this.instance.up.set(0, 0, 1)
+    this.instance.position.copy(this.angle)
+    this.instance.lookAt(new THREE.Vector3())
+    // this.container.add(this.instance);
 
     this.time.on('tick', () => {
       this.targetEased.x += (this.target.x - this.targetEased.x) * this.easing;
       this.targetEased.y += (this.target.y - this.targetEased.y) * this.easing;
       this.targetEased.z += (this.target.z - this.targetEased.z) * this.easing;
 
-      // Look at target
+      this.instance.position.copy(this.targetEased).add(this.angle.clone().normalize().multiplyScalar(20));
       this.instance.lookAt(this.targetEased);
+      // TODO: remove pan from everywhere because we dont use it here
 
-      // this.instance.position.copy(this.targetEased).add(this.angle.clone().normalize().multiplyScalar(20))      //14 + 7.5
-
-      // Apply pan
-      this.instance.position.x += this.pan.value.x;
-      this.instance.position.y += this.pan.value.y;
     });
   }
   setPan() {
@@ -96,6 +95,6 @@ export default class Camera {
     this.instance.updateProjectionMatrix();
   }
   update() {
-    this.controls.update();
+    // this.controls.update();
   }
 }

@@ -22,11 +22,11 @@ export default class Experience {
     this.sizes = new Sizes();
     this.time = new Time();
     this.resources = new Resources(sources);
-    this.camera = new Camera();
+
+    this.setCamera();
     this.renderer = new Renderer();
 
     this.world = new World();
-
 
     this.scene.add(this.world.container);
 
@@ -41,6 +41,16 @@ export default class Experience {
     });
   }
 
+  setCamera() {
+    this.camera = new Camera();
+    // this.scene.add(this.camera.container)
+    this.time.on('tick', () => {
+      if (this.world && this.world.mainHero) {
+        this.camera.target.x = this.world.mainHero.skate.object.position.x;
+        this.camera.target.y = this.world.mainHero.skate.object.position.y;
+      }
+    });
+  }
   resize() {
     this.camera.resize();
     this.renderer.resize();
