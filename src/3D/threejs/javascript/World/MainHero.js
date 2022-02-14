@@ -41,7 +41,6 @@ export default class MainHero {
 
     this.time.on('tick', () => {
       const movementSpeed = new THREE.Vector3();
-      // console.log(this.skate.object.position);
       movementSpeed.copy(this.skate.object.position).sub(this.skate.oldPosition);
       this.movement.acceleration = movementSpeed.clone().sub(this.movement.speed);
       this.movement.speed.copy(movementSpeed);
