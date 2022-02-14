@@ -686,7 +686,6 @@ export default class Physics {
     const shapes = [];
 
     for (const mesh of _options.meshes) {
-      console.log(mesh);
       let shape = null;
 
       if (mesh.name.match(/^cube_?[0-9]{0,3}?|box[0-9]{0,3}?$/i)) {
@@ -734,7 +733,7 @@ export default class Physics {
         // Create model object
         let modelGeometry = null;
         if (shape === 'cylinder') {
-          modelGeometry = new THREE.CylinderBufferGeometry(1, 1, 1, 8, 1);
+          modelGeometry = new THREE.CylinderBufferGeometry(1, 1, 1, 6, 1);
           modelGeometry.rotateX(Math.PI * 0.5);
         } else if (shape === 'box') {
           modelGeometry = new THREE.BoxBufferGeometry(1, 1, 1);
