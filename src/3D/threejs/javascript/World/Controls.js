@@ -69,7 +69,6 @@ export default class Controls extends EventEmitter {
           switch (_event.key) {
             case 'ArrowUp':
             case 'w':
-              this.camera.pan.reset()
               this.actions.up = false;
               break;
 
@@ -80,7 +79,6 @@ export default class Controls extends EventEmitter {
 
             case 'ArrowDown':
             case 's':
-              this.camera.pan.reset()
               this.actions.down = false;
               break;
 
