@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.scss';
 import logo from '../../assets/images/IThublogo.png';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -16,9 +17,7 @@ export const Footer = () => {
           </a>
         </div>
         <div className="footer-text">
-          <a href="" className="text-3d">
-            ITJourney 3D
-          </a>
+          <Link to="/navigation" className="text-3d">ITJourney 3D</Link>
         </div>
         <div className="footer-text">
           <a href="" className="text-contacts">

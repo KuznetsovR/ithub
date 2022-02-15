@@ -32,7 +32,7 @@ export const Header = () => {
               <Link to="/commission">Приёмная комиссия </Link>
             </li>
             <li>
-              <HashLink smooth to="#specialities">Специальности</HashLink>
+              <HashLink smooth to="/#specialities">Специальности</HashLink>
             </li>
             <li>
               <Link to="/courses">Курсы</Link>
