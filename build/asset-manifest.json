@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d7a6a2ef.css",
+    "main.js": "/static/js/main.4a97806a.js",
+    "static/media/MainMap.glb": "/static/media/MainMap.cfbdef1c4dd864317e87.glb",
+    "static/media/coder.png": "/static/media/coder.70a5b693b096ab4194ac.png",
+    "static/media/IThubEkat.glb": "/static/media/IThubEkat.36ca108e9cf65349afbc.glb",
+    "static/media/web_dev.png": "/static/media/web_dev.aeb440151328e0bdcf71.png",
+    "static/media/sys_adm.png": "/static/media/sys_adm.5df8ec9a73c9040bb795.png",
+    "static/media/document.PNG": "/static/media/document.2888ead336675825e34e.PNG",
+    "static/media/MainMapCollision.glb": "/static/media/MainMapCollision.0bf46a00381c882c8a9b.glb",
+    "static/media/floorShadow.png": "/static/media/floorShadow.4ea967ca455c346e899d.png",
+    "static/media/Skate.glb": "/static/media/Skate.fb9f95d67a8898229a18.glb",
+    "static/media/IThublogo.png": "/static/media/IThublogo.3f2e17a2ba3f1a8d0302.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/IThubEkatCollision.glb": "/static/media/IThubEkatCollision.b23a7f8afe5184a27491.glb",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.d7a6a2ef.css.map": "/static/css/main.d7a6a2ef.css.map",
+    "main.4a97806a.js.map": "/static/js/main.4a97806a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7a6a2ef.css",
+    "static/js/main.4a97806a.js"
+  ]
+}
