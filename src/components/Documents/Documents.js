@@ -1,6 +1,6 @@
 import React from 'react';
 import './Documents.scss';
-import document from '../../assets/images/document.PNG';
+import document from '@assets/images/document.PNG';
 import Slider from 'react-slick';
 
 export const Documents = () => {

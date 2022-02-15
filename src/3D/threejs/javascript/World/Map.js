@@ -1,20 +1,36 @@
 import * as THREE from 'three';
-import Experience from '../Experience';
+import World from './World';
 
 export default class Map {
-  experience = new Experience();
-  scene = this.experience.scene;
-  resources = this.experience.resources;
-  time = this.experience.time;
-  debug = this.experience.debug;
+  world = new World();
+  resources = this.world.resources;
+  objects = this.world.objects;
+  time = this.world.time;
+  debug = this.world.debug;
+
   constructor() {
-    this.resource = this.resources.items.MapModel;
-    this.setModel()
+    this.container = new THREE.Object3D()
+    this.container.matrixAutoUpdate = false
+    this.setStatic();
+    this.setDynamic()
   }
-  setModel() {
-    const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-    this.scene.add( light );
-    this.model = this.resource.scene;
-    this.scene.add(this.model);
+  setStatic() {
+    this.objects.add({
+      base: this.resources.items.MapModel.scene,
+      collision: this.resources.items.MainMapCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+  }
+  setDynamic(){
+    this.objects.add({
+      base: this.resources.items.IThubEkatText.scene,
+      collision: this.resources.items.IThubEkatTextCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      mass: 1.5,
+    })
   }
 }

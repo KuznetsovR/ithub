@@ -1,12 +1,9 @@
 import EventEmitter from '../Utils/EventEmitter';
-// import Experience from '../Experience';
+import World from './World';
 
 export default class Controls extends EventEmitter {
-  // experience = new Experience();
-  // camera = this.experience.camera;
-  // time = this.experience.time;
-  // sizes = this.experience.sizes;
-
+  world = new World();
+  time = this.world.time;
   constructor() {
     super();
     this.setActions();
@@ -37,7 +34,6 @@ export default class Controls extends EventEmitter {
           switch (_event.key) {
             case 'ArrowUp':
             case 'w':
-              // this.camera.pan.reset()
               this.actions.up = true;
               break;
 
@@ -48,7 +44,6 @@ export default class Controls extends EventEmitter {
 
             case 'ArrowDown':
             case 's':
-              // this.camera.pan.reset()
               this.actions.down = true;
               break;
 
@@ -69,7 +64,6 @@ export default class Controls extends EventEmitter {
           switch (_event.key) {
             case 'ArrowUp':
             case 'w':
-              // this.camera.pan.reset()
               this.actions.up = false;
               break;
 
@@ -80,7 +74,6 @@ export default class Controls extends EventEmitter {
 
             case 'ArrowDown':
             case 's':
-              // this.camera.pan.reset()
               this.actions.down = false;
               break;
 
