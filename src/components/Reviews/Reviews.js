@@ -1,7 +1,7 @@
 import React from 'react';
 import './Reviews.scss';
 import Slider from 'react-slick';
-import studentOnePhoto from '../../assets/images/web_dev.png';
+import studentOnePhoto from '@assets/images/web_dev.png';
 
 export const Reviews = () => {
   const settings = {

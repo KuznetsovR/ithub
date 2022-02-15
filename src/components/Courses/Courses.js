@@ -1,6 +1,6 @@
 import React from 'react';
 import './Courses.scss';
-import { HexaButton } from '../HexaButton/HexaButton';
+import { HexaButton } from '@components/HexaButton/HexaButton';
 
 export const Courses = () => {
   return (
