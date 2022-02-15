@@ -1,0 +1,50 @@
+@use '../../styles/colors' as colors;
+
+.block-preparatory-courses {
+  background-color: colors.$lighter-dark-gray;
+  display: flex;
+  justify-content: space-evenly;
+  height: 400px;
+  color: colors.$main-white;
+}
+.preparatory-courses-square {
+  background-color: #141414;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.courses-square-2 {
+  margin-top: 40px;
+}
+.courses-square {
+  position: absolute;
+  background-color: colors.$main-purple;
+  transform: rotate(45deg);
+  width: 250px;
+  height: 240px;
+  transform: rotate(45deg);
+}
+.courses-square-3 {
+  margin-bottom: 40px;
+}
+.courses-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: colors.$main-white;
+}
+.preparatory-courses-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 50px;
+}
+.title-preparatory-courses {
+  z-index: 1;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.title-courses-description {
+  font-size: 20px;
+}
