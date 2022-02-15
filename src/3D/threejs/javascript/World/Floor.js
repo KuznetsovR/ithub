@@ -1,23 +1,23 @@
 import * as THREE from 'three';
 import FloorMaterial from '../Materials/Floor';
-import Experience from '../Experience';
+import World from './World';
 
 export default class Floor {
   constructor() {
     this.container = new THREE.Object3D();
     this.container.matrixAutoUpdate = false;
 
-    this.experience = new Experience();
-    this.debug = this.experience.debug
+    this.world = new World();
+    this.debug = this.world.debug
     this.geometry = new THREE.PlaneBufferGeometry(2, 2, 10, 10);
-    this.resources = this.experience.resources;
+    this.resources = this.world.resources;
 
     // TODO: find better colors for the floor
     this.colors = {
-      topLeft: '#7f818d',
-      topRight: '#747780',
-      bottomRight: '#4c4d52',
-      bottomLeft: '#4c4f54',
+      topLeft: '#b25ec9',
+      topRight: '#9a58c6',
+      bottomRight: '#7643d6',
+      bottomLeft: '#8a609a',
     };
 
     this.material = new FloorMaterial();

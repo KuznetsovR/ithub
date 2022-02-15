@@ -1,54 +1,35 @@
-import Experience from '../Experience';
 import * as THREE from 'three';
+import World from './World';
 
 export default class MainHero {
-  experience = new Experience();
-  resources = this.experience.resources;
-  controls = this.experience.controls;
-  time = this.experience.time;
+  world = new World();
+  resources = this.world.resources;
+  objects = this.world.objects;
+  physics = this.world.physics;
+  shadows = this.world.shadows;
+  materials = this.world.materials;
+  controls = this.world.controls;
+  renderer = this.world.renderer;
+  camera = this.world.camera;
+  debug = this.world.debug;
+  time = this.world.time;
 
   container = new THREE.Object3D();
   position = new THREE.Vector3();
 
   constructor() {
+    if (this.debug.active) {
+      this.debugFolder = this.debug.addFolder('car');
+    }
+
     this.setModel();
-    this.setSkate()
-    this.setMovement()
+    this.setMovement();
+    this.setSkate();
   }
   setModel() {
     this.model = {
-      skate: this.resources.items,
+      skate: this.resources.items.SkateModel,
     };
-  }
-  setSkate(){
-    this.skate = {
-
-    }
-    // this.chassis = {}
-    // this.chassis.offset = new THREE.Vector3(0, 0, - 0.28)
-    // this.chassis.object = this.objects.getConvertedMesh(this.models.chassis.scene.children)
-    // this.chassis.object.position.copy(this.physics.car.chassis.body.position)
-    // this.chassis.oldPosition = this.chassis.object.position.clone()
-    // this.container.add(this.chassis.object)
-    //
-    // this.shadows.add(this.chassis.object, { sizeX: 3, sizeY: 2, offsetZ: 0.2 })
-    //
-    // // Time tick
-    // this.time.on('tick', () =>
-    // {
-    //   // Save old position for movement calculation
-    //   this.chassis.oldPosition = this.chassis.object.position.clone()
-    //
-    //   // Update if mode physics
-    //   if(!this.transformControls.enabled)
-    //   {
-    //     this.chassis.object.position.copy(this.physics.car.chassis.body.position).add(this.chassis.offset)
-    //     this.chassis.object.quaternion.copy(this.physics.car.chassis.body.quaternion)
-    //   }
-    //
-    //   // Update position
-    //   this.position.copy(this.chassis.object.position)
-    // })
   }
   setMovement() {
     this.movement = {
@@ -58,14 +39,45 @@ export default class MainHero {
       localAcceleration: new THREE.Vector3(),
     };
 
-    // this.time.on('tick', () => {
-    //   const movementSpeed = new THREE.Vector3()
-    //   movementSpeed.copy(this.chassis.object.position).sub(this.chassis.oldPosition)
-    //   this.movement.acceleration = movementSpeed.clone().sub(this.movement.speed)
-    //   this.movement.speed.copy(movementSpeed)
-    //
-    //   this.movement.localSpeed = this.movement.speed.clone().applyAxisAngle(new THREE.Vector3(0, 0, 1), - this.chassis.object.rotation.z)
-    //   this.movement.localAcceleration = this.movement.acceleration.clone().applyAxisAngle(new THREE.Vector3(0, 0, 1), - this.chassis.object.rotation.z)
-    // });
+    this.time.on('tick', () => {
+      const movementSpeed = new THREE.Vector3();
+      movementSpeed.copy(this.skate.object.position).sub(this.skate.oldPosition);
+      this.movement.acceleration = movementSpeed.clone().sub(this.movement.speed);
+      this.movement.speed.copy(movementSpeed);
+      this.movement.localSpeed = this.movement.speed
+        .clone()
+        .applyAxisAngle(new THREE.Vector3(0, 0, 1), -this.skate.object.rotation.z);
+      this.movement.localAcceleration = this.movement.acceleration
+        .clone()
+        .applyAxisAngle(new THREE.Vector3(0, 0, 1), -this.skate.object.rotation.z);
+    });
+  }
+  setSkate() {
+    this.skate = {};
+    this.skate.offset = new THREE.Vector3(0, 0, -0.28);
+    this.skate.object = this.objects.getConvertedMesh(this.model.skate.scene.children);
+    this.skate.object.position.copy(this.physics.skate.chassis.body.position);
+    this.skate.oldPosition = this.skate.object.position.clone();
+    this.container.add(this.skate.object);
+
+    this.shadows.add(this.skate.object, { sizeX: 3, sizeY: 2, offsetZ: 0.2 });
+
+    // Time tick
+    this.time.on('tick', () => {
+      // Save old position for movement calculation
+      this.skate.oldPosition = this.skate.object.position.clone();
+
+      // Update if mode physics
+      // if (!this.transformControls.enabled) {
+      //   this.skate.object.position.copy(this.physics.car.skate.body.position).add(this.skate.offset);
+      //   this.skate.object.quaternion.copy(this.physics.car.skate.body.quaternion);
+      // }
+
+      this.skate.object.position.copy(this.physics.skate.chassis.body.position).add(this.skate.offset);
+      this.skate.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
+
+      // Update position
+      this.position.copy(this.skate.object.position);
+    });
   }
 }

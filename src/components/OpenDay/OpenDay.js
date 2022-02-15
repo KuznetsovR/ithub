@@ -1,6 +1,6 @@
 import React from 'react';
 import './OpenDay.scss';
-import { HexaButton } from '../HexaButton/HexaButton';
+import { HexaButton } from '@components/HexaButton/HexaButton';
 import Slider from 'react-slick';
 
 export const OpenDay = () => {

@@ -1,16 +1,15 @@
-import Experience from '../Experience';
 import * as THREE from 'three';
 import FloorShadowMaterial from '../Materials/FloorShadow';
+import World from './World';
 
 export default class Materials {
-  experience = new Experience();
-  debug = this.experience.debug;
-  resources = this.experience.resources;
+  world = new World();
+  debug = this.world.debug;
+  resources = this.world.resources;
 
   constructor() {
     if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('materials');
-      this.debugFolder.open();
     }
 
     this.items = {};
@@ -58,9 +57,8 @@ export default class Materials {
     };
 
     // Debug
-    if (this.debug) {
+    if (this.debug.active) {
       const folder = this.debugFolder.addFolder('floorShadow');
-      folder.open();
 
       folder.addColor(this.items.floorShadow, 'shadowColor').onChange(this.items.floorShadow.updateMaterials);
     }
