@@ -12,6 +12,7 @@ export default class Map {
     this.container = new THREE.Object3D()
     this.container.matrixAutoUpdate = false
     this.setStatic();
+    this.setDynamic()
   }
   setStatic() {
     this.objects.add({
@@ -22,5 +23,14 @@ export default class Map {
       mass: 0,
     });
   }
-
+  setDynamic(){
+    this.objects.add({
+      base: this.resources.items.IThubEkatText.scene,
+      collision: this.resources.items.IThubEkatTextCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      mass: 1.5,
+    })
+  }
 }

@@ -19,7 +19,7 @@ export default class Physics {
     this.setFloor();
     this.setSkate();
     this.time.on('tick', () => {
-      this.world.step(this.time.delta /1000, this.time.delta, 3);
+      this.world.step(1 / 60, this.time.delta, 3);
     });
   }
 
