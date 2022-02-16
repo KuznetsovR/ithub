@@ -13,12 +13,6 @@ export const CommissionPage = () => {
         <div className="container">
           <Сommission1 />
           <Сommission2 />
-<<<<<<< HEAD
-=======
-    return (
-        <div>
-            Страница priemnoi комиссии тут
->>>>>>> 55c659dea74c825db6e9274a8b06d14f52d115f8
         </div>
       </main>
       <Footer />
