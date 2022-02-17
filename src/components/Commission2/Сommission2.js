@@ -18,35 +18,28 @@ export const Сommission2 = () => {
             component="form"
             sx={{
               '& > :not(style)': { m: 0, width: '85ch' },
+              '.MuiInputLabel-root': { color: 'white' },
+              '.MuiOutlinedInput-root': { borderColor: 'white' },
+              '.MuiInputBase-root': { color: 'white' },
             }}
             noValidate
             autoComplete="off"
           >
-            <TextField
-              id="outlined-basic"
-              label="ФИО ребёнка"
-              color="secondary"
-              focused
-              variant="outlined"
-            />
+            <TextField id="outlined-basic" label="ФИО ребёнка" color="secondary" variant="outlined" />
           </Box>
-          </div>
-          <div className="share-flex-column">
+        </div>
+        <div className="share-flex-column">
           <Box
             component="form"
             sx={{
               '& > :not(style)': { m: 0, width: '85ch' },
+              '.MuiInputLabel-root': { color: 'white' },
+              '.MuiInputBase-root': { color: 'white' },
             }}
             noValidate
             autoComplete="off"
           >
-            <TextField
-              id="outlined-basic"
-              label="ФИО родителя"
-              color="secondary"
-              focused
-              variant="outlined"
-            />
+            <TextField id="outlined-basic" label="ФИО родителя" color="secondary" variant="outlined" />
           </Box>
         </div>
         <div className="share-flex-row">
@@ -54,35 +47,27 @@ export const Сommission2 = () => {
             component="form"
             sx={{
               '& > :not(style)': { m: 0, width: '40ch' },
+              '.MuiInputLabel-root': { color: 'white' },
+              '.MuiInputBase-root': { color: 'white' },
             }}
             noValidate
             autoComplete="off"
           >
-            <TextField
-              id="outlined-basic"
-              label="Телефон"
-              color="secondary"
-              focused
-              variant="outlined"
-            />
+            <TextField id="outlined-basic" label="Телефон" color="secondary" variant="outlined" />
           </Box>
           <Box
             component="form"
             sx={{
               '& > :not(style)': { m: 0, width: '40ch' },
+              '.MuiInputLabel-root': { color: 'white' },
+              '.MuiInputBase-root': { color: 'white' },
             }}
             noValidate
             autoComplete="off"
           >
-            <TextField
-              id="outlined-basic"
-              label="Почта"
-              color="secondary"
-              focused
-              variant="outlined"
-            />
+            <TextField id="outlined-basic" label="Почта" color="secondary" variant="outlined" />
           </Box>
-          </div>
+        </div>
 
         <div className="share-checkbox">
           <FormGroup>
