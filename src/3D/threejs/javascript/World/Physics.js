@@ -37,7 +37,7 @@ export default class Physics {
   setModels() {
     this.models = {};
     this.models.container = new THREE.Object3D();
-    this.models.container.visible = true;
+    this.models.container.visible = false;
     this.models.materials = {};
     this.models.materials.static = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: true });
     this.models.materials.dynamic = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
