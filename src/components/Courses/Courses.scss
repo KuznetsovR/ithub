@@ -48,3 +48,20 @@
 .title-courses-description {
   font-size: 20px;
 }
+.preparatory-courses-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-gap: 5px;
+  padding: 10px;
+}
+.courese-img {
+  width: 230px;
+  height: 200px;
+}
+.courese-big-img {
+  width: 410px;
+  height: 410px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
