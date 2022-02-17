@@ -30,7 +30,7 @@ export default class Map {
       offset: new THREE.Vector3(0, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
       shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
-      mass: 1.5,
+      mass: 0.3,
     })
   }
 }
