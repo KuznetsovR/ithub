@@ -1,0 +1,12 @@
+export { Admissions } from '@components/Admissions/Admissions.js';
+export { Courses } from '@components/Courses/Courses.js';
+export { Documents } from '@components/Documents/Documents.js';
+export { Footer } from '@components/Footer/Footer.js';
+export { Header } from '@components/Header/Header.js';
+export { HexaButton } from '@components/HexaButton/HexaButton.js';
+export { OpenDay } from '@components/OpenDay/OpenDay.js';
+export { Phone } from '@components/Phone/Phone.js';
+export { Reviews } from '@components/Reviews/Reviews.js';
+export { SpecialityModal } from '@components/SpecialityModal/SpecialityModal.js';
+export { Specialties } from '@components/Specialties/Specialties.js';
+export { YandexMap } from '@components/YandexMap/YandexMap.js';

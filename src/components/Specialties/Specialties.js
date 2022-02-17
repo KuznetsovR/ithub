@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Specialties.scss';
-import { SpecialityModal } from '@components/SpecialityModal/SpecialityModal';
+import { SpecialityModal } from '@components/export.components.js';
 import { modalContents } from './ModalContent';
 
 export const Specialties = () => {

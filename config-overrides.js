@@ -1,6 +1,4 @@
-const { alias } = require('react-app-rewire-alias')
-
-module.exports = alias({
+module.exports = require('react-app-rewire-alias').alias({
   '@components': './src/components',
   '@pages': './src/pages',
   '@assets': './src/assets',
