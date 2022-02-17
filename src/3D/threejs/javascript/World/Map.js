@@ -25,12 +25,21 @@ export default class Map {
   }
   setDynamic(){
     this.objects.add({
-      base: this.resources.items.IThubEkatText.scene,
-      collision: this.resources.items.IThubEkatTextCollision.scene,
+      base: this.resources.items.IThubText.scene,
+      collision: this.resources.items.IThubTextCollision.scene,
       offset: new THREE.Vector3(0, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
       shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
-      mass: 0.3,
+      mass: 0.7,
+      
+    })
+    this.objects.add({
+      base: this.resources.items.EkatText.scene,
+      collision: this.resources.items.EkatTextCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      mass: 0.7,
     })
   }
 }

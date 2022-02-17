@@ -2,19 +2,31 @@ import MapSource from '../Models/Map/MainMap.glb'
 import SkateSource from '../Models/Skate/Skate.glb'
 import MainMapCollision from '../Models/Map/MainMapCollision.glb'
 import MainMapFloorShadow from '../Models/Map/floorShadow.png'
-import IThubEkatText from '../Models/Text/IThubEkat.glb'
-import IThubEkatTextCollision from '../Models/Text/IThubEkatCollision.glb'
+import IThubText from '../Models/Text/IThub.glb'
+import IThubTextCollision from '../Models/Text/IThubCollision.glb'
+import EkatText from '../Models/Text/Ekat.glb'
+import EkatTextCollision from '../Models/Text/EkatCollision.glb'
 
 const sources = [
   {
-    name: 'IThubEkatText',
+    name: 'IThubText',
     type: 'gltfModel',
-    path: IThubEkatText,
+    path: IThubText,
   },
   {
-    name: 'IThubEkatTextCollision',
+    name: 'EkatText',
     type: 'gltfModel',
-    path: IThubEkatTextCollision,
+    path: EkatText,
+  },
+  {
+    name: 'EkatTextCollision',
+    type: 'gltfModel',
+    path: EkatTextCollision,
+  },
+  {
+    name: 'IThubTextCollision',
+    type: 'gltfModel',
+    path: IThubTextCollision,
   },{
     name: 'MapModel',
     type: 'gltfModel',
