@@ -1,14 +1,20 @@
 export const modalContents = {
   programmer: {
-    heading: 'Some heading for programmers',
-    description: 'Some desc for programmers',
+    heading: 'Программист',
+    description: 'Программист пишет код для программ, операционных систем, игр, приложений',
+    role: 'Бизнес-роли: Java-разработчик, системный аналитик, Data Scientist ',
+    price: ' Стоимость: 12 000 рублей в месяц',
   },
   webdev: {
-    heading: 'Some heading for webdev',
-    description: 'Some desc for webdev',
+    heading: 'Веб-разработчик',
+    description: 'Веб-разработчик проектирует и создаёт веб-сайты и мобильные приложения',
+    role: 'Бизнес-роли: разработчик игр, разработчик мобильных приложений, веб-разработчик',
+    price: ' Стоимость: 12 000 рублей в месяц',
   },
   sysadmin: {
-    heading: 'Some heading for sysadmin',
-    description: 'Some desc for sysadmin',
+    heading: 'Системный администратор',
+    description: 'Системный администратор управляет компьютерными сетями, отвечает за стабильную работу оборудования',
+    role: 'Бизнес-роль: системный и сетевой администратор',
+    price: ' Стоимость: 12 000 рублей в месяц',
   },
 };
