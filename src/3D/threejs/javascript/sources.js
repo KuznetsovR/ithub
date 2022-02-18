@@ -20,7 +20,14 @@ import ACollision from '../Models/Text/ACollision.glb'
 import AText from '../Models/Text/A.glb'
 import VCollision from '../Models/Text/VCollision.glb'
 import VText from '../Models/Text/V.glb'
+import MainHero from '../Models/MainHero/MainHero.glb'
+
 const sources = [
+  {
+    name: 'MainHero',
+    type: 'gltfModel',
+    path: MainHero,
+  },
   {
     name: 'AText',
     type: 'gltfModel',
