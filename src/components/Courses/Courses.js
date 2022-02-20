@@ -1,13 +1,20 @@
 import React from 'react';
 import './Courses.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
-import courses1 from '../../assets/images/courses1.jpg';
-import courses2 from '../../assets/images/courses2.jpg';
-import courses3 from '../../assets/images/courses3.jpg';
-import courses4 from '../../assets/images/courses4.jpg';
-import courses5 from '../../assets/images/courses5.jpg';
+import Slider from 'react-slick';
 
 export const Courses = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1300,
+    autoplaySpeed: 5000,
+    // pauseOnHover: true,
+    arrows: false,
+  };
   return (
     <div>
       <div className="block-preparatory-courses">
@@ -32,12 +39,67 @@ export const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="preparatory-courses-img">
-        <img src={courses1} className="courese-big-img" alt="" />
-        <img src={courses2} className="courese-img" alt="" />
-        <img src={courses3} className="courese-img" alt="" />
-        <img src={courses4} className="courese-img" alt="" />
-        <img src={courses5} className="courese-img" alt="" />
+      <div className="open-day-slider-wrapper courses-photo-gallery">
+        <p className="title-photo-gallery">Фотогаларея</p>
+        <Slider {...settings}>
+          <div className={'slide'}>
+            <div className="img-container">
+              <img
+                className={'slide-img  courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+              <img
+                className={'slide-img  courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+              <img
+                className={'slide-img  courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="img-container">
+              <img
+                className={'slide-img courses-slide-img'}
+                src="https://t1.unipage.net/src/co40ou.webp"
+                alt=""
+              />
+              <img
+                className={'slide-img courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+              <img
+                className={'slide-img courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="img-container">
+              <img
+                className={'slide-img courses-slide-img'}
+                src="https://www.studylab.ru/upload/Institutions/image/big/28bdde35702ffcfbdcc4f9138a29be10.jpg"
+                alt=""
+              />
+              <img
+                className={'slide-img  courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+              <img
+                className={'slide-img courses-slide-img'}
+                src="https://t1.unipage.net/src/c8849o.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </Slider>
       </div>
     </div>
   );

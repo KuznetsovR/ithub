@@ -45,23 +45,20 @@
   text-align: center;
   font-weight: bold;
 }
-.title-courses-description {
+.title-courses-description,
+.title-photo-gallery {
   font-size: 20px;
+  color: #fff;
 }
-.preparatory-courses-img {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  grid-gap: 5px;
-  padding: 10px;
+.img-container {
+  display: flex;
 }
-.courese-img {
-  width: 230px;
+.courses-photo-gallery {
+  background-color: #1e1d1d;
+  max-width: 100%;
+  padding: 20px 40px 40px 40px;
+}
+.courses-slide-img {
+  width: 250px;
   height: 200px;
-}
-.courese-big-img {
-  width: 410px;
-  height: 410px;
-  grid-row-start: 1;
-  grid-row-end: 3;
 }

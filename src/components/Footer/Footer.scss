@@ -1,5 +1,5 @@
 @use '../../styles/colors' as colors;
-<<<<<<< HEAD
+
 footer {
   color: white;
 }
@@ -48,57 +48,55 @@ footer {
 }
 .text-phone {
   padding-top: 10px;
-=======
-footer{
-    color: white;
 }
-.footer-container{
-    background-color: colors.$main-graphite;
-    width: 100%;
-    display: flex;
-    flex-direction: row; 
-    margin: 0 auto;
-    justify-content: space-evenly;
+footer {
+  color: white;
 }
-.text-address{
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 10px 50px 10px 0;
-
+.footer-container {
+  background-color: colors.$main-graphite;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-evenly;
 }
-.footer-text{
-    display: flex;
-    flex-direction: column;   
+.text-address {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 50px 10px 0;
 }
-.logo-footer{
-    height: 100px;
-    width: 130px;
-    padding: 15px 150px 5px 0;
+.footer-text {
+  display: flex;
+  flex-direction: column;
 }
-.text-copyright{
-    color: #88898D;
-    font-size: 10px;
-    text-decoration: none;
-    padding: 5px 50px 15px 0;
+.logo-footer {
+  height: 100px;
+  width: 130px;
+  padding: 15px 150px 5px 0;
 }
-.text-contacts{
-    color:white;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 25px 40px 5px 40px;
-    text-align: center;
+.text-copyright {
+  color: #88898d;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 5px 50px 15px 0;
 }
-.text-email{
-    color:white;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 15px 40px 10px 40px;  
-    text-align: center;
+.text-contacts {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 25px 40px 5px 40px;
+  text-align: center;
 }
-.text-phone{
-    padding-top: 10px;
->>>>>>> 9d60bdbc93a100dc5011524927375a4bd4f7ef10
+.text-email {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px 40px 10px 40px;
+  text-align: center;
+}
+.text-phone {
+  padding-top: 10px;
 }
 
 .text-3d {
