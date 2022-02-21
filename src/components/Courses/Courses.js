@@ -42,28 +42,28 @@ export const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="open-day-slider-wrapper courses-photo-gallery">
+      <div className="courses-photo-gallery">
         <p className="title-photo-gallery">Фотогаларея</p>
         <Slider {...settings}>
           <div className={'slide'}>
-            <div className="img-container">
-              <img src={courses1} alt="" className="slide-img  courses-slide-img" />
-              <img src={courses2} alt="" className="slide-img  courses-slide-img" />
-              <img src={courses3} alt="" className="slide-img  courses-slide-img" />
+            <div className="courses-img-container">
+              <img src={courses1} alt="" className="courses-slide-img" />
+              <img src={courses2} alt="" className="courses-slide-img" />
+              <img src={courses3} alt="" className="courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
-            <div className="img-container">
-              <img src={courses1} alt="" className="slide-img  courses-slide-img" />
-              <img src={courses2} alt="" className="slide-img  courses-slide-img" />
-              <img src={courses3} alt="" className="slide-img  courses-slide-img" />
+            <div className="courses-img-container">
+              <img src={courses1} alt="" className="courses-slide-img" />
+              <img src={courses2} alt="" className="courses-slide-img" />
+              <img src={courses3} alt="" className="courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
-            <div className="img-container">
-              <img src={courses1} alt="" className="slide-img  courses-slide-img" />
-              <img src={courses2} alt="" className="slide-img  courses-slide-img" />
-              <img src={courses3} alt="" className="slide-img  courses-slide-img" />
+            <div className="courses-img-container">
+              <img src={courses1} alt="" className="courses-slide-img" />
+              <img src={courses2} alt="" className="courses-slide-img" />
+              <img src={courses3} alt="" className="courses-slide-img" />
             </div>
           </div>
         </Slider>
