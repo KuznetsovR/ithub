@@ -52,6 +52,7 @@
 }
 .img-container {
   display: flex;
+  gap: 15px;
 }
 .courses-photo-gallery {
   background-color: #1e1d1d;
@@ -59,6 +60,5 @@
   padding: 20px 40px 40px 40px;
 }
 .courses-slide-img {
-  width: 250px;
-  height: 200px;
+  max-height: 90%;
 }

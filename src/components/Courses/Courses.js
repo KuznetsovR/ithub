@@ -2,6 +2,9 @@ import React from 'react';
 import './Courses.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
 import Slider from 'react-slick';
+import courses1 from '../../assets/images/courses1.png';
+import courses2 from '../../assets/images/courses2.png';
+import courses3 from '../../assets/images/courses3.png';
 
 export const Courses = () => {
   const settings = {
@@ -44,59 +47,23 @@ export const Courses = () => {
         <Slider {...settings}>
           <div className={'slide'}>
             <div className="img-container">
-              <img
-                className={'slide-img  courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
-              <img
-                className={'slide-img  courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
-              <img
-                className={'slide-img  courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
+              <img src={courses1} alt="" className="slide-img  courses-slide-img" />
+              <img src={courses2} alt="" className="slide-img  courses-slide-img" />
+              <img src={courses3} alt="" className="slide-img  courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
             <div className="img-container">
-              <img
-                className={'slide-img courses-slide-img'}
-                src="https://t1.unipage.net/src/co40ou.webp"
-                alt=""
-              />
-              <img
-                className={'slide-img courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
-              <img
-                className={'slide-img courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
+              <img src={courses1} alt="" className="slide-img  courses-slide-img" />
+              <img src={courses2} alt="" className="slide-img  courses-slide-img" />
+              <img src={courses3} alt="" className="slide-img  courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
             <div className="img-container">
-              <img
-                className={'slide-img courses-slide-img'}
-                src="https://www.studylab.ru/upload/Institutions/image/big/28bdde35702ffcfbdcc4f9138a29be10.jpg"
-                alt=""
-              />
-              <img
-                className={'slide-img  courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
-              <img
-                className={'slide-img courses-slide-img'}
-                src="https://t1.unipage.net/src/c8849o.webp"
-                alt=""
-              />
+              <img src={courses1} alt="" className="slide-img  courses-slide-img" />
+              <img src={courses2} alt="" className="slide-img  courses-slide-img" />
+              <img src={courses3} alt="" className="slide-img  courses-slide-img" />
             </div>
           </div>
         </Slider>
