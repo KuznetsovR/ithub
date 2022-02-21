@@ -1,9 +1,6 @@
 import React from 'react';
 import './CoursesPage.scss'
-import { Courses } from '../../components/Courses/Courses';
-import { Header } from '../../components/Header/Header';
-import { Phone } from '../../components/Phone/Phone';
-import { Footer } from '../../components/Footer/Footer';
+import { Courses, Footer, Header, Phone } from '@components/export.components.js';
 
 export const CoursesPage = () => {
   return (
