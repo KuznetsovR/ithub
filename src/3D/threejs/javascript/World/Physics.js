@@ -103,16 +103,16 @@ export default class Physics {
     };
 
     this.skate.options = {
-      width: 1.01,
+      width: 2.02,
       height: 1.2,
-      depth: 2.02,
+      depth: 2.43,
       offset: new CANNON.Vec3(0, 0, 0.6),
-      mass: 20,
+      mass: 60,
       wheelFrontOffsetDepth: 0.635,
       wheelBackOffsetDepth: -0.475,
-      wheelOffsetWidth: 0.2,
-      wheelRadius: 0.1,
-      wheelHeight: 0.1,
+      wheelOffsetWidth: 0.6,
+      wheelRadius: 0.2,
+      wheelHeight: 0.2,
       wheelSuspensionStiffness: 25,
       wheelSuspensionRestLength: 0.1,
       wheelFrictionSlip: 5,

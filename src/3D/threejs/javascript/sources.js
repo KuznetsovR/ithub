@@ -1,5 +1,5 @@
 import MapSource from '../Models/Map/MainMap.glb'
-import SkateSource from '../Models/Skate/Skate.glb'
+import SkateSource from '../Models/Skate/SpaceShip.glb'
 import MainMapCollision from '../Models/Map/MainMapCollision.glb'
 import MainMapFloorShadow from '../Models/Map/floorShadow.png'
 import cText from '../Models/Text/c.glb'
@@ -20,7 +20,19 @@ import ACollision from '../Models/Text/ACollision.glb'
 import AText from '../Models/Text/A.glb'
 import VCollision from '../Models/Text/VCollision.glb'
 import VText from '../Models/Text/V.glb'
+import IthubEkatCollision from '../Models/Text/IthubEkatCollision.glb'
+import IthubEkatText from '../Models/Text/IthubEkat.glb'
 const sources = [
+  {
+    name: 'IthubEkatText',
+    type: 'gltfModel',
+    path: IthubEkatText,
+  },
+  {
+    name: 'IthubEkatCollision',
+    type: 'gltfModel',
+    path: IthubEkatCollision,
+  },
   {
     name: 'AText',
     type: 'gltfModel',
