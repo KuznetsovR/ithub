@@ -21,6 +21,11 @@ export const Сommission2 = () => {
               '.MuiInputLabel-root': { color: 'white' },
               '.MuiOutlinedInput-root': { borderColor: 'white' },
               '.MuiInputBase-root': { color: 'white' },
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: '#a71dd8',
+                },
+              },
             }}
             noValidate
             autoComplete="off"
@@ -35,6 +40,11 @@ export const Сommission2 = () => {
               '& > :not(style)': { m: 0, width: '85ch' },
               '.MuiInputLabel-root': { color: 'white' },
               '.MuiInputBase-root': { color: 'white' },
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: '#a71dd8',
+                },
+              },
             }}
             noValidate
             autoComplete="off"
@@ -49,6 +59,11 @@ export const Сommission2 = () => {
               '& > :not(style)': { m: 0, width: '40ch' },
               '.MuiInputLabel-root': { color: 'white' },
               '.MuiInputBase-root': { color: 'white' },
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: '#a71dd8',
+                },
+              },
             }}
             noValidate
             autoComplete="off"
@@ -61,6 +76,11 @@ export const Сommission2 = () => {
               '& > :not(style)': { m: 0, width: '40ch' },
               '.MuiInputLabel-root': { color: 'white' },
               '.MuiInputBase-root': { color: 'white' },
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: '#a71dd8',
+                },
+              },
             }}
             noValidate
             autoComplete="off"
