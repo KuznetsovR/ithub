@@ -12,11 +12,10 @@ export default class Lights{
     this.container.add( light );
   }
   setDirectionalLight(){
-    const pointLight = new THREE.PointLight(0xff9000, 1, 1000, 0.01)          // lights in every direction
+    const pointLight = new THREE.PointLight(0xffffff, 1, 1000, 0.001)          // lights in every direction
     pointLight.position.set(1, 1, 20)                                                  // distance - where light disappears, decay - how fast light disappears
     const pointLightHelper = new THREE.PointLightHelper(pointLight, 1)
     this.container.add(pointLightHelper)
-    console.log(pointLightHelper);
     this.container.add(pointLight)
   }
 }

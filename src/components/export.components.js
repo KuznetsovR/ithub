@@ -1,0 +1,14 @@
+export { Admissions } from './Admissions/Admissions.js';
+export { Courses } from './Courses/Courses.js';
+export { Commission1 } from './Commission1/Сommission1';
+export { Commission2 } from './Commission2/Сommission2';
+export { Documents } from './Documents/Documents.js';
+export { Footer } from './Footer/Footer.js';
+export { Header } from './Header/Header.js';
+export { HexaButton } from './HexaButton/HexaButton.js';
+export { OpenDay } from './OpenDay/OpenDay.js';
+export { Phone } from './Phone/Phone.js';
+export { Reviews } from './Reviews/Reviews.js';
+export { SpecialityModal } from './SpecialityModal/SpecialityModal.js';
+export { Specialties } from './Specialties/Specialties.js';
+export { YandexMap } from './YandexMap/YandexMap.js';

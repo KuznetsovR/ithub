@@ -1,11 +1,6 @@
-const [express, port] = [require('express'), 3000];
+const [express, port] = [require('express'), 1337];
 const app = express();
 
-process.env.NODE_ENV = !process.env.NODE_ENV && "developement";
-
-if (process.env.NODE_ENV !== "developement") {
-  app.get('/', (req, res) => res.send('../build/index.html'));
-}
+require('./router/react-finder')(app);
 
 app.listen(port);
-

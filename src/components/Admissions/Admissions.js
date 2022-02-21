@@ -1,6 +1,6 @@
 import React from 'react';
 import './Admissions.scss';
-import logo from '../../assets/images/IThublogo.png';
+import logo from '@assets/images/IThublogo.png';
 
 export const Admissions = () => {
   return (

@@ -1,0 +1,67 @@
+@use '../../styles/colors' as colors;
+.commission-case {
+  background-color: colors.$lighter-dark-gray;
+  padding: 40px;
+}
+.text-comission-head {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.comission-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: colors.$box-shadow-dark-pink;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #a71dd8;
+  margin: 40px auto;
+}
+.comission-column-1 {
+  max-width: 100%;
+  position: relative;
+  flex: 2% 0 0;
+  min-height: 1px;
+  margin-bottom: 15px;
+}
+.comission-column-2 {
+  max-width: 100%;
+  flex: 0 0 38%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+.comission-column-3 {
+  max-width: 100%;
+  flex: 0 0 38%;
+  min-height: 1px;
+  padding-left: 120px;
+  margin-bottom: 15px;
+}
+.commission-text-column {
+  color: #fff;
+  font-size: 20px;
+  margin: 50px 0 55px 0;
+}
+.commission-text-link {
+  color: #fff;
+  font-size: 15px;
+  margin: 60px 0 0 100px;
+}
+.comission-line{
+  height: 160px;
+  width: 4px;
+  background: #a71dd8;
+  position: absolute;
+  top: 40px;
+  right: 18px;
+  box-shadow: 0 0 5px #a71dd8;
+}
+.commission-btn-wrapper{
+  margin-top: 120px;
+  text-align: center;
+}

@@ -23,7 +23,6 @@ export default class Camera {
     this.setAngle();
     this.setInstance();
     // this.setControls();
-    this.setPan();
   }
   setAngle() {
     this.angle = new THREE.Vector3(0, -0.075, 0.037);
@@ -55,38 +54,6 @@ export default class Camera {
       this.instance.lookAt(this.targetEased);
       // TODO: remove pan from everywhere because we dont use it here
 
-    });
-  }
-  setPan() {
-    this.pan = {};
-    this.pan.enabled = false;
-    this.pan.easing = 0.1;
-    this.pan.value = {
-      x: 0,
-      y: 0,
-    };
-    this.pan.targetValue = {
-      x: 0,
-      y: 0,
-    };
-
-    this.pan.reset = () => {
-      this.pan.targetValue.x = 0;
-      this.pan.targetValue.y = 0;
-    };
-
-    this.pan.enable = () => {
-      this.pan.enabled = true;
-    };
-
-    this.pan.disable = () => {
-      this.pan.enabled = false;
-    };
-
-    this.time.on('tick', () => {
-      // Update value and apply easing
-      this.pan.value.x += (this.pan.targetValue.x - this.pan.value.x) * this.pan.easing;
-      this.pan.value.y += (this.pan.targetValue.y - this.pan.value.y) * this.pan.easing;
     });
   }
 
