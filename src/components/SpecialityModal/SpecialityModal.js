@@ -33,12 +33,22 @@ export const SpecialityModal = (props) => {
     >
       <Fade in={props.open}>
         <Box sx={style}>
+          <div className="rectangle-spec-modal">
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {props.specialityContent.heading}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          </div> 
+          <div className="text-spec-modal">
+          <Typography id="modal-modal-description" sx={{ mt: 4 }}>
             {props.specialityContent.description}
           </Typography>
+          <Typography id="modal-modal-role" sx={{ mt: 3 }}>
+            {props.specialityContent.role}
+          </Typography>
+          <Typography id="modal-modal-price" sx={{ mt: 6 }}>
+            {props.specialityContent.price}
+          </Typography>
+          </div>
         </Box>
       </Fade>
     </Modal>
