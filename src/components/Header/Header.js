@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 export const Header = () => {
   return (
     <header>
-      <Link to="/">
+      <Link to="/"> 
         <img src={logo} className="logoheader" alt="logoit" />
       </Link>
       <nav className="menu">
