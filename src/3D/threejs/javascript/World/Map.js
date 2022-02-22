@@ -5,8 +5,6 @@ export default class Map {
   world = new World();
   resources = this.world.resources;
   objects = this.world.objects;
-  time = this.world.time;
-  debug = this.world.debug;
 
   constructor() {
     this.container = new THREE.Object3D()
