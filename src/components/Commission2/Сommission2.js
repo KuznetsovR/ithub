@@ -7,9 +7,8 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-
-
-export const Сommission2 = () => {
+  
+  export const Commission2 = () => {
   const fullwidth = {
     '& > :not(style)': { m: 0, width: '85ch' },
     '.MuiInputLabel-root': { color: 'white' },
@@ -31,8 +30,6 @@ export const Сommission2 = () => {
       },
     },
   };
-
-export const Commission2 = () => {
 
   return (
     <div className="shape-case">
@@ -95,4 +92,5 @@ export const Commission2 = () => {
       </div>
     </div>
   );
-};
+}
+
