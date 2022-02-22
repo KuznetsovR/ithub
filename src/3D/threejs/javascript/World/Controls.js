@@ -7,7 +7,7 @@ export default class Controls extends EventEmitter {
   constructor() {
     super();
     this.setActions();
-    this.setKeyboardControls()
+    this.setKeyboardControls();
   }
   setActions() {
     this.actions = {
@@ -34,21 +34,33 @@ export default class Controls extends EventEmitter {
           switch (_event.key) {
             case 'ArrowUp':
             case 'w':
+            case 'W':
+            case 'ц':
+            case 'Ц':
               this.actions.up = true;
               break;
 
             case 'ArrowRight':
             case 'd':
+            case 'D':
+            case 'в':
+            case 'В':
               this.actions.right = true;
               break;
 
             case 'ArrowDown':
             case 's':
+            case 'S':
+            case 'ы':
+            case 'Ы':
               this.actions.down = true;
               break;
 
             case 'ArrowLeft':
             case 'a':
+            case 'A':
+            case 'ф':
+            case 'Ф':
               this.actions.left = true;
               break;
 
@@ -56,7 +68,7 @@ export default class Controls extends EventEmitter {
               this.actions.brake = true;
               break;
             default:
-              break
+              break;
           }
         },
 
@@ -64,21 +76,33 @@ export default class Controls extends EventEmitter {
           switch (_event.key) {
             case 'ArrowUp':
             case 'w':
+            case 'W':
+            case 'ц':
+            case 'Ц':
               this.actions.up = false;
               break;
 
             case 'ArrowRight':
             case 'd':
+            case 'D':
+            case 'в':
+            case 'В':
               this.actions.right = false;
               break;
 
             case 'ArrowDown':
             case 's':
+            case 'S':
+            case 'ы':
+            case 'Ы':
               this.actions.down = false;
               break;
 
             case 'ArrowLeft':
             case 'a':
+            case 'A':
+            case 'ф':
+            case 'Ф':
               this.actions.left = false;
               break;
 
@@ -86,12 +110,12 @@ export default class Controls extends EventEmitter {
               this.actions.brake = false;
               break;
             default:
-              break
+              break;
           }
         },
       },
     };
-    document.addEventListener('keydown', this.keyboard.events.keyDown)
-    document.addEventListener('keyup', this.keyboard.events.keyUp)
+    document.addEventListener('keydown', this.keyboard.events.keyDown);
+    document.addEventListener('keyup', this.keyboard.events.keyUp);
   }
 }

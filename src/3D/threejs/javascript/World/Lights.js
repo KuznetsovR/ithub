@@ -16,7 +16,6 @@ export default class Lights{
     pointLight.position.set(1, 1, 20)                                                  // distance - where light disappears, decay - how fast light disappears
     const pointLightHelper = new THREE.PointLightHelper(pointLight, 1)
     this.container.add(pointLightHelper)
-    console.log(pointLightHelper);
     this.container.add(pointLight)
   }
 }

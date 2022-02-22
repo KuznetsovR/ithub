@@ -25,10 +25,12 @@ export default class MainHero {
     this.setModel();
     this.setMovement();
     this.setSkate();
+    this.setMainHero();
   }
   setModel() {
     this.model = {
       skate: this.resources.items.SkateModel,
+      mainHero: this.resources.items.MainHero,
     };
   }
   setMovement() {
@@ -67,17 +69,32 @@ export default class MainHero {
       // Save old position for movement calculation
       this.skate.oldPosition = this.skate.object.position.clone();
 
-      // Update if mode physics
-      // if (!this.transformControls.enabled) {
-      //   this.skate.object.position.copy(this.physics.car.skate.body.position).add(this.skate.offset);
-      //   this.skate.object.quaternion.copy(this.physics.car.skate.body.quaternion);
-      // }
-
       this.skate.object.position.copy(this.physics.skate.chassis.body.position).add(this.skate.offset);
       this.skate.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
 
       // Update position
       this.position.copy(this.skate.object.position);
     });
+  }
+  setMainHero() {
+    this.mainHero = {};
+    // this.mainHero.offset = new THREE.Vector3(0, 0, 0);
+    this.mainHero.object = this.objects.getConvertedMesh(this.model.mainHero.scene.children);
+    console.log(this.model.mainHero.scene);
+    // this.mainHero.object.scale.set(0.2, 0.2, 0.2);
+    // this.mainHero.object.position.copy(this.physics.skate.chassis.body.position);
+    // this.mainHero.oldPosition = this.skate.object.position.clone();
+    this.container.add(this.model.mainHero.scene);
+    // Time tick
+    // this.time.on('tick', () => {
+    //   // Save old position for movement calculation
+    //   this.mainHero.oldPosition = this.mainHero.object.position.clone();
+    //
+    //   this.mainHero.object.position.copy(this.physics.skate.chassis.body.position).add(this.mainHero.offset);
+    //   this.skate.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
+    //
+    //   // Update position
+    //   this.position.copy(this.skate.object.position);
+    // });
   }
 }
