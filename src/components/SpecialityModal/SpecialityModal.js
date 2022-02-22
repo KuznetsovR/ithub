@@ -13,11 +13,13 @@ export const SpecialityModal = (props) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 700,
+    height: 300,
     color: 'white',
     outline: 'none',
     bgcolor: 'rgb(30,29,29)',
     border: '1px solid #000',
+    borderRadius: 3,
   };
   return (
     <Modal
@@ -34,20 +36,20 @@ export const SpecialityModal = (props) => {
       <Fade in={props.open}>
         <Box sx={style}>
           <div className="rectangle-spec-modal">
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {props.specialityContent.heading}
-          </Typography>
-          </div> 
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {props.specialityContent.heading}
+            </Typography>
+          </div>
           <div className="text-spec-modal">
-          <Typography id="modal-modal-description" sx={{ mt: 4 }}>
-            {props.specialityContent.description}
-          </Typography>
-          <Typography id="modal-modal-role" sx={{ mt: 3 }}>
-            {props.specialityContent.role}
-          </Typography>
-          <Typography id="modal-modal-price" sx={{ mt: 6 }}>
-            {props.specialityContent.price}
-          </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 5 }}>
+              {props.specialityContent.description}
+            </Typography>
+            <Typography id="modal-modal-role" sx={{ mt: 4 }}>
+              {props.specialityContent.role}
+            </Typography>
+            <Typography id="modal-modal-price" sx={{ mt: 13 }}>
+              {props.specialityContent.price}
+            </Typography>
           </div>
         </Box>
       </Fade>
