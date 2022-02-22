@@ -5,23 +5,12 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-  
-  export const Commission2 = () => {
-  const fullwidth = {
-    '& > :not(style)': { m: 0, width: '85ch' },
-    '.MuiInputLabel-root': { color: 'white' },
-    '.MuiOutlinedInput-root': { borderColor: 'white' },
-    '.MuiInputBase-root': { color: 'white' },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: '#a71dd8',
-      },
-    },
-  };
-  const mediumwidth = {
-    '& > :not(style)': { m: 0, width: '40ch' },
+import { FileUpload } from '../FileUpload/FileUpload';
+
+export const Commission2 = () => {
+  const inputOptions = {
+    '& > :not(style)': { m: 0, flexGrow: '1' },
     '.MuiInputLabel-root': { color: 'white' },
     '.MuiInputBase-root': { color: 'white' },
     '& .MuiOutlinedInput-root': {
@@ -36,32 +25,47 @@ import TextField from '@mui/material/TextField';
       <div className="text-shape-head"> Подать документы</div>
       <div className="shape-rectangle">
         <div className="share-flex-column">
-          <Box component="form" sx={fullwidth} noValidate autoComplete="off">
-            <TextField id="outlined-basic" label="ФИО ребёнка" color="secondary" variant="outlined" />
-          </Box>
+          <TextField
+            id="outlined-basic"
+            sx={inputOptions}
+            label="ФИО ребёнка"
+            color="secondary"
+            variant="outlined"
+          />
         </div>
         <div className="share-flex-column">
-          <Box component="form" sx={fullwidth} noValidate autoComplete="off">
-            <TextField id="outlined-basic" label="ФИО родителя" color="secondary" variant="outlined" />
-          </Box>
+          <TextField
+            id="outlined-basic"
+            sx={inputOptions}
+            label="ФИО родителя"
+            color="secondary"
+            variant="outlined"
+          />
         </div>
         <div className="share-flex-row">
-          <Box
-            component="form"
-            sx={mediumwidth}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField id="outlined-basic" label="Телефон" color="secondary" variant="outlined" />
-          </Box>
-          <Box
-            component="form"
-            sx={mediumwidth}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField id="outlined-basic" label="Почта" color="secondary" variant="outlined" />
-          </Box>
+          <TextField
+            id="outlined-basic"
+            sx={inputOptions}
+            label="Телефон"
+            color="secondary"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-basic"
+            sx={inputOptions}
+            label="Почта"
+            color="secondary"
+            variant="outlined"
+          />
+        </div>
+
+        <div className="files-to-upload">
+          <div className="file-name">Фото паспорта</div>
+          <FileUpload />
+          <div className="file-name">Фото аттестата</div>
+          <FileUpload />
+          <div className="file-name">Заявление</div>
+          <FileUpload />
         </div>
 
         <div className="share-checkbox">
@@ -92,5 +96,4 @@ import TextField from '@mui/material/TextField';
       </div>
     </div>
   );
-}
-
+};
