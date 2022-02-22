@@ -9,62 +9,45 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 export const Сommission2 = () => {
+  const fullwidth = {
+    '& > :not(style)': { m: 0, width: '85ch' },
+    '.MuiInputLabel-root': { color: 'white' },
+    '.MuiOutlinedInput-root': { borderColor: 'white' },
+    '.MuiInputBase-root': { color: 'white' },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#a71dd8',
+      },
+    },
+  };
+  const mediumwidth = {
+    '& > :not(style)': { m: 0, width: '40ch' },
+    '.MuiInputLabel-root': { color: 'white' },
+    '.MuiInputBase-root': { color: 'white' },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#a71dd8',
+      },
+    },
+  };
   return (
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
       <div className="shape-rectangle">
         <div className="share-flex-column">
-          <Box
-            component="form"
-            sx={{
-              '& > :not(style)': { m: 0, width: '85ch' },
-              '.MuiInputLabel-root': { color: 'white' },
-              '.MuiOutlinedInput-root': { borderColor: 'white' },
-              '.MuiInputBase-root': { color: 'white' },
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: '#a71dd8',
-                },
-              },
-            }}
-            noValidate
-            autoComplete="off"
-          >
+          <Box component="form" sx={fullwidth} noValidate autoComplete="off">
             <TextField id="outlined-basic" label="ФИО ребёнка" color="secondary" variant="outlined" />
           </Box>
         </div>
         <div className="share-flex-column">
-          <Box
-            component="form"
-            sx={{
-              '& > :not(style)': { m: 0, width: '85ch' },
-              '.MuiInputLabel-root': { color: 'white' },
-              '.MuiInputBase-root': { color: 'white' },
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: '#a71dd8',
-                },
-              },
-            }}
-            noValidate
-            autoComplete="off"
-          >
+          <Box component="form" sx={fullwidth} noValidate autoComplete="off">
             <TextField id="outlined-basic" label="ФИО родителя" color="secondary" variant="outlined" />
           </Box>
         </div>
         <div className="share-flex-row">
           <Box
             component="form"
-            sx={{
-              '& > :not(style)': { m: 0, width: '40ch' },
-              '.MuiInputLabel-root': { color: 'white' },
-              '.MuiInputBase-root': { color: 'white' },
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: '#a71dd8',
-                },
-              },
-            }}
+            sx={mediumwidth}
             noValidate
             autoComplete="off"
           >
@@ -72,16 +55,7 @@ export const Сommission2 = () => {
           </Box>
           <Box
             component="form"
-            sx={{
-              '& > :not(style)': { m: 0, width: '40ch' },
-              '.MuiInputLabel-root': { color: 'white' },
-              '.MuiInputBase-root': { color: 'white' },
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: '#a71dd8',
-                },
-              },
-            }}
+            sx={mediumwidth}
             noValidate
             autoComplete="off"
           >
