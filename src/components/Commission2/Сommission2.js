@@ -8,6 +8,7 @@ import { purple } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
+
 export const Сommission2 = () => {
   const fullwidth = {
     '& > :not(style)': { m: 0, width: '85ch' },
@@ -30,6 +31,9 @@ export const Сommission2 = () => {
       },
     },
   };
+
+export const Commission2 = () => {
+
   return (
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
