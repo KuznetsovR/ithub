@@ -18,31 +18,20 @@ export const Commission2 = () => {
       },
     },
   };
-  const [schoolRecordsPhoto, setSchoolRecordsPhoto] = useState(null);
-
-  const [passportPhoto, setPassportPhoto] = useState(null);
-
-  const [application, setApplication] = useState(null);
-  const [childName, setChildName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [parentName, setParentName] = useState('');
-  const [email, setEmail] = useState('');
-  const [personalDataAccess, setPersonalDataAccess] = useState(false);
-
-  const formValues = {
-    childName,
-    parentName,
-    phone,
-    email,
-    passportPhoto,
-    schoolRecordsPhoto,
-    application,
-    personalDataAccess,
-  };
+  const [state, setState] = useState({
+    childName: '',
+    parentName: '',
+    phone: '',
+    email: '',
+    passportPhoto: null,
+    schoolRecordsPhoto: null,
+    application: null,
+    personalDataAccess: false,
+  });
 
   const sendForm = (e) => {
-    e.preventDefault()
-    console.log(formValues);
+    e.preventDefault();
+    console.log(state);
   };
 
   return (
@@ -57,7 +46,7 @@ export const Commission2 = () => {
               label="ФИО ребёнка"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> setChildName(e.target.value)}
+              onChange={(e) => setState({ ...state, childName: e.target.value })}
             />
           </div>
           <div className="share-flex-column">
@@ -67,7 +56,7 @@ export const Commission2 = () => {
               label="ФИО родителя"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> setParentName(e.target.value)}
+              onChange={(e) => setState({ ...state, parentName: e.target.value })}
             />
           </div>
           <div className="share-flex-row">
@@ -77,7 +66,7 @@ export const Commission2 = () => {
               label="Телефон"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> setPhone(e.target.value)}
+              onChange={(e) => setState({ ...state, phone: e.target.value })}
             />
             <TextField
               id="outlined-basic"
@@ -85,17 +74,17 @@ export const Commission2 = () => {
               label="Почта"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> setEmail(e.target.value)}
+              onChange={(e) => setState({ ...state, email: e.target.value })}
             />
           </div>
 
           <div className="files-to-upload">
             <div className="file-name">Фото паспорта</div>
-            <FileUpload setState={(e) => setPassportPhoto(e.target.files[0])}/>
+            <FileUpload setState={(e) => setState({ ...state, passportPhoto: e.target.files[0] })} />
             <div className="file-name">Фото аттестата</div>
-            <FileUpload setState={(e) => setSchoolRecordsPhoto(e.target.files[0])} />
+            <FileUpload setState={(e) => setState({ ...state, schoolRecordsPhoto: e.target.files[0] })} />
             <div className="file-name">Заявление</div>
-            <FileUpload setState={(e) => setApplication(e.target.files[0])}/>
+            <FileUpload setState={(e) => setState({ ...state, application: e.target.files[0] })} />
           </div>
 
           <div className="share-checkbox">
@@ -108,7 +97,7 @@ export const Commission2 = () => {
                       color: 'rgb(167,29,216)',
                     },
                   }}
-                  onChange={(e) => setPersonalDataAccess(e.target.checked)}
+                  onChange={(e) => (formValues.personalDataAccess = e.target.checked)}
                 />
               }
               label="Я даю согласие на обработку персональных данных"
