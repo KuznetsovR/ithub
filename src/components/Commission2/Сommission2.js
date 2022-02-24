@@ -97,7 +97,7 @@ export const Commission2 = () => {
                       color: 'rgb(167,29,216)',
                     },
                   }}
-                  onChange={(e) => (formValues.personalDataAccess = e.target.checked)}
+                  onChange={(e) => setState({ ...state, personalDataAccess: e.target.checked })}
                 />
               }
               label="Я даю согласие на обработку персональных данных"
