@@ -19,34 +19,31 @@ export const Commission2 = () => {
     },
   };
   const [schoolRecordsPhoto, setSchoolRecordsPhoto] = useState(null);
-  const handleSchoolRecordsPhoto = (e) => setSchoolRecordsPhoto(e.target.files[0]);
 
   const [passportPhoto, setPassportPhoto] = useState(null);
-  const handlePassportPhoto = (e) => setPassportPhoto(e.target.files[0]);
 
   const [application, setApplication] = useState(null);
-  const handleApplication = (e) => setApplication(e.target.files[0]);
+  const [childName, setChildName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [parentName, setParentName] = useState('');
+  const [email, setEmail] = useState('');
+  const [personalDataAccess, setPersonalDataAccess] = useState(false);
 
-  //TODO: change form string value changes to state
   const formValues = {
-    childName: '',
-    parentName: '',
-    phone: '',
-    email: '',
-    passportPhoto: passportPhoto,
-    schoolRecordsPhoto: schoolRecordsPhoto,
-    application: application,
-    personalDataAccess: false,
+    childName,
+    parentName,
+    phone,
+    email,
+    passportPhoto,
+    schoolRecordsPhoto,
+    application,
+    personalDataAccess,
   };
 
   const sendForm = (e) => {
     e.preventDefault()
     console.log(formValues);
   };
-
-
-
-
 
   return (
     <div className="shape-case">
@@ -60,7 +57,7 @@ export const Commission2 = () => {
               label="ФИО ребёнка"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> formValues.childName = e.target.value}
+              onChange={(e)=> setChildName(e.target.value)}
             />
           </div>
           <div className="share-flex-column">
@@ -70,7 +67,7 @@ export const Commission2 = () => {
               label="ФИО родителя"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> formValues.parentName = e.target.value}
+              onChange={(e)=> setParentName(e.target.value)}
             />
           </div>
           <div className="share-flex-row">
@@ -80,7 +77,7 @@ export const Commission2 = () => {
               label="Телефон"
               color="secondary"
               variant="outlined"
-              onChange={(e)=> formValues.phone = e.target.value}
+              onChange={(e)=> setPhone(e.target.value)}
             />
             <TextField
               id="outlined-basic"
@@ -88,16 +85,17 @@ export const Commission2 = () => {
               label="Почта"
               color="secondary"
               variant="outlined"
+              onChange={(e)=> setEmail(e.target.value)}
             />
           </div>
 
           <div className="files-to-upload">
             <div className="file-name">Фото паспорта</div>
-            <FileUpload setState={handlePassportPhoto}/>
+            <FileUpload setState={(e) => setPassportPhoto(e.target.files[0])}/>
             <div className="file-name">Фото аттестата</div>
-            <FileUpload setState={handleSchoolRecordsPhoto} />
+            <FileUpload setState={(e) => setSchoolRecordsPhoto(e.target.files[0])} />
             <div className="file-name">Заявление</div>
-            <FileUpload setState={handleApplication}/>
+            <FileUpload setState={(e) => setApplication(e.target.files[0])}/>
           </div>
 
           <div className="share-checkbox">
@@ -110,7 +108,7 @@ export const Commission2 = () => {
                       color: 'rgb(167,29,216)',
                     },
                   }}
-                  onChange={(e) => formValues.personalDataAccess = e.target.checked}
+                  onChange={(e) => setPersonalDataAccess(e.target.checked)}
                 />
               }
               label="Я даю согласие на обработку персональных данных"
