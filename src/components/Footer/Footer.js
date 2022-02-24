@@ -2,6 +2,9 @@ import React from 'react';
 import './Footer.scss';
 import logo from '@assets/images/IThublogo.png';
 import { Link } from 'react-router-dom';
+import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 export const Footer = () => {
   return (
@@ -24,10 +27,10 @@ export const Footer = () => {
             Контакты
           </a>
           <a href="" className="text-email">
-            &#9993; priem.ekat@ithub.ru
+            <MailOutlineIcon fontSize="small" /> priem.ekat@ithub.ru
           </a>
           <a href="" className="text-email text-phone">
-            &#9742; +7 (343) 286 78 59
+            < PhoneIcon fontSize="small" /> +7 (343) 286 78 59
           </a>
         </div>
       </div>
