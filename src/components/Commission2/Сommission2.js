@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Сommission2.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
-import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
@@ -19,80 +18,111 @@ export const Commission2 = () => {
       },
     },
   };
+  const [schoolRecordsPhoto, setSchoolRecordsPhoto] = useState(null);
+  const handleSchoolRecordsPhoto = (e) => setSchoolRecordsPhoto(e.target.files[0]);
+
+  const [passportPhoto, setPassportPhoto] = useState(null);
+  const handlePassportPhoto = (e) => setPassportPhoto(e.target.files[0]);
+
+  const [application, setApplication] = useState(null);
+  const handleApplication = (e) => setApplication(e.target.files[0]);
+
+  //TODO: change form string value changes to state
+  const formValues = {
+    childName: '',
+    parentName: '',
+    phone: '',
+    email: '',
+    passportPhoto: passportPhoto,
+    schoolRecordsPhoto: schoolRecordsPhoto,
+    application: application,
+    personalDataAccess: false,
+  };
+
+  const sendForm = (e) => {
+    e.preventDefault()
+    console.log(formValues);
+  };
+
+
+
+
 
   return (
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
       <div className="shape-rectangle">
-        <div className="share-flex-column">
-          <TextField
-            id="outlined-basic"
-            sx={inputOptions}
-            label="ФИО ребёнка"
-            color="secondary"
-            variant="outlined"
-          />
-        </div>
-        <div className="share-flex-column">
-          <TextField
-            id="outlined-basic"
-            sx={inputOptions}
-            label="ФИО родителя"
-            color="secondary"
-            variant="outlined"
-          />
-        </div>
-        <div className="share-flex-row">
-          <TextField
-            id="outlined-basic"
-            sx={inputOptions}
-            label="Телефон"
-            color="secondary"
-            variant="outlined"
-          />
-          <TextField
-            id="outlined-basic"
-            sx={inputOptions}
-            label="Почта"
-            color="secondary"
-            variant="outlined"
-          />
-        </div>
+        <form onSubmit={sendForm}>
+          <div className="share-flex-column">
+            <TextField
+              id="outlined-basic"
+              sx={inputOptions}
+              label="ФИО ребёнка"
+              color="secondary"
+              variant="outlined"
+              onChange={(e)=> formValues.childName = e.target.value}
+            />
+          </div>
+          <div className="share-flex-column">
+            <TextField
+              id="outlined-basic"
+              sx={inputOptions}
+              label="ФИО родителя"
+              color="secondary"
+              variant="outlined"
+              onChange={(e)=> formValues.parentName = e.target.value}
+            />
+          </div>
+          <div className="share-flex-row">
+            <TextField
+              id="outlined-basic"
+              sx={inputOptions}
+              label="Телефон"
+              color="secondary"
+              variant="outlined"
+              onChange={(e)=> formValues.phone = e.target.value}
+            />
+            <TextField
+              id="outlined-basic"
+              sx={inputOptions}
+              label="Почта"
+              color="secondary"
+              variant="outlined"
+            />
+          </div>
 
-        <div className="files-to-upload">
-          <div className="file-name">Фото паспорта</div>
-          <FileUpload />
-          <div className="file-name">Фото аттестата</div>
-          <FileUpload />
-          <div className="file-name">Заявление</div>
-          <FileUpload />
-        </div>
+          <div className="files-to-upload">
+            <div className="file-name">Фото паспорта</div>
+            <FileUpload setState={handlePassportPhoto}/>
+            <div className="file-name">Фото аттестата</div>
+            <FileUpload setState={handleSchoolRecordsPhoto} />
+            <div className="file-name">Заявление</div>
+            <FileUpload setState={handleApplication}/>
+          </div>
 
-        <div className="share-checkbox">
-          <FormGroup>
+          <div className="share-checkbox">
             <FormControlLabel
               control={
                 <Checkbox
-                  defaultChecked
                   sx={{
                     color: purple[50],
                     '&.Mui-checked': {
                       color: 'rgb(167,29,216)',
                     },
                   }}
+                  onChange={(e) => formValues.personalDataAccess = e.target.checked}
                 />
               }
               label="Я даю согласие на обработку персональных данных"
-              defaultChecked
               sx={{
                 color: purple[50],
               }}
             />
-          </FormGroup>
-        </div>
-        <div className="share-btn-wrapper">
-          <HexaButton>Отправить</HexaButton>
-        </div>
+          </div>
+          <div className="share-btn-wrapper">
+            <HexaButton>Отправить</HexaButton>
+          </div>
+        </form>
       </div>
     </div>
   );
