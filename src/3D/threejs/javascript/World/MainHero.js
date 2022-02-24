@@ -78,23 +78,15 @@ export default class MainHero {
   }
   setMainHero() {
     this.mainHero = {};
-    // this.mainHero.offset = new THREE.Vector3(0, 0, 0);
-    this.mainHero.object = this.objects.getConvertedMesh(this.model.mainHero.scene.children);
-    console.log(this.model.mainHero.scene);
-    // this.mainHero.object.scale.set(0.2, 0.2, 0.2);
-    // this.mainHero.object.position.copy(this.physics.skate.chassis.body.position);
-    // this.mainHero.oldPosition = this.skate.object.position.clone();
-    this.container.add(this.model.mainHero.scene);
+    this.mainHero.offset = new THREE.Vector3(0, 0, 0);
+    this.mainHero.object = this.model.mainHero.scene;
+    this.container.add(this.mainHero.object);
+
     // Time tick
-    // this.time.on('tick', () => {
-    //   // Save old position for movement calculation
-    //   this.mainHero.oldPosition = this.mainHero.object.position.clone();
-    //
-    //   this.mainHero.object.position.copy(this.physics.skate.chassis.body.position).add(this.mainHero.offset);
-    //   this.skate.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
-    //
-    //   // Update position
-    //   this.position.copy(this.skate.object.position);
-    // });
+    this.time.on('tick', () => {
+      this.mainHero.oldPosition = this.mainHero.object.position.clone();
+      this.mainHero.object.position.copy(this.physics.skate.chassis.body.position).add(this.mainHero.offset);
+      this.mainHero.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
+    });
   }
 }
