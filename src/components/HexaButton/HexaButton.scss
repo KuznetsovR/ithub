@@ -1,5 +1,8 @@
 @use '../../styles/colors' as colors;
 .hexa {
+  &button {
+    font-family: 'Inter', sans-serif;
+  }
   margin: 0 15px;
   padding: 15px 40px;
   border-radius: 0;
@@ -25,5 +28,17 @@
     border-right: 15px solid colors.$main-pink;
     border-top: calc((15px * 2 + 20px + 3px) / 2) solid transparent; // 2 paddings, font size, idk what is 3
     border-bottom: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
+  }
+}
+
+@-moz-document url-prefix() {
+  .hexa {
+    border-radius: 5px;
+    &::after {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
   }
 }
