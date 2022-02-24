@@ -9,10 +9,8 @@ export const Reviews = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
-    // pauseOnHover: true,
     arrows: false,
   };
   return (
@@ -23,7 +21,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={studentOnePhoto} alt="student-photo" />
+                <img src={studentOnePhoto} alt="student" />
               </div>
               <div className="reviews-text">
                 <p>Иванов Иван</p>
@@ -35,7 +33,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={studentOnePhoto} alt="student-photo" />
+                <img src={studentOnePhoto} alt="student" />
               </div>
               <div className="reviews-text">
                 <p>Иванов Иван</p>
@@ -47,7 +45,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={studentOnePhoto} alt="student-photo" />
+                <img src={studentOnePhoto} alt="student" />
               </div>
               <div className="reviews-text">
                 <p>Иванов Иван</p>

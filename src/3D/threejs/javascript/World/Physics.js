@@ -104,9 +104,9 @@ export default class Physics {
 
     this.skate.options = {
       width: 1.01,
-      height: 1.2,
+      height: 2.2,
       depth: 2.02,
-      offset: new CANNON.Vec3(0, 0, 0.6),
+      offset: new CANNON.Vec3(0, 0, 1.1),
       mass: 20,
       wheelFrontOffsetDepth: 0.635,
       wheelBackOffsetDepth: -0.475,
