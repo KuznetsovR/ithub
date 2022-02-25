@@ -35,7 +35,8 @@
   text-align: center;
 }
 .share-checkbox {
-  margin-left: 230px;
+  display: flex;
+  justify-content: center;
 }
 .files-to-upload{
   display: grid;
