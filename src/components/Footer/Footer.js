@@ -20,7 +20,9 @@ export const Footer = () => {
           </a>
         </div>
         <div className="footer-text">
-          <Link to="/navigation" className="text-3d">ITJourney 3D</Link>
+          <Link to="/navigation" className="text-3d">
+            ITJourney 3D
+          </Link>
         </div>
         <div className="footer-text">
           <a href="" className="text-contacts">
@@ -30,7 +32,7 @@ export const Footer = () => {
             <MailOutlineIcon fontSize="small" /> priem.ekat@ithub.ru
           </a>
           <a href="" className="text-email text-phone">
-            < PhoneIcon fontSize="small" /> +7 (343) 286 78 59
+            <PhoneIcon fontSize="small" /> +7 (343) 286 78 59
           </a>
         </div>
       </div>
