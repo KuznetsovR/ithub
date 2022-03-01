@@ -22,6 +22,7 @@ export default class MainHero {
     this.setMovement();
     this.setSkate();
     this.setMainHero();
+    this.setAnimations()
   }
   setModel() {
     this.model = {
@@ -84,5 +85,11 @@ export default class MainHero {
       this.mainHero.object.position.copy(this.physics.skate.chassis.body.position).add(this.mainHero.offset);
       this.mainHero.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
     });
+  }
+  setAnimations(){
+    this.mixer = new THREE.AnimationMixer(this.container)
+    this.mainHeroAction =  this.mixer.clipAction(this.model.mainHero.animations[1])
+    this.mainHeroAction.play()
+    console.log(this.mainHeroAction);
   }
 }
