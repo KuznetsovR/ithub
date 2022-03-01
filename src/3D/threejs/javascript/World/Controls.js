@@ -1,9 +1,6 @@
 import EventEmitter from '../Utils/EventEmitter';
-import World from './World';
 
 export default class Controls extends EventEmitter {
-  world = new World();
-  time = this.world.time;
   constructor() {
     super();
     this.setActions();

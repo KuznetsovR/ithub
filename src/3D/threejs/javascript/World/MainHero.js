@@ -15,7 +15,7 @@ export default class MainHero {
 
   constructor() {
     if (this.debug.active) {
-      this.debugFolder = this.debug.addFolder('car');
+      this.debugFolder = this.debug.addFolder('skate');
     }
 
     this.setModel();
