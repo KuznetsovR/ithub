@@ -5,11 +5,9 @@ import World from './World';
 export default class Objects {
   world = new World();
   time = this.world.time;
-  resources = this.world.resources;
   materials = this.world.materials;
   physics = this.world.physics;
   shadows = this.world.shadows;
-  debug = this.world.debug;
 
   constructor() {
     this.container = new THREE.Object3D();
@@ -32,7 +30,7 @@ export default class Objects {
         regex: /^floor_?[0-9]{0,3}?/i,
         apply: (_mesh, _options) => {
           // Create floor manually because of missing UV
-          const geometry = new THREE.PlaneBufferGeometry(_mesh.scale.x, _mesh.scale.y, 10, 10);
+          const geometry = new THREE.PlaneGeometry(_mesh.scale.x, _mesh.scale.y, 10, 10);
           const material = this.materials.items.floorShadow.clone();
 
           material.uniforms.tShadow.value = _options.floorShadowTexture;
