@@ -7,10 +7,6 @@ export default class MainHero {
   objects = this.world.objects;
   physics = this.world.physics;
   shadows = this.world.shadows;
-  materials = this.world.materials;
-  controls = this.world.controls;
-  renderer = this.world.renderer;
-  camera = this.world.camera;
   debug = this.world.debug;
   time = this.world.time;
 
