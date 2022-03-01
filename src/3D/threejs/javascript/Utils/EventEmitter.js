@@ -6,12 +6,12 @@ export default class EventEmitter {
 
   on(_names, callback) {
     // Errors
-    if (typeof _names === 'undefined' || _names === '') {
+    if (_names === undefined || _names === '') {
       console.warn('wrong names');
       return false;
     }
 
-    if (typeof callback === 'undefined') {
+    if (callback === undefined) {
       console.warn('wrong callback');
       return false;
     }
@@ -40,7 +40,7 @@ export default class EventEmitter {
 
   off(_names) {
     // Errors
-    if (typeof _names === 'undefined' || _names === '') {
+    if (_names === undefined || _names === '') {
       console.warn('wrong name');
       return false;
     }
