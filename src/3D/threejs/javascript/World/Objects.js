@@ -5,11 +5,9 @@ import World from './World';
 export default class Objects {
   world = new World();
   time = this.world.time;
-  resources = this.world.resources;
   materials = this.world.materials;
   physics = this.world.physics;
   shadows = this.world.shadows;
-  debug = this.world.debug;
 
   constructor() {
     this.container = new THREE.Object3D();
@@ -21,77 +19,18 @@ export default class Objects {
     this.setMerge();
   }
 
-  // commented part is for matcaps
 
   setParsers() {
     this.parsers = {};
 
     this.parsers.items = [
-      // Shade
-      // {
-      //   regex: /^shade([a-z]+)_?[0-9]{0,3}?/i,
-      //   apply: (_mesh, _options) =>
-      //   {
-      //     // Find material
-      //     const match = _mesh.name.match(/^shade([a-z]+)_?[0-9]{0,3}?/i)
-      //     const materialName = `${match[1].substring(0, 1).toLowerCase()}${match[1].substring(1)}` // PastalCase to camelCase
-      //     let material = this.materials.shades.items[materialName]
-      //
-      //     // Default
-      //     if(typeof material === 'undefined')
-      //     {
-      //       material = new THREE.MeshNormalMaterial()
-      //     }
-      //
-      //     // Create clone mesh with new material
-      //     const mesh = _options.duplicated ? _mesh.clone() : _mesh
-      //     mesh.material = material
-      //
-      //     if(mesh.children.length)
-      //     {
-      //       for(const _child of mesh.children)
-      //       {
-      //         if(_child instanceof THREE.Mesh)
-      //         {
-      //           _child.material = material
-      //         }
-      //       }
-      //     }
-      //
-      //     return mesh
-      //   }
-      // },
-
-      // Shade
-      // {
-      //   regex: /^pure([a-z]+)_?[0-9]{0,3}?/i,
-      //   apply: (_mesh, _options) =>
-      //   {
-      //     // Find material
-      //     const match = _mesh.name.match(/^pure([a-z]+)_?[0-9]{0,3}?/i)
-      //     const materialName = match[1].toLowerCase()
-      //     let material = this.materials.pures.items[materialName]
-      //
-      //     // Default
-      //     if(typeof material === 'undefined')
-      //     {
-      //       material = new THREE.MeshNormalMaterial()
-      //     }
-      //
-      //     // Create clone mesh with new material
-      //     const mesh = _options.duplicated ? _mesh.clone() : _mesh
-      //     mesh.material = material
-      //
-      //     return mesh
-      //   }
-      // },
 
       // Floor
       {
         regex: /^floor_?[0-9]{0,3}?/i,
         apply: (_mesh, _options) => {
           // Create floor manually because of missing UV
-          const geometry = new THREE.PlaneBufferGeometry(_mesh.scale.x, _mesh.scale.y, 10, 10);
+          const geometry = new THREE.PlaneGeometry(_mesh.scale.x, _mesh.scale.y, 10, 10);
           const material = this.materials.items.floorShadow.clone();
 
           material.uniforms.tShadow.value = _options.floorShadowTexture;
@@ -115,9 +54,6 @@ export default class Objects {
     this.parsers.default = {}
     this.parsers.default.apply = (_mesh) =>
     {
-      // Create clone mesh with normal material
-      // const mesh = _mesh.clone()
-      // mesh.material = this.materials.shades.items.white
 
       return _mesh.clone()
     }

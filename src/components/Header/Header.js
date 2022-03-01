@@ -7,8 +7,8 @@ import { HashLink } from 'react-router-hash-link';
 export const Header = () => {
   return (
     <header>
-      <Link to="/"> 
-        <img src={logo} className="logoheader" alt="logoit" />
+      <Link to="/">
+        <img src={logo} className="logo-header" alt="ithub-logo" />
       </Link>
       <nav className="menu">
         <div className="triangles-container">
@@ -29,7 +29,7 @@ export const Header = () => {
             <div className="triangle color4" />
           </div>
         </div>
-        <ul>
+        <ul className={'links-list'}>
           <li>
             <Link to="/commission">Приёмная комиссия </Link>
           </li>

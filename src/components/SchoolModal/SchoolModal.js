@@ -4,12 +4,10 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Backdrop from '@mui/material/Backdrop';
 import Fade from '@mui/material/Fade';
-import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
-import { FileUpload } from '../FileUpload/FileUpload';
 import { HexaButton } from '../HexaButton/HexaButton';
 
 export const SchoolModal = (props) => {
