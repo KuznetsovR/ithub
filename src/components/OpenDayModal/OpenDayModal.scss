@@ -1,0 +1,35 @@
+@use '../../styles/colors' as colors;
+
+.school-case {
+  background-color: colors.$lighter-dark-gray;
+  padding: 40px;
+}
+.text-school-head {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.school-flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px 0;
+  & > * {
+    flex-grow: 1;
+  }
+}
+.school-flex-column {
+  & > * {
+    width: 100%;
+  }
+  padding: 20px 0;
+}
+.school-btn-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+.school-checkbox {
+  display: flex;
+  justify-content: center;
+}
