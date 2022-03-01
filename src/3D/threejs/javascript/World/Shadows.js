@@ -139,7 +139,7 @@ export default class Shadows {
     this.materials.base.uniforms.uFadeRadius.value = 0.35;
   }
   setGeometry() {
-    this.geometry = new THREE.PlaneBufferGeometry(1, 1, 1, 1);
+    this.geometry = new THREE.PlaneGeometry(1, 1, 1, 1);
   }
   add(_reference, _options = {}) {
     const shadow = {};
@@ -154,7 +154,7 @@ export default class Shadows {
     // Material
     shadow.material = this.materials.base.clone();
     if (_reference.children[0].name === 'plane'){
-      this.geometry = new THREE.PlaneBufferGeometry(0.8, 0.5, 1, 1);
+      this.geometry = new THREE.PlaneGeometry(0.8, 0.5, 1, 1);
     }
     // Mesh
     shadow.mesh = new THREE.Mesh(

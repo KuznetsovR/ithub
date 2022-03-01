@@ -148,7 +148,7 @@ export default class Physics {
         body: new CANNON.Body({ mass: this.skate.options.mass }),
       };
       this.skate.chassis.body.allowSleep = false;
-      this.skate.chassis.body.position.set(0, 0, 4)
+      this.skate.chassis.body.position.set(0, 0, 4);
       // this.skate.chassis.body.sleep();
       this.skate.chassis.body.addShape(this.skate.chassis.shape, this.skate.options.offset);
       this.skate.chassis.body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 0, 1), -Math.PI * 0.5);
@@ -255,18 +255,14 @@ export default class Physics {
       this.skate.model.material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
 
       this.skate.model.chassis = new THREE.Mesh(
-        new THREE.BoxBufferGeometry(
-          this.skate.options.depth,
-          this.skate.options.width,
-          this.skate.options.height
-        ),
+        new THREE.BoxGeometry(this.skate.options.depth, this.skate.options.width, this.skate.options.height),
         this.skate.model.material
       );
       this.skate.model.container.add(this.skate.model.chassis);
 
       this.skate.model.wheels = [];
 
-      const wheelGeometry = new THREE.CylinderBufferGeometry(
+      const wheelGeometry = new THREE.CylinderGeometry(
         this.skate.options.wheelRadius,
         this.skate.options.wheelRadius,
         this.skate.options.wheelHeight,
@@ -690,10 +686,6 @@ export default class Physics {
 
       if (mesh.name.match(/^cube_?[0-9]{0,3}?|box[0-9]{0,3}?$/i)) {
         shape = 'box';
-      } else if (mesh.name.match(/^cylinder_?[0-9]{0,3}?$/i)) {
-        shape = 'cylinder';
-      } else if (mesh.name.match(/^sphere_?[0-9]{0,3}?$/i)) {
-        shape = 'sphere';
       } else if (mesh.name.match(/^center_?[0-9]{0,3}?$/i)) {
         shape = 'center';
       }
@@ -704,13 +696,9 @@ export default class Physics {
         // Geometry
         let shapeGeometry = null;
 
-        if (shape === 'cylinder') {
-          shapeGeometry = new CANNON.Cylinder(mesh.scale.x, mesh.scale.x, mesh.scale.z, 8);
-        } else if (shape === 'box') {
+        if (shape === 'box') {
           const halfExtents = new CANNON.Vec3(mesh.scale.x * 0.5, mesh.scale.y * 0.5, mesh.scale.z * 0.5);
           shapeGeometry = new CANNON.Box(halfExtents);
-        } else if (shape === 'sphere') {
-          shapeGeometry = new CANNON.Sphere(mesh.scale.x);
         }
 
         // Position
@@ -723,22 +711,13 @@ export default class Physics {
           mesh.quaternion.z,
           mesh.quaternion.w
         );
-        if (shape === 'cylinder') {
-          // Rotate cylinder
-          // shapeQuaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), - Math.PI * 0.5)
-        }
 
         // Save
         shapes.push({ shapeGeometry, shapePosition, shapeQuaternion });
         // Create model object
         let modelGeometry = null;
-        if (shape === 'cylinder') {
-          modelGeometry = new THREE.CylinderBufferGeometry(1, 1, 1, 6, 1);
-          modelGeometry.rotateX(Math.PI * 0.5);
-        } else if (shape === 'box') {
-          modelGeometry = new THREE.BoxBufferGeometry(1, 1, 1);
-        } else if (shape === 'sphere') {
-          modelGeometry = new THREE.SphereBufferGeometry(1, 8, 8);
+        if (shape === 'box') {
+          modelGeometry = new THREE.BoxGeometry(1, 1, 1);
         }
 
         const modelMesh = new THREE.Mesh(

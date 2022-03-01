@@ -14,22 +14,8 @@ export default class Materials {
 
     this.items = {};
 
-    this.setPures();
     this.setFloorShadow();
   }
-
-  setPures() {
-    this.pures = {};
-    this.pures.items = {};
-    this.pures.items.red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-    this.pures.items.red.name = 'pureRed';
-    this.pures.items.white = new THREE.MeshBasicMaterial({ color: 0xffffff });
-    this.pures.items.white.name = 'pureWhite';
-    this.pures.items.yellow = new THREE.MeshBasicMaterial({ color: 0xffe889 });
-    this.pures.items.yellow.name = 'pureYellow';
-  }
-
-  // if we need matcaps, we can add them here
 
   setFloorShadow() {
     this.items.floorShadow = new FloorShadowMaterial();
