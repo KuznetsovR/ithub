@@ -88,7 +88,12 @@ export default class MainHero {
   }
   setAnimations() {
     this.mixer = new THREE.AnimationMixer(this.container);
-    this.mainHeroAction = this.mixer.clipAction(this.model.mainHero.animations[1]);
+    this.mainHeroAction = this.mixer.clipAction(this.model.mainHero.animations[0]);
     this.mainHeroAction.play();
+    this.time.on('tick', () => {
+      if(this.mixer){
+        this.mixer.update(this.time.delta / 1000)  // we divide by 1000 because time.delta is in ms
+      }
+    });
   }
 }
