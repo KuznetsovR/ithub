@@ -137,6 +137,10 @@ export default class Map {
     });
   }
   setPortals() {
-    this.documentsPortal = this.portals.add({ x: 10, y: 0 }, '/');
+    this.documentsPortal = this.portals.add({ x: 10, y: -10 }, '/#documents');
+    this.commissionPortal = this.portals.add({ x: 10, y: -5 }, '/commission');
+    this.reviewsPortal = this.portals.add({ x: 10, y: 0 }, '/#reviews');
+    this.coursesPortal = this.portals.add({ x: 10, y: 5 }, '/courses');
+    this.specialtiesPortal = this.portals.add({ x: 10, y: 10 }, '/#specialities');
   }
 }
