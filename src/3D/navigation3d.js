@@ -18,7 +18,7 @@ export const Navigation3d = () => {
           Вернуться на главную
         </Link>
       </div>
-      <div>Start screen</div>
+      <div className={'start-screen'}>Start screen</div>
     </>
   );
 };
