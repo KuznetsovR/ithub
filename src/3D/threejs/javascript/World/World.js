@@ -44,13 +44,13 @@ export default class World {
     this.setPhysics();
     this.setObjects();
     this.setMainHero();
-    this.setPortals()
-    this.setLights()
+    this.setPortals();
+    this.setLights();
     this.setMap();
   }
-  setLights(){
-    this.light = new Lights()
-    this.container.add(this.light.container)
+  setLights() {
+    this.light = new Lights();
+    this.container.add(this.light.container);
   }
   setMap() {
     this.map = new Map();
@@ -79,8 +79,8 @@ export default class World {
     this.floor = new Floor();
     this.container.add(this.floor.container);
   }
-  setPortals(){
-    this.portals = new Portals()
+  setPortals() {
+    this.portals = new Portals();
     this.container.add(this.portals.container);
   }
 }
