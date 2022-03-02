@@ -1,30 +1,78 @@
-import MapSource from '../Models/Map/MainMap.glb';
-import SkateSource from '../Models/Skate/Skate.glb';
-import MainMapCollision from '../Models/Map/MainMapCollision.glb';
-import MainMapFloorShadow from '../Models/Map/floorShadow.png';
-import cText from '../Models/Text/c.glb';
-import cCollision from '../Models/Text/cCollision.glb';
-import sText from '../Models/Text/s.glb';
-import sCollision from '../Models/Text/sCollision.glb';
-import HCollision from '../Models/Text/HCollision.glb';
-import HText from '../Models/Text/H.glb';
-import TCollision from '../Models/Text/TCollision.glb';
-import TText from '../Models/Text/T.glb';
-import MCollision from '../Models/Text/MCollision.glb';
-import MText from '../Models/Text/M.glb';
-import LCollision from '../Models/Text/LCollision.glb';
-import LText from '../Models/Text/L.glb';
-import JCollision from '../Models/Text/JCollision.glb';
-import JText from '../Models/Text/J.glb';
-import ACollision from '../Models/Text/ACollision.glb';
-import AText from '../Models/Text/A.glb';
-import VCollision from '../Models/Text/VCollision.glb';
-import VText from '../Models/Text/V.glb';
-import IthubEkatCollision from '../Models/Text/IthubEkatCollision.glb';
-import IthubEkatText from '../Models/Text/IthubEkat.glb';
-import MainHero from '../Models/MainHero/MainHero.glb';
+import MapSource from '../Models/Map/MainMap.glb'
+import SkateSource from '../Models/Skate/Skate.glb'
+import MainMapCollision from '../Models/Map/MainMapCollision.glb'
+import MainMapFloorShadow from '../Models/Map/floorShadow.png'
+import cText from '../Models/Text/c.glb'
+import cCollision from '../Models/Text/cCollision.glb'
+import sText from '../Models/Text/s.glb'
+import sCollision from '../Models/Text/sCollision.glb'
+import HCollision from '../Models/Text/HCollision.glb'
+import HText from '../Models/Text/H.glb'
+import TCollision from '../Models/Text/TCollision.glb'
+import TText from '../Models/Text/T.glb'
+import MCollision from '../Models/Text/MCollision.glb'
+import MText from '../Models/Text/M.glb'
+import LCollision from '../Models/Text/LCollision.glb'
+import LText from '../Models/Text/L.glb'
+import JCollision from '../Models/Text/JCollision.glb'
+import JText from '../Models/Text/J.glb'
+import ACollision from '../Models/Text/ACollision.glb'
+import AText from '../Models/Text/A.glb'
+import VCollision from '../Models/Text/VCollision.glb'
+import VText from '../Models/Text/V.glb'
+import IthubEkatCollision from '../Models/Text/IthubEkatCollision.glb'
+import IthubEkatText from '../Models/Text/IthubEkat.glb'
+import MainHero from '../Models/MainHero/MainHero.glb'
+import Ps4 from '../Models/Text/ps4.glb'
+import Ps4Collision from '../Models/Text/ps4Collision.glb'
+import htmlCode from '../Models/Text/htmlCode.glb'
+import htmlCodeCollision from '../Models/Text/htmlCodeCollision.glb'
+import jsCode from '../Models/Text/jsCode.glb'
+import jsCodeCollision from '../Models/Text/jsCodeCollision.glb'
+import adressText from '../Models/Text/adressText.glb'
+import adressTextCollision from '../Models/Text/adressTextCollision.glb'
 
 const sources = [
+  {
+    name: 'adressText',
+    type: 'gltfModel',
+    path: adressText,
+  },
+  {
+    name: 'adressTextCollision',
+    type: 'gltfModel',
+    path: adressTextCollision,
+  },
+  {
+    name: 'jsCode',
+    type: 'gltfModel',
+    path: jsCode,
+  },
+  {
+    name: 'jsCodeCollision',
+    type: 'gltfModel',
+    path: jsCodeCollision,
+  },
+  {
+    name: 'htmlCode',
+    type: 'gltfModel',
+    path: htmlCode,
+  },
+  {
+    name: 'htmlCodeCollision',
+    type: 'gltfModel',
+    path: htmlCodeCollision,
+  },
+  {
+    name: 'Ps4',
+    type: 'gltfModel',
+    path: Ps4,
+  },
+  {
+    name: 'Ps4Collision',
+    type: 'gltfModel',
+    path: Ps4Collision,
+  },
   {
     name: 'IthubEkatText',
     type: 'gltfModel',
