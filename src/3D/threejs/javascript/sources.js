@@ -23,8 +23,56 @@ import VText from '../Models/Text/V.glb'
 import IthubEkatCollision from '../Models/Text/IthubEkatCollision.glb'
 import IthubEkatText from '../Models/Text/IthubEkat.glb'
 import MainHero from '../Models/MainHero/MainHero.glb'
+import Ps4 from '../Models/Text/ps4.glb'
+import Ps4Collision from '../Models/Text/ps4Collision.glb'
+import htmlCode from '../Models/Text/htmlCode.glb'
+import htmlCodeCollision from '../Models/Text/htmlCodeCollision.glb'
+import jsCode from '../Models/Text/jsCode.glb'
+import jsCodeCollision from '../Models/Text/jsCodeCollision.glb'
+import adressText from '../Models/Text/adressText.glb'
+import adressTextCollision from '../Models/Text/adressTextCollision.glb'
 
 const sources = [
+  {
+    name: 'adressText',
+    type: 'gltfModel',
+    path: adressText,
+  },
+  {
+    name: 'adressTextCollision',
+    type: 'gltfModel',
+    path: adressTextCollision,
+  },
+  {
+    name: 'jsCode',
+    type: 'gltfModel',
+    path: jsCode,
+  },
+  {
+    name: 'jsCodeCollision',
+    type: 'gltfModel',
+    path: jsCodeCollision,
+  },
+  {
+    name: 'htmlCode',
+    type: 'gltfModel',
+    path: htmlCode,
+  },
+  {
+    name: 'htmlCodeCollision',
+    type: 'gltfModel',
+    path: htmlCodeCollision,
+  },
+  {
+    name: 'Ps4',
+    type: 'gltfModel',
+    path: Ps4,
+  },
+  {
+    name: 'Ps4Collision',
+    type: 'gltfModel',
+    path: Ps4Collision,
+  },
   {
     name: 'IthubEkatText',
     type: 'gltfModel',
