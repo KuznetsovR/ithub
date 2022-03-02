@@ -14,6 +14,7 @@ export default class Portal extends EventEmitter {
     this.container = new THREE.Object3D();
     this.container.position.x = this.position.x;
     this.container.position.y = this.position.y;
+    this.container.position.z = 0.1;
     this.container.matrixAutoUpdate = false;
     this.container.updateMatrix();
 
@@ -35,8 +36,8 @@ export default class Portal extends EventEmitter {
 
   setPortal() {
     this.portal = {
-      geometry: new THREE.BoxGeometry(),
-      material: new THREE.MeshBasicMaterial({ color: 0xff00ff }),
+      geometry: new THREE.PlaneGeometry(this.sizes.x, this.sizes.y),
+      material: new THREE.MeshBasicMaterial({ color: 0xffffff }),
     };
     this.portal.mesh = new THREE.Mesh(this.portal.geometry, this.portal.material);
 
