@@ -10,6 +10,7 @@ export default class Resources extends EventEmitter {
     this.items = {};
     this.toLoad = this.sources.length;
     this.loaded = 0;
+    this.setLoadingManager()
     this.setLoaders();
     this.startLoading();
   }
@@ -37,10 +38,19 @@ export default class Resources extends EventEmitter {
       this.trigger('ready');
     }
   }
+  setLoadingManager(){
+    this.loadingManager = new THREE.LoadingManager(() => {
+        console.log('loaded');
+      },
+      (itemUrl, itemsLoaded, itemsTotal) => {
+        // TODO: add progress bar and change it here
+        console.log(itemsLoaded / itemsTotal);
+      })
+  }
   setLoaders() {
     this.loaders = {};
-    this.loaders.gltfLoader = new GLTFLoader();
-    this.loaders.textureLoader = new THREE.TextureLoader();
-    this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
+    this.loaders.gltfLoader = new GLTFLoader(this.loadingManager);
+    this.loaders.textureLoader = new THREE.TextureLoader(this.loadingManager);
+    this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader(this.loadingManager);
   }
 }
