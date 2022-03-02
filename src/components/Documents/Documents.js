@@ -1,6 +1,10 @@
 import React from 'react';
 import './Documents.scss';
-import document from '@assets/images/document.PNG';
+// import document from '@assets/images/document.PNG';
+import document1 from '@assets/images/document_1.jpg';
+import document2 from '@assets/images/document_2.jpg';
+import document3 from '@assets/images/document_3.jpg';
+import document4 from '@assets/images/document_4.jpg';
 import Slider from 'react-slick';
 
 export const Documents = () => {
@@ -15,7 +19,7 @@ export const Documents = () => {
     arrows: false,
   };
   return (
-    <div className="container-document">
+    <div className="container-document" id={'documents'}>
       <p className="text-title"> Сведения об образовательной организации </p>
       <div className="grid">
         <div className="text-conditions">
@@ -32,13 +36,16 @@ export const Documents = () => {
         <div className="documents-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
-              <img src={document} className="document-photo" alt="documents" />
+              <img src={document1} className="document-photo" alt="documents" />
             </div>
             <div className={'slide'}>
-              <img src={document} className="document-photo" alt="documents" />
+              <img src={document2} className="document-photo" alt="documents" />
             </div>
             <div className={'slide'}>
-              <img src={document} className="document-photo" alt="documents" />
+              <img src={document3} className="document-photo" alt="documents" />
+            </div>
+            <div className={'slide'}>
+              <img src={document4} className="document-photo" alt="documents" />
             </div>
           </Slider>
         </div>

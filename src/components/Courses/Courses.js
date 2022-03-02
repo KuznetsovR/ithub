@@ -15,7 +15,6 @@ export const Courses = () => {
     autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
-    // pauseOnHover: true,
     arrows: false,
   };
   return (
@@ -33,11 +32,9 @@ export const Courses = () => {
             <p className="title-courses-description">Здесь будет какое-то описание подготовительных курсов</p>
           </div>
           <div>
-            <p>
-              <a href="#" className="courses-link">
+            <div className="courses-link">
                 Ссылка на заявления
-              </a>
-            </p>
+            </div>
             <HexaButton>Записаться</HexaButton>
           </div>
         </div>
