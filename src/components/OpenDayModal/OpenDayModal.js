@@ -60,14 +60,14 @@ export const OpenDayModal = (props) => {
       BackdropProps={{
         timeout: 500,
       }}
-      aria-labelledby="SchoolModal"
-      aria-describedby="SchoolModalDescription"
+      aria-labelledby="OpenDayModal"
+      aria-describedby="OpenDayModalDescription"
     >
       <Fade in={props.open}>
         <Box sx={style}>
-          <div className="text-school-head"> Выезд представителей в школы </div>
+          <div className="text-open-day-head"> День открытых дверей </div>
           <form onSubmit={sendForm}>
-            <div className="school-flex-column">
+            <div className="open-day-flex-column">
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
@@ -77,26 +77,7 @@ export const OpenDayModal = (props) => {
                 onChange={(e) => setState({ ...state, Name: e.target.value })}
               />
             </div>
-            <div className="school-flex-row">
-              <TextField
-                id="outlined-basic"
-                sx={inputOptions}
-                label="Наименование учереждения"
-                color="secondary"
-                variant="outlined"
-                onChange={(e) => setState({ ...state, organization: e.target.value })}
-              />
-              <TextField
-                id="outlined-basic"
-                sx={inputOptions}
-                label="Город"
-                color="secondary"
-                variant="outlined"
-                onChange={(e) => setState({ ...state, city: e.target.value })}
-              />
-            </div>
-
-            <div className="school-flex-row">
+            <div className="open-day-flex-row">
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
@@ -115,7 +96,18 @@ export const OpenDayModal = (props) => {
               />
             </div>
 
-            <div className="school-checkbox">
+            <div className="open-day-flex-row">
+              <TextField
+                id="outlined-basic"
+                sx={inputOptions}
+                type="date"
+                color="secondary"
+                variant="outlined"
+                onChange={(e) => setState({ ...state, date: e.target.value })}
+              />
+            </div>
+
+            <div className="open-day-checkbox">
               <FormControlLabel
                 control={
                   <Checkbox
@@ -134,7 +126,7 @@ export const OpenDayModal = (props) => {
                 }}
               />
             </div>
-            <div className="school-btn-wrapper">
+            <div className="open-day-btn-wrapper">
               <HexaButton>Отправить</HexaButton>
             </div>
           </form>
