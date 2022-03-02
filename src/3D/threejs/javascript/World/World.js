@@ -9,6 +9,7 @@ import Controls from './Controls';
 import Physics from './Physics';
 import Objects from './Objects';
 import Lights from './Lights';
+import Portals from './Portals';
 
 let instance = null;
 
@@ -42,9 +43,10 @@ export default class World {
     this.setShadows();
     this.setPhysics();
     this.setObjects();
+    this.setMainHero();
+    this.setPortals()
     this.setLights()
     this.setMap();
-    this.setMainHero();
   }
   setLights(){
     this.light = new Lights()
@@ -76,5 +78,9 @@ export default class World {
   setFloor() {
     this.floor = new Floor();
     this.container.add(this.floor.container);
+  }
+  setPortals(){
+    this.portals = new Portals()
+    this.container.add(this.portals.container);
   }
 }
