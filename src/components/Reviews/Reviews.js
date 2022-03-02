@@ -14,7 +14,7 @@ export const Reviews = () => {
     arrows: false,
   };
   return (
-    <div className="reviews-container">
+    <div className="reviews-container" id={'reviews'}>
       <div className="reviews-heading-text">Отзывы о студентах</div>
       <div className="reviews-slider-wrapper">
         <Slider {...settings}>

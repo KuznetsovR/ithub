@@ -19,7 +19,7 @@ export const Documents = () => {
     arrows: false,
   };
   return (
-    <div className="container-document">
+    <div className="container-document" id={'documents'}>
       <p className="text-title"> Сведения об образовательной организации </p>
       <div className="grid">
         <div className="text-conditions">
