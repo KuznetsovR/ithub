@@ -90,6 +90,5 @@ export default class MainHero {
     this.mixer = new THREE.AnimationMixer(this.container)
     this.mainHeroAction =  this.mixer.clipAction(this.model.mainHero.animations[1])
     this.mainHeroAction.play()
-    console.log(this.mainHeroAction);
   }
 }

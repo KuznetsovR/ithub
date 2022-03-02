@@ -59,7 +59,6 @@ export default class Portal extends EventEmitter {
         this.visibleTimer._element.style.opacity = '0'
       }
       this.visibleTimer._element.style.width = `${this.elapsedTimeInPortal / 1.5}%`
-      console.log(this.elapsedTimeInPortal);
     });
   }
   redirect() {
@@ -98,6 +97,5 @@ export default class Portal extends EventEmitter {
     this.visibleTimer._element.style.transition = '1s'
     this.visibleTimer._element.style.opacity = '0'
     document.body.appendChild(this.visibleTimer._element)
-    console.log(this.visibleTimer._element);
   }
 }
