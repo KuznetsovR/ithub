@@ -12,6 +12,7 @@ let instance = null;
 
 export default class Experience {
   constructor(canvas) {
+    if (canvas) instance = null
     if (instance) {
       return instance;
     }

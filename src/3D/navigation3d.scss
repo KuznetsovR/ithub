@@ -1,4 +1,4 @@
-canvas{
+canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,6 +7,30 @@ canvas{
   transition: 1s;
   overflow: hidden;
 }
-.ready{
+.ready {
   opacity: 1;
+}
+.go-back-btn-wrapper {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 10px 20px;
+  position: fixed;
+  margin: 20px;
+  bottom: 0;
+  background: #000;
+  .go-back-btn {
+    text-decoration: none;
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+    }
+    &:active {
+      color: white;
+    }
+  }
 }
