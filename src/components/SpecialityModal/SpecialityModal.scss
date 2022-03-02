@@ -1,12 +1,14 @@
 @use '../../styles/colors' as colors;
-.rectangle-spec-modal{
-  border: 3px solid #A71DD8;
+.rectangle-spec-modal {
+  border: 3px solid #a71dd8;
   height: 35px;
   text-align: center;
   box-shadow: 0 0 5px #a71dd8;
   border-radius: 10px;
+  font-family: 'Inter';
 }
-.text-spec-modal{
-    text-align: left;
-    white-space: normal;
+.text-spec-modal {
+  text-align: left;
+  white-space: normal;
+  font-family: 'Inter';
 }

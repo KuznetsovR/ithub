@@ -52,8 +52,6 @@ export default class Camera {
 
       this.instance.position.copy(this.targetEased).add(this.angle.clone().normalize().multiplyScalar(20));
       this.instance.lookAt(this.targetEased);
-      // TODO: remove pan from everywhere because we dont use it here
-
     });
   }
 

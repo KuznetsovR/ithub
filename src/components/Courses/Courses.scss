@@ -23,12 +23,12 @@
   transform: rotate(45deg);
   width: 250px;
   height: 240px;
-  transform: rotate(45deg);
 }
 .courses-square-3 {
   margin-bottom: 40px;
 }
 .courses-link {
+  margin: 15px 0;
   text-decoration: none;
   font-size: 20px;
   color: colors.$main-white;
@@ -45,6 +45,20 @@
   text-align: center;
   font-weight: bold;
 }
-.title-courses-description {
+.title-courses-description,
+.title-photo-gallery {
   font-size: 20px;
+  color: #fff;
+}
+.courses-img-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+}
+.courses-photo-gallery {
+  background-color: #1e1d1d;
+  padding: 20px 40px 40px 40px;
+}
+.courses-slide-img {
+  width: 30%;
 }

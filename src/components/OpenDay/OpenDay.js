@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState }from 'react';
 import './OpenDay.scss';
 import { HexaButton } from '@components/export.components.js';
 import Slider from 'react-slick';
+import { SchoolModal } from '../SchoolModal/SchoolModal';
 
 export const OpenDay = () => {
   const settings = {
@@ -15,6 +16,7 @@ export const OpenDay = () => {
     // pauseOnHover: true,
     arrows: false,
   };
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="open-day-component">
       <div className="open-day">
@@ -61,9 +63,13 @@ export const OpenDay = () => {
           </Slider>
         </div>
         <div className="invite-btn-wrapper">
-          <HexaButton>Пригласить</HexaButton>
-        </div>
+          <HexaButton onClick={() => setModalOpen(true)}>Пригласить</HexaButton>
+          <SchoolModal
+          open={modalOpen}
+          handleClose={setModalOpen}
+        />
       </div>
+    </div>
     </div>
   );
 };
