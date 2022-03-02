@@ -50,15 +50,15 @@ export default class Portal extends EventEmitter {
         this.redirect();
       } else if (this.skateIsInArea) {
         this.elapsedTimeInPortal += this.time.delta / 30;
-        if (this.visibleTimer._element.style.opacity === '0'){
-          this.visibleTimer._element.style.opacity = '1'
+        if (this.visibleTimer._element.style.opacity === '0') {
+          this.visibleTimer._element.style.opacity = '1';
         }
       } else if (this.elapsedTimeInPortal > 0) {
         this.elapsedTimeInPortal -= this.time.delta / 30;
       } else {
-        this.visibleTimer._element.style.opacity = '0'
+        this.visibleTimer._element.style.opacity = '0';
       }
-      this.visibleTimer._element.style.width = `${this.elapsedTimeInPortal / 1.5}%`
+      this.visibleTimer._element.style.width = `${this.elapsedTimeInPortal / 1.5}%`;
     });
   }
   redirect() {
@@ -85,17 +85,17 @@ export default class Portal extends EventEmitter {
       opacity: 0,
       transition: '1s',
     };
-    this.visibleTimer._element.style.userSelect = 'none'
-    this.visibleTimer._element.style.position = 'fixed'
-    this.visibleTimer._element.style.background = '#ff9933'
-    this.visibleTimer._element.style.borderRadius = '5px'
-    this.visibleTimer._element.style.border = '1px solid black'
-    this.visibleTimer._element.style.top = '50px'
-    this.visibleTimer._element.style.left = '50%'
-    this.visibleTimer._element.style.transform = 'translate(-50%, 0)'
-    this.visibleTimer._element.style.height = '10px'
-    this.visibleTimer._element.style.transition = '1s'
-    this.visibleTimer._element.style.opacity = '0'
-    document.body.appendChild(this.visibleTimer._element)
+    this.visibleTimer._element.style.userSelect = 'none';
+    this.visibleTimer._element.style.position = 'fixed';
+    this.visibleTimer._element.style.background = '#ff9933';
+    this.visibleTimer._element.style.borderRadius = '5px';
+    this.visibleTimer._element.style.border = '1px solid black';
+    this.visibleTimer._element.style.top = '50px';
+    this.visibleTimer._element.style.left = '50%';
+    this.visibleTimer._element.style.transform = 'translate(-50%, 0)';
+    this.visibleTimer._element.style.height = '10px';
+    this.visibleTimer._element.style.transition = '1s';
+    this.visibleTimer._element.style.opacity = '0';
+    document.body.appendChild(this.visibleTimer._element);
   }
 }

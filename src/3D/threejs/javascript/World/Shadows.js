@@ -47,42 +47,41 @@ export default class Shadows {
     this.setSun();
     this.setMaterials();
     this.setGeometry();
-    this.time.on('tick', () =>
-    {
-      for(const _shadow of this.items)
-      {
+    this.time.on('tick', () => {
+      for (const _shadow of this.items) {
         // Position
-        const z = Math.max(_shadow.reference.position.z + _shadow.offsetZ, 0)
-        const sunOffset = this.sun.vector.clone().multiplyScalar(z)
+        const z = Math.max(_shadow.reference.position.z + _shadow.offsetZ, 0);
+        const sunOffset = this.sun.vector.clone().multiplyScalar(z);
 
-        _shadow.mesh.position.x = _shadow.reference.position.x + sunOffset.x
-        _shadow.mesh.position.y = _shadow.reference.position.y + sunOffset.y
+        _shadow.mesh.position.x = _shadow.reference.position.x + sunOffset.x;
+        _shadow.mesh.position.y = _shadow.reference.position.y + sunOffset.y;
 
         // Angle
         // Project the rotation as a vector on a plane and extract the angle
-        const rotationVector = new THREE.Vector3(1, 0, 0)
-        rotationVector.applyQuaternion(_shadow.reference.quaternion)
+        const rotationVector = new THREE.Vector3(1, 0, 0);
+        rotationVector.applyQuaternion(_shadow.reference.quaternion);
         // const planeVector = new THREE.Vector3(0, 0, 1)
         // planeVector.normalize()
-        const projectedRotationVector = rotationVector.clone().projectOnPlane(new THREE.Vector3(0, 0, 1))
+        const projectedRotationVector = rotationVector.clone().projectOnPlane(new THREE.Vector3(0, 0, 1));
 
-        let orientationAlpha = Math.abs(rotationVector.angleTo(new THREE.Vector3(0, 0, 1)) - Math.PI * 0.5) / (Math.PI * 0.5)
-        orientationAlpha /= 0.5
-        orientationAlpha -= 1 / 0.5
-        orientationAlpha = Math.abs(orientationAlpha)
-        orientationAlpha = Math.min(Math.max(orientationAlpha, 0), 1)
+        let orientationAlpha =
+          Math.abs(rotationVector.angleTo(new THREE.Vector3(0, 0, 1)) - Math.PI * 0.5) / (Math.PI * 0.5);
+        orientationAlpha /= 0.5;
+        orientationAlpha -= 1 / 0.5;
+        orientationAlpha = Math.abs(orientationAlpha);
+        orientationAlpha = Math.min(Math.max(orientationAlpha, 0), 1);
 
-        const angle = Math.atan2(projectedRotationVector.y, projectedRotationVector.x)
-        _shadow.mesh.rotation.z = angle
+        const angle = Math.atan2(projectedRotationVector.y, projectedRotationVector.x);
+        _shadow.mesh.rotation.z = angle;
 
         // Alpha
-        let alpha = (this.maxDistance - z) / this.maxDistance
-        alpha = Math.min(Math.max(alpha, 0), 1)
-        alpha = Math.pow(alpha, this.distancePower)
+        let alpha = (this.maxDistance - z) / this.maxDistance;
+        alpha = Math.min(Math.max(alpha, 0), 1);
+        alpha = Math.pow(alpha, this.distancePower);
 
-        _shadow.material.uniforms.uAlpha.value = this.alpha * _shadow.alpha * orientationAlpha * alpha
+        _shadow.material.uniforms.uAlpha.value = this.alpha * _shadow.alpha * orientationAlpha * alpha;
       }
-    })
+    });
   }
 
   setSun() {
@@ -153,7 +152,7 @@ export default class Shadows {
 
     // Material
     shadow.material = this.materials.base.clone();
-    if (_reference.children[0].name === 'plane'){
+    if (_reference.children[0].name === 'plane') {
       this.geometry = new THREE.PlaneGeometry(0.8, 0.5, 1, 1);
     }
     // Mesh
