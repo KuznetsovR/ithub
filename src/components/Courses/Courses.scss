@@ -8,7 +8,8 @@
   color: colors.$main-white;
 }
 .preparatory-courses-square {
-  background-color: #141414;
+  background: url(../../assets/images/courses-text-container.svg);
+  background-size: 100%;
   padding: 60px;
   display: flex;
   justify-content: center;
@@ -61,4 +62,9 @@
 }
 .courses-slide-img {
   width: 30%;
+}
+@media (screen and max-width: 800px) {
+  .block-preparatory-courses{
+    flex-direction: column;
+  }
 }

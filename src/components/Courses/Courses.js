@@ -22,9 +22,6 @@ export const Courses = () => {
       <div className="block-preparatory-courses">
         <div className="preparatory-courses-square">
           <p className="title-preparatory-courses">Подготовительные курсы</p>
-          <div className="courses-square" />
-          <div className="courses-square-2 courses-square" />
-          <div className="courses-square-3 courses-square" />
         </div>
 
         <div className="preparatory-courses-description">
