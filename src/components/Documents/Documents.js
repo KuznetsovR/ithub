@@ -21,7 +21,7 @@ export const Documents = () => {
   return (
     <div className="container-document" id={'documents'}>
       <p className="text-title"> Сведения об образовательной организации </p>
-      <div className="grid">
+      <div className="content">
         <div className="text-conditions">
           <div>
             Обучение проходит по Федеральному Государственному Образовательному Стандарту (ФГОС) 09.02.07.
