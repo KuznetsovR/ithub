@@ -88,7 +88,7 @@ export default class MainHero {
   }
   setAnimations() {
     this.mixer = new THREE.AnimationMixer(this.container);
-    this.mainHeroAction = this.mixer.clipAction(this.model.mainHero.animations[0]);
+    this.mainHeroAction = this.mixer.clipAction(this.model.mainHero.animations[1]);
     this.mainHeroAction.play();
     this.time.on('tick', () => {
       if(this.mixer){
