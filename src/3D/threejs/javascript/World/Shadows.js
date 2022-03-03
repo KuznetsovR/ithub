@@ -10,7 +10,7 @@ export default class Shadows {
   alpha = 0.25;
   maxDistance = 3;
   distancePower = 2;
-  zFightingDistance = 0.001;
+  zFightingDistance = 0.025;
   color = '#6B3F8C';
   wireframeVisible = false;
   items = [];
