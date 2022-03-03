@@ -32,4 +32,15 @@
 .school-checkbox {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
+}
+@media (screen and max-width: 700px) {
+  .school-flex-row {
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 0;
+  }
+  .school-flex-column {
+    padding: 5px 0;
+  }
 }
