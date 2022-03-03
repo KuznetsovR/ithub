@@ -10,8 +10,8 @@ export default class Camera {
   time = this.experience.time;
 
   constructor() {
-    this.container = new THREE.Object3D()
-    this.container.matrixAutoUpdate = false
+    this.container = new THREE.Object3D();
+    this.container.matrixAutoUpdate = false;
     if (this.debug.active) {
       this.debugFolder = this.debug.addFolder('camera');
     }
@@ -40,9 +40,9 @@ export default class Camera {
   }
   setInstance() {
     this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 200);
-    this.instance.up.set(0, 0, 1)
-    this.instance.position.copy(this.angle)
-    this.instance.lookAt(new THREE.Vector3())
+    this.instance.up.set(0, 0, 1);
+    this.instance.position.copy(this.angle);
+    this.instance.lookAt(new THREE.Vector3());
     // this.container.add(this.instance);
 
     this.time.on('tick', () => {
