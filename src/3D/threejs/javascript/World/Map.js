@@ -29,8 +29,38 @@ export default class Map {
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
+    this.objects.add({
+      base: this.resources.items.htmlCode.scene,
+      collision: this.resources.items.htmlCodeCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+    this.objects.add({
+      base: this.resources.items.jsCode.scene,
+      collision: this.resources.items.jsCodeCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+    this.objects.add({
+      base: this.resources.items.adressText.scene,
+      collision: this.resources.items.adressTextCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(4, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      mass: 0,
+    });
   }
   setDynamic() {
+    this.objects.add({
+      base: this.resources.items.Ps4.scene,
+      collision: this.resources.items.Ps4Collision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      mass: 1.8,
+    })
     this.objects.add({
       base: this.resources.items.cText.scene,
       collision: this.resources.items.cCollision.scene,
