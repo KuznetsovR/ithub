@@ -1,7 +1,6 @@
 import React from 'react';
 import './Reviews.scss';
 import Slider from 'react-slick';
-import studentOnePhoto from '@assets/images/web_dev.png';
 
 export const Reviews = () => {
   const settings = {
@@ -20,9 +19,7 @@ export const Reviews = () => {
         <Slider {...settings}>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo-wrapper">
-                <img src={studentOnePhoto} alt="student" />
-              </div>
+              <div className="student-photo" />
               <div className="reviews-text">
                 <p>Иванов Иван</p>
                 <p className="reviews-text-2">Компания “ ITbit ”</p>
@@ -32,9 +29,7 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo-wrapper">
-                <img src={studentOnePhoto} alt="student" />
-              </div>
+              <div className="student-photo" />
               <div className="reviews-text">
                 <p>Иванов Иван</p>
                 <p className="reviews-text-2">Компания “ ITbit ”</p>
@@ -44,9 +39,7 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo-wrapper">
-                <img src={studentOnePhoto} alt="student" />
-              </div>
+              <div className="student-photo" />
               <div className="reviews-text">
                 <p>Иванов Иван</p>
                 <p className="reviews-text-2">Компания “ ITbit ”</p>
