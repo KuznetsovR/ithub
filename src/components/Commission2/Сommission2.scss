@@ -43,3 +43,15 @@
   row-gap:20px;
   padding: 20px 0;
 }
+@media (screen and max-width: 600px) {
+  .share-flex-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .files-to-upload{
+    grid-template-columns: 1fr;
+  }
+  .shape-case {
+    padding: 20px 5px;
+  }
+  }
