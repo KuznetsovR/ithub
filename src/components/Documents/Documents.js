@@ -20,7 +20,7 @@ export const Documents = () => {
   };
   return (
     <div className="container-document" id={'documents'}>
-      <p className="text-title"> Сведения об образовательной организации </p>
+      <h1 className="text-title"> Сведения об образовательной организации </h1>
       <div className="content">
         <div className="text-conditions">
           <div>
