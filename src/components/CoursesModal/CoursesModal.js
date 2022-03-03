@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './OpenDayModal.scss';
+import './CoursesModal.scss';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Backdrop from '@mui/material/Backdrop';
@@ -9,9 +9,9 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
-// import DateAdapter from '@mui/lab/AdapterDateFns';
+import DateAdapter from '@mui/lab/AdapterDateFns';
 
-export const OpenDayModal = (props) => {
+export const CoursesModal = (props) => {
   const style = {
     position: 'absolute',
     padding: '30px',

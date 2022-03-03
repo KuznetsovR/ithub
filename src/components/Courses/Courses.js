@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import courses1 from '../../assets/images/courses1.png';
 import courses2 from '../../assets/images/courses2.png';
 import courses3 from '../../assets/images/courses3.png';
+import { CoursesModal } from '../CoursesModal/CoursesModal';
 
 export const Courses = () => {
   const settings = {
@@ -38,7 +39,8 @@ export const Courses = () => {
                 Ссылка на заявления
               </a>
             </p>
-            <HexaButton>Записаться</HexaButton>
+            <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
+            <OpenDayModal open={modalOpen} handleClose={setModalOpen} />
           </div>
         </div>
       </div>
