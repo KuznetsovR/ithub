@@ -10,7 +10,8 @@
 }
 .open-day {
   padding: 40px 30px;
-  width: calc(40% - 30px);
+  width: 40%;
+  box-sizing: border-box;
   background: colors.$dark-gray;
 }
 .schools-events {
@@ -36,16 +37,16 @@
   justify-content: space-between;
 }
 .img-container {
-  height: 230px; // this height is height of a most tall image
   display: grid;
   align-items: center;
-  margin: 0 10px;
   cursor: pointer;
+  margin: 0 10px;
 }
 .open-day-focus {
   color: colors.$main-dark-pink;
 }
 .event-description {
+  padding: 5px 10px;
   text-align: end;
 }
 .invite-btn-wrapper {
@@ -58,4 +59,17 @@
 }
 .open-day-date {
   margin-top: 50px;
+}
+@media (screen and max-width: 1000px) {
+  .open-day-component {
+    flex-direction: column;
+  }
+  .schools-events,
+  .open-day {
+    width: 100%;
+  }
+  .open-day-slider-wrapper {
+    max-width: 100%;
+    padding: 5vw;
+  }
 }
