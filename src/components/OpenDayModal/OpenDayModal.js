@@ -101,7 +101,7 @@ export const OpenDayModal = (props) => {
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
-                type="dateAdapter"
+                type="date"
                 color="secondary"
                 variant="outlined"
                 onChange={(e) => setState({ ...state, date: e.target.value })}

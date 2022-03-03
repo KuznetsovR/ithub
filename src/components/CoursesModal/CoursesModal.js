@@ -9,7 +9,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
-import DateAdapter from '@mui/lab/AdapterDateFns';
+import { FileUpload } from '../FileUpload/FileUpload';
 
 export const CoursesModal = (props) => {
   const style = {
@@ -61,24 +61,33 @@ export const CoursesModal = (props) => {
       BackdropProps={{
         timeout: 500,
       }}
-      aria-labelledby="OpenDayModal"
-      aria-describedby="OpenDayModalDescription"
+      aria-labelledby="CoursesModal"
+      aria-describedby="CoursesModalDescription"
     >
       <Fade in={props.open}>
         <Box sx={style}>
-          <div className="text-open-day-head"> День открытых дверей </div>
           <form onSubmit={sendForm}>
-            <div className="open-day-flex-column">
+            <div className="courses-flex-column">
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
-                label="ФИО"
+                label="ФИО ребёнка"
                 color="secondary"
                 variant="outlined"
                 onChange={(e) => setState({ ...state, Name: e.target.value })}
               />
             </div>
-            <div className="open-day-flex-row">
+            <div className="courses-flex-column">
+              <TextField
+                id="outlined-basic"
+                sx={inputOptions}
+                label="ФИО родителя"
+                color="secondary"
+                variant="outlined"
+                onChange={(e) => setState({ ...state, Name: e.target.value })}
+              />
+            </div>
+            <div className="courses-flex-row">
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
@@ -97,18 +106,20 @@ export const CoursesModal = (props) => {
               />
             </div>
 
-            <div className="open-day-flex-row">
-              <TextField
-                id="outlined-basic"
-                sx={inputOptions}
-                type="dateAdapter"
-                color="secondary"
-                variant="outlined"
-                onChange={(e) => setState({ ...state, date: e.target.value })}
-              />
+            <div className="box-files-to-upload">
+              <div className="files-to-upload">
+                <div className="file-name">Фото паспорта</div>
+                <FileUpload setState={(e) => setState({ ...state, passportPhoto: e.target.files[0] })} />
+                <div className="file-name">Фото аттестата</div>
+                <FileUpload setState={(e) => setState({ ...state, schoolRecordsPhoto: e.target.files[0] })} />
+                <div className="file-name">Заявление</div>
+                <FileUpload setState={(e) => setState({ ...state, application: e.target.files[0] })} />
+              </div>
+              <div className="courses-btn-wrapper">
+                <HexaButton>Отправить</HexaButton>
+              </div>
             </div>
-
-            <div className="open-day-checkbox">
+            <div className="courses-checkbox">
               <FormControlLabel
                 control={
                   <Checkbox
@@ -126,9 +137,6 @@ export const CoursesModal = (props) => {
                   color: purple[50],
                 }}
               />
-            </div>
-            <div className="open-day-btn-wrapper">
-              <HexaButton>Отправить</HexaButton>
             </div>
           </form>
         </Box>

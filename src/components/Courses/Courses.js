@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Courses.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
 import Slider from 'react-slick';
@@ -19,6 +19,7 @@ export const Courses = () => {
     // pauseOnHover: true,
     arrows: false,
   };
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div>
       <div className="block-preparatory-courses">
@@ -40,7 +41,7 @@ export const Courses = () => {
               </a>
             </p>
             <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
-            <OpenDayModal open={modalOpen} handleClose={setModalOpen} />
+            <CoursesModal open={modalOpen} handleClose={setModalOpen} />
           </div>
         </div>
       </div>
