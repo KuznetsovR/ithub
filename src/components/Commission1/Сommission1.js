@@ -24,6 +24,9 @@ export const Commission1 = () => {
           </div>
         </div>
       </div>
+      <div className="mobile-button">
+        <HexaButton>Скачать документы</HexaButton>
+      </div>
     </div>
   );
 };
