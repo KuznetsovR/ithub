@@ -36,16 +36,24 @@ export const Documents = () => {
         <div className="documents-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
-              <img src={document1} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document1} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document2} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document2} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document3} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document3} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document4} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document4} className="document-photo" alt="documents" />
+              </div>
             </div>
           </Slider>
         </div>
