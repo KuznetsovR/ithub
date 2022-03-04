@@ -9,6 +9,10 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 
 export const OpenDayModal = (props) => {
   const style = {
@@ -36,13 +40,10 @@ export const OpenDayModal = (props) => {
     },
   };
   const [state, setState] = useState({
-    childName: '',
-    parentName: '',
+    name: '',
     phone: '',
     email: '',
-    passportPhoto: null,
-    schoolRecordsPhoto: null,
-    application: null,
+    date: '',
     personalDataAccess: false,
   });
 
@@ -69,17 +70,15 @@ export const OpenDayModal = (props) => {
           <form onSubmit={sendForm}>
             <div className="open-day-flex-column">
               <TextField
-                id="outlined-basic"
                 sx={inputOptions}
                 label="ФИО"
                 color="secondary"
                 variant="outlined"
-                onChange={(e) => setState({ ...state, Name: e.target.value })}
+                onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
             <div className="open-day-flex-row">
               <TextField
-                id="outlined-basic"
                 sx={inputOptions}
                 label="Телефон"
                 color="secondary"
@@ -87,7 +86,6 @@ export const OpenDayModal = (props) => {
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
-                id="outlined-basic"
                 sx={inputOptions}
                 label="Почта"
                 color="secondary"
@@ -97,14 +95,22 @@ export const OpenDayModal = (props) => {
             </div>
 
             <div className="open-day-flex-row">
-              <TextField
-                id="outlined-basic"
-                sx={inputOptions}
-                type="date"
-                color="secondary"
-                variant="outlined"
-                onChange={(e) => setState({ ...state, date: e.target.value })}
-              />
+              <FormControl fullWidth>
+                <InputLabel id="open-day-date-select">Дата</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="Дата"
+                  value={state.date}
+                  color="secondary"
+                  variant="outlined"
+                  onChange={(e) => setState({ ...state, date: e.target.value })}
+                >
+                  <MenuItem value={'05.03.2022'}>05.03.2022</MenuItem>
+                  <MenuItem value={'09.03.2022'}>09.03.2022</MenuItem>
+                  <MenuItem value={'23.03.2022'}>23.03.2022</MenuItem>
+                </Select>
+              </FormControl>
             </div>
 
             <div className="open-day-checkbox">
