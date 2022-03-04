@@ -20,18 +20,16 @@ export const Courses = () => {
   return (
     <div>
       <div className="block-preparatory-courses">
-        <div className="preparatory-courses-square">
-          <p className="title-preparatory-courses">Подготовительные курсы</p>
+        <div className="preparatory-courses-square-container">
+          <div className="preparatory-courses-square">
+            <div className="title-preparatory-courses">Подготовительные курсы</div>
+          </div>
         </div>
 
         <div className="preparatory-courses-description">
-          <div>
-            <p className="title-courses-description">Здесь будет какое-то описание подготовительных курсов</p>
-          </div>
-          <div>
-            <div className="courses-link">
-                Ссылка на заявления
-            </div>
+            <div className="title-courses-description">Здесь будет какое-то описание подготовительных курсов</div>
+          <div className={'courses-description-link'}>
+            <div className="courses-link">Ссылка на заявления</div>
             <HexaButton>Записаться</HexaButton>
           </div>
         </div>
