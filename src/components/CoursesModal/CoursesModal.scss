@@ -21,12 +21,6 @@
   }
   padding: 20px 0;
 }
-.courses-btn-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
 .courses-checkbox {
   display: flex;
   justify-content: center;
@@ -38,7 +32,8 @@
   row-gap: 20px;
   padding: 20px 0;
 }
-.box-files-to-upload {
+.courses-btn-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 15px;
 }

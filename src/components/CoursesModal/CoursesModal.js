@@ -19,7 +19,7 @@ export const CoursesModal = (props) => {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 700,
-    height: 450,
+    height: 600,
     color: 'white',
     outline: 'none',
     bgcolor: 'rgb(30,29,29)',
@@ -66,6 +66,7 @@ export const CoursesModal = (props) => {
     >
       <Fade in={props.open}>
         <Box sx={style}>
+          <div className="text-open-day-head"> Записаться на курсы </div>
           <form onSubmit={sendForm}>
             <div className="courses-flex-column">
               <TextField
@@ -106,18 +107,13 @@ export const CoursesModal = (props) => {
               />
             </div>
 
-            <div className="box-files-to-upload">
-              <div className="files-to-upload">
-                <div className="file-name">Фото паспорта</div>
-                <FileUpload setState={(e) => setState({ ...state, passportPhoto: e.target.files[0] })} />
-                <div className="file-name">Фото аттестата</div>
-                <FileUpload setState={(e) => setState({ ...state, schoolRecordsPhoto: e.target.files[0] })} />
-                <div className="file-name">Заявление</div>
-                <FileUpload setState={(e) => setState({ ...state, application: e.target.files[0] })} />
-              </div>
-              <div className="courses-btn-wrapper">
-                <HexaButton>Отправить</HexaButton>
-              </div>
+            <div className="files-to-upload">
+              <div className="file-name">Фото паспорта</div>
+              <FileUpload setState={(e) => setState({ ...state, passportPhoto: e.target.files[0] })} />
+              <div className="file-name">Фото аттестата</div>
+              <FileUpload setState={(e) => setState({ ...state, schoolRecordsPhoto: e.target.files[0] })} />
+              <div className="file-name">Заявление</div>
+              <FileUpload setState={(e) => setState({ ...state, application: e.target.files[0] })} />
             </div>
             <div className="courses-checkbox">
               <FormControlLabel
@@ -137,6 +133,9 @@ export const CoursesModal = (props) => {
                   color: purple[50],
                 }}
               />
+            </div>
+            <div className="courses-btn-wrapper">
+              <HexaButton>Отправить</HexaButton>
             </div>
           </form>
         </Box>
