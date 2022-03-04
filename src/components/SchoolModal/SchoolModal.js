@@ -1,3 +1,5 @@
+// TODO: change Modal on Dialog
+
 import React, { useState } from 'react';
 import './SchoolModal.scss';
 import Modal from '@mui/material/Modal';
@@ -17,8 +19,8 @@ export const SchoolModal = (props) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 700,
-    height: 450,
+    width: '80%',
+    maxWidth: 700,
     color: 'white',
     outline: 'none',
     bgcolor: 'rgb(30,29,29)',

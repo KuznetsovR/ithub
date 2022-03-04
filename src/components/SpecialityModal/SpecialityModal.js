@@ -13,8 +13,8 @@ export const SpecialityModal = (props) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 700,
-    height: 300,
+    width: '80%',
+    maxWidth: 700,
     color: 'white',
     outline: 'none',
     bgcolor: 'rgb(30,29,29)',
@@ -47,7 +47,7 @@ export const SpecialityModal = (props) => {
             <Typography id="modal-modal-role" sx={{ mt: 4 }}>
               {props.specialityContent.role}
             </Typography>
-            <Typography id="modal-modal-price" sx={{ mt: 13 }}>
+            <Typography id="modal-modal-price" sx={{ mt: 8 }}>
               {props.specialityContent.price}
             </Typography>
           </div>

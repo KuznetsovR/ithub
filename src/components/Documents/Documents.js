@@ -20,8 +20,8 @@ export const Documents = () => {
   };
   return (
     <div className="container-document" id={'documents'}>
-      <p className="text-title"> Сведения об образовательной организации </p>
-      <div className="grid">
+      <h1 className="text-title"> Сведения об образовательной организации </h1>
+      <div className="content">
         <div className="text-conditions">
           <div>
             Обучение проходит по Федеральному Государственному Образовательному Стандарту (ФГОС) 09.02.07.
@@ -36,16 +36,24 @@ export const Documents = () => {
         <div className="documents-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
-              <img src={document1} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document1} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document2} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document2} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document3} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document3} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document4} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document4} className="document-photo" alt="documents" />
+              </div>
             </div>
           </Slider>
         </div>

@@ -14,7 +14,6 @@ export const OpenDay = () => {
     autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
-    // pauseOnHover: true,
     arrows: false,
   };
   const [modalOpen, setModalOpen] = useState(false);

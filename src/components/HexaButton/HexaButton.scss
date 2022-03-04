@@ -7,8 +7,8 @@
   padding: 15px 40px;
   border-radius: 0;
   border: 0;
-  background-color: colors.$main-pink;
   color: #fff;
+  background-color: colors.$main-pink;
   font-size: 20px;
   cursor: pointer;
   &::after {
@@ -39,6 +39,23 @@
     }
     &::before {
       display: none;
+    }
+  }
+}
+@media (screen and max-width: 500px) {
+  .hexa {
+    padding: 10px 30px;
+    &::after {
+      margin-left: 30px;
+      margin-top: -10px;
+      border-top: calc((10px * 2 + 20px + 2px) / 2) solid transparent;
+      border-bottom: calc((10px * 2 + 20px + 2px) / 2) solid transparent;
+    }
+    &::before {
+      margin-left: -45px;
+      margin-top: -10px;
+      border-top: calc((10px * 2 + 20px + 3px) / 2) solid transparent;
+      border-bottom: calc((10px * 2 + 20px + 3px) / 2) solid transparent;
     }
   }
 }

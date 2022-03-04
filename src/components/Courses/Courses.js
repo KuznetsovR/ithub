@@ -5,61 +5,66 @@ import Slider from 'react-slick';
 import courses1 from '../../assets/images/courses1.png';
 import courses2 from '../../assets/images/courses2.png';
 import courses3 from '../../assets/images/courses3.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Courses = () => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
     arrows: false,
   };
+  const isTablet = useMediaQuery('(max-width: 1000px)');
+  const isPhone = useMediaQuery('(max-width: 500px)');
+  if (isTablet) {
+    settings.slidesToShow = 2;
+    if (isPhone) {
+      settings.slidesToShow = 1;
+    }
+  }
   return (
     <div>
       <div className="block-preparatory-courses">
-        <div className="preparatory-courses-square">
-          <p className="title-preparatory-courses">Подготовительные курсы</p>
-          <div className="courses-square" />
-          <div className="courses-square-2 courses-square" />
-          <div className="courses-square-3 courses-square" />
+        <div className="preparatory-courses-square-container">
+          <div className="preparatory-courses-square">
+            <div className="title-preparatory-courses">Подготовительные курсы</div>
+          </div>
         </div>
 
         <div className="preparatory-courses-description">
-          <div>
-            <p className="title-courses-description">Здесь будет какое-то описание подготовительных курсов</p>
+          <div className="title-courses-description">
+            Здесь будет какое-то описание подготовительных курсов
           </div>
-          <div>
-            <div className="courses-link">
-                Ссылка на заявления
-            </div>
+          <div className={'courses-description-link'}>
+            <div className="courses-link">Ссылка на заявления</div>
             <HexaButton>Записаться</HexaButton>
           </div>
         </div>
       </div>
       <div className="courses-photo-gallery">
-        <p className="title-photo-gallery">Фотогаларея</p>
+        <h1 className="title-photo-gallery">Фотогаларея</h1>
         <Slider {...settings}>
           <div className={'slide'}>
             <div className="courses-img-container">
               <img src={courses1} alt="" className="courses-slide-img" />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="courses-img-container">
               <img src={courses2} alt="" className="courses-slide-img" />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="courses-img-container">
               <img src={courses3} alt="" className="courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
             <div className="courses-img-container">
-              <img src={courses1} alt="" className="courses-slide-img" />
-              <img src={courses2} alt="" className="courses-slide-img" />
-              <img src={courses3} alt="" className="courses-slide-img" />
-            </div>
-          </div>
-          <div className={'slide'}>
-            <div className="courses-img-container">
-              <img src={courses1} alt="" className="courses-slide-img" />
-              <img src={courses2} alt="" className="courses-slide-img" />
               <img src={courses3} alt="" className="courses-slide-img" />
             </div>
           </div>

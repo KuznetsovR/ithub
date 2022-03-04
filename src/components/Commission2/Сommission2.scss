@@ -4,7 +4,6 @@
   padding: 40px;
 }
 .text-shape-head {
-  color: #fff;
   font-size: 40px;
   margin-bottom: 40px;
   text-align: center;
@@ -41,7 +40,18 @@
 .files-to-upload{
   display: grid;
   grid-template-columns: 200px 1fr;
-  color: white;
   row-gap:20px;
   padding: 20px 0;
 }
+@media (screen and max-width: 600px) {
+  .share-flex-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .files-to-upload{
+    grid-template-columns: 1fr;
+  }
+  .shape-case {
+    padding: 20px 5px;
+  }
+  }
