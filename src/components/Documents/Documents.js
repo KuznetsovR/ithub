@@ -1,6 +1,10 @@
 import React from 'react';
 import './Documents.scss';
-import document from '@assets/images/document.PNG';
+// import document from '@assets/images/document.PNG';
+import document1 from '@assets/images/document_1.jpg';
+import document2 from '@assets/images/document_2.jpg';
+import document3 from '@assets/images/document_3.jpg';
+import document4 from '@assets/images/document_4.jpg';
 import Slider from 'react-slick';
 
 export const Documents = () => {
@@ -15,9 +19,9 @@ export const Documents = () => {
     arrows: false,
   };
   return (
-    <div className="container-document">
-      <p className="text-title"> Сведения об образовательной организации </p>
-      <div className="grid">
+    <div className="container-document" id={'documents'}>
+      <h1 className="text-title"> Сведения об образовательной организации </h1>
+      <div className="content">
         <div className="text-conditions">
           <div>
             Обучение проходит по Федеральному Государственному Образовательному Стандарту (ФГОС) 09.02.07.
@@ -32,13 +36,24 @@ export const Documents = () => {
         <div className="documents-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
-              <img src={document} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document1} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document2} className="document-photo" alt="documents" />
+              </div>
             </div>
             <div className={'slide'}>
-              <img src={document} className="document-photo" alt="documents" />
+              <div className="document-photo-container">
+                <img src={document3} className="document-photo" alt="documents" />
+              </div>
+            </div>
+            <div className={'slide'}>
+              <div className="document-photo-container">
+                <img src={document4} className="document-photo" alt="documents" />
+              </div>
             </div>
           </Slider>
         </div>

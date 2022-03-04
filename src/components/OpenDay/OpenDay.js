@@ -3,6 +3,7 @@ import './OpenDay.scss';
 import { HexaButton } from '@components/export.components.js';
 import Slider from 'react-slick';
 import { SchoolModal } from '../SchoolModal/SchoolModal';
+import { OpenDayModal } from '../OpenDayModal/OpenDayModal';
 
 export const OpenDay = () => {
   const settings = {
@@ -13,7 +14,6 @@ export const OpenDay = () => {
     autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
-    // pauseOnHover: true,
     arrows: false,
   };
   const [modalOpen, setModalOpen] = useState(false);
@@ -30,7 +30,8 @@ export const OpenDay = () => {
             Состоится<span className="open-day-focus"> 6 июля</span>
           </div>
           <div className="invite-btn-wrapper">
-            <HexaButton>Записаться</HexaButton>
+            <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
+            <OpenDayModal open={modalOpen} handleClose={setModalOpen} />
           </div>
         </div>
       </div>

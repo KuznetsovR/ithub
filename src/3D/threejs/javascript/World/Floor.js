@@ -8,8 +8,8 @@ export default class Floor {
     this.container.matrixAutoUpdate = false;
 
     this.world = new World();
-    this.debug = this.world.debug
-    this.geometry = new THREE.PlaneGeometry(2,2);
+    this.debug = this.world.debug;
+    this.geometry = new THREE.PlaneGeometry(2, 2);
 
     this.colors = {
       topLeft: '#b25ec9',
@@ -27,14 +27,13 @@ export default class Floor {
     this.mesh.updateMatrix();
     this.container.add(this.mesh);
 
-    if(this.debug.active)
-    {
-      const folder = this.debug.ui.addFolder('FloorColors')
+    if (this.debug.active) {
+      const folder = this.debug.ui.addFolder('FloorColors');
 
-      folder.addColor(this.colors, 'topLeft').onChange(this.updateMaterial)
-      folder.addColor(this.colors, 'topRight').onChange(this.updateMaterial)
-      folder.addColor(this.colors, 'bottomRight').onChange(this.updateMaterial)
-      folder.addColor(this.colors, 'bottomLeft').onChange(this.updateMaterial)
+      folder.addColor(this.colors, 'topLeft').onChange(this.updateMaterial);
+      folder.addColor(this.colors, 'topRight').onChange(this.updateMaterial);
+      folder.addColor(this.colors, 'bottomRight').onChange(this.updateMaterial);
+      folder.addColor(this.colors, 'bottomLeft').onChange(this.updateMaterial);
     }
   }
   updateMaterial() {
@@ -63,5 +62,5 @@ export default class Floor {
     this.backgroundTexture.needsUpdate = true;
 
     this.material.uniforms.tBackground.value = this.backgroundTexture;
-  };
+  }
 }

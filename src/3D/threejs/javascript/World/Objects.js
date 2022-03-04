@@ -19,12 +19,10 @@ export default class Objects {
     this.setMerge();
   }
 
-
   setParsers() {
     this.parsers = {};
 
     this.parsers.items = [
-
       // Floor
       {
         regex: /^floor_?[0-9]{0,3}?/i,
@@ -51,12 +49,10 @@ export default class Objects {
     ];
 
     // Default
-    this.parsers.default = {}
-    this.parsers.default.apply = (_mesh) =>
-    {
-
-      return _mesh.clone()
-    }
+    this.parsers.default = {};
+    this.parsers.default.apply = (_mesh) => {
+      return _mesh.clone();
+    };
   }
 
   setMerge() {
@@ -143,7 +139,7 @@ export default class Objects {
         let parser = this.parsers.items.find((_item) => _child.name.match(_item.regex));
         if (parser === undefined) {
           // throw new Error('Undefined parser: matcaps used or another error');
-          parser = this.parsers.default
+          parser = this.parsers.default;
         }
 
         // Create mesh by applying parser
