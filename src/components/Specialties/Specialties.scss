@@ -4,13 +4,12 @@
   margin: auto;
   background-color: #191818;
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0 40px;
 }
 
 .specialities-heading-text {
-  font-size: 40px;
-  color: #fff;
-  margin: 0 0 40px 30px;
+  font-weight: normal;
+  margin-left: 30px;
 }
 
 .all-specialities-rectangles {
@@ -56,4 +55,12 @@
 }
 .rec-text-size2 {
   margin-top: 150px;
+}
+@media (screen and max-width: 780px) {
+  .all-specialities-rectangles {
+    flex-direction: column;
+  }
+  .specialities-rectangle {
+    margin: 20px auto;
+  }
 }

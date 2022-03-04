@@ -1,7 +1,5 @@
-// TODO: change Modal on Dialog
-
 import React, { useState } from 'react';
-import './SchoolModal.scss';
+import './OpenDayModal.scss';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Backdrop from '@mui/material/Backdrop';
@@ -12,15 +10,15 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
 
-export const SchoolModal = (props) => {
+export const OpenDayModal = (props) => {
   const style = {
     position: 'absolute',
     padding: '30px',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '80%',
-    maxWidth: 700,
+    width: 700,
+    height: 450,
     color: 'white',
     outline: 'none',
     bgcolor: 'rgb(30,29,29)',
@@ -62,14 +60,14 @@ export const SchoolModal = (props) => {
       BackdropProps={{
         timeout: 500,
       }}
-      aria-labelledby="SchoolModal"
-      aria-describedby="SchoolModalDescription"
+      aria-labelledby="OpenDayModal"
+      aria-describedby="OpenDayModalDescription"
     >
       <Fade in={props.open}>
         <Box sx={style}>
-          <div className="text-school-head"> Выезд представителей в школы </div>
+          <div className="text-open-day-head"> День открытых дверей </div>
           <form onSubmit={sendForm}>
-            <div className="school-flex-column">
+            <div className="open-day-flex-column">
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
@@ -79,26 +77,7 @@ export const SchoolModal = (props) => {
                 onChange={(e) => setState({ ...state, Name: e.target.value })}
               />
             </div>
-            <div className="school-flex-row">
-              <TextField
-                id="outlined-basic"
-                sx={inputOptions}
-                label="Наименование учереждения"
-                color="secondary"
-                variant="outlined"
-                onChange={(e) => setState({ ...state, organization: e.target.value })}
-              />
-              <TextField
-                id="outlined-basic"
-                sx={inputOptions}
-                label="Город"
-                color="secondary"
-                variant="outlined"
-                onChange={(e) => setState({ ...state, city: e.target.value })}
-              />
-            </div>
-
-            <div className="school-flex-row">
+            <div className="open-day-flex-row">
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
@@ -117,7 +96,18 @@ export const SchoolModal = (props) => {
               />
             </div>
 
-            <div className="school-checkbox">
+            <div className="open-day-flex-row">
+              <TextField
+                id="outlined-basic"
+                sx={inputOptions}
+                type="date"
+                color="secondary"
+                variant="outlined"
+                onChange={(e) => setState({ ...state, date: e.target.value })}
+              />
+            </div>
+
+            <div className="open-day-checkbox">
               <FormControlLabel
                 control={
                   <Checkbox
@@ -136,7 +126,7 @@ export const SchoolModal = (props) => {
                 }}
               />
             </div>
-            <div className="school-btn-wrapper">
+            <div className="open-day-btn-wrapper">
               <HexaButton>Отправить</HexaButton>
             </div>
           </form>
