@@ -1,95 +1,69 @@
 @use '../../styles/colors' as colors;
-
-.footer-text {
-  display: flex;
-  flex-direction: column;
-}
-.logo-footer {
-  height: 100px;
-  width: 130px;
-  padding: 15px 150px 5px 0;
-}
-.text-copyright {
-  color: #88898d;
-  font-size: 10px;
-  text-decoration: none;
-  padding: 5px 50px 15px 0;
-}
-.text-contacts {
-  color: white;
-  font-size: 25px;
-  text-decoration: none;
-  padding: 25px 40px 5px 40px;
-  text-align: center;
-}
-.text-email {
-  color: white;
-  font-size: 24px;
-  text-decoration: none;
-  padding: 15px 40px 10px 40px;
-  text-align: center;
-}
-.text-phone {
-  padding-top: 10px;
-}
-
-.text-3d {
-  color: white;
-  font-size: 25px;
-  padding: 85px 40px 10px 40px;
-  text-decoration: none;
-}
-footer {
-  color: white;
-}
 .footer-container {
+  box-sizing: border-box;
   background-color: colors.$main-graphite;
+  width: 100%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   justify-content: space-evenly;
+  padding: 20px;
 }
-.text-address {
-  color: white;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 10px 50px 10px 0;
-}
+
 .footer-text {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.it-journey-container{
+  justify-content: center;
 }
 .logo-footer {
   height: 100px;
   width: 130px;
-  padding: 15px 150px 5px 0;
+  margin: auto;
+}
+.text-address {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 0;
+  margin: auto;
 }
 .text-copyright {
   color: #88898d;
   font-size: 10px;
   text-decoration: none;
-  padding: 5px 50px 15px 0;
+  padding: 5px 0;
+  margin: auto;
 }
 .text-contacts {
-  color: white;
   font-size: 25px;
   text-decoration: none;
-  padding: 25px 40px 5px 40px;
   text-align: center;
+  padding: 10px 0;
 }
 .text-email {
-  color: white;
-  font-size: 18px;
+  font-size: 24px;
   text-decoration: none;
-  padding: 15px 40px 10px 40px;
   text-align: center;
+  padding: 10px 0;
 }
 .text-phone {
-  padding-top: 10px;
+  padding: 10px 0;
 }
 .text-3d {
-  color: white;
   font-size: 25px;
-  padding: 85px 40px 10px 40px;
   text-decoration: none;
+  color: white;
+}
+@media (screen and max-width: 1000px) {
+  .text-3d {
+    display: none;
+  }
+}
+@media (screen and max-width: 600px) {
+  .footer-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
 }
