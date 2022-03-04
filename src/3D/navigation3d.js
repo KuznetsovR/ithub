@@ -1,22 +1,24 @@
 import React, { useEffect, useRef } from 'react';
 import Experience from './threejs/javascript/Experience';
-import './navigation3d.scss'
+import './navigation3d.scss';
+import { Link } from 'react-router-dom';
 
 export const Navigation3d = () => {
   const threeRef = useRef();
-  const three = useRef();
-  const startScreen = useRef()
-
   useEffect(() => {
-    if (!three.current && threeRef.current) {
-      three.current = new Experience(threeRef.current)
+    if (threeRef.current) {
+      new Experience(threeRef.current);
     }
   });
-
   return (
     <>
-      <div ref={startScreen}>Start screen</div>
       <canvas ref={threeRef} />
+      <div className="go-back-btn-wrapper">
+        <Link className={'go-back-btn'} to={'/'}>
+          Вернуться на главную
+        </Link>
+      </div>
+      <div className={'start-screen'}>Start screen</div>
     </>
   );
 };

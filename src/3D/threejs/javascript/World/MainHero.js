@@ -7,10 +7,6 @@ export default class MainHero {
   objects = this.world.objects;
   physics = this.world.physics;
   shadows = this.world.shadows;
-  materials = this.world.materials;
-  controls = this.world.controls;
-  renderer = this.world.renderer;
-  camera = this.world.camera;
   debug = this.world.debug;
   time = this.world.time;
 
@@ -19,13 +15,14 @@ export default class MainHero {
 
   constructor() {
     if (this.debug.active) {
-      this.debugFolder = this.debug.addFolder('car');
+      this.debugFolder = this.debug.addFolder('skate');
     }
 
     this.setModel();
     this.setMovement();
     this.setSkate();
     this.setMainHero();
+    this.setAnimations();
   }
   setModel() {
     this.model = {
@@ -87,6 +84,16 @@ export default class MainHero {
       this.mainHero.oldPosition = this.mainHero.object.position.clone();
       this.mainHero.object.position.copy(this.physics.skate.chassis.body.position).add(this.mainHero.offset);
       this.mainHero.object.quaternion.copy(this.physics.skate.chassis.body.quaternion);
+    });
+  }
+  setAnimations() {
+    this.mixer = new THREE.AnimationMixer(this.container);
+    this.mainHeroAction = this.mixer.clipAction(this.model.mainHero.animations[1]);
+    this.mainHeroAction.play();
+    this.time.on('tick', () => {
+      if(this.mixer){
+        this.mixer.update(this.time.delta / 1000)  // we divide by 1000 because time.delta is in ms
+      }
     });
   }
 }

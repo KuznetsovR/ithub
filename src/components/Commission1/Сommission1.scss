@@ -10,7 +10,6 @@
 }
 .comission-row {
   display: flex;
-  flex-wrap: wrap;
 }
 .circle {
   width: 40px;
@@ -21,31 +20,22 @@
   margin: 40px auto;
 }
 .comission-column-1 {
-  max-width: 100%;
   position: relative;
-  flex: 2% 0 0;
-  min-height: 1px;
-  margin-bottom: 15px;
 }
 .comission-column-2 {
-  max-width: 100%;
-  flex: 0 0 38%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 15px;
+  padding: 0 15px;
 }
 .comission-column-3 {
-  max-width: 100%;
-  flex: 0 0 38%;
-  min-height: 1px;
-  padding-left: 120px;
-  margin-bottom: 15px;
+  flex-grow: 1;
 }
+
 .commission-text-column {
   color: #fff;
   font-size: 20px;
-  margin: 50px 0 55px 0;
+  &:first-child{
+    margin-top: 50px;
+  }
+  margin-top: 55px;
 }
 .commission-text-link {
   color: #fff;
@@ -61,7 +51,44 @@
   right: 18px;
   box-shadow: 0 0 5px #a71dd8;
 }
-.commission-btn-wrapper{
-  margin-top: 120px;
-  text-align: center;
+.commission-links{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+.mobile-commission-links{
+  flex-direction: column;
+  align-items: end;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+  }
+  display: none;
+}
+@media (screen and max-width: 750px) {
+  .commission-text-column {
+    font-size: 14px;
+    margin-top: 64px;
+  }
+  .comission-column-3{
+    display: none;
+  }
+  .mobile-commission-links{
+    display: flex;
+    align-items: center;
+  }
 }

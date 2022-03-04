@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState }from 'react';
 import './OpenDay.scss';
 import { HexaButton } from '@components/export.components.js';
 import Slider from 'react-slick';
+import { SchoolModal } from '../SchoolModal/SchoolModal';
 import { OpenDayModal } from '../OpenDayModal/OpenDayModal';
 
 export const OpenDay = () => {
@@ -13,10 +14,9 @@ export const OpenDay = () => {
     autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
-    // pauseOnHover: true,
     arrows: false,
   };
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(null);
   return (
     <div className="open-day-component">
       <div className="open-day">
@@ -30,8 +30,8 @@ export const OpenDay = () => {
             Состоится<span className="open-day-focus"> 6 июля</span>
           </div>
           <div className="invite-btn-wrapper">
-            <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
-            <OpenDayModal open={modalOpen} handleClose={setModalOpen} />
+            <HexaButton onClick={() => setModalOpen('openDay')}>Записаться</HexaButton>
+            <OpenDayModal open={modalOpen  === 'openDay'} handleClose={setModalOpen} />
           </div>
         </div>
       </div>
@@ -64,9 +64,13 @@ export const OpenDay = () => {
           </Slider>
         </div>
         <div className="invite-btn-wrapper">
-          <HexaButton>Пригласить</HexaButton>
-        </div>
+          <HexaButton onClick={() => setModalOpen('schoolModal')}>Пригласить</HexaButton>
+          <SchoolModal
+          open={modalOpen === 'schoolModal'}
+          handleClose={setModalOpen}
+        />
       </div>
+    </div>
     </div>
   );
 };

@@ -4,31 +4,23 @@
   background-color: colors.$lighter-dark-gray;
   display: flex;
   justify-content: space-evenly;
-  height: 400px;
   color: colors.$main-white;
 }
 .preparatory-courses-square {
-  background-color: #141414;
-  padding: 60px;
+  background: url(../../assets/images/courses-text-container.svg);
+  background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
-.courses-square-2 {
-  margin-top: 40px;
-}
-.courses-square {
-  position: absolute;
-  background-color: colors.$main-purple;
-  transform: rotate(45deg);
-  width: 250px;
-  height: 240px;
-  transform: rotate(45deg);
-}
-.courses-square-3 {
-  margin-bottom: 40px;
+.preparatory-courses-square-container {
+  height: 400px;
+  width: 400px;
 }
 .courses-link {
+  margin: 15px 0;
   text-decoration: none;
   font-size: 20px;
   color: colors.$main-white;
@@ -37,7 +29,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: 50px;
+  width: 500px;
+  padding: 50px;
 }
 .title-preparatory-courses {
   z-index: 1;
@@ -45,20 +38,51 @@
   text-align: center;
   font-weight: bold;
 }
-.title-courses-description,
-.title-photo-gallery {
+.title-courses-description{
   font-size: 20px;
   color: #fff;
 }
+.title-photo-gallery {
+  font-weight: normal;
+}
 .courses-img-container {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 25px;
+  cursor: pointer;
+  margin: 0 10px;
 }
 .courses-photo-gallery {
   background-color: #1e1d1d;
-  padding: 20px 40px 40px 40px;
+  padding: 40px 40px 60px;
 }
 .courses-slide-img {
-  width: 30%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media (screen and max-width: 1000px) {
+  .block-preparatory-courses {
+    flex-direction: column;
+  }
+  .preparatory-courses-square-container {
+    width: 100%;
+    height: 100%;
+    background: #141414;
+  }
+  .preparatory-courses-square {
+    height: 400px;
+    margin: auto;
+    width: 400px;
+  }
+  .preparatory-courses-description{
+    gap: 50px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+@media (screen and max-width: 400px) {
+  .preparatory-courses-square {
+    height: 300px;
+    margin: auto;
+    width: 300px;
+  }
 }

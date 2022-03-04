@@ -4,13 +4,12 @@
   margin: auto;
   background-color: #191818;
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0 40px;
 }
 
 .specialities-heading-text {
-  font-size: 40px;
-  color: #fff;
-  margin: 0 0 40px 30px;
+  font-weight: normal;
+  margin-left: 30px;
 }
 
 .all-specialities-rectangles {
@@ -44,17 +43,24 @@
 }
 
 .rec-text-default {
-  width: 100%;
   color: #ffffff;
-  box-sizing: border-box;
   text-align: center;
-  background: #5b1573;
-  border: 7px solid #5b1573;
+  background: colors.$main-dark-pink;
+  width: 100%;
   font-size: 20px;
+  padding: 5px 0;
 }
 .rec-text-size1 {
-  margin-top: 72%;
+  margin-top: 165px;
 }
 .rec-text-size2 {
-  margin-top: 65%;
+  margin-top: 150px;
+}
+@media (screen and max-width: 780px) {
+  .all-specialities-rectangles {
+    flex-direction: column;
+  }
+  .specialities-rectangle {
+    margin: 20px auto;
+  }
 }
