@@ -37,25 +37,24 @@
   text-align: center;
   font-weight: bold;
 }
-.title-courses-description,
-.title-photo-gallery {
+.title-courses-description{
   font-size: 20px;
   color: #fff;
 }
+.title-photo-gallery {
+  font-weight: normal;
+}
 .courses-img-container {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 25px;
+  cursor: pointer;
+  margin: 0 10px;
 }
 .courses-photo-gallery {
   background-color: #1e1d1d;
-  padding: 20px 40px 40px 40px;
+  padding: 40px 40px 60px;
 }
 .courses-slide-img {
-  width: 30%;
-}
-.courses-description-link{
-  //margin: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 @media (screen and max-width: 1000px) {
