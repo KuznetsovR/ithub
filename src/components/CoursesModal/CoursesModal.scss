@@ -1,0 +1,39 @@
+@use '../../styles/colors' as colors;
+
+.text-open-day-head {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.courses-flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px 0;
+  & > * {
+    flex-grow: 1;
+  }
+}
+.courses-flex-column {
+  & > * {
+    width: 100%;
+  }
+  padding: 20px 0;
+}
+.courses-checkbox {
+  display: flex;
+  justify-content: center;
+}
+.files-to-upload {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  color: white;
+  row-gap: 20px;
+  padding: 20px 0;
+}
+.courses-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}

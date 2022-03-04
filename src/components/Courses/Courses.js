@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Courses.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
 import Slider from 'react-slick';
 import courses1 from '../../assets/images/courses1.png';
 import courses2 from '../../assets/images/courses2.png';
 import courses3 from '../../assets/images/courses3.png';
+import { CoursesModal } from '../CoursesModal/CoursesModal';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Courses = () => {
@@ -18,6 +19,7 @@ export const Courses = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
+  const [modalOpen, setModalOpen] = useState(false);
   const isTablet = useMediaQuery('(max-width: 1000px)');
   const isPhone = useMediaQuery('(max-width: 500px)');
   if (isTablet) {
@@ -39,9 +41,11 @@ export const Courses = () => {
           <div className="title-courses-description">
             Здесь будет какое-то описание подготовительных курсов
           </div>
+
           <div className={'courses-description-link'}>
             <div className="courses-link">Ссылка на заявления</div>
-            <HexaButton>Записаться</HexaButton>
+            <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
+            <CoursesModal open={modalOpen} handleClose={setModalOpen} />
           </div>
         </div>
       </div>
