@@ -51,6 +51,13 @@ export default class Map {
       rotation: new THREE.Euler(0, 0, 0),
       mass: 0,
     });
+    this.objects.add({
+      base: this.resources.items.sisText.scene,
+      collision: this.resources.items.sisTextCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
   }
   setDynamic() {
     this.objects.add({

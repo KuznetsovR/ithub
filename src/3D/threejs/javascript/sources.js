@@ -31,8 +31,20 @@ import jsCode from '../Models/Text/jsCode.glb'
 import jsCodeCollision from '../Models/Text/jsCodeCollision.glb'
 import adressText from '../Models/Text/adressText.glb'
 import adressTextCollision from '../Models/Text/adressTextCollision.glb'
+import sisText from '../Models/Text/sisText.glb'
+import sisTextCollision from '../Models/Text/sisTextCollision.glb'
 
 const sources = [
+  {
+    name: 'sisText',
+    type: 'gltfModel',
+    path: sisText,
+  },
+  {
+    name: 'sisTextCollision',
+    type: 'gltfModel',
+    path: sisTextCollision,
+  },
   {
     name: 'adressText',
     type: 'gltfModel',
