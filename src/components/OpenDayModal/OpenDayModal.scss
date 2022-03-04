@@ -70,3 +70,13 @@ div.css-1m3lphp-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
     }
   }
 }
+@media (screen and max-width: 700px) {
+  .open-day-flex-row{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  .open-day-flex-column{
+    padding: 10px 0;
+  }
+  }
