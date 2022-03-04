@@ -16,7 +16,7 @@ export const OpenDay = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(null);
   return (
     <div className="open-day-component">
       <div className="open-day">
@@ -30,8 +30,8 @@ export const OpenDay = () => {
             Состоится<span className="open-day-focus"> 6 июля</span>
           </div>
           <div className="invite-btn-wrapper">
-            <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
-            <OpenDayModal open={modalOpen} handleClose={setModalOpen} />
+            <HexaButton onClick={() => setModalOpen('openDay')}>Записаться</HexaButton>
+            <OpenDayModal open={modalOpen  === 'openDay'} handleClose={setModalOpen} />
           </div>
         </div>
       </div>
@@ -64,9 +64,9 @@ export const OpenDay = () => {
           </Slider>
         </div>
         <div className="invite-btn-wrapper">
-          <HexaButton onClick={() => setModalOpen(true)}>Пригласить</HexaButton>
+          <HexaButton onClick={() => setModalOpen('schoolModal')}>Пригласить</HexaButton>
           <SchoolModal
-          open={modalOpen}
+          open={modalOpen === 'schoolModal'}
           handleClose={setModalOpen}
         />
       </div>
