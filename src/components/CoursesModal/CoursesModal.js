@@ -18,8 +18,8 @@ export const CoursesModal = (props) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 700,
-    height: 600,
+    width: '80%',
+    maxWidth: 700,
     color: 'white',
     outline: 'none',
     bgcolor: 'rgb(30,29,29)',
@@ -42,8 +42,6 @@ export const CoursesModal = (props) => {
     phone: '',
     email: '',
     passportPhoto: null,
-    schoolRecordsPhoto: null,
-    application: null,
     personalDataAccess: false,
   });
 
@@ -75,7 +73,7 @@ export const CoursesModal = (props) => {
                 label="ФИО ребёнка"
                 color="secondary"
                 variant="outlined"
-                onChange={(e) => setState({ ...state, Name: e.target.value })}
+                onChange={(e) => setState({ ...state, childName: e.target.value })}
               />
             </div>
             <div className="courses-flex-column">
@@ -85,7 +83,7 @@ export const CoursesModal = (props) => {
                 label="ФИО родителя"
                 color="secondary"
                 variant="outlined"
-                onChange={(e) => setState({ ...state, Name: e.target.value })}
+                onChange={(e) => setState({ ...state, parentName: e.target.value })}
               />
             </div>
             <div className="courses-flex-row">
@@ -110,10 +108,6 @@ export const CoursesModal = (props) => {
             <div className="files-to-upload">
               <div className="file-name">Фото паспорта</div>
               <FileUpload setState={(e) => setState({ ...state, passportPhoto: e.target.files[0] })} />
-              <div className="file-name">Фото аттестата</div>
-              <FileUpload setState={(e) => setState({ ...state, schoolRecordsPhoto: e.target.files[0] })} />
-              <div className="file-name">Заявление</div>
-              <FileUpload setState={(e) => setState({ ...state, application: e.target.files[0] })} />
             </div>
             <div className="courses-checkbox">
               <FormControlLabel

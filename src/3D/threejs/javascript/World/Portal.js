@@ -36,8 +36,8 @@ export default class Portal extends EventEmitter {
 
   setPortal() {
     this.portal = {
-      geometry: new THREE.PlaneGeometry(this.sizes.x, this.sizes.y),
-      material: new THREE.MeshBasicMaterial({ color: 0xffffff }),
+      geometry: new THREE.CircleGeometry(this.sizes.x, 6 ),
+      material: new THREE.MeshBasicMaterial({ color: 0x9e3169 }),
     };
     this.portal.mesh = new THREE.Mesh(this.portal.geometry, this.portal.material);
 

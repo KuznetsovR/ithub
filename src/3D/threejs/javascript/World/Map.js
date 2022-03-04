@@ -25,28 +25,24 @@ export default class Map {
     this.objects.add({
       base: this.resources.items.IthubEkatText.scene,
       collision: this.resources.items.IthubEkatCollision.scene,
-      floorShadowTexture: this.resources.items.MainMapFloorShadow,
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
     this.objects.add({
       base: this.resources.items.htmlCode.scene,
       collision: this.resources.items.htmlCodeCollision.scene,
-      floorShadowTexture: this.resources.items.MainMapFloorShadow,
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
     this.objects.add({
       base: this.resources.items.jsCode.scene,
       collision: this.resources.items.jsCodeCollision.scene,
-      floorShadowTexture: this.resources.items.MainMapFloorShadow,
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
     this.objects.add({
       base: this.resources.items.adressText.scene,
       collision: this.resources.items.adressTextCollision.scene,
-      floorShadowTexture: this.resources.items.MainMapFloorShadow,
       offset: new THREE.Vector3(4, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
       mass: 0,
@@ -174,10 +170,10 @@ export default class Map {
     });
   }
   setPortals() {
-    this.documentsPortal = this.portals.add({ x: 10, y: -10 }, '/#documents');
-    this.commissionPortal = this.portals.add({ x: 10, y: -5 }, '/commission');
-    this.reviewsPortal = this.portals.add({ x: 10, y: 0 }, '/#reviews');
-    this.coursesPortal = this.portals.add({ x: 10, y: 5 }, '/courses');
-    this.specialtiesPortal = this.portals.add({ x: 10, y: 10 }, '/#specialities');
+    this.documentsPortal = this.portals.add({ x: 45.2256, y: 26.6675 }, '/#documents');
+    this.commissionPortal = this.portals.add({ x: -42.5098, y: 30.511 }, '/commission');
+    this.reviewsPortal = this.portals.add({ x: 42.412, y: -24.8583 }, '/#reviews');
+    this.coursesPortal = this.portals.add({ x: -45.6849, y: -20.8606 }, '/courses');
+    this.specialtiesPortal = this.portals.add({ x: 2.73161, y: 52.8746 }, '/#specialities');
   }
 }

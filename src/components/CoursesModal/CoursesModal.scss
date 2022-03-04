@@ -37,3 +37,12 @@
   justify-content: center;
   margin-top: 15px;
 }
+@media (screen and max-width: 600px) {
+  .courses-flex-column {
+    padding: 10px 0;
+  }
+  .courses-flex-row{
+    flex-direction: column;
+    padding: 10px 0;
+  }
+}
