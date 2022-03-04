@@ -1,6 +1,5 @@
 import React from 'react';
 import './Сommission1.scss';
-import { HexaButton } from '../HexaButton/HexaButton';
 import { Link } from 'react-router-dom';
 import document1 from '@assets/images/document_1.jpg';
 import document2 from '@assets/images/document_2.jpg';
@@ -24,7 +23,7 @@ export const Commission1 = () => {
           <div className="commission-text-column">Прикрепить файлы к форме</div>
         </div>
         <div className="comission-column-3">
-          <div className="commission-btn-wrapper">
+          <div className="commission-links">
             <Link to={document1} target="_blank" download>Скачать документ 1</Link>
             <Link to={document2} target="_blank" download>Скачать документ 2</Link>
             <Link to={document3} target="_blank" download>Скачать документ 3</Link>
@@ -32,8 +31,11 @@ export const Commission1 = () => {
           </div>
         </div>
       </div>
-      <div className="mobile-button">
-        <HexaButton>Скачать документы</HexaButton>
+      <div className="mobile-commission-links">
+        <Link to={document1} target="_blank" download>Скачать документ 1</Link>
+        <Link to={document2} target="_blank" download>Скачать документ 2</Link>
+        <Link to={document3} target="_blank" download>Скачать документ 3</Link>
+        <Link to={document4} target="_blank" download>Скачать документ 4</Link>
       </div>
     </div>
   );
