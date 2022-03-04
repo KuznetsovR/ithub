@@ -17,8 +17,8 @@
     margin-left: 40px;
     margin-top: -15px;
     border-left: 15px solid colors.$main-pink;
-    border-top: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
-    border-bottom: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
   }
   &::before {
     content: '';
@@ -26,36 +26,25 @@
     margin-left: -55px;
     margin-top: -15px;
     border-right: 15px solid colors.$main-pink;
-    border-top: calc((15px * 2 + 20px + 3px) / 2) solid transparent; // 2 paddings, font size, idk what is 3
-    border-bottom: calc((15px * 2 + 20px + 3px) / 2) solid transparent;
+    border-top: 27px solid transparent; // 2 paddings, font size, idk what is 3
+    border-bottom: 27px solid transparent;
   }
 }
 
-@-moz-document url-prefix() {
-  .hexa {
-    border-radius: 5px;
-    &::after {
-      display: none;
-    }
-    &::before {
-      display: none;
-    }
-  }
-}
 @media (screen and max-width: 500px) {
   .hexa {
     padding: 10px 30px;
     &::after {
       margin-left: 30px;
       margin-top: -10px;
-      border-top: calc((10px * 2 + 20px + 2px) / 2) solid transparent;
-      border-bottom: calc((10px * 2 + 20px + 2px) / 2) solid transparent;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
     }
     &::before {
       margin-left: -45px;
       margin-top: -10px;
-      border-top: calc((10px * 2 + 20px + 3px) / 2) solid transparent;
-      border-bottom: calc((10px * 2 + 20px + 3px) / 2) solid transparent;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
     }
   }
 }

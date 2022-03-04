@@ -51,14 +51,32 @@
   right: 18px;
   box-shadow: 0 0 5px #a71dd8;
 }
-.commission-btn-wrapper{
+.commission-links{
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
   height: 100%;
   flex-grow: 1;
-  justify-content: end;
+  justify-content: center;
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+  }
 }
-.mobile-button{
+.mobile-commission-links{
+  flex-direction: column;
+  align-items: end;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+  }
   display: none;
 }
 @media (screen and max-width: 750px) {
@@ -69,7 +87,8 @@
   .comission-column-3{
     display: none;
   }
-  .mobile-button{
-    display: block;
+  .mobile-commission-links{
+    display: flex;
+    align-items: center;
   }
 }

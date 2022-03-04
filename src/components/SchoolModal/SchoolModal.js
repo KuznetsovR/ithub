@@ -38,13 +38,11 @@ export const SchoolModal = (props) => {
     },
   };
   const [state, setState] = useState({
-    childName: '',
-    parentName: '',
+    name: '',
+    schoolName: '',
+    city: '',
     phone: '',
     email: '',
-    passportPhoto: null,
-    schoolRecordsPhoto: null,
-    application: null,
     personalDataAccess: false,
   });
 
@@ -76,7 +74,7 @@ export const SchoolModal = (props) => {
                 label="ФИО"
                 color="secondary"
                 variant="outlined"
-                onChange={(e) => setState({ ...state, Name: e.target.value })}
+                onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
             <div className="school-flex-row">
@@ -86,7 +84,7 @@ export const SchoolModal = (props) => {
                 label="Наименование учереждения"
                 color="secondary"
                 variant="outlined"
-                onChange={(e) => setState({ ...state, organization: e.target.value })}
+                onChange={(e) => setState({ ...state, schoolName: e.target.value })}
               />
               <TextField
                 id="outlined-basic"

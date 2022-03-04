@@ -33,3 +33,50 @@
   display: flex;
   justify-content: center;
 }
+
+// inner select styles
+div.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  background-color: colors.$lighter-dark-gray;
+  color: white;
+}
+
+div.css-1m3lphp-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  fieldset {
+    border-color: #a71dd8;
+    color: white;
+    legend{
+      color: white;
+    }
+  }
+}
+.MuiFormControl-root{
+  label{
+    &.Mui-focused{
+      color: #a71dd8;
+    }
+    color: white;
+  }
+  .MuiOutlinedInput-root{
+    color: white;
+    fieldset {
+      border-color: #a71dd8;
+      color: white;
+      legend{
+        color: white;
+      }
+    }
+    svg{
+      color: white;
+    }
+  }
+}
+@media (screen and max-width: 700px) {
+  .open-day-flex-row{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  .open-day-flex-column{
+    padding: 10px 0;
+  }
+  }
