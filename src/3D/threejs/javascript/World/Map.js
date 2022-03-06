@@ -170,10 +170,10 @@ export default class Map {
     });
   }
   setPortals() {
-    this.documentsPortal = this.portals.add({ x: 45.2256, y: 26.6675 }, '/#documents');
-    this.commissionPortal = this.portals.add({ x: -42.5098, y: 30.511 }, '/commission');
-    this.reviewsPortal = this.portals.add({ x: 42.412, y: -24.8583 }, '/#reviews');
-    this.coursesPortal = this.portals.add({ x: -45.6849, y: -20.8606 }, '/courses');
-    this.specialtiesPortal = this.portals.add({ x: 2.73161, y: 52.8746 }, '/#specialities');
+    this.documentsPortal = this.portals.add('documents',{ x: 45.2256, y: 26.6675 }, '/#documents', 3);
+    this.commissionPortal = this.portals.add('commission',{ x: -42.5098, y: 30.511 }, '/commission', 3);
+    this.reviewsPortal = this.portals.add('reviews',{ x: 42.412, y: -24.8583 }, '/#reviews', 3);
+    this.coursesPortal = this.portals.add('courses',{ x: -45.6849, y: -20.8606 }, '/courses', 3);
+    this.specialtiesPortal = this.portals.add('specialties',{ x: 2.73161, y: 52.8746 }, '/#specialities', 3);
   }
 }

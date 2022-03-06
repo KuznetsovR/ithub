@@ -9,7 +9,7 @@ import Controls from './Controls';
 import Physics from './Physics';
 import Objects from './Objects';
 import Lights from './Lights';
-import Portals from './Portals';
+import Portals from './Portals/Portals';
 
 let instance = null;
 

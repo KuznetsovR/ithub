@@ -1,17 +1,17 @@
 import * as THREE from 'three';
 import Portal from './Portal';
+import PortalTimer from './PortalTimer';
 
 export default class Portals {
   constructor() {
-    this.items = [];
     this.container = new THREE.Object3D();
     this.container.matrixAutoUpdate = false;
+    this.timer = new PortalTimer()
   }
-  add(position, url, sizes) {
-    const portal = new Portal(position, url, sizes);
+  add(name, position, url, size) {
+    const portal = new Portal(name, position, url, size, this.timer);
 
     this.container.add(portal.container);
-    this.items.push(portal);
 
     return portal;
   }
