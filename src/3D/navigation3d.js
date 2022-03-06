@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import Experience from './threejs/javascript/Experience';
-import './navigation3d.scss';
+import Experience from './Threejs/Javascript/Experience';
+import './Navigation3d.scss';
 import { Link } from 'react-router-dom';
 
 export const Navigation3d = () => {
