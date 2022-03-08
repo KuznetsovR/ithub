@@ -6,6 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { FileUpload } from '../FileUpload/FileUpload';
+import axios from 'axios';
 
 export const Commission2 = () => {
   const inputOptions = {
@@ -29,8 +30,15 @@ export const Commission2 = () => {
     personalDataAccess: false,
   });
 
-  const sendForm = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
+    try {
+      await axios.post('/courses', state)
+      // Do smth to show user the success
+    } catch (e){
+      // Do smth to show user the error
+      console.error(e);
+    }
     console.log(state);
   };
 
