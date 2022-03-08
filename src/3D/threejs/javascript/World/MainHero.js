@@ -59,7 +59,7 @@ export default class MainHero {
     this.skate.oldPosition = this.skate.object.position.clone();
     this.container.add(this.skate.object);
 
-    this.shadows.add(this.skate.object, { sizeX: 3, sizeY: 2, offsetZ: 0.2 });
+    this.shadows.add(this.skate.object, { sizeX: 2.4, sizeY: 1, offsetZ: 0.2 });
 
     // Time tick
     this.time.on('tick', () => {

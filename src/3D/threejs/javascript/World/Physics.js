@@ -158,6 +158,7 @@ export default class Physics {
        */
       this.skate.vehicle = new CANNON.RaycastVehicle({
         chassisBody: this.skate.chassis.body,
+        sliding: false,
       });
 
       this.skate.wheels = {

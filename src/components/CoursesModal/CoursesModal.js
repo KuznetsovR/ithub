@@ -10,6 +10,7 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
 import { FileUpload } from '../FileUpload/FileUpload';
+import axios from 'axios';
 
 export const CoursesModal = (props) => {
   const style = {
@@ -45,8 +46,17 @@ export const CoursesModal = (props) => {
     personalDataAccess: false,
   });
 
-  const sendForm = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
+    try {
+      await axios.post('/courses', state)
+      // Do smth to show user the success
+      props.handleClose(false)
+    } catch (e){
+      // Do smth to show user the error
+      console.error(e);
+    }
+
     console.log(state);
   };
 

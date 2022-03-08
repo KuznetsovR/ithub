@@ -11,6 +11,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
+import axios from 'axios';
 
 export const SchoolModal = (props) => {
   const style = {
@@ -46,8 +47,16 @@ export const SchoolModal = (props) => {
     personalDataAccess: false,
   });
 
-  const sendForm = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
+    try {
+      await axios.post('/courses', state)
+      // Do smth to show user the success
+      props.handleClose(false)
+    } catch (e){
+      // Do smth to show user the error
+      console.error(e);
+    }
     console.log(state);
   };
 
