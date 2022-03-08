@@ -29,14 +29,21 @@ export default class Map {
       mass: 0,
     });
     this.objects.add({
+      base: this.resources.items.IthubEkatText.scene,
+      collision: this.resources.items.IthubEkatCollision2.scene,
+      offset: new THREE.Vector3(-48.5, 34.5, 2),
+      rotation: new THREE.Euler(0, 0, 1),
+      mass: 0,
+    });
+    this.objects.add({
       base: this.resources.items.htmlCode.scene,
       collision: this.resources.items.htmlCodeCollision.scene,
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
     this.objects.add({
-      base: this.resources.items.jsCode.scene,
-      collision: this.resources.items.jsCodeCollision.scene,
+      base: this.resources.items.javaCode.scene,
+      collision: this.resources.items.javaCodeCollision.scene,
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
@@ -44,12 +51,18 @@ export default class Map {
       base: this.resources.items.adressText.scene,
       collision: this.resources.items.adressTextCollision.scene,
       offset: new THREE.Vector3(4, 0, 0),
-      rotation: new THREE.Euler(0, 0, 0),
       mass: 0,
     });
     this.objects.add({
       base: this.resources.items.sisText.scene,
       collision: this.resources.items.sisTextCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+    this.objects.add({
+      base: this.resources.items.phoneNumber.scene,
+      collision: this.resources.items.phoneNumberCollision.scene,
       floorShadowTexture: this.resources.items.MainMapFloorShadow,
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
@@ -64,6 +77,46 @@ export default class Map {
       shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
       mass: 1.8,
     })
+    this.objects.add({
+      base: this.resources.items.RText.scene,
+      collision: this.resources.items.RCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      mass: 1,
+    })
+    this.objects.add({
+      base: this.resources.items.eText.scene,
+      collision: this.resources.items.eCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      mass: 1,
+    })
+    this.objects.add({
+      base: this.resources.items.AText.scene,
+      collision: this.resources.items.ACollision.scene,
+      offset: new THREE.Vector3(-9.3, 20.5, -0.2),
+      rotation: new THREE.Euler(0, 0, -0.2),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.cText.scene,
+      collision: this.resources.items.cCollision.scene,
+      offset: new THREE.Vector3(-8.2, 9.6, -0.25),
+      rotation: new THREE.Euler(0, 0, 0.8),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.ttText.scene,
+      collision: this.resources.items.ttCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
     this.objects.add({
       base: this.resources.items.cText.scene,
       collision: this.resources.items.cCollision.scene,

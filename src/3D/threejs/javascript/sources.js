@@ -21,20 +21,69 @@ import AText from '../Models/Text/A.glb'
 import VCollision from '../Models/Text/VCollision.glb'
 import VText from '../Models/Text/V.glb'
 import IthubEkatCollision from '../Models/Text/IthubEkatCollision.glb'
+import IthubEkatCollision2 from '../Models/Text/IthubEkatCollision2.glb'
 import IthubEkatText from '../Models/Text/IthubEkat.glb'
 import MainHero from '../Models/MainHero/MainHero.glb'
 import Ps4 from '../Models/Text/ps4.glb'
 import Ps4Collision from '../Models/Text/ps4Collision.glb'
 import htmlCode from '../Models/Text/htmlCode.glb'
 import htmlCodeCollision from '../Models/Text/htmlCodeCollision.glb'
-import jsCode from '../Models/Text/jsCode.glb'
-import jsCodeCollision from '../Models/Text/jsCodeCollision.glb'
+import javaCode from '../Models/Text/javaCode.glb'
+import javaCodeCollision from '../Models/Text/javaCodeCollision.glb'
 import adressText from '../Models/Text/adressText.glb'
 import adressTextCollision from '../Models/Text/adressTextCollision.glb'
 import sisText from '../Models/Text/sisText.glb'
 import sisTextCollision from '../Models/Text/sisTextCollision.glb'
+import phoneNumber from '../Models/Text/phoneNumber.glb'
+import phoneNumberCollision from '../Models/Text/phoneNumberCollision.glb'
+import RText from '../Models/Text/R.glb'
+import RCollision from '../Models/Text/RCollision.glb'
+import eText from '../Models/Text/e.glb'
+import eCollision from '../Models/Text/eCollision.glb'
+import ttText from '../Models/Text/tt.glb'
+import ttCollision from '../Models/Text/ttCollision.glb'
 
 const sources = [
+  {
+    name: 'ttText',
+    type: 'gltfModel',
+    path: ttText,
+  },
+  {
+    name: 'ttCollision',
+    type: 'gltfModel',
+    path: ttCollision,
+  },
+  {
+    name: 'eText',
+    type: 'gltfModel',
+    path: eText,
+  },
+  {
+    name: 'eCollision',
+    type: 'gltfModel',
+    path: eCollision,
+  },
+  {
+    name: 'RText',
+    type: 'gltfModel',
+    path: RText,
+  },
+  {
+    name: 'RCollision',
+    type: 'gltfModel',
+    path: RCollision,
+  },
+  {
+    name: 'phoneNumber',
+    type: 'gltfModel',
+    path: phoneNumber,
+  },
+  {
+    name: 'phoneNumberCollision',
+    type: 'gltfModel',
+    path: phoneNumberCollision,
+  },
   {
     name: 'sisText',
     type: 'gltfModel',
@@ -56,14 +105,14 @@ const sources = [
     path: adressTextCollision,
   },
   {
-    name: 'jsCode',
+    name: 'javaCode',
     type: 'gltfModel',
-    path: jsCode,
+    path: javaCode,
   },
   {
-    name: 'jsCodeCollision',
+    name: 'javaCodeCollision',
     type: 'gltfModel',
-    path: jsCodeCollision,
+    path: javaCodeCollision,
   },
   {
     name: 'htmlCode',
@@ -94,6 +143,11 @@ const sources = [
     name: 'IthubEkatCollision',
     type: 'gltfModel',
     path: IthubEkatCollision,
+  },
+  {
+    name: 'IthubEkatCollision2',
+    type: 'gltfModel',
+    path: IthubEkatCollision2,
   },
   {
     name: 'MainHero',
