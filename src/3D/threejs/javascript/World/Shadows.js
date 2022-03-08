@@ -44,9 +44,11 @@ export default class Shadows {
         }
       });
     } // debug end
+
     this.setSun();
     this.setMaterials();
     this.setGeometry();
+
     this.time.on('tick', () => {
       for (const _shadow of this.items) {
         // Position
@@ -60,8 +62,7 @@ export default class Shadows {
         // Project the rotation as a vector on a plane and extract the angle
         const rotationVector = new THREE.Vector3(1, 0, 0);
         rotationVector.applyQuaternion(_shadow.reference.quaternion);
-        // const planeVector = new THREE.Vector3(0, 0, 1)
-        // planeVector.normalize()
+
         const projectedRotationVector = rotationVector.clone().projectOnPlane(new THREE.Vector3(0, 0, 1));
 
         let orientationAlpha =
@@ -105,10 +106,9 @@ export default class Shadows {
         .copy(this.sun.position)
         .multiplyScalar(1 / this.sun.position.z)
         .negate();
+
       this.sun.helper.position.copy(this.sun.position);
-
       const direction = this.sun.position.clone().negate().normalize();
-
       this.sun.helper.setDirection(direction);
       this.sun.helper.setLength(this.sun.helper.position.length());
     };
@@ -126,11 +126,9 @@ export default class Shadows {
     }
   }
   setMaterials() {
-    // Wireframe
     this.materials = {};
     this.materials.wireframe = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
 
-    // Base
     this.materials.base = new ShadowMaterial();
     this.materials.base.depthWrite = false;
     this.materials.base.uniforms.uColor.value = new THREE.Color(this.color);
@@ -143,19 +141,13 @@ export default class Shadows {
   add(_reference, _options = {}) {
     const shadow = {};
 
-    // Options
     shadow.offsetZ = _options.offsetZ === undefined ? 0 : _options.offsetZ;
     shadow.alpha = _options.alpha === undefined ? 1 : _options.alpha;
 
-    // Reference
     shadow.reference = _reference;
 
-    // Material
     shadow.material = this.materials.base.clone();
-    if (_reference.children[0].name === 'plane') {
-      this.geometry = new THREE.PlaneGeometry(0.8, 0.5, 1, 1);
-    }
-    // Mesh
+
     shadow.mesh = new THREE.Mesh(
       this.geometry,
       this.wireframeVisible ? this.materials.wireframe : shadow.material

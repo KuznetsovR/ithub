@@ -13,6 +13,7 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import axios from 'axios';
 
 export const OpenDayModal = (props) => {
   const style = {
@@ -49,8 +50,16 @@ export const OpenDayModal = (props) => {
 
   const availableDates = ['05.03.2022', '09.03.2022', '15.03.2022'];
 
-  const sendForm = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
+    try {
+      await axios.post('/courses', state)
+      // Do smth to show user the success
+      props.handleClose(false)
+    } catch (e){
+      // Do smth to show user the error
+      console.error(e);
+    }
     console.log(state);
   };
 
