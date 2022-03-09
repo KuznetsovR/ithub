@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
 import logo from '@assets/images/IThublogo.png';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+import { HeaderDrawer } from '../HeaderDrawer/HeaderDrawer';
 
 export const Header = () => {
+  const [state, setState] = useState({
+    right: false,
+  });
   return (
     <header>
       <Link to="/">
@@ -42,6 +48,20 @@ export const Header = () => {
             <Link to="/courses">Курсы</Link>
           </li>
         </ul>
+        <div className="mobile-menu">
+          <IconButton
+            aria-label="menu"
+            className={'icon-button'}
+            onClick={() => setState({ right: !state.right })}
+          >
+            <MenuIcon sx={{ fontSize: 40 }} />
+          </IconButton>
+          <HeaderDrawer
+            anchor={'right'}
+            open={state.right}
+            onClose={() => setState({ right: false })}
+          />
+        </div>
       </nav>
     </header>
   );
