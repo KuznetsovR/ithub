@@ -34,6 +34,12 @@
   justify-content: center;
   padding-top: 10px;
 }
+@media (screen and max-width: 1000px) {
+  .schools-events{
+    width: 100%;
+  }
+}
+
 @media (screen and max-width: 700px) {
   .school-flex-row {
     flex-direction: column;
