@@ -27,7 +27,7 @@ export default class Experience {
     this.setCamera();
     this.renderer = new Renderer();
 
-    this.world = new World();
+    this.world = new World(true);
 
     this.scene.add(this.world.container);
 
