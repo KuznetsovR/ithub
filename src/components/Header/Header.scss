@@ -76,6 +76,16 @@ nav.menu {
 .color4{
   border-top-color: #341040;
 }
+.mobile-menu{
+  display: none;
+  height: 100%;
+  justify-content: end;
+  .icon-button{
+    color: white;
+    margin: 20px;
+    padding: 20px;
+  }
+}
 @media (screen and max-width: 1000px) {
   nav.menu {
     min-width: 0;
@@ -83,12 +93,18 @@ nav.menu {
       display: none;
     }
   }
+  .mobile-menu{
+    display: flex;
+  }
   .logo-header {
     padding: 10px 10px 10px 30px;
   }
 }
 @media (screen and max-width: 500px) {
   nav.menu{
+    background-color: inherit;
+  }
+  .triangles-container{
     display: none;
-  };
+  }
 }
