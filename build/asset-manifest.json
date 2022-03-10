@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.eaeaabc3.css",
-    "main.js": "/static/js/main.64f004da.js",
-    "static/media/MainMap.glb": "/static/media/MainMap.90436d68a8c755eee40d.glb",
+    "main.css": "/static/css/main.6cdc4473.css",
+    "main.js": "/static/js/main.c8b4c55a.js",
+    "static/media/MainMap.glb": "/static/media/MainMap.298cd50ec63143a49938.glb",
     "static/media/courses2.png": "/static/media/courses2.c14859cf69356fa3c84d.png",
     "static/media/document_3.jpg": "/static/media/document_3.f49179c666eec4345a0f.jpg",
     "static/media/MainHero.glb": "/static/media/MainHero.5e6bb80c1b5596081c59.glb",
@@ -23,7 +23,7 @@
     "static/media/Skate.glb": "/static/media/Skate.f98ef0c39cea74247574.glb",
     "static/media/IthubEkat.glb": "/static/media/IthubEkat.b478d1015a1b4fac2898.glb",
     "static/media/ps4.glb": "/static/media/ps4.e3a711f5986f1377c669.glb",
-    "static/media/MainMapCollision.glb": "/static/media/MainMapCollision.dcd1137fd952f7c68fcb.glb",
+    "static/media/MainMapCollision.glb": "/static/media/MainMapCollision.b107809a6161737268be.glb",
     "static/media/IThublogo.png": "/static/media/IThublogo.3f2e17a2ba3f1a8d0302.png",
     "static/media/A.glb": "/static/media/A.c4d09bb475eeea30bc26.glb",
     "static/media/s.glb": "/static/media/s.7cd71102de150763b6fb.glb",
@@ -65,11 +65,11 @@
     "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
     "index.html": "/index.html",
     "static/media/IthubEkatCollision2.glb": "/static/media/IthubEkatCollision2.755cf886297f2fb50873.glb",
-    "main.eaeaabc3.css.map": "/static/css/main.eaeaabc3.css.map",
-    "main.64f004da.js.map": "/static/js/main.64f004da.js.map"
+    "main.6cdc4473.css.map": "/static/css/main.6cdc4473.css.map",
+    "main.c8b4c55a.js.map": "/static/js/main.c8b4c55a.js.map"
   },
   "entrypoints": [
-    "static/css/main.eaeaabc3.css",
-    "static/js/main.64f004da.js"
+    "static/css/main.6cdc4473.css",
+    "static/js/main.c8b4c55a.js"
   ]
 }
