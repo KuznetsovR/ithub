@@ -8,11 +8,10 @@ export default class Portals {
     this.container.matrixAutoUpdate = false;
     this.timer = new PortalTimer()
   }
-  add(name, position, url, size) {
+  add(name, position, url, size = 6) {
     const portal = new Portal(name, position, url, size, this.timer);
 
     this.container.add(portal.container);
-
     return portal;
   }
 }

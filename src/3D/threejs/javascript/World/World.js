@@ -10,11 +10,13 @@ import Physics from './Physics';
 import Objects from './Objects';
 import Lights from './Lights';
 import Portals from './Portals/Portals';
+import Zones from './Zones/Zones';
 
 let instance = null;
 
 export default class World {
-  constructor() {
+  constructor(isNewWorld) {
+    if (isNewWorld) instance = null;
     if (instance) {
       return instance;
     }
@@ -45,8 +47,13 @@ export default class World {
     this.setObjects();
     this.setMainHero();
     this.setPortals();
+    this.setZones();
     this.setLights();
     this.setMap();
+  }
+  setZones() {
+    this.zones = new Zones();
+    this.container.add(this.zones.container);
   }
   setLights() {
     this.light = new Lights();

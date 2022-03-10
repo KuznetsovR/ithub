@@ -1,6 +1,7 @@
 import Experience from './Experience';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { gsap } from 'gsap';
 
 export default class Camera {
   experience = new Experience();
@@ -25,14 +26,51 @@ export default class Camera {
     // this.setControls();
   }
   setAngle() {
-    this.angle = new THREE.Vector3(0, -0.075, 0.037);
+    this.angle = {
+      default: new THREE.Vector3(0, -0.075, 0.037),
+      defaultZoom: 20,
+      collegeBuilding: new THREE.Vector3(0.128, -0.078, 0.071),
+      collegeBuildingZoom: 30,
+    };
+
+    this.angle.value = new THREE.Vector3();
+    this.angle.value.copy(this.angle.default);
+    this.angle.zoom = {
+      value: this.angle.defaultZoom,
+    };
 
     if (this.debug.active) {
       this.debugFolder.add(this, 'easing').step(0.0001).min(0).max(1).name('easing');
-      this.debugFolder.add(this.angle, 'x').step(0.001).min(-2).max(2).name('invertDirectionX').listen();
-      this.debugFolder.add(this.angle, 'y').step(0.001).min(-2).max(2).name('invertDirectionY').listen();
-      this.debugFolder.add(this.angle, 'z').step(0.001).min(-2).max(2).name('invertDirectionZ').listen();
+      this.debugFolder
+        .add(this.angle.default, 'x')
+        .step(0.001)
+        .min(-2)
+        .max(2)
+        .name('invertDirectionX')
+        .listen();
+      this.debugFolder
+        .add(this.angle.default, 'y')
+        .step(0.001)
+        .min(-2)
+        .max(2)
+        .name('invertDirectionY')
+        .listen();
+      this.debugFolder
+        .add(this.angle.default, 'z')
+        .step(0.001)
+        .min(-2)
+        .max(2)
+        .name('invertDirectionZ')
+        .listen();
     }
+  }
+  changeAngle(newAngleName) {
+    const angleZoom = `${newAngleName}Zoom`;
+    if (!this.angle[newAngleName] && !this.angle[angleZoom]) {
+      throw new Error('Invalid angle');
+    }
+    gsap.to(this.angle.value, { ...this.angle[newAngleName], duration: 2 });
+    gsap.to(this.angle.zoom, { ...{ value: this.angle[angleZoom] }, duration: 2 });
   }
   setControls() {
     this.controls = new OrbitControls(this.instance, this.canvas);
@@ -41,7 +79,7 @@ export default class Camera {
   setInstance() {
     this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 200);
     this.instance.up.set(0, 0, 1);
-    this.instance.position.copy(this.angle);
+    this.instance.position.copy(this.angle.value);
     this.instance.lookAt(new THREE.Vector3());
     // this.container.add(this.instance);
 
@@ -50,7 +88,9 @@ export default class Camera {
       this.targetEased.y += (this.target.y - this.targetEased.y) * this.easing;
       this.targetEased.z += (this.target.z - this.targetEased.z) * this.easing;
 
-      this.instance.position.copy(this.targetEased).add(this.angle.clone().normalize().multiplyScalar(20));
+      this.instance.position
+        .copy(this.targetEased)
+        .add(this.angle.value.clone().normalize().multiplyScalar(this.angle.zoom.value));
       this.instance.lookAt(this.targetEased);
     });
   }

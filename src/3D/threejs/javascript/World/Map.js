@@ -6,6 +6,8 @@ export default class Map {
   resources = this.world.resources;
   objects = this.world.objects;
   portals = this.world.portals;
+  zones = this.world.zones;
+  camera = this.world.camera
 
   constructor() {
     this.container = new THREE.Object3D();
@@ -13,6 +15,7 @@ export default class Map {
     this.setStatic();
     this.setDynamic();
     this.setPortals();
+    this.setZones();
   }
   setStatic() {
     this.objects.add({
@@ -74,25 +77,25 @@ export default class Map {
       collision: this.resources.items.Ps4Collision.scene,
       offset: new THREE.Vector3(0, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
-      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
       mass: 1.8,
-    })
+    });
     this.objects.add({
       base: this.resources.items.RText.scene,
       collision: this.resources.items.RCollision.scene,
       offset: new THREE.Vector3(0, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
-      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
       mass: 1,
-    })
+    });
     this.objects.add({
       base: this.resources.items.eText.scene,
       collision: this.resources.items.eCollision.scene,
       offset: new THREE.Vector3(0, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
-      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.6, alpha: 0.4 },
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
       mass: 1,
-    })
+    });
     this.objects.add({
       base: this.resources.items.AText.scene,
       collision: this.resources.items.ACollision.scene,
@@ -221,12 +224,22 @@ export default class Map {
       shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
       mass: 0.7,
     });
+    // TODO: move this code to Models file or smth
   }
   setPortals() {
-    this.documentsPortal = this.portals.add('documents',{ x: 45.2256, y: 26.6675 }, '/#documents', 3);
-    this.commissionPortal = this.portals.add('commission',{ x: -42.5098, y: 30.511 }, '/commission', 3);
-    this.reviewsPortal = this.portals.add('reviews',{ x: 42.412, y: -24.8583 }, '/#reviews', 3);
-    this.coursesPortal = this.portals.add('courses',{ x: -45.6849, y: -20.8606 }, '/courses', 3);
-    this.specialtiesPortal = this.portals.add('specialties',{ x: 2.73161, y: 52.8746 }, '/#specialities', 3);
+    this.documentsPortal = this.portals.add('documents', { x: 45.2256, y: 26.6675 }, '/#documents');
+    this.commissionPortal = this.portals.add('commission', { x: -42.5098, y: 30.511 }, '/commission');
+    this.reviewsPortal = this.portals.add('reviews', { x: 42.412, y: -24.8583 }, '/#reviews');
+    this.coursesPortal = this.portals.add('courses', { x: -45.6849, y: -20.8606 }, '/courses');
+    this.specialtiesPortal = this.portals.add('specialties', { x: 2.73161, y: 52.8746 }, '/#specialities');
+  }
+  setZones() {
+    this.collegeBuildingZone = this.zones.add({ x: -40, y: 30 }, { x: 40, y: 40 });
+    this.collegeBuildingZone.on('in', () =>{
+      this.camera.changeAngle('collegeBuilding')
+    })
+    this.collegeBuildingZone.on('out', () =>{
+      this.camera.changeAngle('default')
+    })
   }
 }
