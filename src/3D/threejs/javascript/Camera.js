@@ -1,6 +1,7 @@
 import Experience from './Experience';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { gsap } from 'gsap';
 
 export default class Camera {
   experience = new Experience();
@@ -32,9 +33,11 @@ export default class Camera {
       collegeBuildingZoom: 30,
     };
 
-    this.angle.value = new THREE.Vector3()
-    this.angle.value.copy(this.angle.default)
-    this.angle.zoomValue = this.angle.defaultZoom
+    this.angle.value = new THREE.Vector3();
+    this.angle.value.copy(this.angle.default);
+    this.angle.zoom = {
+      value: this.angle.defaultZoom,
+    };
 
     if (this.debug.active) {
       this.debugFolder.add(this, 'easing').step(0.0001).min(0).max(1).name('easing');
@@ -61,14 +64,13 @@ export default class Camera {
         .listen();
     }
   }
-  changeAngle(newAngle, newZoom){
-    if (!(newAngle instanceof THREE.Vector3)){
-      throw new Error('New angle is not a vector3')
-    } else if (Number.isNaN(newZoom)){
-      throw new Error('Zoom value is not a number')
+  changeAngle(newAngleName) {
+    const angleZoom = `${newAngleName}Zoom`;
+    if (!this.angle[newAngleName] && !this.angle[angleZoom]) {
+      throw new Error('Invalid angle');
     }
-    this.angle.value.copy(newAngle)
-    this.angle.zoomValue = newZoom
+    gsap.to(this.angle.value, { ...this.angle[newAngleName], duration: 2 });
+    gsap.to(this.angle.zoom, { ...{ value: this.angle[angleZoom] }, duration: 2 });
   }
   setControls() {
     this.controls = new OrbitControls(this.instance, this.canvas);
@@ -88,7 +90,7 @@ export default class Camera {
 
       this.instance.position
         .copy(this.targetEased)
-        .add(this.angle.value.clone().normalize().multiplyScalar(this.angle.zoomValue));
+        .add(this.angle.value.clone().normalize().multiplyScalar(this.angle.zoom.value));
       this.instance.lookAt(this.targetEased);
     });
   }
