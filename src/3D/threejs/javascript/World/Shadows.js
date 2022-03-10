@@ -101,6 +101,7 @@ export default class Shadows {
     };
     this.container.add(this.sun.helper);
 
+    this.sun.helper.visible = false
     this.sun.update = () => {
       this.sun.vector
         .copy(this.sun.position)
