@@ -1,6 +1,6 @@
 import React from 'react';
 import './Documents.scss';
-import document1 from '@assets/images/document_1.webp';
+import document1 from '@assets/images/document_1.jpg';
 import document2 from '@assets/images/document_2.webp';
 import document3 from '@assets/images/document_3.webp';
 import document4 from '@assets/images/document_4.webp';
