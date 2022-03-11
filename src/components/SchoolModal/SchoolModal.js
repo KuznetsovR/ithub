@@ -83,6 +83,7 @@ export const SchoolModal = (props) => {
                 label="ФИО"
                 color="secondary"
                 variant="outlined"
+                value={state.name}
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
@@ -93,6 +94,7 @@ export const SchoolModal = (props) => {
                 label="Наименование учереждения"
                 color="secondary"
                 variant="outlined"
+                value={state.schoolName}
                 onChange={(e) => setState({ ...state, schoolName: e.target.value })}
               />
               <TextField
@@ -101,6 +103,7 @@ export const SchoolModal = (props) => {
                 label="Город"
                 color="secondary"
                 variant="outlined"
+                value={state.city}
                 onChange={(e) => setState({ ...state, city: e.target.value })}
               />
             </div>
@@ -112,6 +115,7 @@ export const SchoolModal = (props) => {
                 label="Телефон"
                 color="secondary"
                 variant="outlined"
+                value={state.phone}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
@@ -120,6 +124,7 @@ export const SchoolModal = (props) => {
                 label="Почта"
                 color="secondary"
                 variant="outlined"
+                value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </div>
@@ -134,6 +139,7 @@ export const SchoolModal = (props) => {
                         color: 'rgb(167,29,216)',
                       },
                     }}
+                    checked={state.personalDataAccess}
                     onChange={(e) => setState({ ...state, personalDataAccess: e.target.checked })}
                   />
                 }
