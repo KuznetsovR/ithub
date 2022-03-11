@@ -14,6 +14,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
+import { API_PATH } from '../../constants/API_PATH';
 
 export const OpenDayModal = (props) => {
   const style = {
@@ -53,7 +54,7 @@ export const OpenDayModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:1337/api/open-day', state)
+      await axios.post(API_PATH, state)
 
       setState({
         name: '',
