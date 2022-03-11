@@ -12,6 +12,7 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
 import axios from 'axios';
+import { API_PATH } from '../../constants/API_PATH';
 
 export const SchoolModal = (props) => {
   const style = {
@@ -50,7 +51,17 @@ export const SchoolModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/courses', state)
+      await axios.post(API_PATH + 'school-modal/', state)
+
+      setState({
+        name: '',
+        schoolName: '',
+        city: '',
+        phone: '',
+        email: '',
+        personalDataAccess: false,
+      })
+
       // Do smth to show user the success
       props.handleClose(false)
     } catch (e){

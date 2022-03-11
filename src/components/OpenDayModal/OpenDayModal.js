@@ -54,7 +54,7 @@ export const OpenDayModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(API_PATH, state)
+      await axios.post(API_PATH + '/open-day/', state)
 
       setState({
         name: '',
