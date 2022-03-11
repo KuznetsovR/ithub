@@ -54,6 +54,7 @@ export const Commission2 = () => {
               label="ФИО ребёнка"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, childName: e.target.value })}
             />
           </div>
@@ -64,6 +65,7 @@ export const Commission2 = () => {
               label="ФИО родителя"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, parentName: e.target.value })}
             />
           </div>
@@ -74,6 +76,7 @@ export const Commission2 = () => {
               label="Телефон"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, phone: e.target.value })}
             />
             <TextField
@@ -82,6 +85,7 @@ export const Commission2 = () => {
               label="Почта"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, email: e.target.value })}
             />
           </div>

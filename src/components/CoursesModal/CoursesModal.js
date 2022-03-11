@@ -83,6 +83,7 @@ export const CoursesModal = (props) => {
                 label="ФИО ребёнка"
                 color="secondary"
                 variant="outlined"
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, childName: e.target.value })}
               />
             </div>
@@ -93,6 +94,7 @@ export const CoursesModal = (props) => {
                 label="ФИО родителя"
                 color="secondary"
                 variant="outlined"
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, parentName: e.target.value })}
               />
             </div>
@@ -103,6 +105,7 @@ export const CoursesModal = (props) => {
                 label="Телефон"
                 color="secondary"
                 variant="outlined"
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
@@ -111,6 +114,7 @@ export const CoursesModal = (props) => {
                 label="Почта"
                 color="secondary"
                 variant="outlined"
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </div>
