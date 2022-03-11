@@ -102,7 +102,7 @@ export const SchoolModal = (props) => {
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
-                label="Наименование учереждения"
+                label="Наименование учреждения"
                 color="secondary"
                 variant="outlined"
                 value={state.schoolName}
