@@ -95,6 +95,7 @@ export const OpenDayModal = (props) => {
                 color="secondary"
                 variant="outlined"
                 value={state.name}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
@@ -107,6 +108,7 @@ export const OpenDayModal = (props) => {
                 placeholder={'+7 123 456 7890'}
                 value={state.phone}
                 type={'tel'}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
@@ -116,6 +118,7 @@ export const OpenDayModal = (props) => {
                 variant="outlined"
                 value={state.email}
                 type={'email'}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </div>

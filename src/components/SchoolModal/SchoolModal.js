@@ -95,6 +95,7 @@ export const SchoolModal = (props) => {
                 color="secondary"
                 variant="outlined"
                 value={state.name}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
@@ -106,6 +107,7 @@ export const SchoolModal = (props) => {
                 color="secondary"
                 variant="outlined"
                 value={state.schoolName}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, schoolName: e.target.value })}
               />
               <TextField
@@ -115,6 +117,7 @@ export const SchoolModal = (props) => {
                 color="secondary"
                 variant="outlined"
                 value={state.city}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, city: e.target.value })}
               />
             </div>
@@ -127,6 +130,7 @@ export const SchoolModal = (props) => {
                 color="secondary"
                 variant="outlined"
                 value={state.phone}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
@@ -136,6 +140,7 @@ export const SchoolModal = (props) => {
                 color="secondary"
                 variant="outlined"
                 value={state.email}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </div>
