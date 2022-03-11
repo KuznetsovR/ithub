@@ -30,7 +30,7 @@ class SchoolEventController {
       typeof schoolRequest.schoolName === 'string' &&
       schoolRequest.schoolName.length > 5 &&
       typeof schoolRequest.city === 'string' &&
-      schoolRequest.city.length > 5 &&
+      schoolRequest.city.length > 0 &&
       validatePhone(schoolRequest.phone) &&
       validateEmail(schoolRequest.email) &&
       schoolRequest.personalDataAccess === true
