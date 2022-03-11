@@ -51,7 +51,7 @@ export const SchoolModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(API_PATH + 'school-modal/', state)
+      await axios.post(API_PATH + 'school-event/', state)
 
       setState({
         name: '',
