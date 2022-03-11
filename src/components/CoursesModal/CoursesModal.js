@@ -9,8 +9,8 @@ import Checkbox from '@mui/material/Checkbox';
 import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
-import { FileUpload } from '../FileUpload/FileUpload';
 import axios from 'axios';
+import { API_PATH } from '../../constants/API_PATH';
 
 export const CoursesModal = (props) => {
   const style = {
@@ -42,14 +42,20 @@ export const CoursesModal = (props) => {
     parentName: '',
     phone: '',
     email: '',
-    passportPhoto: null,
     personalDataAccess: false,
   });
 
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/courses', state)
+      await axios.post(API_PATH + '/courses/', state)
+      setState({
+        childName: '',
+        parentName: '',
+        phone: '',
+        email: '',
+        personalDataAccess: false,
+      })
       // Do smth to show user the success
       props.handleClose(false)
     } catch (e){
@@ -119,10 +125,6 @@ export const CoursesModal = (props) => {
               />
             </div>
 
-            <div className="files-to-upload">
-              <div className="file-name">Фото паспорта</div>
-              <FileUpload setState={(e) => setState({ ...state, passportPhoto: e.target.files[0] })} />
-            </div>
             <div className="courses-checkbox">
               <FormControlLabel
                 control={
