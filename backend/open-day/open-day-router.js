@@ -8,7 +8,6 @@ const openDayController = new OpenDayController()
 
 router.post('/', jsonParser,(req, res) => {
   openDayController.addVisitor(req, res)
-  res.status(201).send();
 })
 
 
