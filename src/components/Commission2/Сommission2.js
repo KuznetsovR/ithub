@@ -40,9 +40,9 @@ export const Commission2 = () => {
       formData.append('phone', state.phone)
       formData.append('email', state.email)
       formData.append('personalDataAccess', state.personalDataAccess)
-      formData.append('passportPhoto', state.passportPhoto, state.passportPhoto?.name)
-      formData.append('schoolRecordsPhoto', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name)
-      formData.append('application', state.application, state.application?.name)
+      formData.append('files', state.passportPhoto, state.passportPhoto?.name)
+      formData.append('files', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name)
+      formData.append('files', state.application, state.application?.name)
       await axios.post(API_PATH + '/commission', formData);
       // setState({
       //   childName: '',
@@ -66,7 +66,7 @@ export const Commission2 = () => {
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
       <div className="shape-rectangle">
-        <form onSubmit={sendForm}>
+        <form onSubmit={sendForm} >
           <div className="share-flex-column">
             <TextField
               id="outlined-basic"
