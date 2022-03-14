@@ -16,7 +16,9 @@ class CommissionController {
       this.applicants.push(req.body);
       for (const file of applicant.files) {
         const filePath = `$../../files/${file.originalname}`;
-        fs.writeFile(filePath, file.buffer, () => {});
+        fs.writeFile(filePath, file.buffer, () => {
+          console.log('added ', file.originalname);
+        });
       }
       res.status(201).send();
     } catch (e) {
