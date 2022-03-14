@@ -1,5 +1,5 @@
 import React from 'react';
-import './CoursesPage.scss'
+import './CoursesPage.scss';
 import { Courses, Footer, Header, Phone } from '@components/export.components.js';
 
 export const CoursesPage = () => {
@@ -9,7 +9,7 @@ export const CoursesPage = () => {
       <main>
         <Phone />
         <div className="container">
-          <Courses></Courses>
+          <Courses />
         </div>
       </main>
       <Footer />

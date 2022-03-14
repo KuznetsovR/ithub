@@ -16,6 +16,7 @@
     "express": "^4.17.2",
     "gsap": "^3.9.1",
     "lil-gui": "^0.16.0",
+    "multer": "^1.4.4",
     "react": "^17.0.2",
     "react-app-rewire-alias": "^1.1.7",
     "react-app-rewired": "^2.2.1",
@@ -37,12 +38,14 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "react-snap": "^1.23.0"
   },
   "scripts": {
     "start": "react-app-rewired start NODE_ENV=development",
     "server": "node ./backend/bootstrap.js NODE_ENV=production",
-    "build": "react-app-rewired build NODE_ENV=production"
+    "build": "react-app-rewired build NODE_ENV=production",
+    "postbuild": "react-snap"
   },
   "browserslist": {
     "production": [
