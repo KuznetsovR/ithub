@@ -1,8 +1,12 @@
 const defaultAllowedExtensionsRegex = /(\.doc|\.docx|\.rtf|\.pdf|\.odt|\.jpeg|\.png|\.gif)$/i;
 
-const validateFile = (file, extensionsRegex) => {
+const validateFiles = (files, extensionsRegex) => {
   const regex = extensionsRegex || defaultAllowedExtensionsRegex;
-  const filePath = file.name;
-  return regex.exec(filePath);
+  for (const file of files) {
+    if (!regex.exec(file.originalname)) {
+      return false;
+    }
+  }
+  return true;
 };
-module.exports = { validateFile };
+module.exports = { validateFiles };

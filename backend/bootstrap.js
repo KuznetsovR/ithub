@@ -18,11 +18,10 @@ app.use(jsonParser);
 app.use(urlencodedParser);
 
 const upload = multer();
-app.use(upload.array());
 
 app.use('/api/open-day', openDayRouter);
 app.use('/api/school-event', schoolEventRouter);
 app.use('/api/courses', coursesRouter);
-app.use('/api/commission', commissionRouter);
+app.use('/api/commission', upload.array('files'), commissionRouter);
 
 app.listen(port);
