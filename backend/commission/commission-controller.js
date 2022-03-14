@@ -5,21 +5,14 @@ const { validatePhone } = require('../validators/phone-validator');
 const fs = require('fs');
 
 class CommissionController {
-  constructor() {
-    this.applicants = [];
-  }
   addApplicant(req, res) {
     try {
       const applicant = req.body;
       applicant.files = req.files;
+
       this.validateApplicant(applicant);
-      this.applicants.push(req.body);
-      for (const file of applicant.files) {
-        const filePath = `$../../files/${file.originalname}`;
-        fs.writeFile(filePath, file.buffer, () => {
-          console.log('added ', file.originalname);
-        });
-      }
+      this.addToCatalog(applicant.files)
+
       res.status(201).send();
     } catch (e) {
       if (e.message === 'Incorrect applicant data') {
@@ -29,6 +22,17 @@ class CommissionController {
       }
     }
     // use mailer
+  }
+  addToCatalog(files){
+    const currentTime = Date.now().toString().replaceAll(':', '.')
+    console.log(typeof currentTime, currentTime);
+    fs.mkdirSync('files/' + currentTime)
+    for (const file of files) {
+      const filePath = `$../../files/${currentTime}/${file.originalname}`;
+      fs.writeFile(filePath, file.buffer, () => {
+        console.log('added ', file.originalname);
+      });
+    }
   }
   validateApplicant(applicant) {
     if (
