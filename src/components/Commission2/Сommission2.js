@@ -7,6 +7,7 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { FileUpload } from '../FileUpload/FileUpload';
 import axios from 'axios';
+import { API_PATH } from '../../constants/API_PATH';
 
 export const Commission2 = () => {
   const inputOptions = {
@@ -33,9 +34,28 @@ export const Commission2 = () => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/courses', state)
+      const formData = new FormData()
+      formData.append('childName', state.childName)
+      formData.append('parentName', state.parentName)
+      formData.append('phone', state.phone)
+      formData.append('email', state.email)
+      formData.append('personalDataAccess', state.personalDataAccess)
+      formData.append('passportPhoto', state.passportPhoto, state.passportPhoto?.name)
+      formData.append('schoolRecordsPhoto', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name)
+      formData.append('application', state.application, state.application?.name)
+      await axios.post(API_PATH + '/commission', formData);
+      // setState({
+      //   childName: '',
+      //   parentName: '',
+      //   phone: '',
+      //   email: '',
+      //   passportPhoto: null,
+      //   schoolRecordsPhoto: null,
+      //   application: null,
+      //   personalDataAccess: false,
+      // });
       // Do smth to show user the success
-    } catch (e){
+    } catch (e) {
       // Do smth to show user the error
       console.error(e);
     }
@@ -54,6 +74,7 @@ export const Commission2 = () => {
               label="ФИО ребёнка"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, childName: e.target.value })}
             />
           </div>
@@ -64,6 +85,7 @@ export const Commission2 = () => {
               label="ФИО родителя"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, parentName: e.target.value })}
             />
           </div>
@@ -74,6 +96,7 @@ export const Commission2 = () => {
               label="Телефон"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, phone: e.target.value })}
             />
             <TextField
@@ -82,6 +105,7 @@ export const Commission2 = () => {
               label="Почта"
               color="secondary"
               variant="outlined"
+              autoComplete={'off'}
               onChange={(e) => setState({ ...state, email: e.target.value })}
             />
           </div>

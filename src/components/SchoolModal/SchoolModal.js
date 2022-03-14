@@ -12,6 +12,7 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
 import axios from 'axios';
+import { API_PATH } from '../../constants/API_PATH';
 
 export const SchoolModal = (props) => {
   const style = {
@@ -50,7 +51,17 @@ export const SchoolModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/courses', state)
+      await axios.post(API_PATH + '/school-event/', state)
+
+      setState({
+        name: '',
+        schoolName: '',
+        city: '',
+        phone: '',
+        email: '',
+        personalDataAccess: false,
+      })
+
       // Do smth to show user the success
       props.handleClose(false)
     } catch (e){
@@ -83,6 +94,8 @@ export const SchoolModal = (props) => {
                 label="ФИО"
                 color="secondary"
                 variant="outlined"
+                value={state.name}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
@@ -90,9 +103,11 @@ export const SchoolModal = (props) => {
               <TextField
                 id="outlined-basic"
                 sx={inputOptions}
-                label="Наименование учереждения"
+                label="Наименование учреждения"
                 color="secondary"
                 variant="outlined"
+                value={state.schoolName}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, schoolName: e.target.value })}
               />
               <TextField
@@ -101,6 +116,8 @@ export const SchoolModal = (props) => {
                 label="Город"
                 color="secondary"
                 variant="outlined"
+                value={state.city}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, city: e.target.value })}
               />
             </div>
@@ -112,6 +129,8 @@ export const SchoolModal = (props) => {
                 label="Телефон"
                 color="secondary"
                 variant="outlined"
+                value={state.phone}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
@@ -120,6 +139,8 @@ export const SchoolModal = (props) => {
                 label="Почта"
                 color="secondary"
                 variant="outlined"
+                value={state.email}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </div>
@@ -134,6 +155,7 @@ export const SchoolModal = (props) => {
                         color: 'rgb(167,29,216)',
                       },
                     }}
+                    checked={state.personalDataAccess}
                     onChange={(e) => setState({ ...state, personalDataAccess: e.target.checked })}
                   />
                 }
