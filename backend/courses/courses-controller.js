@@ -1,17 +1,15 @@
+const { formatData } = require('../utils/data-formatter');
 const { validateName } = require('../validators/name-validator');
 const { validateEmail } = require('../validators/email-validator');
 const { validatePhone } = require('../validators/phone-validator');
+const fs = require('fs');
 
 class CoursesController {
-  constructor() {
-    this.applicants = [];
-  }
   addApplicant(req, res) {
     try {
       const applicant = req.body
       this.validateApplicant(applicant);
-      this.applicants.push(req.body)
-      console.log(this.applicants);
+      this.addToCatalog(applicant)
       res.status(201).send();
     } catch (e) {
       if (e.message === 'Incorrect applicant data') {
@@ -20,7 +18,6 @@ class CoursesController {
         throw e;
       }
     }
-    // use mailer
   }
   validateApplicant(applicant) {
     if (
@@ -32,6 +29,16 @@ class CoursesController {
       applicant.personalDataAccess === true
     ) return true;
     throw new Error('Incorrect applicant data');
+  }
+  addToCatalog(applicant) {
+    const currentTime = Date.now().toString().replaceAll(':', '.');
+    fs.mkdirSync('files/Courses/' + currentTime);
+    this.addApplicantData(applicant, currentTime);
+  }
+
+  addApplicantData(data, folderName) {
+    const content = formatData(data);
+    fs.writeFile(`$../../files/Courses/${folderName}/data.txt`, content, () => {});
   }
 }
 
