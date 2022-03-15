@@ -1,7 +1,14 @@
 @use '../../styles/colors' as colors;
 .hexa {
-  &button {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  &.disabled {
+    background: rgba(175, 92, 204, 0.6);
+    &::after{
+      border-left-color: rgba(175, 92, 204, 0.6);
+    }
+    &::before{
+      border-right-color: rgba(175, 92, 204, 0.6);
+    }
   }
   margin: 0 15px;
   padding: 15px 40px;
