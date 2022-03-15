@@ -1,17 +1,16 @@
 const { validateName } = require('../validators/name-validator');
 const { validateEmail } = require('../validators/email-validator');
 const { validatePhone } = require('../validators/phone-validator');
+const fs = require('fs');
+const { formatData } = require('../utils/data-formatter');
 
 class SchoolEventController {
-  constructor() {
-    this.schools = [];
-  }
   addSchool(req, res) {
     try {
-      const schoolRequest = req.body
+      const schoolRequest = req.body;
       this.validateSchoolRequest(schoolRequest);
-      this.schools.push(req.body)
-      console.log(this.schools);
+      this.addToCatalog(schoolRequest);
+
       res.status(201).send();
     } catch (e) {
       if (e.message === 'Incorrect school request data') {
@@ -20,22 +19,32 @@ class SchoolEventController {
         throw e;
       }
     }
-    // use mailer
   }
   validateSchoolRequest(schoolRequest) {
-
     if (
       schoolRequest &&
       validateName(schoolRequest.name) &&
       typeof schoolRequest.schoolName === 'string' &&
-      schoolRequest.schoolName.length > 5 &&
+      schoolRequest.schoolName.length > 0 &&
       typeof schoolRequest.city === 'string' &&
       schoolRequest.city.length > 0 &&
       validatePhone(schoolRequest.phone) &&
       validateEmail(schoolRequest.email) &&
       schoolRequest.personalDataAccess === true
-    ) return true;
+    )
+      return true;
     throw new Error('Incorrect school request data');
+  }
+
+  addToCatalog(school) {
+    const currentTime = Date.now().toString().replaceAll(':', '.');
+    fs.mkdirSync('files/Schools/' + currentTime);
+    this.addSchoolData(school, currentTime);
+  }
+
+  addSchoolData(data, folderName) {
+    const content = formatData(data);
+    fs.writeFile(`$../../files/Schools/${folderName}/data.txt`, content, () => {});
   }
 }
 
