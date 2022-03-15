@@ -1,17 +1,15 @@
+const { formatData } = require('../utils/data-formatter');
 const { validateName } = require('../validators/name-validator');
 const { validateEmail } = require('../validators/email-validator');
 const { validatePhone } = require('../validators/phone-validator');
+const fs = require('fs');
 
 class OpenDayController {
-  constructor() {
-    this.visitors = [];
-  }
   addVisitor(req, res) {
     try {
       const visitor = req.body
       this.validateVisitor(visitor);
-      this.visitors.push(req.body)
-      console.log(this.visitors);
+      this.addToCatalog(visitor)
       res.status(201).send();
     } catch (e) {
       if (e.message === 'Incorrect visitor data') {
@@ -20,7 +18,6 @@ class OpenDayController {
         throw e;
       }
     }
-    // use mailer
   }
   validateVisitor(visitor) {
     if (
@@ -32,6 +29,16 @@ class OpenDayController {
       visitor.personalDataAccess === true
     ) return true;
     throw new Error('Incorrect visitor data');
+  }
+  addToCatalog(visitor) {
+    const currentTime = Date.now().toString().replaceAll(':', '.');
+    fs.mkdirSync('files/OpenDayVisitors/' + currentTime);
+    this.addSchoolData(visitor, currentTime);
+  }
+
+  addSchoolData(data, folderName) {
+    const content = formatData(data);
+    fs.writeFile(`$../../files/OpenDayVisitors/${folderName}/data.txt`, content, () => {});
   }
 }
 
