@@ -41,6 +41,15 @@ export const Commission2 = () => {
 
   const sendForm = async (e) => {
     e.preventDefault();
+    if (
+      !validateName(state.childName) ||
+      !validateName(state.parentName) ||
+      !validatePhone(state.phone) ||
+      !validateEmail(state.email) ||
+      !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
+      state.personalDataAccess
+    )
+      return;
     try {
       const formData = new FormData();
       formData.append('childName', state.childName);
@@ -54,9 +63,13 @@ export const Commission2 = () => {
       await axios.post(API_PATH + '/commission', formData);
       setState({
         childName: '',
+        childNameTouched: false,
         parentName: '',
+        parentNameTouched: false,
         phone: '',
+        phoneTouched: false,
         email: '',
+        emailTouched: false,
         passportPhoto: null,
         schoolRecordsPhoto: null,
         application: null,
@@ -67,12 +80,9 @@ export const Commission2 = () => {
       // Do smth to show user the error
       console.error(e);
     }
-    console.log(state);
   };
 
   const setAllTouched = () => {
-    console.log(123);
-
     setState({
       ...state,
       childNameTouched: true,
