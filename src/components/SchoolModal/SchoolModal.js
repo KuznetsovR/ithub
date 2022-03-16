@@ -68,7 +68,6 @@ export const SchoolModal = (props) => {
       // Do smth to show user the error
       console.error(e);
     }
-    console.log(state);
   };
 
   return (

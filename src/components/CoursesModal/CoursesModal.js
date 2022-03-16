@@ -63,7 +63,6 @@ export const CoursesModal = (props) => {
       console.error(e);
     }
 
-    console.log(state);
   };
 
   return (
