@@ -20,7 +20,6 @@ export const DocumentModal = (props) => {
     border: '1px solid #000',
     borderRadius: 3,
   };
-  console.log('doc');
   return (
     <Modal
       open={props.open}
