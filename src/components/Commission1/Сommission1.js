@@ -2,9 +2,9 @@ import React from 'react';
 import './Сommission1.scss';
 import { Link } from 'react-router-dom';
 import document1 from '@assets/images/document_1.jpg';
-import document2 from '@assets/images/document_2.jpg';
-import document3 from '@assets/images/document_3.jpg';
-import document4 from '@assets/images/document_4.jpg';
+import document2 from '@assets/images/document_2.webp';
+import document3 from '@assets/images/document_3.webp';
+import document4 from '@assets/images/document_4.webp';
 
 export const Commission1 = () => {
   return (
