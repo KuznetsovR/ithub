@@ -40,16 +40,8 @@ export const Commission2 = () => {
   });
 
   const sendForm = async (e) => {
+    console.log(state);
     e.preventDefault();
-    if (
-      !validateName(state.childName) ||
-      !validateName(state.parentName) ||
-      !validatePhone(state.phone) ||
-      !validateEmail(state.email) ||
-      !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
-      state.personalDataAccess
-    )
-      return;
     try {
       const formData = new FormData();
       formData.append('childName', state.childName);
@@ -61,6 +53,7 @@ export const Commission2 = () => {
       formData.append('files', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name);
       formData.append('files', state.application, state.application?.name);
       await axios.post(API_PATH + '/commission', formData);
+      console.log(123);
       setState({
         childName: '',
         childNameTouched: false,
@@ -83,18 +76,31 @@ export const Commission2 = () => {
   };
 
   const setAllTouched = () => {
+    const newPassportPhoto = state.passportPhoto ? state.passportPhoto : undefined;
+    const newSchoolRecordsPhoto = state.schoolRecordsPhoto ? state.schoolRecordsPhoto : undefined;
+    const newApplication = state.application ? state.application : undefined;
     setState({
       ...state,
       childNameTouched: true,
       parentNameTouched: true,
       phoneTouched: true,
       emailTouched: true,
-      passportPhoto: undefined,
-      schoolRecordsPhoto: undefined,
-      application: undefined,
+      passportPhoto: newPassportPhoto,
+      schoolRecordsPhoto: newSchoolRecordsPhoto,
+      application: newApplication,
     });
   };
 
+  const isValid = () => {
+    return (
+      !validateName(state.childName) ||
+      !validateName(state.parentName) ||
+      !validatePhone(state.phone) ||
+      !validateEmail(state.email) ||
+      !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
+      !state.personalDataAccess
+    );
+  };
   return (
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
@@ -216,17 +222,7 @@ export const Commission2 = () => {
             />
           </div>
           <div className="share-btn-wrapper">
-            <HexaButton
-              disabled={
-                !validateName(state.childName) ||
-                !validateName(state.parentName) ||
-                !validatePhone(state.phone) ||
-                !validateEmail(state.email) ||
-                !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
-                state.personalDataAccess
-              }
-              onClick={(e) => setAllTouched(e)}
-            >
+            <HexaButton disabled={isValid} onClick={(e) => setAllTouched(e)}>
               Отправить
             </HexaButton>
           </div>
