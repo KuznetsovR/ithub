@@ -49,7 +49,6 @@ export const OpenDayModal = (props) => {
     personalDataAccess: false,
   });
 
-  const availableDates = ['05.03.2022', '09.03.2022', '15.03.2022'];
 
   const sendForm = async (e) => {
     e.preventDefault();
@@ -135,7 +134,7 @@ export const OpenDayModal = (props) => {
                   variant="outlined"
                   onChange={(e) => setState({ ...state, date: e.target.value })}
                 >
-                  {availableDates.map((el, index) => {
+                  {props.availableDates.map((el, index) => {
                     return <MenuItem value={el} key={index}>{el}</MenuItem>;
                   })}
                 </Select>
