@@ -40,7 +40,16 @@ export const Commission2 = () => {
   });
 
   const sendForm = async (e) => {
-    console.log(state);
+    e.preventDefault()
+    if (
+      !validateName(state.childName) ||
+      !validateName(state.parentName) ||
+      !validatePhone(state.phone) ||
+      !validateEmail(state.email) ||
+      !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
+      !state.personalDataAccess
+    )
+      return;
     e.preventDefault();
     try {
       const formData = new FormData();
