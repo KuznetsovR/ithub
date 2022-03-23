@@ -14,6 +14,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
+import { API_PATH } from '../../constants/API_PATH';
 
 export const OpenDayModal = (props) => {
   const style = {
@@ -53,14 +54,22 @@ export const OpenDayModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/courses', state)
+      await axios.post(API_PATH + '/open-day/', state)
+
+      setState({
+        name: '',
+        phone: '',
+        email: '',
+        date: '',
+        personalDataAccess: false,
+      })
+
       // Do smth to show user the success
       props.handleClose(false)
     } catch (e){
       // Do smth to show user the error
       console.error(e);
     }
-    console.log(state);
   };
 
   return (
@@ -85,6 +94,8 @@ export const OpenDayModal = (props) => {
                 label="ФИО"
                 color="secondary"
                 variant="outlined"
+                value={state.name}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, name: e.target.value })}
               />
             </div>
@@ -94,6 +105,10 @@ export const OpenDayModal = (props) => {
                 label="Телефон"
                 color="secondary"
                 variant="outlined"
+                placeholder={'+7 123 456 7890'}
+                value={state.phone}
+                type={'tel'}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
               />
               <TextField
@@ -101,6 +116,9 @@ export const OpenDayModal = (props) => {
                 label="Почта"
                 color="secondary"
                 variant="outlined"
+                value={state.email}
+                type={'email'}
+                autoComplete={'off'}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </div>
@@ -134,6 +152,7 @@ export const OpenDayModal = (props) => {
                         color: 'rgb(167,29,216)',
                       },
                     }}
+                    checked={state.personalDataAccess}
                     onChange={(e) => setState({ ...state, personalDataAccess: e.target.checked })}
                   />
                 }

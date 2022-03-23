@@ -8,6 +8,7 @@ export const CommissionPage = () => {
       <Header />
           <Phone />
       <main>
+        <Phone />
         <div className="container">
           <Commission1 />
           <Commission2 />
