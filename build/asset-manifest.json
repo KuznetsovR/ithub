@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.708cdc17.css",
-    "main.js": "/static/js/main.d7a7fc18.js",
+    "main.css": "/static/css/main.f66ae096.css",
+    "main.js": "/static/js/main.05810a85.js",
     "static/media/courses2.png": "/static/media/courses2.c14859cf69356fa3c84d.png",
-    "static/media/document_3.jpg": "/static/media/document_3.f49179c666eec4345a0f.jpg",
     "static/media/courses3.png": "/static/media/courses3.9e4dab70fcd369c469da.png",
+    "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
     "static/media/document_1.jpg": "/static/media/document_1.89ac996f75d17aa7f060.jpg",
     "static/media/courses1.png": "/static/media/courses1.d562250d875821b524c6.png",
-    "static/media/document_2.jpg": "/static/media/document_2.64494366c33b45c53589.jpg",
-    "static/media/document_4.jpg": "/static/media/document_4.43ed198f290da5b9b98e.jpg",
-    "static/media/coder.png": "/static/media/coder.ce5379ba6c3f6f2607e7.png",
-    "static/media/web_dev.png": "/static/media/web_dev.772401080116643755c2.png",
-    "static/media/sys_adm.png": "/static/media/sys_adm.a0880a4c75ed0089d767.png",
+    "static/media/document_2.webp": "/static/media/document_2.d3d2b458ec7240f173f6.webp",
+    "static/media/document_4.webp": "/static/media/document_4.b2d96cd1d03a7daa3c6b.webp",
     "static/media/IThublogo.png": "/static/media/IThublogo.3f2e17a2ba3f1a8d0302.png",
+    "static/media/web_dev.webp": "/static/media/web_dev.837a806f22c98630eee9.webp",
+    "static/media/coder.webp": "/static/media/coder.01d458026e69e593f5d0.webp",
+    "static/media/sys_adm.webp": "/static/media/sys_adm.4621e81fa1e98a0d7ea5.webp",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -21,11 +21,11 @@
     "static/media/admissions-text-container.svg": "/static/media/admissions-text-container.fcba7f89ea6157318a70.svg",
     "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
     "index.html": "/index.html",
-    "main.708cdc17.css.map": "/static/css/main.708cdc17.css.map",
-    "main.d7a7fc18.js.map": "/static/js/main.d7a7fc18.js.map"
+    "main.f66ae096.css.map": "/static/css/main.f66ae096.css.map",
+    "main.05810a85.js.map": "/static/js/main.05810a85.js.map"
   },
   "entrypoints": [
-    "static/css/main.708cdc17.css",
-    "static/js/main.d7a7fc18.js"
+    "static/css/main.f66ae096.css",
+    "static/js/main.05810a85.js"
   ]
 }

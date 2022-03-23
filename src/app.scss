@@ -1,3 +1,4 @@
+@use "styles/mixins/scrollbar.mixin" as scrollbar-mixin;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300&display=swap');
 body {
   margin: 0;
@@ -5,6 +6,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: #0e0e0e;
   color: white;
+  @include scrollbar-mixin.custom-scrollbar
 }
 
 // overriding webkit autocompletion styles

@@ -40,16 +40,17 @@ export const Commission2 = () => {
   });
 
   const sendForm = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (
       !validateName(state.childName) ||
       !validateName(state.parentName) ||
       !validatePhone(state.phone) ||
       !validateEmail(state.email) ||
       !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
-      state.personalDataAccess
+      !state.personalDataAccess
     )
       return;
+    e.preventDefault();
     try {
       const formData = new FormData();
       formData.append('childName', state.childName);
@@ -83,15 +84,18 @@ export const Commission2 = () => {
   };
 
   const setAllTouched = () => {
+    const newPassportPhoto = state.passportPhoto || undefined;
+    const newSchoolRecordsPhoto = state.schoolRecordsPhoto || undefined;
+    const newApplication = state.application || undefined;
     setState({
       ...state,
       childNameTouched: true,
       parentNameTouched: true,
       phoneTouched: true,
       emailTouched: true,
-      passportPhoto: undefined,
-      schoolRecordsPhoto: undefined,
-      application: undefined,
+      passportPhoto: newPassportPhoto,
+      schoolRecordsPhoto: newSchoolRecordsPhoto,
+      application: newApplication,
     });
   };
 
@@ -103,6 +107,7 @@ export const Commission2 = () => {
           <div className="share-flex-column">
             <TextField
               error={!validateName(state.childName) && state.childNameTouched}
+              value={state.childName}
               id="outlined-basic"
               sx={inputOptions}
               label="ФИО ребёнка"
@@ -116,6 +121,7 @@ export const Commission2 = () => {
           <div className="share-flex-column">
             <TextField
               error={!validateName(state.parentName) && state.parentNameTouched}
+              value={state.parentName}
               id="outlined-basic"
               sx={inputOptions}
               label="ФИО родителя"
@@ -129,9 +135,12 @@ export const Commission2 = () => {
           <div className="share-flex-row">
             <TextField
               error={!validatePhone(state.phone) && state.phoneTouched}
+              value={state.phone}
               id="outlined-basic"
               sx={inputOptions}
               label="Телефон"
+              placeholder={'+7 123 456 7890'}
+              type={'tel'}
               color="secondary"
               variant="outlined"
               autoComplete={'off'}
@@ -140,10 +149,12 @@ export const Commission2 = () => {
             />
             <TextField
               error={!validateEmail(state.email) && state.emailTouched}
+              value={state.email}
               id="outlined-basic"
               sx={inputOptions}
               label="Почта"
               color="secondary"
+              type={'email'}
               variant="outlined"
               autoComplete={'off'}
               onChange={(e) => setState({ ...state, email: e.target.value })}
@@ -206,6 +217,7 @@ export const Commission2 = () => {
                       color: 'rgb(167,29,216)',
                     },
                   }}
+                  checked={state.personalDataAccess}
                   onChange={(e) => setState({ ...state, personalDataAccess: e.target.checked })}
                 />
               }
@@ -223,7 +235,7 @@ export const Commission2 = () => {
                 !validatePhone(state.phone) ||
                 !validateEmail(state.email) ||
                 !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
-                state.personalDataAccess
+                !state.personalDataAccess
               }
               onClick={(e) => setAllTouched(e)}
             >

@@ -15,6 +15,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
 import { API_PATH } from '../../constants/API_PATH';
+import { validateName } from '../../validators/name-validator';
+import { validatePhone } from '../../validators/phone-validator';
+import { validateEmail } from '../../validators/email-validator';
 
 export const OpenDayModal = (props) => {
   const style = {
@@ -43,35 +46,57 @@ export const OpenDayModal = (props) => {
   };
   const [state, setState] = useState({
     name: '',
+    nameTouched: false,
     phone: '',
+    phoneTouched: false,
     email: '',
+    emailTouched: false,
     date: '',
+    dateTouched: false,
     personalDataAccess: false,
   });
 
-  const availableDates = ['05.03.2022', '09.03.2022', '15.03.2022'];
-
   const sendForm = async (e) => {
     e.preventDefault();
+    if (
+      !validateName(state.name) ||
+      !validatePhone(state.phone) ||
+      !validateEmail(state.email) ||
+      !state.date.length ||
+      !state.personalDataAccess
+    )
+      return;
     try {
-      await axios.post(API_PATH + '/open-day/', state)
+      await axios.post(API_PATH + '/open-day/', state);
 
       setState({
         name: '',
+        nameTouched: false,
         phone: '',
+        phoneTouched: false,
         email: '',
+        emailTouched: false,
         date: '',
+        dateTouched: false,
         personalDataAccess: false,
-      })
+      });
 
       // Do smth to show user the success
-      props.handleClose(false)
-    } catch (e){
+      props.handleClose(false);
+    } catch (e) {
       // Do smth to show user the error
       console.error(e);
     }
   };
-
+  const setAllTouched = () => {
+    setState({
+      ...state,
+      nameTouched: true,
+      phoneTouched: true,
+      emailTouched: true,
+      dateTouched: true,
+    });
+  };
   return (
     <Modal
       open={props.open}
@@ -90,6 +115,7 @@ export const OpenDayModal = (props) => {
           <form onSubmit={sendForm}>
             <div className="open-day-flex-column">
               <TextField
+                error={!validateName(state.name) && state.nameTouched}
                 sx={inputOptions}
                 label="ФИО"
                 color="secondary"
@@ -97,10 +123,12 @@ export const OpenDayModal = (props) => {
                 value={state.name}
                 autoComplete={'off'}
                 onChange={(e) => setState({ ...state, name: e.target.value })}
+                onBlur={() => setState({ ...state, nameTouched: true })}
               />
             </div>
             <div className="open-day-flex-row">
               <TextField
+                error={!validatePhone(state.phone) && state.phoneTouched}
                 sx={inputOptions}
                 label="Телефон"
                 color="secondary"
@@ -110,8 +138,10 @@ export const OpenDayModal = (props) => {
                 type={'tel'}
                 autoComplete={'off'}
                 onChange={(e) => setState({ ...state, phone: e.target.value })}
+                onBlur={() => setState({ ...state, phoneTouched: true })}
               />
               <TextField
+                error={!validateEmail(state.email) && state.emailTouched}
                 sx={inputOptions}
                 label="Почта"
                 color="secondary"
@@ -120,11 +150,12 @@ export const OpenDayModal = (props) => {
                 type={'email'}
                 autoComplete={'off'}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
+                onBlur={() => setState({ ...state, emailTouched: true })}
               />
             </div>
 
             <div className="open-day-flex-row">
-              <FormControl fullWidth>
+              <FormControl fullWidth error={!state.date && state.dateTouched}>
                 <InputLabel id="open-day-date-select">Дата</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
@@ -135,8 +166,12 @@ export const OpenDayModal = (props) => {
                   variant="outlined"
                   onChange={(e) => setState({ ...state, date: e.target.value })}
                 >
-                  {availableDates.map((el, index) => {
-                    return <MenuItem value={el} key={index}>{el}</MenuItem>;
+                  {props.availableDates.map((el, index) => {
+                    return (
+                      <MenuItem value={el} key={index}>
+                        {el}
+                      </MenuItem>
+                    );
                   })}
                 </Select>
               </FormControl>
@@ -163,7 +198,18 @@ export const OpenDayModal = (props) => {
               />
             </div>
             <div className="open-day-btn-wrapper">
-              <HexaButton>Отправить</HexaButton>
+              <HexaButton
+                disabled={
+                  !validateName(state.name) ||
+                  !validatePhone(state.phone) ||
+                  !validateEmail(state.email) ||
+                  !state.date.length ||
+                  !state.personalDataAccess
+                }
+                onClick={(e) => setAllTouched(e)}
+              >
+                Отправить
+              </HexaButton>
             </div>
           </form>
         </Box>
