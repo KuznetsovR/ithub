@@ -17,7 +17,7 @@
 }
 
 .student-photo {
-  background-image: url(../../assets/images/web_dev.png);
+  background-image: url(../../assets/images/web_dev.webp);
   background-size: 100%;
   border: 5px solid #5b1573;
   width: 235px;
@@ -29,11 +29,15 @@
 .reviews-text {
   color: #a71dd8;
   padding-left: 40px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .reviews-text-2 {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
+}
+.reviews-text-3 {
+  color: #fff;
+  font-size: 15px;
 }
 .reviews-slider-wrapper{
   .slick-dots {
