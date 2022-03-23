@@ -20,7 +20,6 @@ export const Documents = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
-  console.log(openModal);
   return (
     <div className="container-document" id={'documents'}>
 
