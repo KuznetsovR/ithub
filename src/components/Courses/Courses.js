@@ -30,8 +30,8 @@ export const Courses = () => {
   }
   return (
     <div>
-      <div className="block-preparatory-courses">
-        <div className="preparatory-courses-square-container">
+    <div className="block-preparatory-courses">
+        {/* <div className="preparatory-courses-square-container">
           <div className="preparatory-courses-square">
             <div className="title-preparatory-courses">Подготовительные курсы</div>
           </div>
@@ -47,8 +47,26 @@ export const Courses = () => {
             <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
             <CoursesModal open={modalOpen} handleClose={setModalOpen} />
           </div>
+        </div> */
+        }
+        <div className="preparatory-courses-square-container">
+          <div className="preparatory-courses-square">
+            <div className="title-preparatory-courses">О колледже</div>
+          </div>
         </div>
-      </div>
+        <div className="preparatory-courses-description">
+          <div className="title-courses">Время</div>
+        <div className="title-courses-description">
+         Учимся 10 месяцев в году. У нас две экзаменационные сессии: зимняя в декабре, летняя в июне. В июле и августе отдыхаем.
+
+        </div>
+        <div className="title-courses"> Место</div>
+        <div className="title-courses-description">Улица Чкалова, 3 (3 этаж)</div>
+        <div className="title-courses">Процесс</div>
+        <div className="title-courses-description">Занятия начинаются в 9:00. Одна пара длится полтора часа. В день 3-4 пары. Вечер будет свободен для проектов, отдыха и общения!
+</div>
+        </div> 
+        </div>
       <div className="courses-photo-gallery">
         <h1 className="title-photo-gallery">Фотогаларея</h1>
         <Slider {...settings}>

@@ -45,7 +45,7 @@ export const Header = () => {
             </HashLink>
           </li>
           <li>
-            <Link to="/courses">Курсы</Link>
+            <Link to="/courses">О колледже</Link>
           </li>
         </ul>
         <div className="mobile-menu">
