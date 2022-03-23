@@ -139,6 +139,8 @@ export const Commission2 = () => {
               id="outlined-basic"
               sx={inputOptions}
               label="Телефон"
+              placeholder={'+7 123 456 7890'}
+              type={'tel'}
               color="secondary"
               variant="outlined"
               autoComplete={'off'}
@@ -152,6 +154,7 @@ export const Commission2 = () => {
               sx={inputOptions}
               label="Почта"
               color="secondary"
+              type={'email'}
               variant="outlined"
               autoComplete={'off'}
               onChange={(e) => setState({ ...state, email: e.target.value })}
