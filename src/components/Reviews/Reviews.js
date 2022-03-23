@@ -14,16 +14,16 @@ export const Reviews = () => {
   };
   return (
     <div className="reviews-container" id={'reviews'}>
-      <h1 className="reviews-heading-text">Отзывы о студентах</h1>
+      <h1 className="reviews-heading-text">Отзывы о наших студентах</h1>
       <div className="reviews-slider-wrapper">
         <Slider {...settings}>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo" />
               <div className="reviews-text">
-                <p>Иванов Иван</p>
-                <p className="reviews-text-2">Компания “ ITbit ”</p>
-                <p className="reviews-text-2">Здесь будет какой-то крутой озыв о студенте IThub Ekat</p>
+                <p>Иван (1 курс)</p>
+                <p className="reviews-text-2">Иван инициативный, любознательный. Хорошо владеет имеющимися умениями, с интересом и удовольствием осваивает новые практические сферы и прикладные инструменты. Умеет организовать собственную работу и процесс освоения новых навыков</p>
+                <p className="reviews-text-3">[ Директор регионального центра цифровой трансформации образования, ГАОУ ДПО ИРО Свердловской области Стариченко Е.Б. ]</p>
               </div>
             </div>
           </div>
@@ -31,9 +31,9 @@ export const Reviews = () => {
             <div className="all-reviews-rectangles">
               <div className="student-photo" />
               <div className="reviews-text">
-                <p>Иванов Иван</p>
-                <p className="reviews-text-2">Компания “ ITbit ”</p>
-                <p className="reviews-text-2">Здесь будет какой-то крутой озыв о студенте IThub Ekat</p>
+                <p>Павел (3 курс)</p>
+                <p className="reviews-text-2">У Павла удивительное сочетание рабочих и персональных качеств. Ответственный, нацеленный на результат, заряженный. Хорошая логика и критическое мышление</p>
+                <p className="reviews-text-3">[ Ярослав Минуллин, компания Енерсофт ]</p>
               </div>
             </div>
           </div>
@@ -41,9 +41,9 @@ export const Reviews = () => {
             <div className="all-reviews-rectangles">
               <div className="student-photo" />
               <div className="reviews-text">
-                <p>Иванов Иван</p>
-                <p className="reviews-text-2">Компания “ ITbit ”</p>
-                <p className="reviews-text-2">Здесь будет какой-то крутой озыв о студенте IThub Ekat</p>
+                <p>Ярослав (2 курс)</p>
+                <p className="reviews-text-2">Ярослав очень быстро освоился в платформе. У него достаточно хороший багаж знаний. Задачи решает быстро. Смотрит чуть дальше. чем ожидалось, судя по вопросам, которые он задает и его рассуждениям.  Даже предложил несколько полезных изменений.</p>
+                <p className="reviews-text-3">[ Иваницкий А.М, директор компании Тандем ]</p>
               </div>
             </div>
           </div>

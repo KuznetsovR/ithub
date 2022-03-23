@@ -27,7 +27,7 @@ export const OpenDay = () => {
             <span className="open-day-focus"> родителей</span> посетить наш колледж
           </div>
           <div className="open-day-date">
-            Состоится<span className="open-day-focus"> 6 июля</span>
+            Состоится<span className="open-day-focus"> 23 марта </span>
           </div>
           <div className="invite-btn-wrapper">
             <HexaButton onClick={() => setModalOpen('openDay')}>Записаться</HexaButton>
