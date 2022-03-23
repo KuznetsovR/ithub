@@ -53,7 +53,6 @@ export const Commission2 = () => {
       formData.append('files', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name);
       formData.append('files', state.application, state.application?.name);
       await axios.post(API_PATH + '/commission', formData);
-      console.log(123);
       setState({
         childName: '',
         childNameTouched: false,
@@ -76,9 +75,9 @@ export const Commission2 = () => {
   };
 
   const setAllTouched = () => {
-    const newPassportPhoto = state.passportPhoto ? state.passportPhoto : undefined;
-    const newSchoolRecordsPhoto = state.schoolRecordsPhoto ? state.schoolRecordsPhoto : undefined;
-    const newApplication = state.application ? state.application : undefined;
+    const newPassportPhoto = state.passportPhoto || undefined;
+    const newSchoolRecordsPhoto = state.schoolRecordsPhoto || undefined;
+    const newApplication = state.application || undefined;
     setState({
       ...state,
       childNameTouched: true,
@@ -91,16 +90,6 @@ export const Commission2 = () => {
     });
   };
 
-  const isValid = () => {
-    return (
-      !validateName(state.childName) ||
-      !validateName(state.parentName) ||
-      !validatePhone(state.phone) ||
-      !validateEmail(state.email) ||
-      !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
-      !state.personalDataAccess
-    );
-  };
   return (
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
@@ -109,6 +98,7 @@ export const Commission2 = () => {
           <div className="share-flex-column">
             <TextField
               error={!validateName(state.childName) && state.childNameTouched}
+              value={state.childName}
               id="outlined-basic"
               sx={inputOptions}
               label="ФИО ребёнка"
@@ -122,6 +112,7 @@ export const Commission2 = () => {
           <div className="share-flex-column">
             <TextField
               error={!validateName(state.parentName) && state.parentNameTouched}
+              value={state.parentName}
               id="outlined-basic"
               sx={inputOptions}
               label="ФИО родителя"
@@ -135,6 +126,7 @@ export const Commission2 = () => {
           <div className="share-flex-row">
             <TextField
               error={!validatePhone(state.phone) && state.phoneTouched}
+              value={state.phone}
               id="outlined-basic"
               sx={inputOptions}
               label="Телефон"
@@ -146,6 +138,7 @@ export const Commission2 = () => {
             />
             <TextField
               error={!validateEmail(state.email) && state.emailTouched}
+              value={state.email}
               id="outlined-basic"
               sx={inputOptions}
               label="Почта"
@@ -212,6 +205,7 @@ export const Commission2 = () => {
                       color: 'rgb(167,29,216)',
                     },
                   }}
+                  checked={state.personalDataAccess}
                   onChange={(e) => setState({ ...state, personalDataAccess: e.target.checked })}
                 />
               }
@@ -222,7 +216,17 @@ export const Commission2 = () => {
             />
           </div>
           <div className="share-btn-wrapper">
-            <HexaButton disabled={isValid} onClick={(e) => setAllTouched(e)}>
+            <HexaButton
+              disabled={
+                !validateName(state.childName) ||
+                !validateName(state.parentName) ||
+                !validatePhone(state.phone) ||
+                !validateEmail(state.email) ||
+                !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
+                !state.personalDataAccess
+              }
+              onClick={(e) => setAllTouched(e)}
+            >
               Отправить
             </HexaButton>
           </div>
