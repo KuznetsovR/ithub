@@ -1,3 +1,4 @@
+@use "../../styles/mixins/scrollbar.mixin" as scrollbar-mixin;
 @use '../../styles/colors' as colors;
 
 .school-case {
@@ -48,6 +49,11 @@ div.css-1m3lphp-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
       color: white;
     }
   }
+}
+ul.css-6hp17o-MuiList-root-MuiMenu-list{
+  max-height: 100px;
+  overflow-y: scroll;
+  @include scrollbar-mixin.custom-scrollbar
 }
 .MuiFormControl-root{
   label{

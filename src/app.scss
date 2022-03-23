@@ -1,3 +1,4 @@
+@use "styles/mixins/scrollbar.mixin" as scrollbar-mixin;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300&display=swap');
 body {
   margin: 0;
@@ -5,24 +6,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: #0e0e0e;
   color: white;
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-  &::-webkit-scrollbar-track {
-
-    border-radius: 10px;
-    background: rgba(255,255,255, 0.1);
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(255,255,255, 0.2);
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgba(255,255,255, 0.4);
-  }
-  &::-webkit-scrollbar-thumb:active {
-    background: rgba(255,255,255, 0.9);
-  }
+  @include scrollbar-mixin.custom-scrollbar
 }
 
 // overriding webkit autocompletion styles
