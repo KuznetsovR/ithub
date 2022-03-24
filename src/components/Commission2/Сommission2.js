@@ -12,6 +12,8 @@ import { validateName } from '../../validators/name-validator';
 import { validatePhone } from '../../validators/phone-validator';
 import { validateEmail } from '../../validators/email-validator';
 import { validateFiles } from '../../validators/file-validator';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 export const Commission2 = () => {
   const inputOptions = {
@@ -37,10 +39,12 @@ export const Commission2 = () => {
     schoolRecordsPhoto: null,
     application: null,
     personalDataAccess: false,
+    openNotification: '',
+    fileEvents: [],
   });
 
   const sendForm = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (
       !validateName(state.childName) ||
       !validateName(state.parentName) ||
@@ -62,6 +66,8 @@ export const Commission2 = () => {
       formData.append('files', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name);
       formData.append('files', state.application, state.application?.name);
       await axios.post(API_PATH + '/commission', formData);
+      clearFiles();
+
       setState({
         childName: '',
         childNameTouched: false,
@@ -75,11 +81,20 @@ export const Commission2 = () => {
         schoolRecordsPhoto: null,
         application: null,
         personalDataAccess: false,
+        openNotification: 'success',
+        fileEvents: [],
       });
-      // Do smth to show user the success
     } catch (e) {
-      // Do smth to show user the error
-      console.error(e);
+      setState({
+        ...state,
+        openNotification: 'error',
+      });
+    }
+  };
+
+  const clearFiles = () => {
+    for (const fileEvent of state.fileEvents) {
+      fileEvent.target.value = '';
     }
   };
 
@@ -96,6 +111,16 @@ export const Commission2 = () => {
       passportPhoto: newPassportPhoto,
       schoolRecordsPhoto: newSchoolRecordsPhoto,
       application: newApplication,
+    });
+  };
+
+  const handleNotificationClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setState({
+      ...state,
+      openNotification: '',
     });
   };
 
@@ -172,9 +197,13 @@ export const Commission2 = () => {
               Фото паспорта
             </div>
             <FileUpload
-              setState={(e) =>
-                e.target.files[0] ? setState({ ...state, passportPhoto: e.target.files[0] }) : null
-              }
+              onChange={(e) => {
+                setState({
+                  ...state,
+                  passportPhoto: e.target.files[0],
+                  fileEvents: [...state.fileEvents, e],
+                });
+              }}
             />
             <div
               className="file-name"
@@ -186,9 +215,13 @@ export const Commission2 = () => {
               Фото аттестата
             </div>
             <FileUpload
-              setState={(e) =>
-                e.target.files[0] ? setState({ ...state, schoolRecordsPhoto: e.target.files[0] }) : null
-              }
+              onChange={(e) => {
+                setState({
+                  ...state,
+                  schoolRecordsPhoto: e.target.files[0],
+                  fileEvents: [...state.fileEvents, e],
+                });
+              }}
             />
             <div
               className="file-name"
@@ -199,9 +232,13 @@ export const Commission2 = () => {
               Заявление
             </div>
             <FileUpload
-              setState={(e) =>
-                e.target.files[0] ? setState({ ...state, application: e.target.files[0] }) : null
-              }
+              onChange={(e) => {
+                setState({
+                  ...state,
+                  application: e.target.files[0],
+                  fileEvents: [...state.fileEvents, e],
+                });
+              }}
             />
           </div>
 
@@ -244,6 +281,24 @@ export const Commission2 = () => {
           </div>
         </form>
       </div>
+      <Snackbar
+        open={state.openNotification === 'success'}
+        autoHideDuration={4000}
+        onClose={handleNotificationClose}
+      >
+        <Alert onClose={handleNotificationClose} severity="success" sx={{ width: '100%' }} variant="filled">
+          Данные успешно отправлены!
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={state.openNotification === 'error'}
+        autoHideDuration={4000}
+        onClose={handleNotificationClose}
+      >
+        <Alert onClose={handleNotificationClose} severity="error" sx={{ width: '100%' }} variant="filled">
+          Произошла ошибка, попробуйте ещё раз.
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

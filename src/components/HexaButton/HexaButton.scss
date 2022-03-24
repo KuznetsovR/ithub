@@ -3,10 +3,10 @@
   font-family: 'Inter', sans-serif;
   &.disabled {
     background: rgba(175, 92, 204, 0.6);
-    &::after{
+    &::after {
       border-left-color: rgba(175, 92, 204, 0.6);
     }
-    &::before{
+    &::before {
       border-right-color: rgba(175, 92, 204, 0.6);
     }
   }
@@ -52,6 +52,19 @@
       margin-top: -10px;
       border-top: 22px solid transparent;
       border-bottom: 22px solid transparent;
+    }
+  }
+}
+@media (min-resolution: 1.1x) and (max-resolution: 1.9x), (min-resolution: 2.1x) and (max-resolution: 2.9x) {
+  @-moz-document url-prefix() {
+    .hexa {
+      border-radius: 5px;
+      &::after {
+        display: none;
+      }
+      &::before {
+        display: none;
+      }
     }
   }
 }
