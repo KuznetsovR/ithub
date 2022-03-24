@@ -12,6 +12,7 @@ import {
   OpenDay,
  
 } from '@components/export.components.js';
+import { Faq } from '../../components/Faq/Faq';
 
 export const MainPage = () => {
   return (
@@ -25,8 +26,8 @@ export const MainPage = () => {
           <Specialties />
           <Reviews />
           <Documents />
-          <YandexMap /> 
-         
+          <YandexMap />
+          <Faq />
         </div>
       </main>
       <Footer />

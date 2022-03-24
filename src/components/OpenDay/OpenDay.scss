@@ -51,12 +51,51 @@
   margin-top: 40px;
   text-align: center;
 }
-.open-day-desc {
-  margin-top: 50px;
-  line-height: 2rem;
+.assign-btn-wrapper {
+  text-align: center;
+  margin-top: auto;
 }
-.open-day-date {
-  margin-top: 50px;
+
+.open-day-desc {
+  line-height: 2rem;
+  margin-top: 10px;
+}
+.open-day-dates-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  max-height: 120px;
+  overflow-y: scroll;
+  li {
+    padding: 5px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(175, 92, 204, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(175, 92, 204, 0.2);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(175, 92, 204, 0.4);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: rgba(175, 92, 204, 0.9);
+  }
+  scrollbar-width: thin;
+  scrollbar-color: rgba(175, 92, 204, 0.5) rgba(175, 92, 204, 0.1);
+}
+.open-day-dates {
+  margin-top: 10px;
+  background-color: #151515;
+  padding: 10px 20px;
+  border-radius: 15px;
 }
 @media (screen and max-width: 1000px) {
   .open-day-component {

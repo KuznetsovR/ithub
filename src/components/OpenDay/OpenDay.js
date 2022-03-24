@@ -1,4 +1,4 @@
-import React, { useState }from 'react';
+import React, { useState } from 'react';
 import './OpenDay.scss';
 import { HexaButton } from '@components/export.components.js';
 import Slider from 'react-slick';
@@ -16,6 +16,7 @@ export const OpenDay = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
+  const availableDates = ['05.04.2022', '09.04.2022', '15.04.2022', '17.04.2022', '18.04.2022', '19.04.2022', '21.04.2022'];
   const [modalOpen, setModalOpen] = useState(null);
   return (
     <div className="open-day-component">
@@ -25,13 +26,25 @@ export const OpenDay = () => {
           <div className="open-day-desc">
             Приглашаем <span className="open-day-focus"> абитуриентов </span> и их
             <span className="open-day-focus"> родителей</span> посетить наш колледж
+            <div className="open-day-dates">
+              <ul className="open-day-dates-list">
+                {availableDates.map((el, index) => {
+                  return (
+                    <li key={index}>
+                      {el}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-          <div className="open-day-date">
-            Состоится<span className="open-day-focus"> 23 марта </span>
-          </div>
-          <div className="invite-btn-wrapper">
+          <div className="assign-btn-wrapper">
             <HexaButton onClick={() => setModalOpen('openDay')}>Записаться</HexaButton>
-            <OpenDayModal open={modalOpen  === 'openDay'} handleClose={setModalOpen} />
+            <OpenDayModal
+              open={modalOpen === 'openDay'}
+              availableDates={availableDates}
+              handleClose={setModalOpen}
+            />
           </div>
         </div>
       </div>
@@ -65,12 +78,9 @@ export const OpenDay = () => {
         </div>
         <div className="invite-btn-wrapper">
           <HexaButton onClick={() => setModalOpen('schoolModal')}>Пригласить</HexaButton>
-          <SchoolModal
-          open={modalOpen === 'schoolModal'}
-          handleClose={setModalOpen}
-        />
+          <SchoolModal open={modalOpen === 'schoolModal'} handleClose={setModalOpen} />
+        </div>
       </div>
-    </div>
     </div>
   );
 };
