@@ -1,8 +1,8 @@
 import React from 'react';
-import './CoursesPage.scss';
+import './AboutPage.scss';
 import { Courses, Footer, Header, Phone } from '@components/export.components.js';
 
-export const CoursesPage = () => {
+export const AboutPage = () => {
   return (
     <>
       <Header />

@@ -23,7 +23,7 @@ export const HeaderDrawer = (props) => {
             </HashLink>
           </li>
           <li onClick={props.onClose}>
-            <Link to="/courses">О колледже </Link>
+            <Link to="/about">О колледже </Link>
           </li>
         </ul>
       </Box>

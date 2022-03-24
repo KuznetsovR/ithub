@@ -22,21 +22,6 @@ export const Documents = () => {
   };
   return (
     <div className="container-document" id={'documents'}>
-
-      <DocumentModal open={openModal === 'doc1'} handleClose={setOpenModal}>
-        <img src={document1} className="document-photo" alt="documents" />
-      </DocumentModal>
-      <DocumentModal open={openModal === 'doc2'} handleClose={setOpenModal}>
-        <img src={document2} className="document-photo" alt="documents" />
-      </DocumentModal>
-      <DocumentModal open={openModal === 'doc3'} handleClose={setOpenModal}>
-        <img src={document3} className="document-photo" alt="documents" />
-      </DocumentModal>
-      <DocumentModal open={openModal === 'doc4'} handleClose={setOpenModal}>
-        <img src={document4} className="document-photo" alt="documents" />
-      </DocumentModal>
-
-
       <h1 className="text-title"> Сведения об образовательной организации </h1>
       <div className="content">
         <div className="text-conditions">
@@ -51,6 +36,18 @@ export const Documents = () => {
           <p>Действует отсрочка от армии.</p>
         </div>
         <div className="documents-slider-wrapper">
+          <DocumentModal open={openModal === 'doc1'} handleClose={setOpenModal}>
+            <img src={document1} className="document-photo" alt="documents" />
+          </DocumentModal>
+          <DocumentModal open={openModal === 'doc2'} handleClose={setOpenModal}>
+            <img src={document2} className="document-photo" alt="documents" />
+          </DocumentModal>
+          <DocumentModal open={openModal === 'doc3'} handleClose={setOpenModal}>
+            <img src={document3} className="document-photo" alt="documents" />
+          </DocumentModal>
+          <DocumentModal open={openModal === 'doc4'} handleClose={setOpenModal}>
+            <img src={document4} className="document-photo" alt="documents" />
+          </DocumentModal>
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="document-photo-container" onClick={() => setOpenModal('doc1')}>
