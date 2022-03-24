@@ -10,6 +10,7 @@ import {
   YandexMap,
   Admissions,
   OpenDay,
+ 
 } from '@components/export.components.js';
 
 export const MainPage = () => {
@@ -24,7 +25,8 @@ export const MainPage = () => {
           <Specialties />
           <Reviews />
           <Documents />
-          <YandexMap />
+          <YandexMap /> 
+         
         </div>
       </main>
       <Footer />
