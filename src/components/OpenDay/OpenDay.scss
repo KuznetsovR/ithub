@@ -88,6 +88,8 @@
   &::-webkit-scrollbar-thumb:active {
     background: rgba(175, 92, 204, 0.9);
   }
+  scrollbar-width: thin;
+  scrollbar-color: rgba(175, 92, 204, 0.5) rgba(175, 92, 204, 0.1);
 }
 .open-day-dates {
   margin-top: 10px;
