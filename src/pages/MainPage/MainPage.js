@@ -11,6 +11,7 @@ import {
   Admissions,
   OpenDay,
 } from '@components/export.components.js';
+import { Faq } from '../../components/Faq/Faq';
 
 export const MainPage = () => {
   return (
@@ -25,6 +26,7 @@ export const MainPage = () => {
           <Reviews />
           <Documents />
           <YandexMap />
+          <Faq />
         </div>
       </main>
       <Footer />
