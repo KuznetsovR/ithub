@@ -70,7 +70,14 @@ export const OpenDayModal = (props) => {
     )
       return;
     try {
-      await axios.post(API_PATH + '/open-day/', state);
+      const form = {
+        name: state.name,
+        phone: state.phone,
+        email: state.email,
+        date: state.date,
+        personalDataAccess: state.personalDataAccess,
+      };
+      await axios.post(API_PATH + '/open-day/', form);
       setState({
         name: '',
         nameTouched: false,
