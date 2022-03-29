@@ -13,7 +13,7 @@ export const Header = () => {
   });
   return (
     <header>
-      <Link to="/">
+      <Link to="/main">
         <img src={logo} className="logo-header" alt="ithub-logo" />
       </Link>
       <nav className="menu">
@@ -40,7 +40,7 @@ export const Header = () => {
             <Link to="/commission">Приёмная комиссия </Link>
           </li>
           <li>
-            <HashLink smooth to="/#specialities">
+            <HashLink smooth to="/main#specialities">
               Специальности
             </HashLink>
           </li>

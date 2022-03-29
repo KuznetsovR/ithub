@@ -15,9 +15,9 @@ export const Footer = () => {
           <div className="text-copyright">© Copyright 2021 ITHub Ekat college</div>
         </div>
         <div className="footer-text it-journey-container">
-          <Link to="/navigation" className="text-3d">
+          <a href="/" className="text-3d">
             ITJourney 3D
-          </Link>
+          </a>
         </div>
         <div className="footer-text">
           <div className="text-contacts">Контакты</div>
