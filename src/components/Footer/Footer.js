@@ -28,7 +28,7 @@ export const Footer = () => {
             <PhoneIcon fontSize="small" /> +7 (343) 286 78 59
           </div>
           <div className="footer-contact-info">
-            <a href="https://vk.com/ithub.ekat" target="_blank">
+            <a href="https://vk.com/ithub.ekat" target="_blank" rel="noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 38" width="27px" height="27px">
                 <path
                   fill="#1976d2"
