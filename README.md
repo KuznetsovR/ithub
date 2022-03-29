@@ -6,9 +6,19 @@ FrontEnd: Rubtsova Tatiana, Ezhova Nastya <br />
 3D modeling: Korobkov Stepan, Muraviev Bogdan <br />
 Project initialization: Dmitriy Vlasenko <br />
 
-# Navigation
+# Deploy
 
-Navigation page is a game, where user can travel around small world to reach destination where he will be redirected to corresponding page or to corresponding part of the main page
+### 2d
+
+Папка build содержит все файлы, которые будут использоваться в продакшене.
+<br>
+index.html - главная страница
+<br>
+about/index.html - страница о колледже
+<br>
+commission/index.html - страница приемной комиссии
+
+static - папка со статическими файлами, которые использует каждый из html файлов
 
 # Инструкция по добавлению нового контента
 
@@ -30,12 +40,12 @@ Navigation page is a game, where user can travel around small world to reach des
 ### День открытых дверей
 
 В компоненте `OpenDay.js` можно поменять дату следующего дня открытых дверей - изменить текст даты
-на 30 строке компонента в теге с классом `open-day-date`
+в теге с классом `open-day-date`
 
 #### День открытых дверей - модальное окно
 
 В модальном окне можно менять доступные для дня открытых дверей даты: <br /> <br />
-Компонент `OpenDayModal.js`, массив `availableDates` на 50 строке хранит в себе доступные даты
+Компонент `OpenDayModal.js`, массив `availableDates` хранит в себе доступные даты
 
 ### Выезд представителей в школы
 
@@ -60,18 +70,18 @@ Navigation page is a game, where user can travel around small world to reach des
 
 Текстовый контент секции документов изменяется в `Documents.js` в теге с классом `text-conditions`, сами документы можно изменить тем же образом, что описан в `Выезд представителей в школы`
 
- ## Страница приёмной комиссии
- 
-Импорт документов для скачивания - такой же, как и прежде. Чтобы изменить скачиваемый документ, нужно изменить атрибут to в теге `Link` (который находится в теге с классом `commission-links` и `mobile-commission-links`, т.е. изменить нужно в 2ух местах) на имя нового 
+## Страница приёмной комиссии
 
- ### Страница приёмной комиссии - форма
- 
+Импорт документов для скачивания - такой же, как и прежде. Чтобы изменить скачиваемый документ, нужно изменить атрибут to в теге `Link` (который находится в теге с классом `commission-links` и `mobile-commission-links`, т.е. изменить нужно в 2ух местах) на имя нового
+
+### Страница приёмной комиссии - форма
+
 Если нужно что-то изменить в любой из форм - пишите мне
 
- ## Страница курсов
- 
+## Страница курсов
+
 Описание курсов можно изменить в компоненте `Courses.js` в теге с классом `title-courses-description`
 
- ### Страница курсов - фотогалерея
- 
- Картинки в слайдерах меняются так же, как и в компонентах `Documents`, `OpenDay` 
+### Страница курсов - фотогалерея
+
+Картинки в слайдерах меняются так же, как и в компонентах `Documents`, `OpenDay`
