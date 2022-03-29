@@ -20,6 +20,17 @@ commission/index.html - страница приемной комиссии
 
 static - папка со статическими файлами, которые использует каждый из html файлов
 
+### API
+
+Папка files хранит в себе присланные с фронта файлы и формы
+OpenDayVisitors - Посетители дня открытых дверей
+Commission - Заявления на поступление в колледж
+
+bootstrap.js - Начальный файл сервера, именно с него начинается загрузка апи
+Путь к апи на виртуальной машине - home/i21s998/ithub-api/src/
+Вариант хоста на апаче: https://www.phusionpassenger.com/library/walkthroughs/deploy/nodejs/ownserver/apache/oss/trusty/deploy_app.html#edit-apache-configuration-file
+
+
 # Инструкция по добавлению нового контента
 
 Здесь описаны способы добавления или изменения контента на сайте
