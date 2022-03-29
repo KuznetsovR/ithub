@@ -22,12 +22,17 @@ static - папка со статическими файлами, которые
 
 ### API
 
-Папка files хранит в себе присланные с фронта файлы и формы
+Папка files хранит в себе присланные с фронта файлы и формы 
+<br>
 OpenDayVisitors - Посетители дня открытых дверей
+<br>
 Commission - Заявления на поступление в колледж
+<br>
 
 bootstrap.js - Начальный файл сервера, именно с него начинается загрузка апи
+<br>
 Путь к апи на виртуальной машине - home/i21s998/ithub-api/src/
+<br>
 Вариант хоста на апаче: https://www.phusionpassenger.com/library/walkthroughs/deploy/nodejs/ownserver/apache/oss/trusty/deploy_app.html#edit-apache-configuration-file
 
 
