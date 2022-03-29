@@ -1,0 +1,12 @@
+@use '../../styles/colors' as colors;
+.container-faq{
+    padding: 40px 0;
+    background-color: colors.$main-graphite;
+}
+.content-faq{
+    margin: 50px 40px 20px;
+}
+.text-title-faq{
+ font-weight: normal;
+ margin-left: 40px;
+}

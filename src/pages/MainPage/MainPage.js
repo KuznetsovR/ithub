@@ -10,6 +10,7 @@ import {
   YandexMap,
   Admissions,
   OpenDay,
+ 
 } from '@components/export.components.js';
 import { Faq } from '../../components/Faq/Faq';
 
