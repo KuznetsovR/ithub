@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.74cb2213.css",
-    "main.js": "/static/js/main.b48ccb1b.js",
+    "main.js": "/static/js/main.fead5e91.js",
     "static/media/courses2.png": "/static/media/courses2.c14859cf69356fa3c84d.png",
     "static/media/courses3.png": "/static/media/courses3.9e4dab70fcd369c469da.png",
     "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
@@ -22,10 +22,10 @@
     "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
     "index.html": "/index.html",
     "main.74cb2213.css.map": "/static/css/main.74cb2213.css.map",
-    "main.b48ccb1b.js.map": "/static/js/main.b48ccb1b.js.map"
+    "main.fead5e91.js.map": "/static/js/main.fead5e91.js.map"
   },
   "entrypoints": [
     "static/css/main.74cb2213.css",
-    "static/js/main.b48ccb1b.js"
+    "static/js/main.fead5e91.js"
   ]
 }
