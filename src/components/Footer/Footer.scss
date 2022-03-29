@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.it-journey-container{
+.it-journey-container {
   justify-content: center;
 }
 .logo-footer {
@@ -42,14 +42,18 @@
   text-align: center;
   padding: 10px 0;
 }
-.text-email {
+.footer-contact-info {
   font-size: 24px;
   text-decoration: none;
   text-align: center;
-  padding: 10px 0;
-}
-.text-phone {
-  padding: 10px 0;
+  padding: 5px 0;
+  a {
+    color: #fff;
+    text-decoration: none;
+    svg{
+      padding: 0 5px;
+    }
+  }
 }
 .text-3d {
   font-size: 25px;
