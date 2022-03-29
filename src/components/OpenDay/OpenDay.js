@@ -4,6 +4,7 @@ import { HexaButton } from '@components/export.components.js';
 import Slider from 'react-slick';
 import { SchoolModal } from '../SchoolModal/SchoolModal';
 import { OpenDayModal } from '../OpenDayModal/OpenDayModal';
+import photo5 from '../../assets/images/ithub.webp';
 
 export const OpenDay = () => {
   const settings = {
@@ -49,16 +50,16 @@ export const OpenDay = () => {
         </div>
       </div>
       <div className="schools-events">
-        <h3>Выезд представителей в школы</h3>
+        <h3>Мы ждём вас!</h3>
         <div className="open-day-slider-wrapper">
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="img-container">
-                <img className={'slide-img'} src="https://t1.unipage.net/src/c8849o.webp" alt="" />
+                <img className={'slide-img'} src={photo5} alt="" />
               </div>
-              <div className="event-description">22.04.2022</div>
+              <div className="event-description"></div>
             </div>
-            <div className={'slide'}>
+            {/* <div className={'slide'}>
               <div className="img-container">
                 <img className={'slide-img'} src="https://t1.unipage.net/src/co40ou.webp" alt="" />
               </div>
@@ -73,13 +74,13 @@ export const OpenDay = () => {
                 />
               </div>
               <div className="event-description">05.04.2022</div>
-            </div>
+            </div> */}
           </Slider>
         </div>
-        <div className="invite-btn-wrapper">
+        {/* <div className="invite-btn-wrapper">
           <HexaButton onClick={() => setModalOpen('schoolModal')}>Пригласить</HexaButton>
           <SchoolModal open={modalOpen === 'schoolModal'} handleClose={setModalOpen} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

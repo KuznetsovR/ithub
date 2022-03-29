@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './Courses.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
 import Slider from 'react-slick';
-import courses1 from '../../assets/images/courses1.png';
-import courses2 from '../../assets/images/courses2.png';
-import courses3 from '../../assets/images/courses3.png';
+import photo1 from '../../assets/images/krit.webp';
+import photo2 from '../../assets/images/it-hub.webp';
+import photo3 from '../../assets/images/23feb.webp';
+import photo4 from '../../assets/images/photo-1.webp';
 import { CoursesModal } from '../CoursesModal/CoursesModal';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -72,22 +73,22 @@ export const Courses = () => {
         <Slider {...settings}>
           <div className={'slide'}>
             <div className="courses-img-container">
-              <img src={courses1} alt="" className="courses-slide-img" />
+              <img src={photo4} alt="" className="courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
             <div className="courses-img-container">
-              <img src={courses2} alt="" className="courses-slide-img" />
+              <img src={photo1} alt="" className="courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
             <div className="courses-img-container">
-              <img src={courses3} alt="" className="courses-slide-img" />
+              <img src={photo3} alt="" className="courses-slide-img" />
             </div>
           </div>
           <div className={'slide'}>
             <div className="courses-img-container">
-              <img src={courses3} alt="" className="courses-slide-img" />
+              <img src={photo2} alt="" className="courses-slide-img" />
             </div>
           </div>
         </Slider>
