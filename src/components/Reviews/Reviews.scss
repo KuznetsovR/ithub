@@ -44,6 +44,15 @@
     bottom: -20px;
   }
 }
+.student-photo-1{
+  background-image: url(../../assets/images/ivan.webp);
+}
+.student-photo-2{
+  background-image: url(../../assets/images/yaroslav.webp);
+}
+.student-photo-3{
+  background-image: url(../../assets/images/pavel.webp);
+}
 @media (screen and max-width: 600px) {
   .all-reviews-rectangles {
     flex-direction: column;
