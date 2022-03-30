@@ -56,8 +56,8 @@ export const Courses = () => {
           <div className="title-courses">О колледже</div>
           <div className="title-courses-description">
             Колледж входит в
-            <Link to={'/moscow'}>
-              Академию информационных технологий IThub
+            <Link to={'/moscow'} className={'link-to-moscow'} target={'_blank'}>
+              {' '}Академию информационных технологий IThub
             </Link>
             , где можно получить востребованные IT-профессии на базе 9, 10 и 11 классов. IThub —
             образовательная система нового поколения, основанная на передовых цифровых технологиях. Наша сила
