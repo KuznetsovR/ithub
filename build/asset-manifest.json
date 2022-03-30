@@ -1,31 +1,39 @@
 {
   "files": {
-    "main.css": "/static/css/main.74cb2213.css",
-    "main.js": "/static/js/main.fead5e91.js",
-    "static/media/courses2.png": "/static/media/courses2.c14859cf69356fa3c84d.png",
-    "static/media/courses3.png": "/static/media/courses3.9e4dab70fcd369c469da.png",
+    "main.css": "/static/css/main.54d7f820.css",
+    "main.js": "/static/js/main.a93f8443.js",
     "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
     "static/media/document_1.jpg": "/static/media/document_1.89ac996f75d17aa7f060.jpg",
-    "static/media/courses1.png": "/static/media/courses1.d562250d875821b524c6.png",
     "static/media/document_2.webp": "/static/media/document_2.d3d2b458ec7240f173f6.webp",
+    "static/media/ithub.webp": "/static/media/ithub.ba5011684992473b9936.webp",
+    "static/media/ApplicationExample.rtf": "/static/media/ApplicationExample.9a2908935c6d0cb4fad8.rtf",
     "static/media/document_4.webp": "/static/media/document_4.b2d96cd1d03a7daa3c6b.webp",
+    "static/media/krit.webp": "/static/media/krit.eb824552677d2588cb31.webp",
+    "static/media/photo-1.webp": "/static/media/photo-1.242ba70d489116c1394c.webp",
+    "static/media/it-hub.webp": "/static/media/it-hub.5e83776fc756e85f2341.webp",
+    "static/media/DogovorSPO.docx": "/static/media/DogovorSPO.b24a09bef8fda370f3b1.docx",
+    "static/media/DogovorSPO18.docx": "/static/media/DogovorSPO18.15904a302a8205cd5680.docx",
+    "static/media/23feb.webp": "/static/media/23feb.5daf16936dfa946e21c2.webp",
+    "static/media/yaroslav.webp": "/static/media/yaroslav.0849d1bcea829f387464.webp",
     "static/media/IThublogo.png": "/static/media/IThublogo.3f2e17a2ba3f1a8d0302.png",
+    "static/media/ivan.webp": "/static/media/ivan.a84504368260c232bc96.webp",
     "static/media/web_dev.webp": "/static/media/web_dev.837a806f22c98630eee9.webp",
     "static/media/coder.webp": "/static/media/coder.01d458026e69e593f5d0.webp",
     "static/media/sys_adm.webp": "/static/media/sys_adm.4621e81fa1e98a0d7ea5.webp",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/pavel.webp": "/static/media/pavel.117c07bb62056d741ca9.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/courses-text-container.svg": "/static/media/courses-text-container.a08b933b6423905e8be0.svg",
     "static/media/admissions-text-container.svg": "/static/media/admissions-text-container.fcba7f89ea6157318a70.svg",
+    "static/media/courses-text-container.svg": "/static/media/courses-text-container.2f2a1aa32ec27e2d8904.svg",
     "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
     "index.html": "/index.html",
-    "main.74cb2213.css.map": "/static/css/main.74cb2213.css.map",
-    "main.fead5e91.js.map": "/static/js/main.fead5e91.js.map"
+    "main.54d7f820.css.map": "/static/css/main.54d7f820.css.map",
+    "main.a93f8443.js.map": "/static/js/main.a93f8443.js.map"
   },
   "entrypoints": [
-    "static/css/main.74cb2213.css",
-    "static/js/main.fead5e91.js"
+    "static/css/main.54d7f820.css",
+    "static/js/main.a93f8443.js"
   ]
 }

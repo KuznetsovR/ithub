@@ -19,7 +19,9 @@ about/index.html - страница о колледже
 commission/index.html - страница приемной комиссии
 
 static - папка со статическими файлами, которые использует каждый из html файлов
+<br>
 
+src/constants/API_PATH - файл с константой пути до апи. Его нужно поменять, если изменится путь до апи (сейчас http://10.3.21.1:1337/api)
 ### 3d
 
 Папка dist содержит все файлы, которые будут использоваться в продакшене.
@@ -44,9 +46,6 @@ Commission - Заявления на поступление в колледж
 bootstrap.js - Начальный файл сервера, именно с него начинается загрузка апи
 <br>
 Путь к апи на виртуальной машине - home/i21s998/ithub-api/src/
-<br>
-Вариант хоста на апаче: https://www.phusionpassenger.com/library/walkthroughs/deploy/nodejs/ownserver/apache/oss/trusty/deploy_app.html#edit-apache-configuration-file
-
 
 # Инструкция по добавлению нового контента
 

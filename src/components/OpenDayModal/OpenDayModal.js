@@ -47,8 +47,10 @@ export const OpenDayModal = (props) => {
     },
   };
   const [state, setState] = useState({
-    name: '',
-    nameTouched: false,
+    childName: '',
+    childNameTouched: false,
+    parentName: '',
+    parentNameTouched: false,
     phone: '',
     phoneTouched: false,
     email: '',
@@ -62,7 +64,8 @@ export const OpenDayModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     if (
-      !validateName(state.name) ||
+      !validateName(state.childName) ||
+      !validateName(state.parentName) ||
       !validatePhone(state.phone) ||
       !validateEmail(state.email) ||
       !state.date.length ||
@@ -71,7 +74,8 @@ export const OpenDayModal = (props) => {
       return;
     try {
       const form = {
-        name: state.name,
+        childName: state.childName,
+        parentName: state.parentName,
         phone: state.phone,
         email: state.email,
         date: state.date,
@@ -79,8 +83,10 @@ export const OpenDayModal = (props) => {
       };
       await axios.post(API_PATH + '/open-day/', form);
       setState({
-        name: '',
-        nameTouched: false,
+        childName: '',
+        childNameTouched: false,
+        parentName: '',
+        parentNameTouched: false,
         phone: '',
         phoneTouched: false,
         email: '',
@@ -139,15 +145,28 @@ export const OpenDayModal = (props) => {
             <form onSubmit={sendForm}>
               <div className="open-day-flex-column">
                 <TextField
-                  error={!validateName(state.name) && state.nameTouched}
+                  error={!validateName(state.childName) && state.childNameTouched}
                   sx={inputOptions}
-                  label="ФИО"
+                  label="ФИО абитуриента"
                   color="secondary"
                   variant="outlined"
-                  value={state.name}
+                  value={state.childName}
                   autoComplete={'off'}
-                  onChange={(e) => setState({ ...state, name: e.target.value })}
-                  onBlur={() => setState({ ...state, nameTouched: true })}
+                  onChange={(e) => setState({ ...state, childName: e.target.value })}
+                  onBlur={() => setState({ ...state, childNameTouched: true })}
+                />
+              </div>
+              <div className="open-day-flex-column">
+                <TextField
+                  error={!validateName(state.parentName) && state.parentNameTouched}
+                  sx={inputOptions}
+                  label="ФИО родителя"
+                  color="secondary"
+                  variant="outlined"
+                  value={state.parentName}
+                  autoComplete={'off'}
+                  onChange={(e) => setState({ ...state, parentName: e.target.value })}
+                  onBlur={() => setState({ ...state, parentNameTouched: true })}
                 />
               </div>
               <div className="open-day-flex-row">
@@ -167,7 +186,7 @@ export const OpenDayModal = (props) => {
                 <TextField
                   error={!validateEmail(state.email) && state.emailTouched}
                   sx={inputOptions}
-                  label="Почта"
+                  label="Электронная почта"
                   color="secondary"
                   variant="outlined"
                   value={state.email}
@@ -180,11 +199,11 @@ export const OpenDayModal = (props) => {
 
               <div className="open-day-flex-row">
                 <FormControl fullWidth error={!state.date && state.dateTouched}>
-                  <InputLabel id="open-day-date-select">Дата</InputLabel>
+                  <InputLabel id="open-day-date-select">Дата и время</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    label="Дата"
+                    label="Дата и время"
                     value={state.date}
                     color="secondary"
                     variant="outlined"
@@ -224,7 +243,7 @@ export const OpenDayModal = (props) => {
               <div className="open-day-btn-wrapper">
                 <HexaButton
                   disabled={
-                    !validateName(state.name) ||
+                    !validateName(state.childName) ||
                     !validatePhone(state.phone) ||
                     !validateEmail(state.email) ||
                     !state.date.length ||

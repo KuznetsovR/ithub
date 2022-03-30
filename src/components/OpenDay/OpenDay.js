@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './OpenDay.scss';
 import { HexaButton } from '@components/export.components.js';
 import Slider from 'react-slick';
-import { SchoolModal } from '../SchoolModal/SchoolModal';
 import { OpenDayModal } from '../OpenDayModal/OpenDayModal';
 import photo5 from '../../assets/images/ithub.webp';
 
@@ -30,11 +29,7 @@ export const OpenDay = () => {
             <div className="open-day-dates">
               <ul className="open-day-dates-list">
                 {availableDates.map((el, index) => {
-                  return (
-                    <li key={index}>
-                      {el}
-                    </li>
-                  );
+                  return <li key={index}>{el}</li>;
                 })}
               </ul>
             </div>
@@ -55,9 +50,8 @@ export const OpenDay = () => {
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="img-container">
-                <img className={'slide-img'} src={photo5} alt="" />
+                <img className={'slide-img'} style={{ height: '250px' }} src={photo5} alt="" />
               </div>
-              <div className="event-description"></div>
             </div>
             {/* <div className={'slide'}>
               <div className="img-container">
