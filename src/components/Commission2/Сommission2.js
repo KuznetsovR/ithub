@@ -242,7 +242,7 @@ export const Commission2 = () => {
             />
           </div>
 
-          <div className="allowed-formats">Доступные форматы: .doc .docx .rtf .pdf .odt .jpeg .png .gif</div>
+          <div className="allowed-formats">Доступные форматы: .doc .docx .rtf .pdf .odt .jpeg .png .gif .zip</div>
 
           <div className="share-checkbox">
             <FormControlLabel
