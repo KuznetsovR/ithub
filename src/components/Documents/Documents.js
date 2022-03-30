@@ -33,7 +33,7 @@ export const Documents = () => {
             прошли государственную аккредитацию (Свид. № от 004965).
           </p>
           <p>Выпускники получают дипломы государственного образца.</p>
-          <p>Действует отсрочка от армии.</p>
+          <p>Предоставляется отсрочка от армии.</p>
         </div>
         <div className="documents-slider-wrapper">
           <DocumentModal open={openModal === 'doc1'} handleClose={setOpenModal}>

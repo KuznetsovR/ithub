@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Courses.scss';
-import { HexaButton } from '../HexaButton/HexaButton';
 import Slider from 'react-slick';
 import photo1 from '../../assets/images/krit.webp';
 import photo2 from '../../assets/images/it-hub.webp';
 import photo3 from '../../assets/images/23feb.webp';
 import photo4 from '../../assets/images/photo-1.webp';
-import { CoursesModal } from '../CoursesModal/CoursesModal';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Courses = () => {
@@ -20,7 +18,6 @@ export const Courses = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
-  const [modalOpen, setModalOpen] = useState(false);
   const isTablet = useMediaQuery('(max-width: 1000px)');
   const isPhone = useMediaQuery('(max-width: 500px)');
   if (isTablet) {
@@ -56,17 +53,17 @@ export const Courses = () => {
           </div>
         </div>
         <div className="preparatory-courses-description">
-          <div className="title-courses">Время</div>
+          <div className="title-courses">Учебный год</div>
         <div className="title-courses-description">
          Учимся 10 месяцев в году. У нас две экзаменационные сессии: зимняя в декабре, летняя в июне. В июле и августе отдыхаем.
 
         </div>
         <div className="title-courses"> Место</div>
-        <div className="title-courses-description">Улица Чкалова, 3 (3 этаж)</div>
-        <div className="title-courses">Процесс</div>
+        <div className="title-courses-description">Екатеринбург, улица Чкалова, 3 (3 этаж)</div>
+        <div className="title-courses">Образовательный процесс</div>
         <div className="title-courses-description">Занятия начинаются в 9:00. Одна пара длится полтора часа. В день 3-4 пары. Вечер будет свободен для проектов, отдыха и общения!
 </div>
-        </div> 
+        </div>
         </div>
       <div className="courses-photo-gallery">
         <h1 className="title-photo-gallery">Фотогаларея</h1>

@@ -30,9 +30,9 @@ const AccordionSummary = styled((props) => (
   borderRadius: '10px',
   borderColor: 'rgba(26,26,26)',
   flexDirection: 'row-reverse',
-  
+
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',           
+    transform: 'rotate(90deg)',
     color: 'rgba(255,255,255)',
   },
   '& .MuiAccordionSummary-content': {
@@ -65,7 +65,7 @@ export function FaqAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Улица Чкалова, 3 (3 этаж)
+            Екатеринбург, Улица Чкалова, 3 (3 этаж)
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -85,7 +85,7 @@ export function FaqAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Стоимость обучения на 2022-2023 год: 15 000₽ в месяц
+            Стоимость обучения за 2022-2023 год: 150 000₽
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -124,7 +124,7 @@ export function FaqAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Да, можно. Мы составили <a href="https://ithub.ru/design/images/MatKapital.pdf"> инструкцию, как это сделать</a> 
+          Да, можно. Мы составили <a href="https://ithub.ru/design/images/MatKapital.pdf"> инструкцию, как это сделать</a>
  </Typography>
         </AccordionDetails>
       </Accordion>
@@ -134,7 +134,7 @@ export function FaqAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Действуйте по <a href="https://ithub.ru/design/images/nalogvichet.pdf"> инструкции</a> 
+          Действуйте по <a href="https://ithub.ru/design/images/nalogvichet.pdf"> инструкции</a>
  </Typography>
         </AccordionDetails>
       </Accordion>
