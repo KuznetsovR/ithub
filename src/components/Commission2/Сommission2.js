@@ -35,8 +35,7 @@ export const Commission2 = () => {
     phoneTouched: false,
     email: '',
     emailTouched: false,
-    passportPhoto: null,
-    schoolRecordsPhoto: null,
+    dogovorSPO: null,
     application: null,
     personalDataAccess: false,
     openNotification: '',
@@ -50,7 +49,7 @@ export const Commission2 = () => {
       !validateName(state.parentName) ||
       !validatePhone(state.phone) ||
       !validateEmail(state.email) ||
-      !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
+      !validateFiles([state.dogovorSPO, state.application]) ||
       !state.personalDataAccess
     )
       return;
@@ -62,8 +61,7 @@ export const Commission2 = () => {
       formData.append('phone', state.phone);
       formData.append('email', state.email);
       formData.append('personalDataAccess', state.personalDataAccess);
-      formData.append('files', state.passportPhoto, state.passportPhoto?.name);
-      formData.append('files', state.schoolRecordsPhoto, state.schoolRecordsPhoto?.name);
+      formData.append('files', state.dogovorSPO, state.dogovorSPO?.name);
       formData.append('files', state.application, state.application?.name);
       await axios.post(API_PATH + '/commission', formData);
       clearFiles();
@@ -77,8 +75,7 @@ export const Commission2 = () => {
         phoneTouched: false,
         email: '',
         emailTouched: false,
-        passportPhoto: null,
-        schoolRecordsPhoto: null,
+        dogovorSPO: null,
         application: null,
         personalDataAccess: false,
         openNotification: 'success',
@@ -99,8 +96,8 @@ export const Commission2 = () => {
   };
 
   const setAllTouched = () => {
-    const newPassportPhoto = state.passportPhoto || undefined;
-    const newSchoolRecordsPhoto = state.schoolRecordsPhoto || undefined;
+    console.log(state.application.size);
+    const newDogovorSPO = state.dogovorSPO || undefined;
     const newApplication = state.application || undefined;
     setState({
       ...state,
@@ -108,8 +105,7 @@ export const Commission2 = () => {
       parentNameTouched: true,
       phoneTouched: true,
       emailTouched: true,
-      passportPhoto: newPassportPhoto,
-      schoolRecordsPhoto: newSchoolRecordsPhoto,
+      dogovorSPO: newDogovorSPO,
       application: newApplication,
     });
   };
@@ -124,6 +120,8 @@ export const Commission2 = () => {
     });
   };
 
+  const fileMaxSize = 5242880; //5MB
+
   return (
     <div className="shape-case">
       <div className="text-shape-head"> Подать документы</div>
@@ -135,7 +133,7 @@ export const Commission2 = () => {
               value={state.childName}
               id="outlined-basic"
               sx={inputOptions}
-              label="ФИО ребёнка"
+              label="ФИО абитуриента"
               color="secondary"
               variant="outlined"
               autoComplete={'off'}
@@ -191,34 +189,16 @@ export const Commission2 = () => {
             <div
               className="file-name"
               style={{
-                color: state.passportPhoto === null || validateFiles([state.passportPhoto]) ? '' : 'red',
+                color: state.dogovorSPO === null || validateFiles([state.dogovorSPO]) ? '' : 'red',
               }}
             >
-              Фото паспорта
+              Договор СПО
             </div>
             <FileUpload
               onChange={(e) => {
                 setState({
                   ...state,
-                  passportPhoto: e.target.files[0],
-                  fileEvents: [...state.fileEvents, e],
-                });
-              }}
-            />
-            <div
-              className="file-name"
-              style={{
-                color:
-                  state.schoolRecordsPhoto === null || validateFiles([state.schoolRecordsPhoto]) ? '' : 'red',
-              }}
-            >
-              Фото аттестата
-            </div>
-            <FileUpload
-              onChange={(e) => {
-                setState({
-                  ...state,
-                  schoolRecordsPhoto: e.target.files[0],
+                  dogovorSPO: e.target.files[0],
                   fileEvents: [...state.fileEvents, e],
                 });
               }}
@@ -242,7 +222,12 @@ export const Commission2 = () => {
             />
           </div>
 
-          <div className="allowed-formats">Доступные форматы: .doc .docx .rtf .pdf .odt .jpeg .png .gif .zip</div>
+          <div className="allowed-formats">
+            Доступные форматы: .doc .docx .rtf .pdf .odt .jpeg .png .gif .zip
+          </div>
+          {state?.application?.size > fileMaxSize || state?.dogovorSPO?.size > fileMaxSize ? (
+            <div className={'max-file-size-hint'}>Максимальный размер файла - 5МБ</div>
+          ) : null}
 
           <div className="share-checkbox">
             <FormControlLabel
@@ -271,7 +256,7 @@ export const Commission2 = () => {
                 !validateName(state.parentName) ||
                 !validatePhone(state.phone) ||
                 !validateEmail(state.email) ||
-                !validateFiles([state.passportPhoto, state.schoolRecordsPhoto, state.application]) ||
+                !validateFiles([state.dogovorSPO, state.application]) ||
                 !state.personalDataAccess
               }
               onClick={(e) => setAllTouched(e)}
