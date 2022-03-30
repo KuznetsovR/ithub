@@ -177,7 +177,7 @@ export const Commission2 = () => {
               value={state.email}
               id="outlined-basic"
               sx={inputOptions}
-              label="Почта"
+              label="Электронная почта"
               color="secondary"
               type={'email'}
               variant="outlined"

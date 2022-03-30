@@ -167,7 +167,7 @@ export const OpenDayModal = (props) => {
                 <TextField
                   error={!validateEmail(state.email) && state.emailTouched}
                   sx={inputOptions}
-                  label="Почта"
+                  label="Электронная почта"
                   color="secondary"
                   variant="outlined"
                   value={state.email}
@@ -180,7 +180,7 @@ export const OpenDayModal = (props) => {
 
               <div className="open-day-flex-row">
                 <FormControl fullWidth error={!state.date && state.dateTouched}>
-                  <InputLabel id="open-day-date-select">Дата</InputLabel>
+                  <InputLabel id="open-day-date-select">Дата и время</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
