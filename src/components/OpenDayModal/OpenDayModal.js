@@ -184,7 +184,7 @@ export const OpenDayModal = (props) => {
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    label="Дата"
+                    label="Дата и время"
                     value={state.date}
                     color="secondary"
                     variant="outlined"
