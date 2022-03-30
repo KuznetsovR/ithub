@@ -8,6 +8,7 @@ export const Reviews = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
     speed: 1300,
     autoplaySpeed: 5000,
     arrows: false,
