@@ -6,7 +6,6 @@ import photo2 from '../../assets/images/it-hub.webp';
 import photo3 from '../../assets/images/23feb.webp';
 import photo4 from '../../assets/images/photo-1.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Link } from 'react-router-dom';
 
 export const Courses = () => {
   const settings = {
@@ -55,10 +54,10 @@ export const Courses = () => {
         <div className="preparatory-courses-description">
           <div className="title-courses">О колледже</div>
           <div className="title-courses-description">
-            Колледж входит в
-            <Link to={'/moscow'} className={'link-to-moscow'} target={'_blank'}>
-              {' '}Академию информационных технологий IThub
-            </Link>
+            Колледж входит в{' '}
+            <a href="https://ithub.ru/" target="_blank" rel="noreferrer" className={'link-to-moscow'}>
+              Академию информационных технологий IThub
+            </a>
             , где можно получить востребованные IT-профессии на базе 9, 10 и 11 классов. IThub —
             образовательная система нового поколения, основанная на передовых цифровых технологиях. Наша сила
             — в интенсивной программе обучения и практикоориентированности.
