@@ -6,6 +6,7 @@ import photo2 from '../../assets/images/it-hub.webp';
 import photo3 from '../../assets/images/23feb.webp';
 import photo4 from '../../assets/images/photo-1.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { Link } from 'react-router-dom';
 
 export const Courses = () => {
   const settings = {
@@ -28,7 +29,7 @@ export const Courses = () => {
   }
   return (
     <div>
-    <div className="block-preparatory-courses">
+      <div className="block-preparatory-courses">
         {/* <div className="preparatory-courses-square-container">
           <div className="preparatory-courses-square">
             <div className="title-preparatory-courses">Подготовительные курсы</div>
@@ -45,26 +46,37 @@ export const Courses = () => {
             <HexaButton onClick={() => setModalOpen(true)}>Записаться</HexaButton>
             <CoursesModal open={modalOpen} handleClose={setModalOpen} />
           </div>
-        </div> */
-        }
+        </div> */}
         <div className="preparatory-courses-square-container">
           <div className="preparatory-courses-square">
             <div className="title-preparatory-courses">О колледже</div>
           </div>
         </div>
         <div className="preparatory-courses-description">
+          <div className="title-courses">О колледже</div>
+          <div className="title-courses-description">
+            Колледж входит в
+            <Link to={'/moscow'}>
+              Академию информационных технологий IThub
+            </Link>
+            , где можно получить востребованные IT-профессии на базе 9, 10 и 11 классов. IThub —
+            образовательная система нового поколения, основанная на передовых цифровых технологиях. Наша сила
+            — в интенсивной программе обучения и практикоориентированности.
+          </div>
           <div className="title-courses">Учебный год</div>
-        <div className="title-courses-description">
-         Учимся 10 месяцев в году. У нас две экзаменационные сессии: зимняя в декабре, летняя в июне. В июле и августе отдыхаем.
-
+          <div className="title-courses-description">
+            Учимся 10 месяцев в году. У нас две экзаменационные сессии: зимняя в декабре, летняя в июне. В
+            июле и августе отдыхаем.
+          </div>
+          <div className="title-courses"> Место</div>
+          <div className="title-courses-description">Екатеринбург, улица Чкалова, 3 (3 этаж)</div>
+          <div className="title-courses">Образовательный процесс</div>
+          <div className="title-courses-description">
+            Занятия начинаются в 9:00. Одна пара длится полтора часа. В день 3-4 пары. Вечер будет свободен
+            для проектов, отдыха и общения!
+          </div>
         </div>
-        <div className="title-courses"> Место</div>
-        <div className="title-courses-description">Екатеринбург, улица Чкалова, 3 (3 этаж)</div>
-        <div className="title-courses">Образовательный процесс</div>
-        <div className="title-courses-description">Занятия начинаются в 9:00. Одна пара длится полтора часа. В день 3-4 пары. Вечер будет свободен для проектов, отдыха и общения!
-</div>
-        </div>
-        </div>
+      </div>
       <div className="courses-photo-gallery">
         <h1 className="title-photo-gallery">Фотогаларея</h1>
         <Slider {...settings}>
