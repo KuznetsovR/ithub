@@ -5,6 +5,10 @@ import photo1 from '../../assets/images/krit.webp';
 import photo2 from '../../assets/images/it-hub.webp';
 import photo3 from '../../assets/images/23feb.webp';
 import photo4 from '../../assets/images/photo-1.webp';
+import photo5 from '../../assets/images/a2.webp';
+import photo6 from '../../assets/images/teatr.webp';
+import photo7 from '../../assets/images/myzei.webp';
+import photo8 from '../../assets/images/myzei-2.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Courses = () => {
@@ -97,6 +101,26 @@ export const Courses = () => {
           <div className={'slide'}>
             <div className="courses-img-container">
               <img src={photo2} alt="" className="courses-slide-img" />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="courses-img-container">
+              <img src={photo5} alt="" className="courses-slide-img" />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="courses-img-container">
+              <img src={photo6} alt="" className="courses-slide-img" />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="courses-img-container">
+              <img src={photo7} alt="" className="courses-slide-img" />
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="courses-img-container">
+              <img src={photo8} alt="" className="courses-slide-img" />
             </div>
           </div>
         </Slider>

@@ -19,6 +19,7 @@ export const DocumentModal = (props) => {
     bgcolor: 'rgb(30,29,29)',
     border: '1px solid #000',
     borderRadius: 3,
+    textAlign: 'center',
   };
   return (
     <Modal

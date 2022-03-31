@@ -40,10 +40,30 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
+              <div className="student-photo student-photo-4" />
+              <div className="reviews-text">
+                <p>Сергей (3 курс)</p>
+                <p className="reviews-text-2"> Сергей - в целом, доставляет результат и это главное. Креативен, хорош в поддержке команды. Всегда (!) находит решение. </p>
+                <p className="reviews-text-3">[ Ярослав Минуллин, компания Енерсофт ]</p>
+              </div>
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="all-reviews-rectangles">
               <div className="student-photo student-photo-3" />
               <div className="reviews-text">
                 <p>Павел (3 курс)</p>
-                <p className="reviews-text-2">У Павла удивительное сочетание рабочих и персональных качеств. Ответственный, нацеленный на результат, заряженный. Хорошая логика и критическое мышление</p>
+                <p className="reviews-text-2">У Павла удивительное сочетание рабочих и персональных качеств. Ответственный, нацеленный на результат, заряженный. Хорошая логика и критическое мышление.</p>
+                <p className="reviews-text-3">[ Ярослав Минуллин, компания Енерсофт ]</p>
+              </div>
+            </div>
+          </div>
+          <div className={'slide'}>
+            <div className="all-reviews-rectangles">
+              <div className="student-photo student-photo-3" />
+              <div className="reviews-text">
+                <p>Кирилл (3 курс)</p>
+                <p className="reviews-text-2">Кирилл - отличный командный игрок. Очень неплохое знание React, общая эрудированность. Может работать за рамками своей компетенции. Иногда утирал носы MID’ам из аутстаффинга.</p>
                 <p className="reviews-text-3">[ Ярослав Минуллин, компания Енерсофт ]</p>
               </div>
             </div>
