@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.54d7f820.css",
-    "main.js": "/static/js/main.8f9dbe6c.js",
+    "main.css": "/static/css/main.86d82ad0.css",
+    "main.js": "/static/js/main.311a8031.js",
     "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
     "static/media/document_1.jpg": "/static/media/document_1.89ac996f75d17aa7f060.jpg",
     "static/media/document_2.webp": "/static/media/document_2.d3d2b458ec7240f173f6.webp",
@@ -13,7 +13,13 @@
     "static/media/it-hub.webp": "/static/media/it-hub.5e83776fc756e85f2341.webp",
     "static/media/DogovorSPO.docx": "/static/media/DogovorSPO.b24a09bef8fda370f3b1.docx",
     "static/media/DogovorSPO18.docx": "/static/media/DogovorSPO18.15904a302a8205cd5680.docx",
+    "static/media/myzei-2.webp": "/static/media/myzei-2.2add431907e045fc3e49.webp",
+    "static/media/a2.webp": "/static/media/a2.6db6013dc0da234079ec.webp",
+    "static/media/myzei.webp": "/static/media/myzei.3fdf4eda4494416de3d3.webp",
     "static/media/23feb.webp": "/static/media/23feb.5daf16936dfa946e21c2.webp",
+    "static/media/teatr.webp": "/static/media/teatr.3d16bbd50fe3dc0b8abd.webp",
+    "static/media/ph.webp": "/static/media/ph.e8218c36114060a0c483.webp",
+    "static/media/sergei.webp": "/static/media/sergei.8e4903727a04242ee04b.webp",
     "static/media/yaroslav.webp": "/static/media/yaroslav.0849d1bcea829f387464.webp",
     "static/media/IThublogo.png": "/static/media/IThublogo.3f2e17a2ba3f1a8d0302.png",
     "static/media/ivan.webp": "/static/media/ivan.a84504368260c232bc96.webp",
@@ -23,17 +29,16 @@
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/pavel.webp": "/static/media/pavel.117c07bb62056d741ca9.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/admissions-text-container.svg": "/static/media/admissions-text-container.fcba7f89ea6157318a70.svg",
-    "static/media/courses-text-container.svg": "/static/media/courses-text-container.2f2a1aa32ec27e2d8904.svg",
+    "static/media/courses-text-container.svg": "/static/media/courses-text-container.950922fbc965cc245952.svg",
     "index.html": "/index.html",
     "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
-    "main.54d7f820.css.map": "/static/css/main.54d7f820.css.map",
-    "main.8f9dbe6c.js.map": "/static/js/main.8f9dbe6c.js.map"
+    "main.86d82ad0.css.map": "/static/css/main.86d82ad0.css.map",
+    "main.311a8031.js.map": "/static/js/main.311a8031.js.map"
   },
   "entrypoints": [
-    "static/css/main.54d7f820.css",
-    "static/js/main.8f9dbe6c.js"
+    "static/css/main.86d82ad0.css",
+    "static/js/main.311a8031.js"
   ]
 }
