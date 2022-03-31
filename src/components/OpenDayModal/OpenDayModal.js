@@ -14,7 +14,6 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
-import { API_PATH } from '../../constants/API_PATH';
 import { validateName } from '../../validators/name-validator';
 import { validatePhone } from '../../validators/phone-validator';
 import { validateEmail } from '../../validators/email-validator';
@@ -81,7 +80,7 @@ export const OpenDayModal = (props) => {
         date: state.date,
         personalDataAccess: state.personalDataAccess,
       };
-      await axios.post(API_PATH + '/open-day/', form);
+      await axios.post(window.API_PATH + '/open-day/', form);
       setState({
         childName: '',
         childNameTouched: false,

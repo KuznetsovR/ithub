@@ -10,7 +10,6 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { HexaButton } from '../HexaButton/HexaButton';
 import axios from 'axios';
-import { API_PATH } from '../../constants/API_PATH';
 
 export const CoursesModal = (props) => {
   const style = {
@@ -48,7 +47,7 @@ export const CoursesModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(API_PATH + '/courses/', state)
+      await axios.post(window.API_PATH + '/courses/', state)
       setState({
         childName: '',
         parentName: '',
