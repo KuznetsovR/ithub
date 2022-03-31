@@ -7,7 +7,6 @@ import { purple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import { FileUpload } from '../FileUpload/FileUpload';
 import axios from 'axios';
-import { API_PATH } from '../../constants/API_PATH';
 import { validateName } from '../../validators/name-validator';
 import { validatePhone } from '../../validators/phone-validator';
 import { validateEmail } from '../../validators/email-validator';
@@ -63,7 +62,7 @@ export const Commission2 = () => {
       formData.append('personalDataAccess', state.personalDataAccess);
       formData.append('files', state.dogovorSPO, state.dogovorSPO?.name);
       formData.append('files', state.application, state.application?.name);
-      await axios.post(API_PATH + '/commission', formData);
+      await axios.post(window.API_PATH + '/commission', formData);
       clearFiles();
 
       setState({

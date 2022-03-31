@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.54d7f820.css",
-    "main.js": "/static/js/main.a93f8443.js",
+    "main.js": "/static/js/main.8f9dbe6c.js",
     "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
     "static/media/document_1.jpg": "/static/media/document_1.89ac996f75d17aa7f060.jpg",
     "static/media/document_2.webp": "/static/media/document_2.d3d2b458ec7240f173f6.webp",
@@ -27,13 +27,13 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/admissions-text-container.svg": "/static/media/admissions-text-container.fcba7f89ea6157318a70.svg",
     "static/media/courses-text-container.svg": "/static/media/courses-text-container.2f2a1aa32ec27e2d8904.svg",
-    "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
     "index.html": "/index.html",
+    "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
     "main.54d7f820.css.map": "/static/css/main.54d7f820.css.map",
-    "main.a93f8443.js.map": "/static/js/main.a93f8443.js.map"
+    "main.8f9dbe6c.js.map": "/static/js/main.8f9dbe6c.js.map"
   },
   "entrypoints": [
     "static/css/main.54d7f820.css",
-    "static/js/main.a93f8443.js"
+    "static/js/main.8f9dbe6c.js"
   ]
 }
