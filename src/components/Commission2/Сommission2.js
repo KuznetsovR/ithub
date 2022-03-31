@@ -95,7 +95,6 @@ export const Commission2 = () => {
   };
 
   const setAllTouched = () => {
-    console.log(state.application.size);
     const newDogovorSPO = state.dogovorSPO || undefined;
     const newApplication = state.application || undefined;
     setState({
