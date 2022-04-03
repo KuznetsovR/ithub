@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutPage.scss';
-import { Courses, Footer, Header, Phone } from '@components/export.components.js';
+import { About, Footer, Header, Phone } from '@components/export.components.js';
 
 export const AboutPage = () => {
   return (
@@ -9,7 +9,7 @@ export const AboutPage = () => {
       <main>
         <Phone />
         <div className="container">
-          <Courses />
+          <About />
         </div>
       </main>
       <Footer />

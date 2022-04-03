@@ -1,5 +1,5 @@
 export { Admissions } from './Admissions/Admissions.js';
-export { Courses } from './Courses/Courses.js';
+export { About } from './About/About.js';
 export { Commission1 } from './Commission1/Сommission1';
 export { Commission2 } from './Commission2/Сommission2';
 export { Documents } from './Documents/Documents.js';

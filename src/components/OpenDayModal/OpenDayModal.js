@@ -108,7 +108,8 @@ export const OpenDayModal = (props) => {
   const setAllTouched = () => {
     setState({
       ...state,
-      nameTouched: true,
+      childNameTouched: true,
+      parentNameTouched: true,
       phoneTouched: true,
       emailTouched: true,
       dateTouched: true,
@@ -207,6 +208,9 @@ export const OpenDayModal = (props) => {
                     color="secondary"
                     variant="outlined"
                     onChange={(e) => setState({ ...state, date: e.target.value })}
+                    sx={{
+                      color: '#fff',
+                    }}
                   >
                     {props.availableDates.map((el, index) => {
                       return (

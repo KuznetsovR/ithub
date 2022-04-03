@@ -1,5 +1,5 @@
 import React from 'react';
-import './Courses.scss';
+import './About.scss';
 import Slider from 'react-slick';
 import photo1 from '../../assets/images/krit.webp';
 import photo2 from '../../assets/images/it-hub.webp';
@@ -11,7 +11,7 @@ import photo7 from '../../assets/images/myzei.webp';
 import photo8 from '../../assets/images/myzei-2.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const Courses = () => {
+export const About = () => {
   const settings = {
     dots: true,
     infinite: true,

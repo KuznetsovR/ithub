@@ -7,18 +7,14 @@ import { HashLink } from 'react-router-hash-link';
 
 export const HeaderDrawer = (props) => {
   return (
-    <Drawer
-      anchor={props.anchor}
-      open={props.open}
-      onClose={props.onClose}
-    >
-      <Box sx={{ width: '250px', color: 'white' }} role="presentation">
+    <Drawer anchor={props.anchor} open={props.open} onClose={props.onClose}>
+      <Box sx={{ width: '250px', color: 'white', bgcolor: '#232020', height: '100%' }} role="presentation">
         <ul className={'mobile-links-list'}>
           <li onClick={props.onClose}>
             <Link to="/commission">Приёмная комиссия </Link>
           </li>
           <li onClick={props.onClose}>
-            <HashLink smooth to="/#specialities">
+            <HashLink smooth to="/main#specialities">
               Специальности
             </HashLink>
           </li>
