@@ -19,6 +19,7 @@ export const Documents = () => {
     speed: 1300,
     autoplaySpeed: 5000,
     arrows: false,
+    lazyLoad: true,
   };
   return (
     <div className="container-document" id={'documents'}>
@@ -36,18 +37,10 @@ export const Documents = () => {
           <p>Предоставляется отсрочка от армии.</p>
         </div>
         <div className="documents-slider-wrapper">
-          <DocumentModal open={openModal === 'doc1'} handleClose={setOpenModal}>
-            <img src={document1} className="document-photo" alt="documents" />
-          </DocumentModal>
-          <DocumentModal open={openModal === 'doc2'} handleClose={setOpenModal}>
-            <img src={document2} className="document-photo" alt="documents" />
-          </DocumentModal>
-          <DocumentModal open={openModal === 'doc3'} handleClose={setOpenModal}>
-            <img src={document3} className="document-photo" alt="documents" />
-          </DocumentModal>
-          <DocumentModal open={openModal === 'doc4'} handleClose={setOpenModal}>
-            <img src={document4} className="document-photo" alt="documents" />
-          </DocumentModal>
+          <DocumentModal open={openModal === 'doc1'} handleClose={setOpenModal} documentRef={document1} />
+          <DocumentModal open={openModal === 'doc2'} handleClose={setOpenModal} documentRef={document2} />
+          <DocumentModal open={openModal === 'doc3'} handleClose={setOpenModal} documentRef={document3} />
+          <DocumentModal open={openModal === 'doc4'} handleClose={setOpenModal} documentRef={document4} />
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="document-photo-container" onClick={() => setOpenModal('doc1')}>
