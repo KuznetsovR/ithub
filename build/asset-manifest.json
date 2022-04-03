@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.86d82ad0.css",
-    "main.js": "/static/js/main.311a8031.js",
+    "main.css": "/static/css/main.38722f79.css",
+    "main.js": "/static/js/main.749fcba1.js",
     "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
     "static/media/document_1.jpg": "/static/media/document_1.89ac996f75d17aa7f060.jpg",
     "static/media/document_2.webp": "/static/media/document_2.d3d2b458ec7240f173f6.webp",
@@ -29,16 +29,16 @@
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/index.html",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/admissions-text-container.svg": "/static/media/admissions-text-container.fcba7f89ea6157318a70.svg",
     "static/media/courses-text-container.svg": "/static/media/courses-text-container.950922fbc965cc245952.svg",
-    "index.html": "/index.html",
     "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
-    "main.86d82ad0.css.map": "/static/css/main.86d82ad0.css.map",
-    "main.311a8031.js.map": "/static/js/main.311a8031.js.map"
+    "main.38722f79.css.map": "/static/css/main.38722f79.css.map",
+    "main.749fcba1.js.map": "/static/js/main.749fcba1.js.map"
   },
   "entrypoints": [
-    "static/css/main.86d82ad0.css",
-    "static/js/main.311a8031.js"
+    "static/css/main.38722f79.css",
+    "static/js/main.749fcba1.js"
   ]
 }
