@@ -108,7 +108,8 @@ export const OpenDayModal = (props) => {
   const setAllTouched = () => {
     setState({
       ...state,
-      nameTouched: true,
+      childNameTouched: true,
+      parentNameTouched: true,
       phoneTouched: true,
       emailTouched: true,
       dateTouched: true,
