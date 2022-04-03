@@ -208,6 +208,9 @@ export const OpenDayModal = (props) => {
                     color="secondary"
                     variant="outlined"
                     onChange={(e) => setState({ ...state, date: e.target.value })}
+                    sx={{
+                      color: '#fff',
+                    }}
                   >
                     {props.availableDates.map((el, index) => {
                       return (
