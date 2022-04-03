@@ -12,7 +12,7 @@ export const App = () => {
           path="/"
           element={
             <div>
-              <Link to={'/main'}>asd</Link>
+              <Link to={'/main'}>Вернуться</Link>
             </div>
           }
         />
