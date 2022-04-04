@@ -3,6 +3,7 @@ import './app.scss';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
 import { MainPage, AboutPage, CommissionPage } from '@pages/export.pages.js';
+import { CoursesPage } from './pages/CoursesPage/CoursesPage';
 
 export const App = () => {
   return (
@@ -13,12 +14,14 @@ export const App = () => {
           element={
             <div>
               <Link to={'/main'}>Вернуться</Link>
+              <Link to={'/courses'}>Курсы</Link>
             </div>
           }
         />
         <Route path="/main" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/commission" element={<CommissionPage />} />
+        <Route path="/courses" element={<CoursesPage />} />
       </Routes>
     </BrowserRouter>
   );
