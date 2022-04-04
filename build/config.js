@@ -1,1 +1,1 @@
-var API_PATH = 'http://82.151.196.167/api'
+var API_PATH = 'https://portal.it-college.ru:1337/api'
