@@ -39,7 +39,7 @@ ul.MuiList-root.MuiMenu-list{
   background-color: colors.$lighter-dark-gray;
   color: #fff;
   max-height: 100px;
-  overflow-y: scroll;
+  overflow: auto;
   @include scrollbar-mixin.custom-scrollbar
 }
 
