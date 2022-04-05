@@ -1,5 +1,5 @@
 @use '../../styles/colors' as colors;
-.courses-page{
+.courses-page {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -7,10 +7,10 @@
   align-items: center;
   flex-direction: column;
 }
-.courses-page-under-construction{
+.courses-page-under-construction {
   font-size: 60px;
 }
-.courses-page-go-back-link{
+.courses-page-go-back-link {
   font-size: 30px;
   text-decoration: none;
   color: colors.$main-pink;
