@@ -29,9 +29,6 @@ export const Courses = () => {
           </div>
           <div className="preparatory-courses-description">
             <div className="title-courses">В разработке...</div>
-            {/* <div className="title-courses">Учебный год</div>
-            <div className="title-courses-description">
-            </div> */}
         </div>
         </div>
         <div className="plug"> </div>
