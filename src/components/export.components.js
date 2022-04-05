@@ -12,3 +12,4 @@ export { Reviews } from './Reviews/Reviews.js';
 export { SpecialityModal } from './SpecialityModal/SpecialityModal.js';
 export { Specialties } from './Specialties/Specialties.js';
 export { YandexMap } from './YandexMap/YandexMap.js';
+export { Courses } from './Courses/Courses.js';

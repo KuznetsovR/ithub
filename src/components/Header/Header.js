@@ -47,6 +47,9 @@ export const Header = () => {
           <li>
             <Link to="/about">О колледже</Link>
           </li>
+          <li>
+            <Link to="/Courses">Курсы</Link>
+          </li>
         </ul>
         <div className="mobile-menu">
           <IconButton

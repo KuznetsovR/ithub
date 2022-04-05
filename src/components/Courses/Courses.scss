@@ -1,0 +1,83 @@
+@use '../../styles/colors' as colors;
+
+.block-preparatory-courses {
+  background-color: colors.$lighter-dark-gray;
+  display: flex;
+  justify-content: space-evenly;
+  color: colors.$main-white;
+}
+.preparatory-courses-square {
+  background: url(../../assets/images/courses-text-container.svg) center;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.preparatory-courses-square-container {
+  height: 564px;
+  width: 400px;
+}
+.courses-link {
+  margin: 15px 0;
+  text-decoration: none;
+  font-size: 20px;
+  color: colors.$main-white;
+}
+.preparatory-courses-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 500px;
+  padding: 30px 50px;
+}
+.title-preparatory-courses {
+  z-index: 1;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.title-courses{
+  font-size: 25px;
+  text-align: left;
+  color: colors.$main-pink;
+  margin: 20px 0 0 0;
+}
+.title-courses-description{
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+}
+.plug{
+  background-color: colors.$lighter-dark-gray;
+  height: 500px;
+}
+@media (screen and max-width: 1000px) {
+  .block-preparatory-courses {
+    flex-direction: column;
+  }
+  .preparatory-courses-square-container {
+    width: 100%;
+    height: 100%;
+    background: #141414;
+  }
+  .preparatory-courses-square {
+    height: 400px;
+    margin: auto;
+    width: 400px;
+  }
+  .preparatory-courses-description{
+    gap: 50px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+@media (screen and max-width: 400px) {
+  .preparatory-courses-square {
+    height: 300px;
+    margin: auto;
+    width: 300px;
+  }
+}
