@@ -13,9 +13,12 @@ export const Footer = () => {
           <div className="text-address">Екатеринбург, Чкалова 3</div>
           <div className="text-copyright">© Copyright 2021-2022 ITHub Ekat college</div>
         </div>
-        <div className="footer-text it-journey-container">
-          <a href="/" className="text-3d">
+        <div className="footer-text footer-text-center">
+          <a href="/">
             ITJourney 3D
+          </a>
+          <a href="https://ithub.ru/">
+            ITHub Moscow
           </a>
         </div>
         <div className="footer-text">

@@ -41,6 +41,10 @@
   height: 100%;
   font-size: 24px;
 }
+.rotating-cube-logo{
+  margin: 0;
+  width: 160px;
+}
 @keyframes cubeMove {
   from {
     transform: rotateX(0deg) rotateY(0deg);
