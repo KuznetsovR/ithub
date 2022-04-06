@@ -6,6 +6,7 @@ import { HashLink } from 'react-router-hash-link';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import { HeaderDrawer } from '../HeaderDrawer/HeaderDrawer';
+import { RotatingCube } from '../RotatingCube/RotatingCube';
 
 export const Header = () => {
   const [state, setState] = useState({
@@ -49,6 +50,11 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/Courses">Курсы</Link>
+          </li>
+          <li>
+            <a href="/">
+              <RotatingCube />
+            </a>
           </li>
         </ul>
         <div className="mobile-menu">
