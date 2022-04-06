@@ -1,7 +1,10 @@
 @use '../../styles/colors' as colors;
+@use '../../styles/variables' as variables;
+
 .reviews-container {
   background-color: #1e1d1d;
   padding: 40px 0;
+  scroll-margin-top: variables.$headerAndPhoneHeight;
 }
 
 .reviews-heading-text {

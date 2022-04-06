@@ -4,7 +4,7 @@ import { SpecialityModal } from '@components/export.components.js';
 import { modalContents } from './ModalContent';
 
 export const Specialties = () => {
-  const [openModal, setOpenModal] = useState();
+  const [openModal, setOpenModal] = useState('');
 
   return (
     <div className="specialities-container" id={'specialities'}>

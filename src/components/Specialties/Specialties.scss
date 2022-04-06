@@ -1,10 +1,12 @@
 @use '../../styles/colors' as colors;
+@use '../../styles/variables' as variables;
 
 .specialities-container {
   margin: auto;
   background-color: #191818;
   width: 100%;
   padding: 20px 0 40px;
+  scroll-margin-top: variables.$headerAndPhoneHeight;
 }
 
 .specialities-heading-text {

@@ -1,6 +1,9 @@
 header {
   display: flex;
   height: 120px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   background-color: #232020;
 }
 .logo-header {
@@ -43,7 +46,7 @@ header {
 }
 nav.menu {
   width: 60%;
-  min-width: 620px;
+  min-width: 720px;
   position: relative;
   height: 120px;
   background: #431452;
@@ -52,13 +55,13 @@ nav.menu {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 70px;
     padding: 0;
     height: 100%;
     align-items: center;
     a {
       color: white;
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
       text-decoration: none;
     }

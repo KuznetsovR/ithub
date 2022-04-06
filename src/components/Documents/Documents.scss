@@ -1,7 +1,9 @@
 @use '../../styles/colors' as colors;
+@use '../../styles/variables' as variables;
 .container-document {
   padding: 40px 0;
   background-color: colors.$main-graphite;
+  scroll-margin-top: variables.$headerAndPhoneHeight;
 }
 .content {
   display: flex;

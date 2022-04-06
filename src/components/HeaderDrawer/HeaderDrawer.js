@@ -21,6 +21,9 @@ export const HeaderDrawer = (props) => {
           <li onClick={props.onClose}>
             <Link to="/about">О колледже </Link>
           </li>
+          <li onClick={props.onClose}>
+            <Link to="/courses">Курсы</Link>
+          </li>
         </ul>
       </Box>
     </Drawer>

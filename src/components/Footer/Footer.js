@@ -14,7 +14,7 @@ export const Footer = () => {
           <div className="text-copyright">© Copyright 2021-2022 ITHub Ekat college</div>
         </div>
         <div className="footer-text footer-text-center">
-          <a href="/">
+          <a href="/" className={'text-3d'}>
             ITJourney 3D
           </a>
           <a href="https://ithub.ru/">

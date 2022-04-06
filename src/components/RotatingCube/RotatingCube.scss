@@ -1,49 +1,58 @@
 .rotating-cube-wrapper {
   perspective: 500px;
+  -webkit-perspective: 500px;
+  width: 100px;
 }
 .rotating-cube {
-  width: 160px;
-  height: 160px;
+  margin: auto;
+  width: 70px;
+  height: 70px;
   transform-style: preserve-3d;
   -webkit-animation: cubeMove 10s linear infinite;
   animation: cubeMove 10s linear infinite;
 }
 .rotating-cube-side  {
   position: absolute;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   border: 1px solid #fff;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .rotating-cube-top {
-  transform: rotateX(90deg) translateZ(80px);
+  transform: rotateX(90deg) translateZ(35px);
+  -webkit-transform: rotateX(90deg) translateZ(35px);
 }
 .rotating-cube-right {
-  transform: rotateY(90deg) translateZ(80px);
+  transform: rotateY(90deg) translateZ(35px);
+  -webkit-transform: rotateY(90deg) translateZ(35px);
 }
 .rotating-cube-left {
-  transform: rotateY(-90deg) translateZ(80px);
+  transform: rotateY(-90deg) translateZ(35px);
+  -webkit-transform: rotateY(-90deg) translateZ(35px);
 }
 .rotating-cube-bottom {
-  transform: rotateX(-90deg) translateZ(80px);
+  transform: rotateX(-90deg) translateZ(35px);
+  -webkit-transform: rotateX(-90deg) translateZ(35px);
 }
 .rotating-cube-front {
-  transform: translateZ(80px);
+  transform: translateZ(35px);
+  -webkit-transform: translateZ(35px);
 }
 .rotating-cube-back {
-  transform: rotateY(-180deg) translateZ(80px);
+  transform: rotateY(-180deg) translateZ(35px);
+  -webkit-transform: rotateY(-180deg) translateZ(35px);
 }
 
 .rotating-cube-side-text{
   display: grid;
   place-items: center;
   height: 100%;
-  font-size: 24px;
+  font-size: 12px;
 }
 .rotating-cube-logo{
-  margin: 0;
-  width: 160px;
+  //margin: 0;
+  width: 70px;
 }
 @keyframes cubeMove {
   from {
