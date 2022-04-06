@@ -1,8 +1,11 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import './CoursesPage.scss';
 import { Courses, Footer, Header, Phone } from '@components/export.components.js';
 
 export const CoursesPage = () => {
+  useEffect(() => {
+    window.scrollTo(1, 0)
+  }, []);
   return (
     <>
       <Header />
