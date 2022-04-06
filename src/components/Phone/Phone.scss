@@ -5,6 +5,10 @@
   text-align: center;
   color: #9c9b9b;
   padding: 15px;
+  position: fixed;
+  width: 100vw;
+  top: 120px;
+  z-index: 100;
 }
 .number {
   color: #4c49e3;
