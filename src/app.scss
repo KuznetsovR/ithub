@@ -1,4 +1,5 @@
 @use "styles/mixins/scrollbar.mixin" as scrollbar-mixin;
+@use "styles/variables" as variables;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300&display=swap');
 body {
   margin: 0;
@@ -16,5 +17,5 @@ input:-webkit-autofill:focus {
 }
 
 header ~ main{
-  padding-top: 170px; // header + phone
+  padding-top: variables.$headerAndPhoneHeight;
 }
