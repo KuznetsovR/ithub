@@ -49,7 +49,7 @@ export const Header = () => {
             <Link to="/about">О колледже</Link>
           </li>
           <li>
-            <Link to="/Courses">Курсы</Link>
+            <Link to="/courses">Курсы</Link>
           </li>
           <li>
             <a href="/">
