@@ -20,11 +20,8 @@
 }
 
 .student-photo {
-  background-image: url(../../assets/images/web_dev.webp);
   background-size: 100%;
   border: 5px solid #5b1573;
-  width: 235px;
-  height: 235px;
   min-width: 235px;
   min-height: 235px;
   box-shadow: 0 0 5px #a71dd8;
@@ -66,8 +63,8 @@
     margin: 40px 0;
   }
   .student-photo {
-    width: 90vw;
-    height: 90vw;
+    width: 85vw;
+    height: 85vw;
     margin: auto;
   }
 }
