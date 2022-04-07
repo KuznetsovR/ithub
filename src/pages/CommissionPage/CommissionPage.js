@@ -1,7 +1,10 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import './CommissionPage.scss';
 import { Header, Commission1, Commission2, Footer, Phone } from '../../components/export.components.js';
 export const CommissionPage = () => {
+  useEffect(() => {
+    window.scrollTo(1, 0)
+  }, []);
   return (
     <>
       <Header />

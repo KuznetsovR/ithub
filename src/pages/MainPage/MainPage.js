@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import './MainPage.scss';
 import {
   Header,
@@ -15,6 +15,9 @@ import {
 import { Faq } from '../../components/Faq/Faq';
 
 export const MainPage = () => {
+  useEffect(() => {
+    window.scrollTo(1, 0)
+  }, []);
   return (
     <>
       <Header />
