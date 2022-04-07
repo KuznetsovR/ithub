@@ -20,7 +20,9 @@ export const Reviews = () => {
         <Slider {...settings}>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo student-photo-1" />
+              <div className="student-photo-wrapper">
+                <div className="student-photo student-photo-1" />
+              </div>
               <div className="reviews-text">
                 <p>Иван (1 курс)</p>
                 <p className="reviews-text-2">Иван инициативный, любознательный. Хорошо владеет имеющимися умениями, с интересом и удовольствием осваивает новые практические сферы и прикладные инструменты. Умеет организовать собственную работу и процесс освоения новых навыков</p>
@@ -30,7 +32,9 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo student-photo-2" />
+              <div className="student-photo-wrapper">
+                <div className="student-photo student-photo-2" />
+              </div>
               <div className="reviews-text">
                 <p>Ярослав (2 курс)</p>
                 <p className="reviews-text-2">Ярослав очень быстро освоился в платформе. У него достаточно хороший багаж знаний. Задачи решает быстро. Смотрит чуть дальше. чем ожидалось, судя по вопросам, которые он задает и его рассуждениям.  Даже предложил несколько полезных изменений.</p>
@@ -40,7 +44,9 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo student-photo-4" />
+              <div className="student-photo-wrapper">
+                <div className="student-photo student-photo-4" />
+              </div>
               <div className="reviews-text">
                 <p>Сергей (3 курс)</p>
                 <p className="reviews-text-2"> Сергей - в целом, доставляет результат и это главное. Креативен, хорош в поддержке команды. Всегда (!) находит решение. </p>
@@ -50,7 +56,9 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo student-photo-3" />
+              <div className="student-photo-wrapper">
+                <div className="student-photo student-photo-3" />
+              </div>
               <div className="reviews-text">
                 <p>Павел (3 курс)</p>
                 <p className="reviews-text-2">У Павла удивительное сочетание рабочих и персональных качеств. Ответственный, нацеленный на результат, заряженный. Хорошая логика и критическое мышление.</p>
@@ -60,7 +68,9 @@ export const Reviews = () => {
           </div>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
-              <div className="student-photo student-photo-3" />
+              <div className="student-photo-wrapper">
+                <div className="student-photo student-photo-3" />
+              </div>
               <div className="reviews-text">
                 <p>Кирилл (3 курс)</p>
                 <p className="reviews-text-2">Кирилл - отличный командный игрок. Очень неплохое знание React, общая эрудированность. Может работать за рамками своей компетенции. Иногда утирал носы MID’ам из аутстаффинга.</p>
