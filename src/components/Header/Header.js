@@ -17,7 +17,7 @@ export const Header = () => {
       <Link to="/main">
         <img src={logo} className="logo-header" alt="ithub-logo" />
       </Link>
-      <a href="/">
+      <a href="/" className={'header-rotating-cube'}>
         <RotatingCube />
       </a>
       <nav className="menu">
