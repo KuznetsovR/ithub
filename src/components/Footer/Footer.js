@@ -24,10 +24,10 @@ export const Footer = () => {
         <div className="footer-text">
           <div className="text-contacts">Контакты</div>
           <div className="footer-contact-info">
-            <MailOutlineIcon fontSize="small" /> priem.ekat@ithub.ru
+            <MailOutlineIcon fontSize="small" /> <a href={'mailto:priem.ekat@ithub.ru'}>priem.ekat@ithub.ru</a>
           </div>
           <div className="footer-contact-info">
-            <PhoneIcon fontSize="small" /> +7 (343) 286 78 59
+            <PhoneIcon fontSize="small" /> <a href={'tel:+73432867859'}>+7 (343) 286 78 59</a>
           </div>
           <div className="footer-contact-info">
             <a href="https://vk.com/ithub.ekat" target="_blank" rel="noreferrer">

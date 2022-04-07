@@ -17,6 +17,9 @@ export const Header = () => {
       <Link to="/main">
         <img src={logo} className="logo-header" alt="ithub-logo" />
       </Link>
+      <a href="/">
+        <RotatingCube />
+      </a>
       <nav className="menu">
         <div className="triangles-container">
           <div className="triangle-row">
@@ -50,11 +53,6 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/courses">Курсы</Link>
-          </li>
-          <li>
-            <a href="/">
-              <RotatingCube />
-            </a>
           </li>
         </ul>
         <div className="mobile-menu">
