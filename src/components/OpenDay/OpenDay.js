@@ -50,7 +50,7 @@ export const OpenDay = () => {
           <Slider {...settings}>
             <div className={'slide'}>
               <div className="img-container">
-                <img className={'slide-img'} style={{ height: '250px' }} src={photo5} alt="" />
+                <img className={'slide-img'} src={photo5} alt="" />
               </div>
             </div>
             {/* <div className={'slide'}>

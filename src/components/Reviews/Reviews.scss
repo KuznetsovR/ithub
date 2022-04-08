@@ -19,14 +19,11 @@
   padding: 40px 40px 20px 40px;
 }
 
-.student-photo {
-  background-image: url(../../assets/images/web_dev.webp);
+.student-photo-wrapper {
   background-size: 100%;
   border: 5px solid #5b1573;
-  width: 235px;
-  height: 235px;
-  min-width: 235px;
-  min-height: 235px;
+  width: 245px;
+  height: 245px;
   box-shadow: 0 0 5px #a71dd8;
 }
 .reviews-text {
@@ -34,11 +31,11 @@
   padding-left: 40px;
   font-size: 25px;
 }
-.reviews-text-2 {
+.reviews-text-description {
   color: #fff;
   font-size: 18px;
 }
-.reviews-text-3 {
+.reviews-text-author {
   color: #fff;
   font-size: 15px;
 }
@@ -47,27 +44,19 @@
     bottom: -20px;
   }
 }
-.student-photo-1{
-  background-image: url(../../assets/images/ivan.webp);
-}
-.student-photo-2{
-  background-image: url(../../assets/images/yaroslav.webp);
-}
-.student-photo-3{
-  background-image: url(../../assets/images/ph.webp);
-}
-.student-photo-4{
-  background-image: url(../../assets/images/sergei.webp);
-}
 @media (screen and max-width: 600px) {
   .all-reviews-rectangles {
     flex-direction: column;
     padding: 5px;
     margin: 40px 0;
   }
-  .student-photo {
-    width: 90vw;
-    height: 90vw;
+  .student-photo-wrapper {
+    width: 85vw;
+    height: 85vw;
     margin: auto;
+  }
+  .student-photo{
+    width: 100%;
+    height: 100%;
   }
 }
