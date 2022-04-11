@@ -10,13 +10,15 @@ import {
   YandexMap,
   Admissions,
   OpenDay,
- 
+
 } from '@components/export.components.js';
 import { Faq } from '../../components/Faq/Faq';
 
 export const MainPage = () => {
   useEffect(() => {
-    window.scrollTo(1, 0)
+    if(!window.location.hash) {
+      window.scrollTo(1, 0)
+    }
   }, []);
   return (
     <>
