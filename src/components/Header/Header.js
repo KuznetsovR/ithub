@@ -26,15 +26,15 @@ export const Header = () => {
             <div className="triangle start-color" />
             <div className="triangle color3" />
           </div>
-          <div className="triangle-row reversed" style={{ marginLeft: '30px' }}>
+          <div className="triangle-row reversed" style={{ marginLeft: '25px' }}>
             <div className="triangle color2" />
             <div className="triangle color4" />
           </div>
-          <div className="triangle-row reversed" style={{ marginTop: '60px' }}>
+          <div className="triangle-row reversed" style={{ marginTop: '50px' }}>
             <div className="triangle start-color" />
             <div className="triangle color3" />
           </div>
-          <div className="triangle-row" style={{ margin: '60px 0 0 30px' }}>
+          <div className="triangle-row" style={{ margin: '50px 0 0 25px' }}>
             <div className="triangle color2" />
             <div className="triangle color4" />
           </div>

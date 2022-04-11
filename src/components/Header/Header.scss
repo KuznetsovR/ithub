@@ -1,13 +1,13 @@
 header {
   display: flex;
-  height: 120px;
+  height: 100px;
   position: fixed;
   width: 100%;
   z-index: 100;
   background-color: #232020;
 }
 .logo-header {
-  height: 100px;
+  height: 80px;
   padding: 10px 10px 10px 70px;
 }
 .triangles-container {
@@ -22,14 +22,14 @@ header {
   display: flex;
 }
 .triangle {
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 60px solid;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid;
 }
 .reversed{
   .triangle{
     border-top: 0;
-    border-bottom: 60px solid ;
+    border-bottom: 50px solid ;
     &.start-color{
       border-bottom-color: #373333;
     }
@@ -48,7 +48,7 @@ nav.menu {
   width: 50%;
   min-width: 620px;
   position: relative;
-  height: 120px;
+  height: 100px;
   background: #431452;
   margin: auto 0 auto auto;
   .links-list {

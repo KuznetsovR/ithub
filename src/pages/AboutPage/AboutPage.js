@@ -4,7 +4,7 @@ import { About, Footer, Header, Phone } from '@components/export.components.js';
 
 export const AboutPage = () => {
   useEffect(() => {
-    window.scrollTo(1, 0)
+    if(!window.location.hash) window.scrollTo(1, 0)
   }, []);
   return (
     <>
