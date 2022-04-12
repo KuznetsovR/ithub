@@ -1,5 +1,5 @@
 import React from 'react';
-import './Сommission1.scss';
+import './Commission1.scss';
 import { Link } from 'react-router-dom';
 import document1 from '@assets/files/docsToDownload/ApplicationExample.rtf';
 import document2 from '@assets/files/docsToDownload/DogovorSPO.docx';
