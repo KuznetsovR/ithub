@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Reviews.scss';
 import Slider from 'react-slick';
 import IvanPhoto from '../../assets/images/ivan.webp';
 import YaroslavPhoto from '../../assets/images/yaroslav.webp';
 import DefaultPhoto from '../../assets/images/ph.webp';
 import SergeiPhoto from '../../assets/images/sergei.webp';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export const Reviews = () => {
   const settings = {
@@ -17,15 +19,27 @@ export const Reviews = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
+  const slider = useRef(null);
+  const next = () => {
+    slider.current.slickNext();
+  };
+  const previous = () => {
+    slider.current.slickPrev();
+  };
+  const arrowStyles = {
+    fontSize: '40px',
+  };
   return (
     <div className="reviews-container" id={'reviews'}>
       <h1 className="reviews-heading-text">Отзывы о наших студентах</h1>
       <div className="reviews-slider-wrapper">
-        <Slider {...settings}>
+        <KeyboardArrowLeftIcon sx={arrowStyles} className={'reviews-arrow-icon-left'} onClick={previous} />
+        <KeyboardArrowRightIcon sx={arrowStyles} className={'reviews-arrow-icon-right'} onClick={next} />
+        <Slider {...settings} ref={slider}>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={IvanPhoto} alt="Ivan-Photo" className={'student-photo'} />
+                <img src={IvanPhoto} alt="Ivan" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Иван (1 курс)</p>
@@ -44,7 +58,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={YaroslavPhoto} alt="Yaroslav-Photo" className={'student-photo'} />
+                <img src={YaroslavPhoto} alt="Yaroslav" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Ярослав (2 курс)</p>
@@ -60,7 +74,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={SergeiPhoto} alt="Sergei-Photo" className={'student-photo'} />
+                <img src={SergeiPhoto} alt="Sergei" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Сергей (3 курс)</p>
@@ -75,7 +89,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={DefaultPhoto} alt="Pavel-Photo" className={'student-photo'} />
+                <img src={DefaultPhoto} alt="Pavel" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Павел (3 курс)</p>
@@ -90,7 +104,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={DefaultPhoto} alt="Kirill-Photo" className={'student-photo'} />
+                <img src={DefaultPhoto} alt="Kirill" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Кирилл (3 курс)</p>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './About.scss';
 import Slider from 'react-slick';
 import photo1 from '../../assets/images/krit.webp';
@@ -10,6 +10,8 @@ import photo6 from '../../assets/images/teatr.webp';
 import photo7 from '../../assets/images/myzei.webp';
 import photo8 from '../../assets/images/myzei-2.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export const About = () => {
   const settings = {
@@ -30,6 +32,16 @@ export const About = () => {
       settings.slidesToShow = 1;
     }
   }
+  const slider = useRef(null);
+  const next = () => {
+    slider.current.slickNext();
+  };
+  const previous = () => {
+    slider.current.slickPrev();
+  };
+  const arrowStyles = {
+    fontSize: '40px',
+  };
   return (
     <div>
       <div className="block-preparatory-about">
@@ -65,7 +77,9 @@ export const About = () => {
       </div>
       <div className="about-photo-gallery">
         <h1 className="title-photo-gallery">Фотогаларея</h1>
-        <Slider {...settings}>
+        <KeyboardArrowLeftIcon sx={arrowStyles} className={'about-arrow-icon-left'} onClick={previous} />
+        <KeyboardArrowRightIcon sx={arrowStyles} className={'about-arrow-icon-right'} onClick={next} />
+        <Slider {...settings} ref={slider}>
           <div className={'slide'}>
             <div className="about-img-container">
               <img src={photo4} alt="" className="about-slide-img" />

@@ -25,7 +25,14 @@ export const Commission2 = () => {
       },
     },
   };
-  const [state, setState] = useState({
+  const inputAttributes = {
+    sx: { inputOptions },
+    id: 'outlined-basic',
+    color: 'secondary',
+    variant: 'outlined',
+    autoComplete: 'off',
+  };
+  const initialState = {
     childName: '',
     childNameTouched: false,
     parentName: '',
@@ -39,7 +46,8 @@ export const Commission2 = () => {
     personalDataAccess: false,
     openNotification: '',
     fileEvents: [],
-  });
+  };
+  const [state, setState] = useState(initialState);
 
   const sendForm = async (e) => {
     e.preventDefault();
@@ -66,19 +74,8 @@ export const Commission2 = () => {
       clearFiles();
 
       setState({
-        childName: '',
-        childNameTouched: false,
-        parentName: '',
-        parentNameTouched: false,
-        phone: '',
-        phoneTouched: false,
-        email: '',
-        emailTouched: false,
-        dogovorSPO: null,
-        application: null,
-        personalDataAccess: false,
+        ...initialState,
         openNotification: 'success',
-        fileEvents: [],
       });
     } catch (e) {
       setState({
@@ -129,12 +126,8 @@ export const Commission2 = () => {
             <TextField
               error={!validateName(state.childName) && state.childNameTouched}
               value={state.childName}
-              id="outlined-basic"
-              sx={inputOptions}
               label="ФИО абитуриента"
-              color="secondary"
-              variant="outlined"
-              autoComplete={'off'}
+              {...inputAttributes}
               onChange={(e) => setState({ ...state, childName: e.target.value })}
               onBlur={() => setState({ ...state, childNameTouched: true })}
             />
@@ -143,12 +136,8 @@ export const Commission2 = () => {
             <TextField
               error={!validateName(state.parentName) && state.parentNameTouched}
               value={state.parentName}
-              id="outlined-basic"
-              sx={inputOptions}
               label="ФИО родителя"
-              color="secondary"
-              variant="outlined"
-              autoComplete={'off'}
+              {...inputAttributes}
               onChange={(e) => setState({ ...state, parentName: e.target.value })}
               onBlur={() => setState({ ...state, parentNameTouched: true })}
             />
@@ -157,27 +146,19 @@ export const Commission2 = () => {
             <TextField
               error={!validatePhone(state.phone) && state.phoneTouched}
               value={state.phone}
-              id="outlined-basic"
-              sx={inputOptions}
               label="Телефон"
               placeholder={'+7 123 456 7890'}
               type={'tel'}
-              color="secondary"
-              variant="outlined"
-              autoComplete={'off'}
+              {...inputAttributes}
               onChange={(e) => setState({ ...state, phone: e.target.value })}
               onBlur={() => setState({ ...state, phoneTouched: true })}
             />
             <TextField
               error={!validateEmail(state.email) && state.emailTouched}
               value={state.email}
-              id="outlined-basic"
-              sx={inputOptions}
               label="Электронная почта"
-              color="secondary"
               type={'email'}
-              variant="outlined"
-              autoComplete={'off'}
+              {...inputAttributes}
               onChange={(e) => setState({ ...state, email: e.target.value })}
               onBlur={() => setState({ ...state, emailTouched: true })}
             />
@@ -200,6 +181,7 @@ export const Commission2 = () => {
                   fileEvents: [...state.fileEvents, e],
                 });
               }}
+              id={'dogovorSPO'}
             />
             <div
               className="file-name"
@@ -217,11 +199,12 @@ export const Commission2 = () => {
                   fileEvents: [...state.fileEvents, e],
                 });
               }}
+              id={'application'}
             />
           </div>
 
           <div className="allowed-formats">
-            Доступные форматы: .doc .docx .rtf .pdf .odt .jpeg .png .gif .zip
+            Доступные форматы: .doc .docx .rtf .pdf .odt .jpeg .jpg .png .gif .zip
           </div>
           {state?.application?.size > fileMaxSize || state?.dogovorSPO?.size > fileMaxSize ? (
             <div className={'max-file-size-hint'}>Максимальный размер файла - 5МБ</div>

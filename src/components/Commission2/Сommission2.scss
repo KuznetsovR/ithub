@@ -47,6 +47,9 @@
   row-gap:20px;
   padding: 20px 0;
 }
+.file-name{
+  align-self: center;
+}
 @media (screen and max-width: 600px) {
   .share-flex-row {
     flex-direction: column;
