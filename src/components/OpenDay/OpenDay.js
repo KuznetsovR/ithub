@@ -47,12 +47,12 @@ export const OpenDay = () => {
       <div className="schools-events">
         <h3>Мы ждём вас!</h3>
         <div className="open-day-slider-wrapper">
-          <Slider {...settings}>
-            <div className={'slide'}>
+          {/*<Slider {...settings}>*/}
+          {/*  <div className={'slide'}>*/}
               <div className="img-container">
                 <img className={'slide-img'} src={photo5} alt="" />
               </div>
-            </div>
+            {/*</div>*/}
             {/* <div className={'slide'}>
               <div className="img-container">
                 <img className={'slide-img'} src="https://t1.unipage.net/src/co40ou.webp" alt="" />
@@ -69,7 +69,7 @@ export const OpenDay = () => {
               </div>
               <div className="event-description">05.04.2022</div>
             </div> */}
-          </Slider>
+          {/*</Slider>*/}
         </div>
         {/* <div className="invite-btn-wrapper">
           <HexaButton onClick={() => setModalOpen('schoolModal')}>Пригласить</HexaButton>
