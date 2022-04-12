@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Reviews.scss';
 import Slider from 'react-slick';
 import IvanPhoto from '../../assets/images/ivan.webp';
 import YaroslavPhoto from '../../assets/images/yaroslav.webp';
 import DefaultPhoto from '../../assets/images/ph.webp';
 import SergeiPhoto from '../../assets/images/sergei.webp';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export const Reviews = () => {
   const settings = {
@@ -17,11 +19,23 @@ export const Reviews = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
+  const slider = useRef(null);
+  const next = () => {
+    slider.current.slickNext();
+  };
+  const previous = () => {
+    slider.current.slickPrev();
+  };
+  const arrowStyles = {
+    fontSize: '40px',
+  };
   return (
     <div className="reviews-container" id={'reviews'}>
       <h1 className="reviews-heading-text">Отзывы о наших студентах</h1>
       <div className="reviews-slider-wrapper">
-        <Slider {...settings}>
+        <KeyboardArrowLeftIcon sx={arrowStyles} className={'reviews-arrow-icon-left'} onClick={previous} />
+        <KeyboardArrowRightIcon sx={arrowStyles} className={'reviews-arrow-icon-right'} onClick={next} />
+        <Slider {...settings} ref={slider}>
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">

@@ -59,10 +59,29 @@
 .about-photo-gallery {
   background-color: #1e1d1d;
   padding: 40px 40px 60px;
+  position: relative;
 }
 .about-slide-img {
   min-height: 203px;
   max-width: 100%;
+}
+
+.about-arrow-icon-left, .about-arrow-icon-right{
+  position: absolute;
+  top: 50%;
+  padding: 2px;
+  margin: 5px 3px 0;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 5px #1e1d1d;
+  background-color: #1e1d1d;
+  border-radius: 50%;
+}
+.about-arrow-icon-left{
+  left: 0;
+}
+.about-arrow-icon-right{
+  right: 0;
 }
 
 @media (screen and max-width: 1000px) {
