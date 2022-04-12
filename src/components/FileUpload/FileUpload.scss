@@ -1,3 +1,30 @@
+@use '../../styles/colors' as colors;
+
 .file-input {
-  width: 100%;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.file-upload {
+  display: flex;
+  label {
+    max-width: 255px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    border: 1px solid colors.$box-shadow-dark-pink;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 1s;
+    &:hover {
+      background: colors.$box-shadow-dark-pink;
+    }
+  }
 }
