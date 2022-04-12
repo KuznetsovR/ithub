@@ -32,7 +32,7 @@ export const Commission2 = () => {
     variant: 'outlined',
     autoComplete: 'off',
   };
-  const [state, setState] = useState({
+  const initialState = {
     childName: '',
     childNameTouched: false,
     parentName: '',
@@ -46,7 +46,8 @@ export const Commission2 = () => {
     personalDataAccess: false,
     openNotification: '',
     fileEvents: [],
-  });
+  };
+  const [state, setState] = useState(initialState);
 
   const sendForm = async (e) => {
     e.preventDefault();
@@ -73,19 +74,8 @@ export const Commission2 = () => {
       clearFiles();
 
       setState({
-        childName: '',
-        childNameTouched: false,
-        parentName: '',
-        parentNameTouched: false,
-        phone: '',
-        phoneTouched: false,
-        email: '',
-        emailTouched: false,
-        dogovorSPO: null,
-        application: null,
-        personalDataAccess: false,
+        ...initialState,
         openNotification: 'success',
-        fileEvents: [],
       });
     } catch (e) {
       setState({
