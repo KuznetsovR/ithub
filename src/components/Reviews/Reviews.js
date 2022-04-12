@@ -39,7 +39,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={IvanPhoto} alt="Ivan-Photo" className={'student-photo'} />
+                <img src={IvanPhoto} alt="Ivan" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Иван (1 курс)</p>
@@ -58,7 +58,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={YaroslavPhoto} alt="Yaroslav-Photo" className={'student-photo'} />
+                <img src={YaroslavPhoto} alt="Yaroslav" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Ярослав (2 курс)</p>
@@ -74,7 +74,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={SergeiPhoto} alt="Sergei-Photo" className={'student-photo'} />
+                <img src={SergeiPhoto} alt="Sergei" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Сергей (3 курс)</p>
@@ -89,7 +89,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={DefaultPhoto} alt="Pavel-Photo" className={'student-photo'} />
+                <img src={DefaultPhoto} alt="Pavel" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Павел (3 курс)</p>
@@ -104,7 +104,7 @@ export const Reviews = () => {
           <div className={'slide'}>
             <div className="all-reviews-rectangles">
               <div className="student-photo-wrapper">
-                <img src={DefaultPhoto} alt="Kirill-Photo" className={'student-photo'} />
+                <img src={DefaultPhoto} alt="Kirill" className={'student-photo'} />
               </div>
               <div className="reviews-text">
                 <p>Кирилл (3 курс)</p>
