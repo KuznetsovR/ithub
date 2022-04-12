@@ -50,7 +50,7 @@ export const SchoolModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(window.API_PATH + '/school-event/', state)
+      await axios.post(window.API_PATH + '/school-event/', state);
 
       setState({
         name: '',
@@ -59,11 +59,11 @@ export const SchoolModal = (props) => {
         phone: '',
         email: '',
         personalDataAccess: false,
-      })
+      });
 
       // Do smth to show user the success
-      props.handleClose(false)
-    } catch (e){
+      props.handleClose(false);
+    } catch (e) {
       // Do smth to show user the error
       console.error(e);
     }

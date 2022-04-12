@@ -1,4 +1,4 @@
-@use "../../styles/mixins/scrollbar.mixin" as scrollbar-mixin;
+@use '../../styles/mixins/scrollbar.mixin' as scrollbar-mixin;
 @use '../../styles/colors' as colors;
 
 .school-case {
@@ -35,42 +35,42 @@
   justify-content: center;
 }
 
-ul.MuiList-root.MuiMenu-list{
+ul.MuiList-root.MuiMenu-list {
   background-color: colors.$lighter-dark-gray;
   color: #fff;
   max-height: 100px;
   overflow: auto;
-  @include scrollbar-mixin.custom-scrollbar
+  @include scrollbar-mixin.custom-scrollbar;
 }
 
-.MuiFormControl-root{
-  label{
-    &.Mui-focused{
+.MuiFormControl-root {
+  label {
+    &.Mui-focused {
       color: #a71dd8;
     }
     color: white;
   }
-  .MuiOutlinedInput-root{
+  .MuiOutlinedInput-root {
     color: white;
     fieldset {
       border-color: #a71dd8;
       color: white;
-      legend{
+      legend {
         color: white;
       }
     }
-    svg{
+    svg {
       color: white;
     }
   }
 }
 @media (screen and max-width: 700px) {
-  .open-day-flex-row{
+  .open-day-flex-row {
     flex-direction: column;
     gap: 20px;
     padding: 10px 0;
   }
-  .open-day-flex-column{
+  .open-day-flex-column {
     padding: 10px 0;
   }
-  }
+}
