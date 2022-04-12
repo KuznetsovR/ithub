@@ -32,7 +32,7 @@
 .commission-text-column {
   color: #fff;
   font-size: 20px;
-  &:first-child{
+  &:first-child {
     margin-top: 50px;
   }
   margin-top: 55px;
@@ -42,7 +42,7 @@
   font-size: 15px;
   margin: 60px 0 0 100px;
 }
-.comission-line{
+.comission-line {
   height: 160px;
   width: 4px;
   background: #a71dd8;
@@ -51,27 +51,27 @@
   right: 18px;
   box-shadow: 0 0 5px #a71dd8;
 }
-.commission-links{
+.commission-links {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
   flex-grow: 1;
   justify-content: center;
-  a{
+  a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     padding: 10px;
   }
 }
-.mobile-commission-links{
+.mobile-commission-links {
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
   flex-grow: 1;
   justify-content: center;
-  a{
+  a {
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -84,10 +84,10 @@
     font-size: 14px;
     margin-top: 64px;
   }
-  .comission-column-3{
+  .comission-column-3 {
     display: none;
   }
-  .mobile-commission-links{
+  .mobile-commission-links {
     display: flex;
     align-items: center;
   }

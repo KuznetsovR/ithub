@@ -35,7 +35,9 @@ export const DocumentModal = (props) => {
       aria-describedby="DocumentModalDescription"
     >
       <Fade in={props.open}>
-        <Box sx={style}><img src={props.documentRef} className={'document-in-modal'} alt="document" /></Box>
+        <Box sx={style}>
+          <img src={props.documentRef} className={'document-in-modal'} alt="document" />
+        </Box>
       </Fade>
     </Modal>
   );

@@ -47,21 +47,20 @@ export const CoursesModal = (props) => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(window.API_PATH + '/courses/', state)
+      await axios.post(window.API_PATH + '/courses/', state);
       setState({
         childName: '',
         parentName: '',
         phone: '',
         email: '',
         personalDataAccess: false,
-      })
+      });
       // Do smth to show user the success
-      props.handleClose(false)
-    } catch (e){
+      props.handleClose(false);
+    } catch (e) {
       // Do smth to show user the error
       console.error(e);
     }
-
   };
 
   return (
