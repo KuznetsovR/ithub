@@ -35,7 +35,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start NODE_ENV=development",
-    "build": "react-app-rewired build NODE_ENV=production",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && react-app-rewired build NODE_ENV=production",
     "postbuild": "react-snap"
   },
   "browserslist": {
