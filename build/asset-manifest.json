@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.908f784e.css",
-    "main.js": "/static/js/main.f3223735.js",
+    "main.css": "/static/css/main.8359d997.css",
+    "main.js": "/static/js/main.359f7370.js",
     "static/media/document_3.webp": "/static/media/document_3.682f6ac87cd8eb7aafa6.webp",
     "static/media/document_1.jpg": "/static/media/document_1.89ac996f75d17aa7f060.jpg",
     "static/media/document_2.webp": "/static/media/document_2.d3d2b458ec7240f173f6.webp",
@@ -21,8 +21,8 @@
     "static/media/ph.webp": "/static/media/ph.e8218c36114060a0c483.webp",
     "static/media/sergei.webp": "/static/media/sergei.8e4903727a04242ee04b.webp",
     "static/media/yaroslav.webp": "/static/media/yaroslav.0849d1bcea829f387464.webp",
+    "static/media/ivan.webp": "/static/media/ivan.69461c6c54189e216a15.webp",
     "static/media/IThublogo.png": "/static/media/IThublogo.3f2e17a2ba3f1a8d0302.png",
-    "static/media/ivan.webp": "/static/media/ivan.a84504368260c232bc96.webp",
     "static/media/web_dev.webp": "/static/media/web_dev.837a806f22c98630eee9.webp",
     "static/media/coder.webp": "/static/media/coder.01d458026e69e593f5d0.webp",
     "static/media/sys_adm.webp": "/static/media/sys_adm.4621e81fa1e98a0d7ea5.webp",
@@ -31,14 +31,13 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/index.html",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/vkIcon.svg": "/static/media/vkIcon.d0e935daa7d8e69a8027b6428cee085e.svg",
     "static/media/admissions-text-container.svg": "/static/media/admissions-text-container.fcba7f89ea6157318a70.svg",
     "static/media/courses-text-container.svg": "/static/media/courses-text-container.950922fbc965cc245952.svg",
-    "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg",
-    "main.908f784e.css.map": "/static/css/main.908f784e.css.map",
-    "main.f3223735.js.map": "/static/js/main.f3223735.js.map"
+    "static/media/admissions-logo-container.svg": "/static/media/admissions-logo-container.607d00c000ebe2c09bd2.svg"
   },
   "entrypoints": [
-    "static/css/main.908f784e.css",
-    "static/js/main.f3223735.js"
+    "static/css/main.8359d997.css",
+    "static/js/main.359f7370.js"
   ]
 }

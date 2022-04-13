@@ -1,5 +1,5 @@
 import React from 'react';
-import './Сommission1.scss';
+import './Commission1.scss';
 import { Link } from 'react-router-dom';
 import document1 from '@assets/files/docsToDownload/ApplicationExample.rtf';
 import document2 from '@assets/files/docsToDownload/DogovorSPO.docx';
@@ -23,16 +23,28 @@ export const Commission1 = () => {
         </div>
         <div className="comission-column-3">
           <div className="commission-links">
-            <Link to={document1} target="_blank" download>Скачать образец заявления</Link>
-            <Link to={document2} target="_blank" download>Скачать договор СПО</Link>
-            <Link to={document3} target="_blank" download>Скачать договор СПО 18+</Link>
+            <Link to={document1} target="_blank" download>
+              Скачать образец заявления
+            </Link>
+            <Link to={document2} target="_blank" download>
+              Скачать договор СПО
+            </Link>
+            <Link to={document3} target="_blank" download>
+              Скачать договор СПО 18+
+            </Link>
           </div>
         </div>
       </div>
       <div className="mobile-commission-links">
-        <Link to={document1} target="_blank" download>Скачать образец заявления</Link>
-        <Link to={document2} target="_blank" download>Скачать договор СПО</Link>
-        <Link to={document3} target="_blank" download>Скачать договор СПО 18+</Link>
+        <Link to={document1} target="_blank" download>
+          Скачать образец заявления
+        </Link>
+        <Link to={document2} target="_blank" download>
+          Скачать договор СПО
+        </Link>
+        <Link to={document3} target="_blank" download>
+          Скачать договор СПО 18+
+        </Link>
       </div>
     </div>
   );

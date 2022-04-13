@@ -8,7 +8,6 @@ export const Specialties = () => {
 
   return (
     <div className="specialities-container" id={'specialities'}>
-
       <h1 className="specialities-heading-text">Специальности</h1>
       <div className="all-specialities-rectangles">
         <div className="specialities-rectangle rec-bg1" onClick={() => setOpenModal('webdev')}>

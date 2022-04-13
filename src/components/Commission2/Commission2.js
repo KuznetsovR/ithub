@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Сommission2.scss';
+import './Commission2.scss';
 import { HexaButton } from '../HexaButton/HexaButton';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';

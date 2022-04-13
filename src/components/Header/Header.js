@@ -63,11 +63,7 @@ export const Header = () => {
           >
             <MenuIcon sx={{ fontSize: 40 }} />
           </IconButton>
-          <HeaderDrawer
-            anchor={'right'}
-            open={state.right}
-            onClose={() => setState({ right: false })}
-          />
+          <HeaderDrawer anchor={'right'} open={state.right} onClose={() => setState({ right: false })} />
         </div>
       </nav>
     </header>

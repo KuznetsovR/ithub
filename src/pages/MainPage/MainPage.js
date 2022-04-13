@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './MainPage.scss';
 import {
   Header,
@@ -10,14 +10,13 @@ import {
   YandexMap,
   Admissions,
   OpenDay,
-
 } from '@components/export.components.js';
 import { Faq } from '../../components/Faq/Faq';
 
 export const MainPage = () => {
   useEffect(() => {
-    if(!window.location.hash) {
-      window.scrollTo(1, 0)
+    if (!window.location.hash) {
+      window.scrollTo(1, 0);
     }
   }, []);
   return (

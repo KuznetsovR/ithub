@@ -1,7 +1,7 @@
 export { Admissions } from './Admissions/Admissions.js';
 export { About } from './About/About.js';
-export { Commission1 } from './Commission1/Сommission1';
-export { Commission2 } from './Commission2/Сommission2';
+export { Commission1 } from './Commission1/Commission1';
+export { Commission2 } from './Commission2/Commission2';
 export { Documents } from './Documents/Documents.js';
 export { Footer } from './Footer/Footer.js';
 export { Header } from './Header/Header.js';

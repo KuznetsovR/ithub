@@ -53,7 +53,11 @@ export const Documents = () => {
           <DocumentModal open={openModal === 'doc2'} handleClose={setOpenModal} documentRef={document2} />
           <DocumentModal open={openModal === 'doc3'} handleClose={setOpenModal} documentRef={document3} />
           <DocumentModal open={openModal === 'doc4'} handleClose={setOpenModal} documentRef={document4} />
-          <KeyboardArrowLeftIcon sx={arrowStyles} className={'documents-arrow-icon-left'} onClick={previous} />
+          <KeyboardArrowLeftIcon
+            sx={arrowStyles}
+            className={'documents-arrow-icon-left'}
+            onClick={previous}
+          />
           <KeyboardArrowRightIcon sx={arrowStyles} className={'documents-arrow-icon-right'} onClick={next} />
           <Slider {...settings} ref={slider}>
             <div className={'slide'}>

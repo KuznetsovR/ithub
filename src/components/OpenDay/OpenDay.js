@@ -49,11 +49,11 @@ export const OpenDay = () => {
         <div className="open-day-slider-wrapper">
           {/*<Slider {...settings}>*/}
           {/*  <div className={'slide'}>*/}
-              <div className="img-container">
-                <img className={'slide-img'} src={photo5} alt="" />
-              </div>
-            {/*</div>*/}
-            {/* <div className={'slide'}>
+          <div className="img-container">
+            <img className={'slide-img'} src={photo5} alt="" />
+          </div>
+          {/*</div>*/}
+          {/* <div className={'slide'}>
               <div className="img-container">
                 <img className={'slide-img'} src="https://t1.unipage.net/src/co40ou.webp" alt="" />
               </div>

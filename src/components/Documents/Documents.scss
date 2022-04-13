@@ -27,14 +27,15 @@
   margin: 0 10px;
   cursor: pointer;
 }
-.documents-slider-wrapper{
+.documents-slider-wrapper {
   width: 200px;
   position: relative;
   .slick-dots {
     bottom: -25px;
   }
 }
-.documents-arrow-icon-left, .documents-arrow-icon-right{
+.documents-arrow-icon-left,
+.documents-arrow-icon-right {
   position: absolute;
   top: 50%;
   padding: 2px;
@@ -45,7 +46,7 @@
   background-color: #1e1d1d;
   border-radius: 50%;
 }
-.documents-arrow-icon-right{
+.documents-arrow-icon-right {
   right: 0;
 }
 
@@ -53,7 +54,7 @@
   .content {
     flex-direction: column;
   }
-  .documents-slider-wrapper{
+  .documents-slider-wrapper {
     width: 100%;
   }
 }
