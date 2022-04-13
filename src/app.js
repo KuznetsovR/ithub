@@ -14,7 +14,6 @@ export const App = () => {
           element={
             <div>
               <Link to={'/main'}>Вернуться</Link>
-              <Link to={'/courses'}>Курсы</Link>
             </div>
           }
         />
