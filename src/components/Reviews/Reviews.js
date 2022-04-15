@@ -15,7 +15,7 @@ export const Reviews = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1300,
+    speed: 750,
     autoplaySpeed: 5000,
     arrows: false,
   };

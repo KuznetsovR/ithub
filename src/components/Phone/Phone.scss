@@ -1,10 +1,12 @@
 @use '../../styles/colors' as colors;
+@use "../../styles/variables" as variables;
 
 .phone-service-support {
   background-color: colors.$main-grey;
   text-align: center;
   color: #9c9b9b;
   padding: 15px;
+  height: variables.$phoneHeight;
   position: fixed;
   width: 100vw;
   box-sizing: border-box;
@@ -13,12 +15,10 @@
 }
 .number {
   text-decoration: none;
-  color: #4c49e3;
+  color: white;
 }
-@media (screen and max-width: 500px) {
+@media (screen and max-width: 1000px) {
   .phone-service-support {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    display:none;
   }
 }
