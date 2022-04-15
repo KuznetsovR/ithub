@@ -1,6 +1,7 @@
+@use "../../styles/variables" as variables;
 header {
   display: flex;
-  height: 100px;
+  height: variables.$headerHeight;
   position: fixed;
   width: 100%;
   z-index: 100;
