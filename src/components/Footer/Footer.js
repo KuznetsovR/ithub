@@ -23,8 +23,7 @@ export const Footer = () => {
         <div className="footer-text">
           <div className="text-contacts">Контакты</div>
           <div className="footer-contact-info">
-            <MailOutlineIcon fontSize="small" />
-            <a href={'mailto:priem.ekat@ithub.ru'}>priem.ekat@ithub.ru</a>
+            <MailOutlineIcon fontSize="small" /> <a href={'mailto:priem.ekat@ithub.ru'}> priem.ekat@ithub.ru</a>
           </div>
           <div className="footer-contact-info">
             <PhoneIcon fontSize="small" /> <a href={'tel:+73432867859'}>+7 (343) 286 78 59</a>
