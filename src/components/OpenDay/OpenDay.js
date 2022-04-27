@@ -16,7 +16,7 @@ export const OpenDay = () => {
     autoplaySpeed: 5000,
     arrows: false,
   };
-  const availableDates = ['23.04.2022, 14:00'];
+  const availableDates = ['13.05.2022, 17:00 - 20:00'];
   const [modalOpen, setModalOpen] = useState(null);
   return (
     <div className="open-day-component">
